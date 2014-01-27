@@ -1,0 +1,41 @@
+\begin{picture}(0,0)%
+\includegraphics{engctrl-1.psf}%
+\end{picture}%
+\setlength{\unitlength}{1184sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(8909,6996)(976,-6361)
+\put(976,-5291){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}0}%
+}}}
+\put(982,-4285){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}10}%
+}}}
+\put(982,-3252){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}20}%
+}}}
+\put(982,-2219){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}30}%
+}}}
+\put(982,-1186){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}40}%
+}}}
+\put(982,-153){\makebox(0,0)[rb]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}50}%
+}}}
+\put(3932,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1986}%
+}}}
+\put(5235,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1989}%
+}}}
+\put(7841,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1995}%
+}}}
+\put(9144,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1998}%
+}}}
+\put(1326,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1980}%
+}}}
+\put(2629,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1983}%
+}}}
+\put(5551,-6361){\makebox(0,0)[b]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Year}%
+}}}
+\put(6538,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1992}%
+}}}
+\end{picture}

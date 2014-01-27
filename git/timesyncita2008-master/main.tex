@@ -1,0 +1,79 @@
+%\documentclass[10pt,twocolumn]{main}
+%\documentclass[10pt,letterpaper]{article}
+\documentclass[conference]{IEEEtran}
+
+%next line allows \thanks in conference mode
+\IEEEoverridecommandlockouts
+
+\usepackage{pslatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{graphics}
+%\usepackage{epsfig} % for postscript graphics files
+
+\DeclareMathOperator{\Drift}{Drift}
+
+\usepackage{cite}
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  \DeclareGraphicsExtensions{.eps}
+\fi
+
+
+\begin{document}
+
+\title{On the Impact of Time Synchronization on Quality of Information and Network Performance
+\thanks{This material is supported in part by the U.S. ARL and the
+U.K. MOD under Agreement Number W911NF-06-3-0001, by the NSF under
+award CNS-0614853, and by the Center for Embedded Networked Sensing
+at UCLA. Any opinions, findings and conclusions or recommendations
+expressed in this material are those of the authors and do not
+necessarily reflect the views of the listed funding agencies. The
+U.S. and U.K. Governments are authorized to reproduce and distribute
+reprints for Government purposes notwithstanding any copyright
+notation herein.}}
+\author{{\sc Kartik Ariyur\dag}, {\sc Thomas Schmid\ddag}, {\sc Yunjung Yi\dag}, {\sc Zainul Charbiwala\ddag}, {\sc Mani B. Srivastava\ddag}\\
+\normalsize{\dag Honeywell Inc.} \\
+\normalsize{1985 Douglas Drive Golden Valley, MN}\\
+\normalsize{\tt\{kartik.ariyur,yunjung.yi\}@honeywell.com}\\
+\normalsize{\ddag Department of Electrical Engineering, }
+\normalsize{University of California, Los Angeles} \\
+\normalsize{420 Westwood Plaza Los Angeles, CA}\\
+\normalsize{\tt\{thomas.schmid,zainul,mbs\}@ucla.edu} }
+
+\maketitle
+%\setcounter{page}{0}
+%\pagestyle{empty}
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\baselineskip=1.\normalbaselineskip
+\input{abstract}
+\input{intro}
+%\input{intro}
+%\input{background}
+%\input{appQOI}
+\input{Detector}
+\input{TrackingFilter}
+%\input{adaptation_sim}
+%\input{adaptation-2}
+\input{ita_ucla2008}
+\input{ConcludingRemarks}
+\input{Acknowledgements}
+\bibliography{ref}
+\bibliographystyle{plain}
+
+\end{document}

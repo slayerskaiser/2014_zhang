@@ -1,0 +1,23 @@
+\begin{picture}(0,0)%
+\includegraphics{trends-1.psf}%
+\end{picture}%
+\setlength{\unitlength}{1184sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(9149,6996)(736,-6361)
+\put(1126,-2461){\rotatebox{90.0}{\makebox(0,0)[b]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Cost/Performance}%
+}}}}
+\put(5701,-6361){\makebox(0,0)[b]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Year}%
+}}}
+\put(8216,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}2006}%
+}}}
+\put(5610,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}2002}%
+}}}
+\put(3004,-5687){\makebox(0,0)[b]{\smash{\SetFigFont{8}{9.6}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1998}%
+}}}
+\end{picture}

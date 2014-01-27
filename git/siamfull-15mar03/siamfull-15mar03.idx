@@ -1,0 +1,1637 @@
+\indexentry {computation!ubiquitous computing}{i}
+\indexentry {CDS Panel!membership}{iii}
+\indexentry {Air Force Office of Scientific Research (AFOSR)}{vii}
+\indexentry {CDS Panel!formation}{vii}
+\indexentry {CDS Panel!membership}{vii}
+\indexentry {Air Force Office of Scientific Research (AFOSR)}{vii}
+\indexentry {University of Maryland}{vii}
+\indexentry {Defense Advanced Research Projects Agency (DARPA)}{vii}
+\indexentry {CDS Panel!web site}{vii}
+\indexentry {Fleming, W. H.}{viii}
+\indexentry {control!successes of}{viii}
+\indexentry {National Science Foundation (NSF)}{viii}
+\indexentry {terrorism, fight against}{viii}
+\indexentry {homeland defense|see{terrorism}}{viii}
+\indexentry {biological and chemical weapons}{viii}
+\indexentry {Air Force Office of Scientific Research (AFOSR)}{viii}
+\indexentry {actuation}{1}
+\indexentry {control!system}{1}
+\indexentry {industrial revolution}{1}
+\indexentry {feedback}{1}
+\indexentry {Watt governor|see{centrifugal governor}}{1}
+\indexentry {centrifugal governor}{1}
+\indexentry {flyball governor|see{centrifugal governor}}{1}
+\indexentry {steam engine}{1}
+\indexentry {sensing}{1}
+\indexentry {actuation}{1}
+\indexentry {safety}{1}
+\indexentry {reliability}{1}
+\indexentry {control!as enabling technology}{1}
+\indexentry {disk drives}{1}
+\indexentry {control!as enabling technology}{1}
+\indexentry {electrical power}{1}
+\indexentry {power grid, electrical}{1}
+\indexentry {autopilot}{1}
+\indexentry {uncertainty management}{1}
+\indexentry {disturbances}{1}
+\indexentry {dynamics}{1}
+\indexentry {steam engine}{2}
+\indexentry {economic systems}{2}
+\indexentry {decision making!systems}{2}
+\indexentry {uncertainty!component or parameter variation}{2}
+\indexentry {biology}{2}
+\indexentry {medicine}{2}
+\indexentry {control!principles}{2}
+\indexentry {economics}{2}
+\indexentry {operations research}{2}
+\indexentry {mathematics}{2}
+\indexentry {physics}{2}
+\indexentry {biology}{2}
+\indexentry {applied mathematics}{2}
+\indexentry {control!successes of|(}{2}
+\indexentry {control!as enabling technology}{2}
+\indexentry {Boeing Company}{3}
+\indexentry {Seagate Technology}{3}
+\indexentry {fly-by-wire}{3}
+\indexentry {disk drives}{3}
+\indexentry {aerospace systems}{3}
+\indexentry {aircraft}{3}
+\indexentry {tracking}{3}
+\indexentry {guidance}{3}
+\indexentry {satellites}{3}
+\indexentry {missiles}{3}
+\indexentry {manufacturing}{3}
+\indexentry {automobiles}{3}
+\indexentry {process control}{3}
+\indexentry {communications!systems}{3}
+\indexentry {cellular phones}{3}
+\indexentry {Internet}{3}
+\indexentry {telephone system}{3}
+\indexentry {mathematics!contributions to}{3}
+\indexentry {complex systems}{3}
+\indexentry {systems perspective}{3}
+\indexentry {NSFNET}{4}
+\indexentry {Internet}{4}
+\indexentry {power grid, electrical}{4}
+\indexentry {control!successes of|)}{4}
+\indexentry {software!systems}{4}
+\indexentry {computation!ubiquitous computing}{4}
+\indexentry {data rich systems}{4}
+\indexentry {distributed control}{4}
+\indexentry {ubiquitous computing}{4}
+\indexentry {high confidence systems}{4}
+\indexentry {reliability}{4}
+\indexentry {information-based systems}{5}
+\indexentry {autonomous systems}{5}
+\indexentry {enterprise level systems}{5}
+\indexentry {decision making!higher level}{5}
+\indexentry {unmanned vehicles}{5}
+\indexentry {resource allocation}{5}
+\indexentry {defense systems}{5}
+\indexentry {terrorism, fight against}{5}
+\indexentry {sensing!sensor webs}{5}
+\indexentry {unmanned vehicles}{5}
+\indexentry {decision making!systems}{5}
+\indexentry {adversarial environments}{5}
+\indexentry {autonomous systems}{5}
+\indexentry {networks}{5}
+\indexentry {command and control}{5}
+\indexentry {control!as enabling technology}{5}
+\indexentry {asymmetric threats}{5}
+\indexentry {communications!systems}{5}
+\indexentry {reconfigurable systems}{5}
+\indexentry {control!challenges}{5}
+\indexentry {symbolic dynamics}{5}
+\indexentry {dynamics}{5}
+\indexentry {decision making!logic}{5}
+\indexentry {reasoning, higher level}{5}
+\indexentry {distributed control}{5}
+\indexentry {asynchronous systems}{5}
+\indexentry {communications!role of, in control}{5}
+\indexentry {networks}{5}
+\indexentry {packet-based systems}{5}
+\indexentry {C4ISR}{5}
+\indexentry {airspace management}{5}
+\indexentry {enterprise level systems}{5}
+\indexentry {autonomous systems}{5}
+\indexentry {autonomy|see{autonomous systems}}{5}
+\indexentry {decision making!higher level}{5}
+\indexentry {decision making!systems}{5}
+\indexentry {logistics}{5}
+\indexentry {automatic synthesis}{5}
+\indexentry {verification and validation}{5}
+\indexentry {simulation}{5}
+\indexentry {reliability}{5}
+\indexentry {CDS Panel!recommendations}{6}
+\indexentry {recommendations|(}{6}
+\indexentry {computer science!interaction of control and}{6}
+\indexentry {communications!integration of control and}{6}
+\indexentry {distributed control}{6}
+\indexentry {computation!integration of control and}{6}
+\indexentry {networking!integration of control and}{6}
+\indexentry {real-time systems}{6}
+\indexentry {enterprise level systems}{6}
+\indexentry {decision making!higher level}{6}
+\indexentry {resource allocation}{6}
+\indexentry {adaptation}{6}
+\indexentry {learning}{6}
+\indexentry {artificial intelligence}{6}
+\indexentry {uncertainty!in resource allocation}{6}
+\indexentry {new domains, control in}{6}
+\indexentry {nanotechnology}{6}
+\indexentry {quantum systems}{6}
+\indexentry {electromagnetics}{6}
+\indexentry {environmental science}{6}
+\indexentry {biology}{6}
+\indexentry {dual investigator funding}{6}
+\indexentry {theory!support for}{6}
+\indexentry {mathematics!interaction with}{6}
+\indexentry {education}{6}
+\indexentry {outreach}{6}
+\indexentry {accessibility, broadening}{6}
+\indexentry {control!principles}{6}
+\indexentry {recommendations|)}{6}
+\indexentry {control!impact and payoffs}{6}
+\indexentry {control!definition}{7}
+\indexentry {fly-by-wire}{7}
+\indexentry {feedback}{7}
+\indexentry {high confidence systems}{7}
+\indexentry {amplifiers}{7}
+\indexentry {protocols}{7}
+\indexentry {battlefield management}{7}
+\indexentry {biological engineering}{7}
+\indexentry {control!system}{7}
+\indexentry {actuation}{7}
+\indexentry {sensing}{7}
+\indexentry {closed loop control}{7}
+\indexentry {feedback!loop}{7}
+\indexentry {stability}{7}
+\indexentry {disturbance rejection}{7}
+\indexentry {component failures, robustness to}{7}
+\indexentry {dynamics}{7}
+\indexentry {actuation}{7}
+\indexentry {computation}{7}
+\indexentry {disturbances}{8}
+\indexentry {uncertainty!component or parameter variation}{8}
+\indexentry {uncertainty!unmodeled dynamics}{8}
+\indexentry {feedback!loop}{8}
+\indexentry {feedfoward control}{8}
+\indexentry {closed loop}{8}
+\indexentry {open loop}{8}
+\indexentry {feedback!versus control}{8}
+\indexentry {atmospheric systems}{8}
+\indexentry {feedback!in biological systems}{8}
+\indexentry {global climate dynamics}{8}
+\indexentry {ecological systems}{8}
+\indexentry {economic systems}{8}
+\indexentry {dynamics!economic systems}{8}
+\indexentry {control!theory}{8}
+\indexentry {rigor}{9}
+\indexentry {control!successes of}{9}
+\indexentry {history|see{control, history of}}{9}
+\indexentry {control!history of}{9}
+\indexentry {control!history of!control theory}{9}
+\indexentry {amplifiers}{9}
+\indexentry {industrial revolution}{9}
+\indexentry {steam engine}{9}
+\indexentry {governors}{9}
+\indexentry {centrifugal governor}{9}
+\indexentry {uncertainty!component or parameter variation}{9}
+\indexentry {Bode plots}{9}
+\indexentry {transfer functions}{9}
+\indexentry {frequency domain control}{9}
+\indexentry {feedback!loop}{9}
+\indexentry {closed loop control}{9}
+\indexentry {Nyquist plots}{9}
+\indexentry {stability}{9}
+\indexentry {phase margin}{9}
+\indexentry {gain margin}{9}
+\indexentry {disturbance rejection}{9}
+\indexentry {classical control}{9}
+\indexentry {modern control}{9}
+\indexentry {optimization}{9}
+\indexentry {state space control}{9}
+\indexentry {differential equations}{9}
+\indexentry {trajectory generation}{9}
+\indexentry {closed loop control}{9}
+\indexentry {optimal control}{9}
+\indexentry {Pontryagin, L.\ S.}{9}
+\indexentry {Bellman, R. E.}{9}
+\indexentry {Kalman filter}{9}
+\indexentry {estimation}{9}
+\indexentry {open loop control}{9}
+\indexentry {multi-variable control}{9}
+\indexentry {uncertainty}{9}
+\indexentry {operator theory}{9}
+\indexentry {mathematics!interaction with}{9}
+\indexentry {mathematics!contributions to}{9}
+\indexentry {robust control}{9}
+\indexentry {multi-variable control}{9}
+\indexentry {adaptive control}{10}
+\indexentry {nonlinear control}{10}
+\indexentry {geometric control}{10}
+\indexentry {fuzzy control}{10}
+\indexentry {hybrid systems}{10}
+\indexentry {neural networks}{10}
+\indexentry {applied mathematics}{10}
+\indexentry {physics}{10}
+\indexentry {operations research}{10}
+\indexentry {control!principles}{10}
+\indexentry {complex systems}{10}
+\indexentry {dynamics}{10}
+\indexentry {stability}{10}
+\indexentry {dynamical systems}{10}
+\indexentry {performance}{10}
+\indexentry {feedback}{10}
+\indexentry {stability}{10}
+\indexentry {disturbances}{10}
+\indexentry {uncertainty!component or parameter variation}{10}
+\indexentry {uncertainty!unmodeled dynamics}{10}
+\indexentry {unmodeled dynamics|see{uncertainty}}{10}
+\indexentry {modeling}{10}
+\indexentry {identification|see{system identification}}{10}
+\indexentry {system identification}{10}
+\indexentry {input/output models}{10}
+\indexentry {disturbances}{10}
+\indexentry {forced response}{10}
+\indexentry {interconnection}{10}
+\indexentry {dynamics}{10}
+\indexentry {input/output models}{10}
+\indexentry {uncertainty}{10}
+\indexentry {feedback}{11}
+\indexentry {uncertainty management}{11}
+\indexentry {control!technology}{11}
+\indexentry {actuation}{11}
+\indexentry {sensing}{11}
+\indexentry {computation}{11}
+\indexentry {automobiles}{11}
+\indexentry {adaptive control}{11}
+\indexentry {engine control}{11}
+\indexentry {cruise control}{11}
+\indexentry {brakes|see{antilock brakes}}{11}
+\indexentry {antilock brakes}{11}
+\indexentry {microprocessors!use, in control}{11}
+\indexentry {communications!role of, in control}{11}
+\indexentry {software!embedded}{11}
+\indexentry {control!as enabling technology}{11}
+\indexentry {reconfigurable systems}{11}
+\indexentry {software!embedded}{11}
+\indexentry {computation!ubiquitous computing}{11}
+\indexentry {ubiquitous computing}{11}
+\indexentry {communications!systems}{11}
+\indexentry {smart systems}{11}
+\indexentry {verification and validation}{12}
+\indexentry {component failures, robustness to}{12}
+\indexentry {uncertainty}{12}
+\indexentry {software!embedded}{12}
+\indexentry {computer science}{12}
+\indexentry {real-time systems}{12}
+\indexentry {hybrid systems}{12}
+\indexentry {robotics}{12}
+\indexentry {discrete mathematics}{12}
+\indexentry {natural science}{12}
+\indexentry {engineering science}{12}
+\indexentry {feedback}{12}
+\indexentry {systems perspective}{12}
+\indexentry {control!principles}{12}
+\indexentry {physics!relationship to control}{12}
+\indexentry {input/output models}{12}
+\indexentry {stability}{12}
+\indexentry {interconnection}{12}
+\indexentry {modeling}{12}
+\indexentry {dynamics}{12}
+\indexentry {model reduction}{12}
+\indexentry {disturbance rejection}{12}
+\indexentry {operations research}{12}
+\indexentry {optimization}{12}
+\indexentry {game theory}{12}
+\indexentry {resource allocation}{12}
+\indexentry {computer science!relationship to control}{13}
+\indexentry {real-time systems}{13}
+\indexentry {consumer electronics}{13}
+\indexentry {control!as enabling technology}{13}
+\indexentry {control!as hidden technology}{13}
+\indexentry {control!history of!early examples}{13}
+\indexentry {buildings, control of}{13}
+\indexentry {temperature control}{13}
+\indexentry {feedback}{13}
+\indexentry {thermostat}{13}
+\indexentry {time delay}{13}
+\indexentry {dynamics}{13}
+\indexentry {centrifugal governor}{14}
+\indexentry {thermostat}{14}
+\indexentry {Honeywell}{14}
+\indexentry {cruise control}{14}
+\indexentry {public awareness}{14}
+\indexentry {cruise control}{14}
+\indexentry {automobiles}{14}
+\indexentry {closed loop}{14}
+\indexentry {feedback}{14}
+\indexentry {integral action}{14}
+\indexentry {reliability}{14}
+\indexentry {emissions control}{14}
+\indexentry {pollution}{14}
+\indexentry {manufacturing}{14}
+\indexentry {control!as enabling technology}{14}
+\indexentry {computer numerically controlled (CNC) machining}{14}
+\indexentry {process control}{14}
+\indexentry {Internet}{14}
+\indexentry {communications!systems}{14}
+\indexentry {wireless networks}{14}
+\indexentry {power control, in communications}{14}
+\indexentry {aerospace systems|(}{14}
+\indexentry {World War II}{14}
+\indexentry {control!successes of}{14}
+\indexentry {control!as enabling technology}{14}
+\indexentry {X-29}{15}
+\indexentry {Wright Flyer}{15}
+\indexentry {precision guided weapons}{15}
+\indexentry {sensing!inertial}{15}
+\indexentry {radar}{15}
+\indexentry {global positioning system (GPS)}{15}
+\indexentry {space systems}{15}
+\indexentry {rockets}{15}
+\indexentry {control!successes of}{15}
+\indexentry {satellites}{15}
+\indexentry {satellites}{15}
+\indexentry {flight control|(}{15}
+\indexentry {control!successes of}{15}
+\indexentry {Wright Flyer}{15}
+\indexentry {pilots}{15}
+\indexentry {aircraft}{16}
+\indexentry {stability!augmentation}{16}
+\indexentry {dynamics!aircraft}{16}
+\indexentry {World War II}{16}
+\indexentry {pilots}{16}
+\indexentry {sensing!inertial}{16}
+\indexentry {reliability}{16}
+\indexentry {modeling}{16}
+\indexentry {transfer functions}{16}
+\indexentry {classical control}{16}
+\indexentry {differential equations}{16}
+\indexentry {simulation}{16}
+\indexentry {stability!augmentation}{16}
+\indexentry {modern control}{16}
+\indexentry {control!as enabling technology}{16}
+\indexentry {multi-variable control}{16}
+\indexentry {stability!augmentation}{16}
+\indexentry {redundant architectures}{16}
+\indexentry {reliability}{16}
+\indexentry {pilots}{16}
+\indexentry {fly-by-wire}{16}
+\indexentry {auto-land}{16}
+\indexentry {dynamics!aircraft}{16}
+\indexentry {safety}{16}
+\indexentry {F-16}{16}
+\indexentry {B-2}{16}
+\indexentry {X-29}{16}
+\indexentry {Wright Flyer}{16}
+\indexentry {pilots}{16}
+\indexentry {reconnaissance}{16}
+\indexentry {surveillance}{16}
+\indexentry {unmanned vehicles}{16}
+\indexentry {Wise, K. A.}{17}
+\indexentry {aircraft|(}{17}
+\indexentry {flight control}{17}
+\indexentry {control!successes of}{17}
+\indexentry {fighter aircraft|see{aircraft}}{17}
+\indexentry {missiles}{17}
+\indexentry {global positioning system (GPS)}{17}
+\indexentry {Boeing Company}{17}
+\indexentry {vignettes}{17}
+\indexentry {pilots}{17}
+\indexentry {safety}{17}
+\indexentry {fly-by-wire}{17}
+\indexentry {tailless aircraft}{17}
+\indexentry {F-15 ACTIVE}{17}
+\indexentry {X-36}{17}
+\indexentry {feedback!linearization}{17}
+\indexentry {safety}{17}
+\indexentry {neural networks}{17}
+\indexentry {adaptive control}{17}
+\indexentry {reconfigurable systems}{17}
+\indexentry {missiles}{17}
+\indexentry {munitions}{17}
+\indexentry {Joint Direct Attack Munition (JDAM)}{17}
+\indexentry {optimal control}{17}
+\indexentry {sensing}{17}
+\indexentry {autocode}{17}
+\indexentry {uncertainty}{17}
+\indexentry {software}{17}
+\indexentry {unmanned vehicles}{17}
+\indexentry {ordinance}{17}
+\indexentry {intelligent control}{17}
+\indexentry {vision guided systems}{17}
+\indexentry {path planning}{17}
+\indexentry {verification and validation}{17}
+\indexentry {logistics}{17}
+\indexentry {aircraft|)}{17}
+\indexentry {flight control|)}{17}
+\indexentry {aerospace systems|)}{17}
+\indexentry {information-based systems|(}{18}
+\indexentry {disk drives}{18}
+\indexentry {physics}{18}
+\indexentry {complex systems}{18}
+\indexentry {control!challenges}{18}
+\indexentry {decision making!logic}{18}
+\indexentry {software!embedded}{18}
+\indexentry {software}{18}
+\indexentry {verification and validation}{18}
+\indexentry {resource allocation}{18}
+\indexentry {uncertainty!in resource allocation}{18}
+\indexentry {disturbances}{18}
+\indexentry {operations research}{18}
+\indexentry {complexity}{18}
+\indexentry {Internet}{18}
+\indexentry {power control, in communications}{18}
+\indexentry {congestion control}{18}
+\indexentry {wireless networks}{18}
+\indexentry {supply chains}{18}
+\indexentry {air traffic control}{18}
+\indexentry {real-time systems}{18}
+\indexentry {communications!role of, in control}{19}
+\indexentry {feedback}{19}
+\indexentry {distributed control}{19}
+\indexentry {networking!role of, in control}{19}
+\indexentry {asynchronous systems}{19}
+\indexentry {packet-based systems}{19}
+\indexentry {uncertainty}{19}
+\indexentry {uncertainty management}{19}
+\indexentry {information-based systems}{19}
+\indexentry {complexity!managing}{19}
+\indexentry {airspace management}{20}
+\indexentry {vehicle management}{20}
+\indexentry {transportation systems}{20}
+\indexentry {mission management}{20}
+\indexentry {airspace management}{20}
+\indexentry {biology!biological networks}{20}
+\indexentry {decision making!systems}{20}
+\indexentry {information-based systems|)}{20}
+\indexentry {control!challenges|(}{20}
+\indexentry {computation!ubiquitous computing}{20}
+\indexentry {ubiquitous computing}{20}
+\indexentry {MEMS}{20}
+\indexentry {microelectronics}{20}
+\indexentry {actuation}{20}
+\indexentry {sensing}{20}
+\indexentry {data rich systems}{20}
+\indexentry {telephone system}{20}
+\indexentry {power grid, electrical}{20}
+\indexentry {Internet}{20}
+\indexentry {MEMS}{21}
+\indexentry {sensing!sensor webs}{21}
+\indexentry {sensing}{21}
+\indexentry {new domains, control in}{21}
+\indexentry {biology}{21}
+\indexentry {biological engineering}{21}
+\indexentry {education}{21}
+\indexentry {quantum systems}{21}
+\indexentry {discipline boundaries}{21}
+\indexentry {Mabuchi, H.}{21}
+\indexentry {vignettes}{21}
+\indexentry {physics}{21}
+\indexentry {dynamics}{22}
+\indexentry {model reduction}{22}
+\indexentry {multiscale systems}{22}
+\indexentry {experiments}{22}
+\indexentry {reliability}{22}
+\indexentry {reconfigurable systems}{22}
+\indexentry {component failures, robustness to}{22}
+\indexentry {disk drives}{22}
+\indexentry {complexity|(}{23}
+\indexentry {complex systems}{23}
+\indexentry {complexity!managing}{23}
+\indexentry {complexity|)}{23}
+\indexentry {neuroscience}{23}
+\indexentry {ubiquitous computing}{23}
+\indexentry {computation!ubiquitous computing}{23}
+\indexentry {communications!integration of control and}{23}
+\indexentry {computation!integration of control and}{23}
+\indexentry {hybrid systems}{23}
+\indexentry {networks}{23}
+\indexentry {protocols}{23}
+\indexentry {autonomous systems}{23}
+\indexentry {path planning}{23}
+\indexentry {regulation}{23}
+\indexentry {tracking}{23}
+\indexentry {obstacle avoidance}{23}
+\indexentry {decision making!higher level}{23}
+\indexentry {robotics}{24}
+\indexentry {symbolic dynamics}{24}
+\indexentry {protocols}{24}
+\indexentry {linguistics}{24}
+\indexentry {new domains, control in}{24}
+\indexentry {quantum systems}{24}
+\indexentry {environmental science}{24}
+\indexentry {biology}{24}
+\indexentry {economic systems}{24}
+\indexentry {enterprise level systems}{24}
+\indexentry {education}{24}
+\indexentry {math and science education}{24}
+\indexentry {software}{24}
+\indexentry {systems engineering}{24}
+\indexentry {biology}{24}
+\indexentry {computer science}{24}
+\indexentry {discipline boundaries}{24}
+\indexentry {economics}{24}
+\indexentry {molecular biology}{24}
+\indexentry {environmental science}{24}
+\indexentry {operations research}{24}
+\indexentry {psychology}{24}
+\indexentry {software}{24}
+\indexentry {verification and validation}{24}
+\indexentry {logistics}{24}
+\indexentry {compactification}{24}
+\indexentry {accessibility, broadening}{24}
+\indexentry {education}{24}
+\indexentry {math and science education}{24}
+\indexentry {K-12 education}{25}
+\indexentry {control!principles}{25}
+\indexentry {mathematics}{25}
+\indexentry {simulation}{25}
+\indexentry {optimization}{25}
+\indexentry {heuristics}{25}
+\indexentry {experiments}{25}
+\indexentry {systems engineering}{25}
+\indexentry {control!challenges|)}{25}
+\indexentry {control!challenges}{27}
+\indexentry {overarching themes}{27}
+\indexentry {communications!integration of control and}{27}
+\indexentry {computer science!interaction of control and}{27}
+\indexentry {rigor}{27}
+\indexentry {decision making!systems}{28}
+\indexentry {complex systems}{28}
+\indexentry {symbolic dynamics}{28}
+\indexentry {aerospace systems|(}{29}
+\indexentry {transportation systems|(}{29}
+\indexentry {Wright, Wilbur}{29}
+\indexentry {control!as enabling technology}{29}
+\indexentry {control!history of!aerospace}{29}
+\indexentry {aircraft}{29}
+\indexentry {Wright Flyer}{29}
+\indexentry {pilots}{29}
+\indexentry {control!successes of}{29}
+\indexentry {flight control}{29}
+\indexentry {autopilot}{29}
+\indexentry {World War II}{29}
+\indexentry {radar}{29}
+\indexentry {precision guided weapons}{29}
+\indexentry {space systems}{29}
+\indexentry {control!successes of}{29}
+\indexentry {automobiles}{29}
+\indexentry {fuel economy}{29}
+\indexentry {safety}{29}
+\indexentry {reliability}{29}
+\indexentry {emissions control}{30}
+\indexentry {cruise control}{30}
+\indexentry {control!successes of}{30}
+\indexentry {automotive systems}{30}
+\indexentry {vignettes}{30}
+\indexentry {Barron, M. B.}{30}
+\indexentry {Powers, W. F.}{30}
+\indexentry {control!successes of}{30}
+\indexentry {engine control}{30}
+\indexentry {emissions control}{30}
+\indexentry {mechatronics}{30}
+\indexentry {environmental regulations}{30}
+\indexentry {fuel economy}{30}
+\indexentry {microprocessors!use, in control}{30}
+\indexentry {temperature control}{30}
+\indexentry {catalytic converter}{30}
+\indexentry {mechatronics}{31}
+\indexentry {antilock brakes}{31}
+\indexentry {reliability}{31}
+\indexentry {public awareness}{31}
+\indexentry {flight control}{31}
+\indexentry {F-18}{32}
+\indexentry {X-45}{32}
+\indexentry {fly-by-wire}{32}
+\indexentry {unmanned vehicles}{32}
+\indexentry {modeling}{32}
+\indexentry {dynamics!aircraft}{32}
+\indexentry {dynamics}{32}
+\indexentry {feedback!loop}{32}
+\indexentry {control!challenges}{32}
+\indexentry {differential equations}{33}
+\indexentry {dynamics}{33}
+\indexentry {aircraft}{33}
+\indexentry {vehicle management}{33}
+\indexentry {health status, system}{33}
+\indexentry {inner loop}{33}
+\indexentry {outer loop}{33}
+\indexentry {regulation}{33}
+\indexentry {regulation}{33}
+\indexentry {pilots}{33}
+\indexentry {unmanned vehicles}{33}
+\indexentry {safety}{33}
+\indexentry {reconnaissance}{33}
+\indexentry {surveillance}{33}
+\indexentry {defense systems}{33}
+\indexentry {vehicle management}{33}
+\indexentry {mission management}{33}
+\indexentry {simulation}{33}
+\indexentry {hybrid systems}{33}
+\indexentry {dynamical systems}{33}
+\indexentry {heuristics}{33}
+\indexentry {aircraft}{33}
+\indexentry {auto-land}{33}
+\indexentry {reliability}{33}
+\indexentry {B-2}{33}
+\indexentry {F-16}{33}
+\indexentry {F-16}{34}
+\indexentry {B-2}{34}
+\indexentry {distributed control}{34}
+\indexentry {battlefield management}{34}
+\indexentry {intelligent highways}{34}
+\indexentry {command and control}{34}
+\indexentry {airspace management}{34}
+\indexentry {distributed control}{34}
+\indexentry {air traffic control}{34}
+\indexentry {sensing}{35}
+\indexentry {hierarchical control}{35}
+\indexentry {global positioning system (GPS)}{35}
+\indexentry {verification and validation}{35}
+\indexentry {automotive systems}{35}
+\indexentry {hybrid cars}{35}
+\indexentry {automobiles}{35}
+\indexentry {inner loop}{35}
+\indexentry {fuel cells}{35}
+\indexentry {safety}{35}
+\indexentry {automotive systems|(}{35}
+\indexentry {microprocessors!use, in control}{35}
+\indexentry {engine control}{35}
+\indexentry {emissions control}{35}
+\indexentry {radar}{35}
+\indexentry {chassis control}{35}
+\indexentry {safety}{36}
+\indexentry {energy systems}{36}
+\indexentry {networks}{36}
+\indexentry {diagnostics}{36}
+\indexentry {chassis control}{36}
+\indexentry {intelligent highways}{36}
+\indexentry {communications!systems}{36}
+\indexentry {automotive systems|)}{36}
+\indexentry {time delay}{36}
+\indexentry {propulsion systems}{36}
+\indexentry {gas turbine engines}{36}
+\indexentry {health status, system}{36}
+\indexentry {asset management}{36}
+\indexentry {modeling!embedded}{37}
+\indexentry {fault tolerance}{37}
+\indexentry {diagnostics}{37}
+\indexentry {prognostics}{37}
+\indexentry {model reduction}{37}
+\indexentry {modeling!embedded}{37}
+\indexentry {optimization!online}{37}
+\indexentry {flow control}{37}
+\indexentry {combustion systems}{37}
+\indexentry {gas turbine engines}{37}
+\indexentry {actuation!flow control}{37}
+\indexentry {sensing}{37}
+\indexentry {MEMS}{37}
+\indexentry {hypersonic flight systems}{37}
+\indexentry {control!as enabling technology}{37}
+\indexentry {space systems}{37}
+\indexentry {tracking}{37}
+\indexentry {performance}{38}
+\indexentry {modeling!space systems}{38}
+\indexentry {disturbance rejection}{38}
+\indexentry {flexible structures}{38}
+\indexentry {formation control}{38}
+\indexentry {flexible structures}{38}
+\indexentry {dynamics!space systems}{38}
+\indexentry {formation control}{38}
+\indexentry {networks}{38}
+\indexentry {actuation!space systems}{38}
+\indexentry {interferometry}{38}
+\indexentry {sensing}{38}
+\indexentry {simulation}{38}
+\indexentry {verification and validation}{38}
+\indexentry {aerospace systems|)}{38}
+\indexentry {transportation systems|)}{38}
+\indexentry {Jacobson, V.}{39}
+\indexentry {regulation}{39}
+\indexentry {control!challenges}{39}
+\indexentry {networks!control of|(}{39}
+\indexentry {networking!integration of control and}{39}
+\indexentry {Internet}{39}
+\indexentry {decentralized control}{39}
+\indexentry {time delay}{39}
+\indexentry {uncertainty!in networks}{39}
+\indexentry {resource allocation}{39}
+\indexentry {performance}{39}
+\indexentry {optimal network caching}{39}
+\indexentry {time delay}{39}
+\indexentry {caching, optimal network}{39}
+\indexentry {decentralized control}{40}
+\indexentry {asynchronous systems}{40}
+\indexentry {adaptation}{40}
+\indexentry {packet-based systems}{40}
+\indexentry {transport control protocol (TCP)}{40}
+\indexentry {protocols}{40}
+\indexentry {TCP|see{transport control protocol}}{40}
+\indexentry {congestion control}{40}
+\indexentry {distributed control}{40}
+\indexentry {routing algorithms, for networks}{40}
+\indexentry {dynamics!networks}{41}
+\indexentry {Internet protocol (IP)}{41}
+\indexentry {protocols}{41}
+\indexentry {IP|see{Internet protocol}}{41}
+\indexentry {routing algorithms, for networks}{41}
+\indexentry {asynchronous systems}{41}
+\indexentry {uncertainty!in networks}{41}
+\indexentry {time delay}{41}
+\indexentry {distributed control}{41}
+\indexentry {wireless networks}{41}
+\indexentry {load balancing, in networks}{41}
+\indexentry {ad hoc networks@{\it ad hoc} networks}{41}
+\indexentry {wireless networks}{41}
+\indexentry {power control, in communications}{41}
+\indexentry {protocols}{41}
+\indexentry {air traffic control}{41}
+\indexentry {supply chains}{42}
+\indexentry {networks!control of|)}{42}
+\indexentry {networks!control over|(}{42}
+\indexentry {automobiles}{42}
+\indexentry {sensing!sensor webs}{42}
+\indexentry {intelligent highways}{42}
+\indexentry {supply chains}{42}
+\indexentry {logistics}{42}
+\indexentry {enterprise level systems}{42}
+\indexentry {Kumar, P.~ R.}{42}
+\indexentry {abstraction}{42}
+\indexentry {communications!integration of control and}{42}
+\indexentry {computation!integration of control and}{42}
+\indexentry {networking!integration of control and}{42}
+\indexentry {vignettes}{42}
+\indexentry {Internet}{42}
+\indexentry {protocols}{42}
+\indexentry {plug-and-play architecture}{42}
+\indexentry {sensing!in communications networks}{43}
+\indexentry {communications!systems}{43}
+\indexentry {uncertainty!component or parameter variation}{43}
+\indexentry {time delay}{43}
+\indexentry {asynchronous systems}{43}
+\indexentry {packet-based systems}{43}
+\indexentry {distributed control}{43}
+\indexentry {self-configuring systems}{43}
+\indexentry {component failures, robustness to}{43}
+\indexentry {protocols}{43}
+\indexentry {reliability}{43}
+\indexentry {safety}{43}
+\indexentry {packet-based systems}{43}
+\indexentry {distributed control}{43}
+\indexentry {reliability}{43}
+\indexentry {sensing}{43}
+\indexentry {time delay}{43}
+\indexentry {self-configuring systems}{44}
+\indexentry {Bode plots}{44}
+\indexentry {amplifiers}{44}
+\indexentry {transfer functions}{44}
+\indexentry {frequency domain control}{44}
+\indexentry {Lyapunov functions}{44}
+\indexentry {Boyd, S. P.}{44}
+\indexentry {vignettes}{44}
+\indexentry {Lyapunov functions}{44}
+\indexentry {control Lyapunov functions}{44}
+\indexentry {value function}{44}
+\indexentry {Bellman, R. E.}{44}
+\indexentry {Pontryagin, L.\ S.}{44}
+\indexentry {asynchronous systems}{45}
+\indexentry {control Lyapunov functions}{45}
+\indexentry {model predictive control}{45}
+\indexentry {packet-based systems}{45}
+\indexentry {optimization!online}{45}
+\indexentry {process control}{45}
+\indexentry {networks!control over|)}{45}
+\indexentry {software!embedded}{45}
+\indexentry {adversarial environments}{45}
+\indexentry {vigilant software}{45}
+\indexentry {software!systems}{45}
+\indexentry {high confidence systems}{45}
+\indexentry {modeling!embedded}{45}
+\indexentry {sensing!in software systems}{45}
+\indexentry {uncertainty management}{46}
+\indexentry {sorting}{46}
+\indexentry {feedback}{46}
+\indexentry {self-configuring systems}{46}
+\indexentry {disturbance rejection}{46}
+\indexentry {verification and validation}{46}
+\indexentry {software!systems}{46}
+\indexentry {protocols}{46}
+\indexentry {formal methods}{46}
+\indexentry {optimization}{46}
+\indexentry {hybrid systems}{47}
+\indexentry {formal methods}{47}
+\indexentry {supply chains}{47}
+\indexentry {enterprise level systems}{47}
+\indexentry {reconfigurable systems}{47}
+\indexentry {HVAC systems}{47}
+\indexentry {energy systems}{47}
+\indexentry {real-time systems}{47}
+\indexentry {buildings, control of}{47}
+\indexentry {electrical power}{47}
+\indexentry {asset management}{47}
+\indexentry {uncertainty!in resource allocation}{47}
+\indexentry {command and control}{47}
+\indexentry {distributed control}{47}
+\indexentry {real-time systems}{47}
+\indexentry {optimization}{47}
+\indexentry {enterprise level systems}{47}
+\indexentry {modeling!embedded}{47}
+\indexentry {fault tolerance}{47}
+\indexentry {networks!control over}{47}
+\indexentry {C4ISR}{47}
+\indexentry {command and control}{47}
+\indexentry {adversarial environments}{47}
+\indexentry {asset management}{47}
+\indexentry {surveillance}{47}
+\indexentry {reconnaissance}{47}
+\indexentry {uncertainty!in resource allocation}{47}
+\indexentry {adversarial environments}{48}
+\indexentry {intelligent machines|see{robotics}}{49}
+\indexentry {machines, intelligent|see{robotics}}{49}
+\indexentry {robotics|(}{49}
+\indexentry {sensing!in biological systems}{49}
+\indexentry {Wiener, Norbert}{49}
+\indexentry {feedback}{49}
+\indexentry {manufacturing}{49}
+\indexentry {unmanned vehicles}{49}
+\indexentry {control!history of!robotics}{49}
+\indexentry {robotics!history of}{49}
+\indexentry {cybernetics}{49}
+\indexentry {Wiener, Norbert}{49}
+\indexentry {Tsien, H.~S.}{49}
+\indexentry {missiles}{49}
+\indexentry {computer numerically controlled (CNC) machining}{49}
+\indexentry {World War II}{49}
+\indexentry {master-slave mechanisms}{49}
+\indexentry {sensing!in robotic systems}{49}
+\indexentry {manufacturing!robots for}{49}
+\indexentry {automation|see{manufacturing}}{49}
+\indexentry {computer science}{49}
+\indexentry {manufacturing}{49}
+\indexentry {artificial intelligence}{49}
+\indexentry {reasoning, higher level}{50}
+\indexentry {Mars rover}{50}
+\indexentry {Sony AIBO}{50}
+\indexentry {AIBO robot}{50}
+\indexentry {control!successes of}{50}
+\indexentry {artificial intelligence}{50}
+\indexentry {entertainment}{50}
+\indexentry {Robotics and Automation Society, IEEE}{50}
+\indexentry {Computer Society, IEEE}{50}
+\indexentry {Control Systems Society (CSS), IEEE}{50}
+\indexentry {satellites}{51}
+\indexentry {artificial intelligence}{51}
+\indexentry {unmanned vehicles}{51}
+\indexentry {underwater vehicles}{51}
+\indexentry {satellites}{51}
+\indexentry {adaptation}{51}
+\indexentry {reasoning, higher level}{51}
+\indexentry {artificial intelligence}{51}
+\indexentry {teams!control of}{51}
+\indexentry {Wiener, Norbert}{51}
+\indexentry {sensing!in robotic systems}{51}
+\indexentry {actuation}{51}
+\indexentry {learning}{51}
+\indexentry {adaptation}{51}
+\indexentry {reasoning, higher level}{51}
+\indexentry {decision making!higher level}{51}
+\indexentry {control!challenges}{51}
+\indexentry {automotive systems}{51}
+\indexentry {automobiles}{51}
+\indexentry {manufacturing}{51}
+\indexentry {autonomous systems}{51}
+\indexentry {vision guided systems}{51}
+\indexentry {control!successes of}{51}
+\indexentry {computer science}{51}
+\indexentry {psychology}{51}
+\indexentry {neuroscience}{51}
+\indexentry {motion control}{51}
+\indexentry {modeling!robotics}{51}
+\indexentry {software!motion control}{51}
+\indexentry {adaptation}{52}
+\indexentry {learning}{52}
+\indexentry {man-machine systems}{52}
+\indexentry {entertainment}{52}
+\indexentry {cooperative control}{52}
+\indexentry {defense systems}{52}
+\indexentry {teams!control of}{52}
+\indexentry {surveillance}{52}
+\indexentry {logistics}{52}
+\indexentry {D'Andrea, R.}{52}
+\indexentry {RoboCup}{52}
+\indexentry {adversarial environments}{52}
+\indexentry {artificial intelligence}{52}
+\indexentry {autonomous systems}{52}
+\indexentry {vignettes}{52}
+\indexentry {testbeds}{52}
+\indexentry {robotics}{52}
+\indexentry {competitions, student}{52}
+\indexentry {teams!control of}{52}
+\indexentry {systems engineering}{53}
+\indexentry {dynamics}{53}
+\indexentry {hierarchical control}{53}
+\indexentry {discipline boundaries}{53}
+\indexentry {estimation}{53}
+\indexentry {trajectory generation}{53}
+\indexentry {time delay}{53}
+\indexentry {latency|see{time delay}}{53}
+\indexentry {heuristics}{54}
+\indexentry {dynamics}{54}
+\indexentry {communications!integration of control and}{54}
+\indexentry {vision guided systems}{54}
+\indexentry {protocols}{54}
+\indexentry {distributed control}{54}
+\indexentry {communications!systems}{54}
+\indexentry {unstructured environments}{54}
+\indexentry {reasoning, higher level}{54}
+\indexentry {remote exploration}{54}
+\indexentry {mixed initiative systems}{54}
+\indexentry {human interfaces|see{man-machine systems}}{54}
+\indexentry {man-machine systems}{55}
+\indexentry {variable autonomy}{55}
+\indexentry {autonomous systems}{55}
+\indexentry {man-machine systems}{55}
+\indexentry {air traffic control}{55}
+\indexentry {command and control}{55}
+\indexentry {pilots}{55}
+\indexentry {airspace management}{55}
+\indexentry {reasoning, higher level}{55}
+\indexentry {sensing!in robotic systems}{55}
+\indexentry {data rich systems}{55}
+\indexentry {physiology}{55}
+\indexentry {manufacturing}{55}
+\indexentry {vision guided systems}{55}
+\indexentry {self-configuring systems}{55}
+\indexentry {adaptation}{55}
+\indexentry {active vision}{55}
+\indexentry {human motion, understanding}{56}
+\indexentry {system identification}{56}
+\indexentry {reasoning, higher level}{56}
+\indexentry {medicine!robotics for|(}{56}
+\indexentry {minimally invasive surgery}{56}
+\indexentry {Robodoc}{56}
+\indexentry {DaVinci surgical system}{56}
+\indexentry {ZEUS robotic surgical system}{56}
+\indexentry {fault tolerance}{56}
+\indexentry {reliability}{56}
+\indexentry {verification and validation}{56}
+\indexentry {man-machine systems}{57}
+\indexentry {medicine!robotics for|)}{57}
+\indexentry {robotics|)}{57}
+\indexentry {biology|(}{58}
+\indexentry {temperature control}{58}
+\indexentry {regulation}{58}
+\indexentry {Hoagland, M. B.}{58}
+\indexentry {Dodson, B.}{58}
+\indexentry {feedback!in biological systems}{58}
+\indexentry {biological engineering}{58}
+\indexentry {control!challenges}{58}
+\indexentry {locomotion}{58}
+\indexentry {reverse engineering}{58}
+\indexentry {active vision}{58}
+\indexentry {population models}{58}
+\indexentry {modeling!population models}{58}
+\indexentry {epidemics}{58}
+\indexentry {medicine}{58}
+\indexentry {flow control}{58}
+\indexentry {image guided surgery}{58}
+\indexentry {neural prosthesis}{58}
+\indexentry {molecular biology|(}{58}
+\indexentry {biomolecular systems|see{molecular biology}}{58}
+\indexentry {genomics}{58}
+\indexentry {DNA}{58}
+\indexentry {proteomics}{58}
+\indexentry {proteins}{58}
+\indexentry {cellular signaling networks}{59}
+\indexentry {networks!biological cell}{59}
+\indexentry {cellular signaling networks}{59}
+\indexentry {reverse engineering}{59}
+\indexentry {estimation}{59}
+\indexentry {system identification}{59}
+\indexentry {stability!cellular signaling networks}{59}
+\indexentry {drug dosage scheduling}{60}
+\indexentry {modeling!biology}{60}
+\indexentry {genomics}{60}
+\indexentry {proteomics}{60}
+\indexentry {feedback!in biological systems}{60}
+\indexentry {uncertainty!in biological systems}{60}
+\indexentry {feedback!loop}{60}
+\indexentry {E.~coli@{\it E.~coli}}{60}
+\indexentry {regulation}{60}
+\indexentry {proteins}{60}
+\indexentry {uncertainty!in biological systems}{60}
+\indexentry {experiments}{60}
+\indexentry {regulation}{60}
+\indexentry {chemotaxis}{60}
+\indexentry {E.~coli@{\it E.~coli}}{60}
+\indexentry {bacteria}{60}
+\indexentry {adaptation}{60}
+\indexentry {control!principles}{60}
+\indexentry {integral action}{61}
+\indexentry {disturbance rejection}{61}
+\indexentry {genetics}{61}
+\indexentry {hybrid systems}{61}
+\indexentry {modeling!biology}{61}
+\indexentry {bacteria}{61}
+\indexentry {dynamical systems}{61}
+\indexentry {molecular biology|)}{61}
+\indexentry {integrative biology|(}{61}
+\indexentry {locomotion}{61}
+\indexentry {control!principles}{61}
+\indexentry {control!as enabling technology}{61}
+\indexentry {animals|see{integrative biology}}{61}
+\indexentry {insects|see{integrative biology}}{61}
+\indexentry {feedforward control}{61}
+\indexentry {dynamics!locomotion systems}{61}
+\indexentry {feedback!in biological systems}{61}
+\indexentry {sensing!in biological systems}{62}
+\indexentry {Drosophila}{62}
+\indexentry {sensing!in biological systems}{62}
+\indexentry {flight control!insect}{62}
+\indexentry {autonomous systems}{62}
+\indexentry {fault tolerance}{62}
+\indexentry {modeling!biology}{63}
+\indexentry {multiscale systems}{63}
+\indexentry {communications!integration of control and}{63}
+\indexentry {integrative biology|)}{63}
+\indexentry {medicine|(}{63}
+\indexentry {biomedicine|see{medicine}}{63}
+\indexentry {image guided surgery}{63}
+\indexentry {minimally invasive surgery}{63}
+\indexentry {active vision}{63}
+\indexentry {segmentation of images}{63}
+\indexentry {registration of images}{63}
+\indexentry {active vision}{64}
+\indexentry {Kalman filter}{64}
+\indexentry {data rich systems}{64}
+\indexentry {magnetic resonance imagery (MRI)}{64}
+\indexentry {registration of images}{64}
+\indexentry {biology|)}{64}
+\indexentry {medicine|)}{64}
+\indexentry {materials|(}{65}
+\indexentry {processing, chemical|(}{65}
+\indexentry {manufacturing}{65}
+\indexentry {process control}{65}
+\indexentry {thin films}{65}
+\indexentry {microelectronics}{65}
+\indexentry {biomaterials}{65}
+\indexentry {supply chains}{65}
+\indexentry {enterprise level systems}{65}
+\indexentry {resource allocation}{65}
+\indexentry {control!history of!process control}{65}
+\indexentry {process control!history of}{65}
+\indexentry {automobiles}{65}
+\indexentry {disk drives}{65}
+\indexentry {microprocessors!manufacturing of}{65}
+\indexentry {multi-variable control}{66}
+\indexentry {paper machine control}{66}
+\indexentry {constraints, actuator}{66}
+\indexentry {model predictive control}{66}
+\indexentry {Honeywell}{66}
+\indexentry {control!challenges}{66}
+\indexentry {modeling!materials and processing}{66}
+\indexentry {multiscale systems}{66}
+\indexentry {microelectronics}{66}
+\indexentry {control!as enabling technology}{66}
+\indexentry {pharmaceuticals}{66}
+\indexentry {crystallization}{67}
+\indexentry {environmental regulations}{67}
+\indexentry {process control}{67}
+\indexentry {pollution}{67}
+\indexentry {supply chains}{67}
+\indexentry {sensing!in process control systems}{67}
+\indexentry {data rich systems}{68}
+\indexentry {sensor rich systems|see{data rich systems}}{68}
+\indexentry {complexity}{68}
+\indexentry {uncertainty}{68}
+\indexentry {dynamics!processing systems}{68}
+\indexentry {constraints, actuator}{68}
+\indexentry {stochastic systems}{68}
+\indexentry {differential equations}{68}
+\indexentry {partial differential equations (PDEs)|see{differential equations}}{68}
+\indexentry {modeling!materials and processing}{68}
+\indexentry {microelectronics}{68}
+\indexentry {differential equations}{68}
+\indexentry {simulation}{68}
+\indexentry {uncertainty}{68}
+\indexentry {particulate systems|(}{68}
+\indexentry {agriculture}{68}
+\indexentry {pharmaceuticals}{68}
+\indexentry {population models}{68}
+\indexentry {modeling!population models}{68}
+\indexentry {differential equations}{68}
+\indexentry {real-time systems}{68}
+\indexentry {population models}{68}
+\indexentry {modeling!population models}{68}
+\indexentry {sensing!in process control systems}{68}
+\indexentry {polymers|(}{69}
+\indexentry {coatings}{69}
+\indexentry {sensing!in process control systems}{69}
+\indexentry {polymers|)}{69}
+\indexentry {granulation|(}{69}
+\indexentry {modeling!materials and processing}{69}
+\indexentry {multiscale systems}{69}
+\indexentry {regulation}{70}
+\indexentry {granulation|)}{70}
+\indexentry {profile control|(}{70}
+\indexentry {paper machine control}{70}
+\indexentry {regulation}{70}
+\indexentry {paper machine control}{70}
+\indexentry {profile control|)}{70}
+\indexentry {particulate systems|)}{70}
+\indexentry {biotechnology|(}{70}
+\indexentry {control!as enabling technology}{70}
+\indexentry {process control}{70}
+\indexentry {sensing!in biological systems}{70}
+\indexentry {bioreactor control}{70}
+\indexentry {temperature control}{70}
+\indexentry {intracellular signaling}{70}
+\indexentry {systems engineering}{71}
+\indexentry {cybernetics}{71}
+\indexentry {regulation}{71}
+\indexentry {modeling!biology}{71}
+\indexentry {population models}{71}
+\indexentry {modeling!population models}{71}
+\indexentry {DNA}{71}
+\indexentry {proteins}{71}
+\indexentry {E.~coli@{\it E.~coli}}{71}
+\indexentry {genetics}{71}
+\indexentry {biology}{71}
+\indexentry {bacteria}{71}
+\indexentry {biotechnology|)}{71}
+\indexentry {materials|)}{71}
+\indexentry {processing, chemical|)}{71}
+\indexentry {environmental science}{72}
+\indexentry {global climate dynamics}{72}
+\indexentry {dynamics!environmental systems}{72}
+\indexentry {multiscale systems}{72}
+\indexentry {atmospheric systems}{72}
+\indexentry {inverse modeling}{72}
+\indexentry {modeling!inverse}{72}
+\indexentry {pollution}{72}
+\indexentry {differential equations}{72}
+\indexentry {inverse modeling}{72}
+\indexentry {modeling!inverse}{72}
+\indexentry {uncertainty}{72}
+\indexentry {microbiological ecosystems}{72}
+\indexentry {biofilms}{72}
+\indexentry {genetics}{72}
+\indexentry {gene regulatory networks}{72}
+\indexentry {bacteria}{72}
+\indexentry {regulation!gene regulatory networks}{72}
+\indexentry {networks!ecological}{73}
+\indexentry {ecological systems}{73}
+\indexentry {bacteria}{73}
+\indexentry {sensing!in biological systems}{73}
+\indexentry {physiology}{73}
+\indexentry {ecosystems|see{microbiological ecosystems}}{73}
+\indexentry {feedback!in biological systems}{73}
+\indexentry {economic systems}{73}
+\indexentry {game theory}{74}
+\indexentry {options, financial}{74}
+\indexentry {stochastic systems}{74}
+\indexentry {optimal control}{74}
+\indexentry {dynamics!economic systems}{74}
+\indexentry {uncertainty!in economic systems}{74}
+\indexentry {operations research}{74}
+\indexentry {securities, financial}{74}
+\indexentry {options, financial}{74}
+\indexentry {modeling!economic systems}{74}
+\indexentry {uncertainty!in economic systems}{74}
+\indexentry {electromagnetics}{75}
+\indexentry {adaptive optics}{75}
+\indexentry {wavefront control}{75}
+\indexentry {antenna arrays}{75}
+\indexentry {electromagnetic nulling, active}{75}
+\indexentry {radar}{75}
+\indexentry {defense systems}{75}
+\indexentry {stealth}{75}
+\indexentry {multistatic radar systems}{75}
+\indexentry {antenna arrays}{75}
+\indexentry {directed energy systems}{75}
+\indexentry {cellular phones}{75}
+\indexentry {distributed control}{75}
+\indexentry {communications!systems}{75}
+\indexentry {multistatic radar systems}{75}
+\indexentry {radar!multistatic}{75}
+\indexentry {sensing!electromagnetic fields}{75}
+\indexentry {infrared signatures}{75}
+\indexentry {gas turbine engines}{75}
+\indexentry {nanotechnology}{75}
+\indexentry {quantum systems}{75}
+\indexentry {physics}{75}
+\indexentry {simulation}{75}
+\indexentry {actuation!nanoscale}{76}
+\indexentry {coatings}{76}
+\indexentry {materials}{76}
+\indexentry {manufacturing}{76}
+\indexentry {data rich systems}{76}
+\indexentry {diagnostics}{76}
+\indexentry {adaptation}{76}
+\indexentry {closed loop control}{76}
+\indexentry {learning}{76}
+\indexentry {system identification}{76}
+\indexentry {quantum systems}{76}
+\indexentry {energy systems|(}{76}
+\indexentry {reliability}{76}
+\indexentry {power grid, electrical}{76}
+\indexentry {reliability}{76}
+\indexentry {communications!systems}{76}
+\indexentry {networks}{76}
+\indexentry {real-time systems}{77}
+\indexentry {regulation}{77}
+\indexentry {satellites}{77}
+\indexentry {cascade failures}{77}
+\indexentry {complex systems}{77}
+\indexentry {simulation}{77}
+\indexentry {protocols}{77}
+\indexentry {autonomous systems}{77}
+\indexentry {cascade failures}{77}
+\indexentry {simulation}{77}
+\indexentry {distributed control}{77}
+\indexentry {dynamical systems}{77}
+\indexentry {fuel cells}{77}
+\indexentry {gas turbine engines}{77}
+\indexentry {energy systems|)}{77}
+\indexentry {education|(}{79}
+\indexentry {National Science Foundation (NSF)}{79}
+\indexentry {Control Systems Society (CSS), IEEE}{79}
+\indexentry {courses!shared}{79}
+\indexentry {applied mathematics}{79}
+\indexentry {operations research}{79}
+\indexentry {optimal control}{79}
+\indexentry {stochastic systems}{79}
+\indexentry {systems engineering}{79}
+\indexentry {new domains, control in}{79}
+\indexentry {biology}{80}
+\indexentry {computer science}{80}
+\indexentry {physics}{80}
+\indexentry {economics}{80}
+\indexentry {quantum systems}{80}
+\indexentry {discipline boundaries}{80}
+\indexentry {control!challenges}{80}
+\indexentry {curriculum development}{80}
+\indexentry {courses!broader audiences}{80}
+\indexentry {cross-disciplinary research centers}{80}
+\indexentry {University of Maryland}{80}
+\indexentry {University of Illinois, Urbana-Champaign}{80}
+\indexentry {University of California, Santa Barbara}{80}
+\indexentry {courses!shared}{80}
+\indexentry {M.S.\ programs}{80}
+\indexentry {Ph.D.\ programs}{80}
+\indexentry {Caltech}{80}
+\indexentry {discipline boundaries}{80}
+\indexentry {Washington University}{80}
+\indexentry {regional alliances}{80}
+\indexentry {outreach|(}{81}
+\indexentry {accessibility, broadening|(}{81}
+\indexentry {control!principles}{81}
+\indexentry {new domains, control in}{81}
+\indexentry {textbooks}{81}
+\indexentry {discipline boundaries}{81}
+\indexentry {biology}{81}
+\indexentry {computer science}{81}
+\indexentry {environmental science}{81}
+\indexentry {physics}{81}
+\indexentry {differential equations}{81}
+\indexentry {Murray, R. M.}{81}
+\indexentry {Morgansen, K. A.}{81}
+\indexentry {vignettes}{81}
+\indexentry {accessibility, broadening}{81}
+\indexentry {courses!undergraduate}{81}
+\indexentry {Caltech}{81}
+\indexentry {discipline boundaries}{81}
+\indexentry {control!principles}{81}
+\indexentry {feedback}{81}
+\indexentry {uncertainty management}{81}
+\indexentry {dynamics}{81}
+\indexentry {modeling}{81}
+\indexentry {model reduction}{82}
+\indexentry {differential equations}{82}
+\indexentry {MATLAB}{82}
+\indexentry {SIMULINK}{82}
+\indexentry {curriculum development}{82}
+\indexentry {dynamics}{82}
+\indexentry {linear systems}{82}
+\indexentry {courses!undergraduate}{82}
+\indexentry {physics}{82}
+\indexentry {software!control}{82}
+\indexentry {classical control}{82}
+\indexentry {modern control}{82}
+\indexentry {nonlinear control}{83}
+\indexentry {adaptive control}{83}
+\indexentry {hybrid systems}{83}
+\indexentry {MATLAB}{83}
+\indexentry {simulation}{83}
+\indexentry {SIMULINK}{83}
+\indexentry {Modelica}{83}
+\indexentry {accessibility, broadening|)}{83}
+\indexentry {accessibility, broadening}{83}
+\indexentry {curriculum development}{83}
+\indexentry {complex systems}{83}
+\indexentry {textbooks}{83}
+\indexentry {compactification}{83}
+\indexentry {control!principles}{83}
+\indexentry {systems perspective}{83}
+\indexentry {complex systems}{83}
+\indexentry {teams!working in}{83}
+\indexentry {domain knowledge}{83}
+\indexentry {RoboCup}{83}
+\indexentry {FIRST}{83}
+\indexentry {competitions, student}{83}
+\indexentry {domain knowledge}{83}
+\indexentry {experiments}{84}
+\indexentry {new domains, control in}{84}
+\indexentry {K-12 education}{84}
+\indexentry {math and science education}{84}
+\indexentry {antilock brakes}{84}
+\indexentry {experiments}{84}
+\indexentry {microprocessors!use, in control}{84}
+\indexentry {dynamics}{84}
+\indexentry {National Science Foundation (NSF)}{84}
+\indexentry {curriculum development!K-12}{84}
+\indexentry {teaching materials}{84}
+\indexentry {discipline boundaries}{84}
+\indexentry {Consortium for Mathematics and Its Applications (COMAP)}{84}
+\indexentry {Eisenhower National Clearinghouse}{84}
+\indexentry {thermostat}{84}
+\indexentry {governors}{84}
+\indexentry {applied mathematics}{85}
+\indexentry {differential equations}{85}
+\indexentry {dynamical systems}{85}
+\indexentry {biology}{85}
+\indexentry {physics}{85}
+\indexentry {chemistry}{85}
+\indexentry {teaching materials}{85}
+\indexentry {teachers, K-12}{85}
+\indexentry {curriculum development!K-12}{85}
+\indexentry {Scientific American}{85}
+\indexentry {cruise control}{85}
+\indexentry {manufacturing}{85}
+\indexentry {control!principles}{85}
+\indexentry {amplifiers}{85}
+\indexentry {congestion control}{85}
+\indexentry {feedback}{85}
+\indexentry {control!successes of}{85}
+\indexentry {communications!systems}{85}
+\indexentry {public awareness}{85}
+\indexentry {control!as hidden technology}{86}
+\indexentry {artificial intelligence}{86}
+\indexentry {robotics}{86}
+\indexentry {computer science}{86}
+\indexentry {public awareness}{86}
+\indexentry {dynamics}{86}
+\indexentry {books!popular}{86}
+\indexentry {textbooks}{86}
+\indexentry {dynamical systems}{86}
+\indexentry {control!history of}{86}
+\indexentry {multimedia tools}{86}
+\indexentry {teaching materials}{86}
+\indexentry {Rugh, W. J.}{86}
+\indexentry {software!control}{87}
+\indexentry {classical control}{87}
+\indexentry {modern control}{87}
+\indexentry {control!successes of}{87}
+\indexentry {MATLAB}{87}
+\indexentry {simulation}{87}
+\indexentry {complex systems}{87}
+\indexentry {Modelica}{87}
+\indexentry {modeling}{87}
+\indexentry {nonlinear control}{87}
+\indexentry {information-based systems}{87}
+\indexentry {hybrid systems}{87}
+\indexentry {dynamics}{87}
+\indexentry {time delay}{87}
+\indexentry {control!impact and payoffs}{87}
+\indexentry {industry interaction}{87}
+\indexentry {Ph.D.\ programs}{87}
+\indexentry {International Federation of Automatic Control (IFAC)}{88}
+\indexentry {IFAC Professional Briefs}{88}
+\indexentry {biotechnology}{88}
+\indexentry {mechatronics}{88}
+\indexentry {real-time systems}{88}
+\indexentry {government interaction|(}{88}
+\indexentry {national laboratories}{88}
+\indexentry {technology transfer}{88}
+\indexentry {Air Force Research Laboratory (AFRL)}{88}
+\indexentry {funding agencies, working for}{88}
+\indexentry {government interaction|)}{88}
+\indexentry {outreach|)}{88}
+\indexentry {education|)}{88}
+\indexentry {recommendations|(}{89}
+\indexentry {CDS Panel!recommendations|(}{89}
+\indexentry {communications!integration of control and}{89}
+\indexentry {computation!integration of control and}{89}
+\indexentry {computation!ubiquitous computing}{89}
+\indexentry {ubiquitous computing}{89}
+\indexentry {complex systems}{89}
+\indexentry {safety}{89}
+\indexentry {robust yet fragile behavior}{89}
+\indexentry {cascade failures}{89}
+\indexentry {computer science!interaction of control and}{89}
+\indexentry {teams!working in}{89}
+\indexentry {communications!integration of control and}{89}
+\indexentry {Multidisciplinary University Research Initiative (MURI)}{89}
+\indexentry {industry interaction}{90}
+\indexentry {wireless networks}{90}
+\indexentry {electrical power}{90}
+\indexentry {transportation systems}{90}
+\indexentry {control!impact and payoffs}{90}
+\indexentry {enterprise level systems}{90}
+\indexentry {supply chains}{90}
+\indexentry {decision making!systems}{90}
+\indexentry {complex systems}{90}
+\indexentry {decision making!higher level}{90}
+\indexentry {decision making!logic}{90}
+\indexentry {artificial intelligence}{90}
+\indexentry {logistics}{90}
+\indexentry {supply chains}{90}
+\indexentry {decision making!logic}{90}
+\indexentry {uncertainty!in resource allocation}{90}
+\indexentry {enterprise level systems}{90}
+\indexentry {enterprise level systems}{90}
+\indexentry {differential equations}{90}
+\indexentry {testbeds}{90}
+\indexentry {experiments}{90}
+\indexentry {adversarial environments}{90}
+\indexentry {artificial intelligence}{90}
+\indexentry {unmanned vehicles}{90}
+\indexentry {man-machine systems}{90}
+\indexentry {robotics}{90}
+\indexentry {competitions, student}{90}
+\indexentry {control!impact and payoffs}{91}
+\indexentry {autonomous systems}{91}
+\indexentry {new domains, control in}{91}
+\indexentry {biochemical signals}{91}
+\indexentry {uncertainty management}{91}
+\indexentry {quantum systems}{91}
+\indexentry {biology}{91}
+\indexentry {nanotechnology}{91}
+\indexentry {environmental science}{91}
+\indexentry {discipline boundaries}{91}
+\indexentry {dual investigator funding}{91}
+\indexentry {focused workshops}{91}
+\indexentry {short courses}{92}
+\indexentry {dual appointments}{92}
+\indexentry {cross-disciplinary research centers}{92}
+\indexentry {University of California, Santa Barbara}{92}
+\indexentry {Caltech}{92}
+\indexentry {discipline boundaries}{92}
+\indexentry {new domains, control in}{92}
+\indexentry {control!as enabling technology}{92}
+\indexentry {theory!support for}{92}
+\indexentry {mathematics!interaction with}{92}
+\indexentry {rigor}{92}
+\indexentry {control!successes of}{92}
+\indexentry {abstraction}{92}
+\indexentry {compactification}{92}
+\indexentry {dynamical systems}{92}
+\indexentry {graph theory}{92}
+\indexentry {complex systems}{92}
+\indexentry {queuing theory}{92}
+\indexentry {statistics}{92}
+\indexentry {national institutes, for control science}{93}
+\indexentry {control!impact and payoffs}{93}
+\indexentry {education|(}{93}
+\indexentry {outreach|(}{93}
+\indexentry {accessibility, broadening}{93}
+\indexentry {compactification}{93}
+\indexentry {textbooks}{93}
+\indexentry {curriculum development}{93}
+\indexentry {control!principles}{93}
+\indexentry {applied physics}{93}
+\indexentry {control!principles}{93}
+\indexentry {bioengineering|see{biological engineering}}{93}
+\indexentry {biological engineering}{93}
+\indexentry {software!control}{93}
+\indexentry {laboratories|see{experiments}}{93}
+\indexentry {curriculum development}{93}
+\indexentry {experiments}{93}
+\indexentry {MATLAB}{94}
+\indexentry {industry interaction}{94}
+\indexentry {technology transfer}{94}
+\indexentry {Ph.D.\ programs}{94}
+\indexentry {textbooks}{94}
+\indexentry {teaching materials}{94}
+\indexentry {public awareness}{94}
+\indexentry {multimedia tools}{94}
+\indexentry {books!popular}{94}
+\indexentry {control!principles}{94}
+\indexentry {IFAC Professional Briefs}{94}
+\indexentry {public awareness}{94}
+\indexentry {control!impact and payoffs}{94}
+\indexentry {education|)}{94}
+\indexentry {outreach|)}{94}
+\indexentry {recommendations|)}{94}
+\indexentry {CDS Panel!recommendations|)}{94}
+\indexentry {information-based systems}{94}
+\indexentry {control!impact and payoffs}{94}
+\indexentry {control!principles}{94}
+\indexentry {biology!increased understanding through use of control}{94}
+\indexentry {systems perspective}{95}
+\indexentry {education|(}{97}
+\indexentry {National Science Foundation (NSF)}{97}
+\indexentry {Control Systems Society (CSS), IEEE}{97}
+\indexentry {dynamical systems}{97}
+\indexentry {consumer electronics}{97}
+\indexentry {automotive systems}{97}
+\indexentry {aerospace systems}{97}
+\indexentry {manufacturing}{97}
+\indexentry {medicine}{97}
+\indexentry {discipline boundaries}{97}
+\indexentry {process control}{97}
+\indexentry {environmental science}{97}
+\indexentry {transportation systems}{97}
+\indexentry {biology}{97}
+\indexentry {economic systems}{97}
+\indexentry {University of Illinois, Urbana-Champaign}{97}
+\indexentry {feedback}{98}
+\indexentry {control!principles}{98}
+\indexentry {courses!undergraduate}{98}
+\indexentry {courses!undergraduate}{98}
+\indexentry {control!principles}{98}
+\indexentry {simulation}{98}
+\indexentry {systems engineering}{98}
+\indexentry {feedback}{98}
+\indexentry {medicine}{98}
+\indexentry {computer science!interaction of control and}{98}
+\indexentry {economics}{98}
+\indexentry {communications!integration of control and}{98}
+\indexentry {courses!undergraduate}{98}
+\indexentry {experiments}{99}
+\indexentry {discipline boundaries}{99}
+\indexentry {short courses}{99}
+\indexentry {competitions, student}{99}
+\indexentry {National Science Foundation (NSF)}{99}
+\indexentry {journals, electronic}{100}
+\indexentry {education|)}{100}
+\indexentry {books!zzz@\emph {\alsoname } textbooks\protect \gobble |gobble}{105}
+\indexentry {theory!zzz@\emph {\alsoname } control, theory; mathematics\protect \gobble |gobble}{105}
+\indexentry {communications!zzz@\emph {\alsoname } networks; telephone system\protect \gobble |gobble}{105}
+\indexentry {courses!zzz@\emph {\alsoname } short courses\protect \gobble |gobble}{105}
+\indexentry {autopilot|seealso{cruise control}}{105}
+\indexentry {discrete mathematics|seealso{formal methods; graph theory}}{105}
+\indexentry {asset management|seealso{resource allocation}}{105}
+\indexentry {applied physics|seealso{physics}}{105}
+\indexentry {resource allocation|seealso{asset management; supply chains}}{105}
+\indexentry {robust yet fragile behavior|seealso{cascade failures}}{105}
+\indexentry {C4ISR|seealso{command and control}}{105}
+\indexentry {cellular phones|seealso{wireless networks}}{105}
+\indexentry {component failures, robustness to|seealso{reliability}}{105}
+\indexentry {cooperative control|seealso{teams, control of}}{105}
+\indexentry {decentralized control|seealso{distributed control}}{105}
+\indexentry {defense systems|seealso{battlefield management; command and control}}{105}
+\indexentry {distributed control|seealso{decentralized control}}{105}
+\indexentry {disturbances|seealso{uncertainty}}{105}
+\indexentry {electrical power|seealso{power grid}}{105}
+\indexentry {engine control|seealso{gas turbine engines}}{105}
+\indexentry {estimation|seealso{Kalman filter}}{105}
+\indexentry {fault tolerance|seealso{reliability}}{105}
+\indexentry {geometric control|seealso{feedback linearization}}{105}
+\indexentry {governors|seealso{centrifugal governor}}{105}
+\indexentry {guidance|seealso{mission management; trajectory generation}}{105}
+\indexentry {health status, system|seealso{diagnostics}}{105}
+\indexentry {intracellular signaling|seealso{bacteria; chemotaxis}}{105}
+\indexentry {outer loop|seealso{guidance; trajectory generation}}{105}
+\indexentry {path planning|seealso{motion control; trajectory generation}}{105}
+\indexentry {pilots|seealso{flight control}}{105}
+\indexentry {simulation|seealso{modeling}}{105}
+\indexentry {space systems|seealso{aerospace systems}}{105}
+\indexentry {transportation systems|seealso{air traffic control; automotive systems}}{105}
+\indexentry {vision guided systems|seealso{active vision}}{105}
+\indexentry {courses!broader audiences|seealso{accessibility, broadening}}{105}
+\indexentry {command and control|seealso{battlefield management; mission management}}{105}
+\indexentry {airspace management|seealso{air traffic control}}{105}
+\indexentry {applied mathematics|seealso{mathematics}}{105}
+\indexentry {autocode|seealso{automatic synthesis}}{105}
+\indexentry {accomplishments|see{control, successes of}}{105}
+\indexentry {asset allocation|see{resource allocation}}{105}
+\indexentry {semi-autonomous systems|see{autonomous systems}}{105}
+\indexentry {UAVs|see{unmanned vehicles}}{105}
+\indexentry {autonomous vehicles|see{unmanned vehicles}}{105}
+\indexentry {cars|see{automobiles}}{105}
+\indexentry {CDROM|see{multimedia tools}}{105}
+\indexentry {cells|see{molecular biology}}{105}
+\indexentry {chemical processing|see{processing, chemical}}{105}
+\indexentry {undergraduate courses|see{courses}}{105}
+\indexentry {higher level reasoning|see{reasoning; decision making}}{105}
+\indexentry {automated highways|see{intelligent highways}}{105}
+\indexentry {highways|see{intelligent highways}}{105}
+\indexentry {delay|see{time delay}}{105}
+\indexentry {ordinary differential equations (ODEs)|see{differential equations}}{105}
+\indexentry {differential games|see{game theory}}{105}
+\indexentry {surgery|see{image guided surgery; minimally invasive surgery}}{105}
+\indexentry {electronics|see{amplifiers; consumer electronics; microelectronics}}{105}
+\indexentry {embedded software|see{software}}{105}
+\indexentry {finance|see{economic systems}}{105}
+\indexentry {numerically controlled machines|see{computer numerically controlled machines}}{105}
+\indexentry {noise|see{disturbances}}{105}
+\indexentry {panel|see{CDS Panel}}{105}
+\indexentry {robustness|see{reliability; uncertainty management}}{105}
+\indexentry {semiconductors|see{microelectronics}}{105}
+\indexentry {successes|see{control, successes}}{105}
+\indexentry {integration of control!with computation|see{computation}}{105}
+\indexentry {integration of control!with communications|see{communications}}{105}

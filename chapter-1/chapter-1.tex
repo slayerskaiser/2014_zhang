@@ -1,0 +1,38 @@
+\chapter{Introduction}
+
+Batteries, particularly rechargeable ones, are used extensively in daily life. They provide the energy for such electrical systems as communication, automotive, and renewable power systems, among others. In order to design for and operate these systems, an accurate battery model and a means of simulating the model efficiently is needed. For example, modern battery charge and health management schemes use high-fidelity battery models to track the state of charge (SOC) and state of health (SOH); this information is then used to predict and optimize runtime of the battery. However, most batteries have nonlinear capacitive effects, which require the use of a nonlinear filter. This thesis provides one possible solution to this problem by choosing an appropriate battery model and testing the speed and accuracy of various nonlinear filters in determining the SOC.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Characteristics of Rechargeable Batteries}
+
+A high-fidelity battery model has to accurately reproduce the various characteristics of the battery. The characteristics included in most models are the capacity and the state of charge. More accurate models include nonlinear effects, such as the rate-capacity effect and the recovery effect, along with self-discharge and the effects of ambient temperature. The dynamic electrical attributes, such as the current-voltage (i-v) characteristics and transient responses, can also be modeled.
+%Th\'{e}venin impedance,
+
+The capacity of a battery is the amount of electric charge it can store, measured in the SI unit Ampere-hours (Ah). Commonly, for rechargeable battery specifications, the subunit milliampere-hour (mAh) is used. Due to the electrochemical nature of batteries, a battery's available capacity decreases as the rate of discharge increases. Therefore, the capacity for a battery is typically stated for a given discharge rate. For lead-acid batteries, this diminishing capacity with increasing discharge rate is known as Peukert's law, which states that for a one-ampere discharge rate\cite{doerffel06}
+\begin{equation}
+C_p = I^k t,
+\end{equation}
+where $C_p$ is the capacity at a one-ampere discharge rate in Ah, $I$ is the discharge current in A, $t$ is the time to discharge the battery in hours, and $k>=1$ is the dimensionless Peukert constant, typically between 1.1 and 1.3 for a lead-acid battery. The constant $k$ only equals unity for an ideal accumulator, so for real batteries, $k$ is always greater than unity. Thus, for a given increase in the discharge current, the discharge time decreases by a proportionally greater amount. Therefore, the effective, or available, capacity $Ct$ is reduced. For a general battery, this effect is known as the rate-capacity effect. Related to this is the recovery effect, so called because when a battery is allowed to rest during an idle period, the battery ``recovers'' available capacity previously lost during discharge due to the rate-capacity effect.
+
+Both the rate-capacity effect and the recovery effect can be explained by the electrochemical nature of the battery. During discharge the concentration of the active material around the electrode is depleted and the active materials in the depletion region move towards the electrode to reduce the concentration gradient\cite{chiasserini99}. Because the speed at which the concentration gradient is equalized is limited, the faster the rate of discharge, the less active material has been replenished, resulting in a decrease in the capacity. Likewise, when the battery is allowed to rest, the active material gradient has additional time to equalize and increase the available capacity.
+
+Closely related to the capacity is the SOC. This thesis defines it as the ratio between the remaining capacity and the maximum capacity, with both capacities measured using the amount of active material within the battery. This definition then denotes the proportion of remaining chemical energy rather the the available energy and is unaffected by the rate-capacity and recovery effects. Note that a fully charged battery has an SOC of unity and a fully discharged battery has an SOC of zero, regardless of the available capacity. Additionally, it is convenient to establish the relationship between the SOC of the battery and its open-circuit voltage $V_{OC}$, which is useful for simulation of the i-v characteristics and transient responses.
+
+Other more minor effects that are usually incorporated into models are self-discharge, the effect of ambient temperature, and aging. Self-discharge refers to an idle battery decreasing its SOC over time due to internal chemical reactions. It is dependent on the type of battery, SOC, ambient temperatures, and other factors. The ambient temperature has effects on the internal resistance of the battery and the self-discharge rate. Commonly, the battery is designed to operate with a narrow range of temperatures. Below the operating temperature range, the internal resistance increases, decreasing the capacity. Above the operating range, the internal resistance decreases, not only increasing the capacity but also the self-discharge rate; thus, the actual capacity is lowered due to the increased self-discharge. Aging refers to the decrease in battery performance measures, such as capacity, self-discharge, and internal resistance, over time due to unwanted chemical reactions. In practice, aging is indicated by the SOH, defined as the ratio between the current maximum capacity and that of a new battery. The SOH threshold at which the battery performance is considered too degraded varies by application.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Rechargeable Battery Models}
+
+\emph{introduce battery models and detail one chosen for simulation}
+
+This study is concerned with prediction of the SOC of a battery using noisy measurements of its current and voltage. To do so accurately for a general load, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics is desirable. There are several battery models that have some or all of these attributes. The remainder of this section discusses their characteristics and chooses the best one for the purposes of this thesis.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Nonlinear Filtering Methods}
+
+The ability to express the chose battery model in state-space form is a major advantage when it comes to filtering. %change

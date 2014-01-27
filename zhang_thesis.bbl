@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{doerffel06}
+\textsc{Doerffel, D.} and \textsc{S.~A. Sharkh} (2006) \enquote{A critical
+  review of using the Peukert equation for determining the remaining capacity
+  of lead-acid and lithium-ion batteries,} \emph{Journal of Power Sources},
+  \textbf{155}(2), pp. 395 -- 400.
+
+\bibitem{chiasserini99}
+\textsc{Chiasserini, C.} and \textsc{R.~Rao} (1999) \enquote{A model for
+  battery pulsed discharge with recovery effect,} in \emph{Wireless
+  Communications and Networking Conference, 1999. WCNC. 1999 IEEE}, pp.
+  636--639 vol.2.
+
+\end{thebibliography}

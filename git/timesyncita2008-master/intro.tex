@@ -1,0 +1,29 @@
+\section{Introduction}
+New hardware and technology enable low-power inexpensive
+distributed sensor networks. To realize certain applications such as
+real time event detection, target tracking and system monitoring,
+time synchronization is essential. There exists substantial literature on 
+synchronization techniques including Time-Sync
+Protocol for Sensor Network (TPSN)~\cite{ganeriwal03timingsync},
+Reference Broadcast Synchronization (RBS)
+~\cite{elson02finegrained}, elapsed time \cite{kusy05elapsed}, and Flooding Time Synchronization Protocol (FTSP)~\cite{maroti2004ftsp}.
+In general, the goal of a time synchronization mechanism is to
+devise a scheme that improves accuracy with minimal energy
+consumption. However, there is clearly a trade off between accuracy and
+energy consumption. It is not always be desirable to deploy the
+most accurate time synchronization as it can prematurely drain the batteries. The
+choice of a time synchronization mechanism will depend on the
+application's demand on timing accuracy as well as the available energy
+budget. To select a proper time
+synchronization mechanism based on the requirements of the application, the relationship between application
+performance or QoI (Quality of Information) and time synchronization
+services are quantified in this article. We
+formalize the relationship between the performance of applications
+and time synchronization services based on an analytic framework using
+representative applications, namely, event detection and estimation.
+
+The paper is organized as follows. Section~\ref{sec:detector} quantifies the effect of the time-error between nodes upon the performance of detection algorithms, both for the case of no synchronization algorithm and for the case where synchronization algorithms are used. Section~\ref{sec:TrackingFilter} introduces a novel nonlinear hybrid filter which is globally convergent and robust to synchronization errors. It also quantifies the effect of synchronization error upon the solution of least squares estimation problems across the network, which would automatically include batch least squares, recursive least squares and Kalman filtering. Section~\ref{sec:power} quantifies the trade-off between clock stabilization, power consumption, and synchronization across the network. In particular, it shows how much energy a duty-cycled system can gain by employing
+a more stable clock, and conversely, it shows the maximum energy such a
+clock system can use so that overall energy consumption is minimized. Upper and lower bounds on the number of resynchronization requests are determined using a 3 year temperature data set and modeling crystal drifts.
+
+

@@ -1,0 +1,39 @@
+\contentsline {chapter}{Preface}{vii}
+\contentsline {chapter}{\numberline {1}Executive Summary}{1}
+\contentsline {chapter}{\numberline {2}Overview of the Field}{7}
+\contentsline {section}{\numberline {2.1}What is Control{}?}{7}
+\contentsline {section}{\numberline {2.2}Control System Examples}{13}
+\contentsline {section}{\numberline {2.3}The Increasing Role of Information-Based Systems}{18}
+\contentsline {section}{\numberline {2.4}Opportunities and Challenges Facing the Field}{20}
+\contentsline {chapter}{\numberline {3}Applications, Opportunities, and Challenges}{27}
+\contentsline {section}{\numberline {3.1}Aerospace and Transportation}{29}
+\contentsline {paragraph}{Automotive Systems}{35}
+\contentsline {paragraph}{Aircraft Propulsion Systems}{37}
+\contentsline {paragraph}{Flow Control}{37}
+\contentsline {paragraph}{Space Systems\footnote {The Panel would like to thank Jonathan How and Jesse Leitner for their contributions to this section.}}{38}
+\contentsline {section}{\numberline {3.2}Information and Networks}{39}
+\contentsline {paragraph}{Vigilant, high confidence software systems}{45}
+\contentsline {paragraph}{Verification and validation of protocols and software}{46}
+\contentsline {paragraph}{Real-time supply chain management}{47}
+\contentsline {section}{\numberline {3.3}Robotics and Intelligent Machines}{49}
+\contentsline {paragraph}{Mixed Initiative Systems and Human Interfaces}{54}
+\contentsline {paragraph}{Control Using High Data-Rate Sensors}{55}
+\contentsline {paragraph}{Medical Robotics}{56}
+\contentsline {section}{\numberline {3.4}Biology and Medicine}{58}
+\contentsline {section}{\numberline {3.5}Materials and Processing}{65}
+\contentsline {section}{\numberline {3.6}Other Applications}{72}
+\contentsline {chapter}{\numberline {4}Education and Outreach}{79}
+\contentsline {section}{\numberline {4.1}The New Environment for Control Education}{79}
+\contentsline {section}{\numberline {4.2}Making Control{} More Accessible}{81}
+\contentsline {section}{\numberline {4.3}Broadening Control{} Education}{83}
+\contentsline {section}{\numberline {4.4}The Opportunities in K-12 Math and Science Education}{84}
+\contentsline {section}{\numberline {4.5}Other Opportunities and Trends}{85}
+\contentsline {chapter}{\numberline {5}Recommendations}{89}
+\contentsline {section}{\numberline {5.1}Integrated Control, Computation, Communications}{89}
+\contentsline {section}{\numberline {5.2}Control of Complex Decision Systems}{90}
+\contentsline {section}{\numberline {5.3}High-Risk, Long-Range Applications of Control}{91}
+\contentsline {section}{\numberline {5.4}Support for Theory and Interaction with Mathematics}{92}
+\contentsline {section}{\numberline {5.5}New Approaches to Education and Outreach}{93}
+\contentsline {section}{\numberline {5.6}Concluding Remarks}{94}
+\contentsline {chapter}{\numberline {A}NSF/CSS Workshop on Education}{97}
+\contentsline {chapter}{Bibliography}{101}
