@@ -16,4 +16,32 @@
   Communications and Networking Conference, 1999. WCNC. 1999 IEEE}, pp.
   636--639 vol.2.
 
+\bibitem{jongerden09}
+\textsc{Jongerden, M.} and \textsc{B.~Haverkort} (2009) \enquote{Which battery
+  model to use?} \emph{Software, IET}, \textbf{3}(6), pp. 445--457.
+
+\bibitem{capizzi11}
+\textsc{Capizzi, G.}, \textsc{F.~Bonanno}, and \textsc{G.~Tina} (2011)
+  \enquote{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid
+  Batteries Charge-Discharge,} \emph{Energy Conversion, IEEE Transactions on},
+  \textbf{26}(2), pp. 435--443.
+
+\bibitem{shen02}
+\textsc{Shen, W.}, \textsc{C.~Chan}, \textsc{E.~W.~C. Lo}, and \textsc{K.~Chau}
+  (2002) \enquote{Adaptive neuro-fuzzy modeling of battery residual capacity
+  for electric vehicles,} \emph{Industrial Electronics, IEEE Transactions on},
+  \textbf{49}(3), pp. 677--684.
+
+\bibitem{manwell93}
+\textsc{Manwell, J.} and \textsc{J.~McGowan} (1993) \enquote{Lead acid battery
+  storage model for hybrid energy system,} \emph{Solar Energy}, \textbf{50}(5),
+  pp. 399--405.
+
+\bibitem{rakhmatov01}
+\textsc{Rakhmatov, D.~N.} and \textsc{S.~B.~K. Vrudhula} (2001) \enquote{An
+  Analytical High-level Battery Model for Use in Energy Management of Portable
+  Electronic Systems,} in \emph{Proceedings of the 2001 IEEE/ACM International
+  Conference on Computer-aided Design}, ICCAD '01, IEEE Press, Piscataway, NJ,
+  USA, pp. 488--493.
+
 \end{thebibliography}
