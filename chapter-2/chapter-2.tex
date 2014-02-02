@@ -34,6 +34,10 @@ The circuit on the right is a nonlinear system, since the coefficients are depen
 		+ \begin{bmatrix} 1/C_{ts} & 1/C_{tl} \end{bmatrix} i_\text{cell} \\
 	v_\text{cell} = [-1 \quad -1 \quad 1] x - R_s i_\text{cell}
 \end{gather}
+The two electrical circuits and the nonlinear voltage source that connects them can be written as one state space system for use with nonlinear filters discussed in the first section, yielding
+
+In order to determine the necessity of incorporating the nonlinear relationship between $V_{SOC}$ and $V_{OC}$ in the filter design, the linearized right-hand circuit with $V_{SOC}=0.6$~V and the left-hand circuit were processed by a Kalman filter in each iteration and in that order, with the nonlinearity calculated implicitly.
+% the left-hand circuit along with the right-hand circuit linearized at $V_{SOC}=0.6$~V were consecutively processed by the Kalman filter in each itera
 
 \begin{figure}
 \centering
