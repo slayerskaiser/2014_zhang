@@ -26,6 +26,7 @@ The circuit on the left is a linear, time-invariant (LTI) system, which has the 
 \end{gather}
 The circuit on the right is a nonlinear system, since the coefficients are dependent on the voltage $V_{SOC}$. The corresponding state space model is [I think that I changed the model a little for my simulations by adding an output for $i_\text{cell}$. Also, the ``nonlinear'' simulations combine both ss systems using the given Voc nonlinearity].
 \begin{gather}
+    x = [v_{C_{ts}} \quad v_{C_{tl}} \quad V_{OC}] \\
 	\dot{x} = \begin{bmatrix}
 		-1/R_{ts}C_{ts} & 0 & 0 \\
 		0 & -1/R_{tl}C_{tl} & 0 \\
