@@ -12,12 +12,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages we like to use. %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pslatex}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{exscale}
-\usepackage[mathscr]{eucal}
-\usepackage{bm}
+%\usepackage{exscale}
+%\usepackage[mathscr]{eucal}
+%\usepackage{bm}
 \usepackage{eqlist} % Makes for a nice list of symbols.
 \usepackage[dvipsnames]{color}
 \usepackage{psfrag}
@@ -29,17 +31,24 @@
 \usepackage[final]{graphicx}
 %\DeclareGraphicsExtensions{.pdf, .jpg}
 \graphicspath{{chapter-1/figures/}{chapter-2/figures/}{chapter-3/figures/}{chapter-4/figures/}{appendix-a/figures/}}
-%\usepackage[first,timestamp]{draftcopy}
+\usepackage[first,timestamp]{draftcopy}
 %\usepackage{rotating}
 \usepackage{ctable}
 %\usepackage{cite}
-\usepackage{lmodern}
-\usepackage{textcomp}
+%\usepackage{lmodern}
+%\usepackage{textcomp}
 \usepackage{setspace}
 %\usepackage[citestyle=numeric-comp,backend=bibtex,sorting=none]{biblatex}
 %\addbibresource{Biblio-Database.bib}
-\usepackage{epstopdf}
-\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+%\usepackage{epstopdf}
+%\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+
+%\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+% activate={true,nocompatibility} - activate protrusion and expansion
+% final - enable microtype; use ``draft'' to disable
+% tracking=true, kerning=true, spacing=true - activate these techniques
+% factor=1100 - add 10% to the protrusion amount (default is 1000)
+% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
 
 \doublespacing
 
@@ -324,7 +333,7 @@
 % Chapters
 \include{chapter-1/chapter-1}
 \include{chapter-2/chapter-2}
-\include{chapter-3/chapter-3}
+%\include{chapter-3/chapter-3}
 %\include{chapter-4/chapter-4}
 %\include{chapter-5/chapter-5}
 %\include{chapter-6/chapter-6}

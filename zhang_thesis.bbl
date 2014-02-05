@@ -44,4 +44,9 @@
   Conference on Computer-aided Design}, ICCAD '01, IEEE Press, Piscataway, NJ,
   USA, pp. 488--493.
 
+\bibitem{chen06}
+\textsc{Chen, M.} and \textsc{G.~Rincon-Mora} (2006) \enquote{Accurate
+  electrical battery model capable of predicting runtime and I-V performance,}
+  \emph{Energy Conversion, IEEE Transactions on}, \textbf{21}(2), pp. 504--511.
+
 \end{thebibliography}
