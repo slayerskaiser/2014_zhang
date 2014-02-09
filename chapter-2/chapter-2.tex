@@ -5,7 +5,7 @@
 \section{Battery Model}
 
 As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} and shown in \autoref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient i-v characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and $R_{sd}$ are assumed constant
-for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient i-v response as well as the open-circuit voltage $V_\text{OC}$. From a new 850~mAh TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters and fit them to curves, obtaining
+for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient i-v response as well as the open-circuit voltage $V_\text{OC}$. From a typical TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters and fit them to curves, obtaining
 \begin{gather}
 	R_s(V_\text{SOC}) = 0.1562 e^{-24.37 V_\text{SOC}} + 0.07446 \\
 	R_{ts}(V_\text{SOC}) = 0.3208 e^{-29.14 V_\text{SOC}} + 0.04669 \\
@@ -16,10 +16,6 @@ for a given battery and determine the capacity and self-discharge rate of the ba
 \end{gather}
 The resistance and capacitance parameters shown above are approximately constant for $\text{SOC}>0.2$ and change exponentially for $\text{SOC}<0.2$. The open-circuit voltage also changes exponentially for $\text{SOC}<0.2$ but is approximately linear for $\text{SOC}>0.2$.
 
-This thesis 
-
-For the left circuit, the capacitance $C_\text{cap}$ can be calculated 
-
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\textwidth]{batt_model}
@@ -27,24 +23,64 @@ For the left circuit, the capacitance $C_\text{cap}$ can be calculated
 \label{fig:batt_model}
 \end{figure}
 
-The circuit on the left is a linear, time-invariant (LTI) system, which has the following state space model:
+This study used the nonlinear parameters given by Chen and Rinc\'on-Mora for the implementation of a battery using their battery model in Matlab. \emph{The other, constant parameters were chosen to produce a capacity of 4~Ah and a self-discharge rate of 4\% per month, assuming a nominal voltage of 3.7~V. [I didn't properly derive the following equations so my actual values are different.]} To do so, the equivalent capacitance $C_\text{cap}$ to deliver the desired capacity is calculated, and then the resistance $R_{sd}$
+that produces the desired self-discharge rate is calculated. More specifically, the capacitance $C_\text{cap}$ is chosen to so that it supplies the same energy as a battery when discharged at
+\begin{equation}
+    I_t\,[\text{A}] = C_n\,[\text{Ah}] / 1\,[\text{h}],
+\end{equation}
+where $I_t$ is the discharge current in amperes, $C_n$ is the rated capacity in ampere-hours, and $n$ is the time base in hours for which the rated capacity is declared~\cite{iec61434,linden01_ch3}. Note that by definition, a fully charged battery with capacity $C_n$ is fully discharged in $n$ hours when discharged at a constant current of $I_t/n$~\cite{linden01_ch3}. The energy delivered by the battery over the $T=n$~hours is then
+\begin{align}
+    E_\text{batt} &= \int_0^T V(t) I(t) \,\mathrm{d}t = T \left( \frac{1}{T} \int_0^T V(t)\,\mathrm{d}t \right) \frac{I_t}{n} = V_n I_t (1\,\text{h}) \\
+    &= 3600 V_n I_t (\text{s}) \,[\text{J}],
+\end{align}
+where $V_n$ is the nominal voltage. The energy stored in the capacitor $C_\text{cap}$ is $E_\text{cap} = C_\text{cap} V_\text{SOC,max}^2 / 2$. Recall that $V_\text{SOC}$ has a maximum voltage of 1~V, so the capacitance needs to be
+\begin{equation}
+    C_\text{cap} = 2E_\text{batt}/(1\,\text{V}^2) = 7200 V_n I_t (\text{s}/\text{V}^2) \,[\text{F}]
+\end{equation}
+Then, the resistance $R_{sd}$ is chosen so that the time constant $\tau=RC$ results in the desired drop of $\xi=0.04$ over $T=1$~month as follows
 \begin{gather}
-    x = C_\text{cap} V_\text{SOC} \\
-    \dot{x} = \frac{x}{R_{sd} C_\text{cap}} - \frac{i_\text{cell}}{C_\text{cap}} \\
-    V_\text{SOC} = \frac{x}{C_\text{cap}}
+    V(t) = V_0 e^{-T/\tau} = V_0 (1-\xi) \\
+    \tau = -T/\ln(1-\xi) = -2592000/\ln 0.96 \,[\text{s}].
 \end{gather}
-The circuit on the right is a nonlinear system, since the coefficients are dependent on the voltage $V_\text{SOC}$. The corresponding state space model is [I think that I changed the model a little for my simulations by adding an output for $i_\text{cell}$. Also, the ``nonlinear'' simulations combine both ss systems using the given Voc nonlinearity].
+Then, $R_{sd}=\tau/C_\text{cap}$. Thus, the parameters are $C_\text{cap}=106.56$~kF and $R_{sd}=595.86~\Omega$. \emph{[Actual values used in study are $C=3789.5$ and $R=6290.7$. That works out to 1422.5~mAh and 10.3\% per month. Question is whether to change original setup or redo simulations.]}
+
+For ease of filter design, it is useful to derive the state-space representation of the battery model. The physical variable definition is used, where the state variables are chosen to represent the stored charge in each capacitor. Choosing $x_1=C_{ts}V_{ts}$, $x_2=C_{tl}V_{tl}$, and $x_3=C_\text{cap}V_\text{SOC}$, where the voltages are as defined in \autoref{fig:batt_model}, achieves the goal. Additionally, it can be seen that the cell current influences the state variables, while the
+cell voltage is influenced by them. Therefore, $i_\text{cell}$ is defined as the state input and $V_\text{cell}$ is defined as the state output. The resulting state space representation is
 \begin{gather}
-    x = [v_{C_{ts}} \quad v_{C_{tl}} \quad V_\text{OC}] \\
-	\dot{x} = \begin{bmatrix}
-		-1/R_{ts}C_{ts} & 0 & 0 \\
-		0 & -1/R_{tl}C_{tl} & 0 \\
-		0 & 0 & 0
-		\end{bmatrix} x 
-		+ \begin{bmatrix} 1/C_{ts} & 1/C_{tl} \end{bmatrix} i_\text{cell} \\
-	v_\text{cell} = [-1 \quad -1 \quad 1] x - R_s i_\text{cell}
+    \dot{\mathbf{x}} = \begin{bmatrix}
+        -1/R_{ts}C_{ts} & 0 & 0 \\
+        0 & -1/R_{tl}C_{tl} & 0 \\
+        0 & 0 & -1/R_{sd}C_\text{cap}
+    \end{bmatrix} \mathbf{x} + \begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix} i_\text{cell} \\
+    V_\text{cell} = V_\text{OC} - \frac{x_1}{C_{ts}} - \frac{x_2}{C_{tl}} - R_s i_\text{cell}.
 \end{gather}
-The two electrical circuits and the nonlinear voltage source that connects them can be written as one state space system for use with nonlinear filters discussed in the first section, yielding
+While the above appears to be a linear system, remember that many of the parameters are functions of $V_\text{SOC}$, and thus, depend on the state $x_3$.
+
+% The circuit on the left in the battery model can be written in state-space form by choosing the state variable to represent the charge stored in the capacitor, i.e.\ $x=C_\text{cap} V_\text{SOC}$. Additionally, the input to the system is the battery current $i_\text{cell}$, and the output is the SOC
+% voltage $V_\text{SOC}$.  Then, the state space model is
+% \begin{gather}
+%     \dot{x} = - \frac{x}{R_{sd} C_\text{cap}} - i_\text{cell} \\
+%     V_\text{SOC} = \frac{x}{C_\text{cap}}.
+% \end{gather}
+% This is a linear, time-invariant system because of the constant coefficients.
+% 
+% The circuit on the right can also be written in state-space form by choosing the state variables to represent the charges in the capacitors. Specifically, let $x=\left[C_{ts}V_{ts}, C_{tl}V_{tl}\right]^\top$
+% 
+% The circuit on the right is a nonlinear, time-invariant system, because its parameters are functions of the SOC. To better see this, consider $|i\text{cell}|>>V_\text{SOC}/R_{sd}$. Then, 
+% 
+% However, the circuit on the right is a nonlinear, time-invariant system, because its parameters are functions of the SOC, which changes over time. 
+% The circuit on the right is a nonlinear system, since the coefficients are dependent on the voltage $V_\text{SOC}$. The corresponding state space model is [I think that I changed the model a little for my simulations by adding an output for $i_\text{cell}$. Also, the ``nonlinear'' simulations combine both ss systems using the given Voc nonlinearity].
+% \begin{gather}
+%     x = [v_{C_{ts}} \quad v_{C_{tl}} \quad V_\text{OC}] \\
+% 	\dot{x} = \begin{bmatrix}
+% 		-1/R_{ts}C_{ts} & 0 & 0 \\
+% 		0 & -1/R_{tl}C_{tl} & 0 \\
+% 		0 & 0 & 0
+% 		\end{bmatrix} x 
+% 		+ \begin{bmatrix} 1/C_{ts} & 1/C_{tl} \end{bmatrix} i_\text{cell} \\
+% 	v_\text{cell} = [-1 \quad -1 \quad 1] x - R_s i_\text{cell}
+% \end{gather}
+% The two electrical circuits and the nonlinear voltage source that connects them can be written as one state space system for use with nonlinear filters discussed in the first section, yielding
 
 \section{Filter Design}
 

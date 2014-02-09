@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -48,5 +48,16 @@
 \textsc{Chen, M.} and \textsc{G.~Rincon-Mora} (2006) \enquote{Accurate
   electrical battery model capable of predicting runtime and I-V performance,}
   \emph{Energy Conversion, IEEE Transactions on}, \textbf{21}(2), pp. 504--511.
+
+\bibitem{iec61434}
+\textsc{{IEC SC 21A}} (1996) \emph{Secondary cells and batteries containing
+  alkaline or other non-acid electrolytes -- Guide to designation of current in
+  alkaline secondary cell and battery standards}, \emph{Tech. Rep. IEC 61434},
+  The International Electrotechnical Commission.
+
+\bibitem{linden01_ch3}
+\textsc{Linden, D.} (2001) \enquote{Factors Affecting Battery Performance,} in
+  \emph{Handbook of Batteries} (D.~Linden and T.~B. Reddy, eds.), third ed.,
+  chap.~3, McGraw-Hill.
 
 \end{thebibliography}
