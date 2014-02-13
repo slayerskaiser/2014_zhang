@@ -1,3 +1,6 @@
+\documentclass[../zhang_thesis.tex]{subfiles}
+\begin{document}
+
 \chapter{Methodology}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,37 +57,15 @@ cell voltage is influenced by them. Therefore, $i_\text{cell}$ is defined as the
     \end{bmatrix} \mathbf{x} + \begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix} i_\text{cell} \\
     V_\text{cell} = V_\text{OC} - \frac{x_1}{C_{ts}} - \frac{x_2}{C_{tl}} - R_s i_\text{cell}.
 \end{gather}
-While the above appears to be a linear system, remember that many of the parameters are functions of $V_\text{SOC}$, and thus, depend on the state $x_3$.
+While the above appears to be a linear system, remember that many of the parameters are functions of $V_\text{SOC}$, and thus, depend on the state $x_3$. Therefore, this is a nonlinear system.
 
-% The circuit on the left in the battery model can be written in state-space form by choosing the state variable to represent the charge stored in the capacitor, i.e.\ $x=C_\text{cap} V_\text{SOC}$. Additionally, the input to the system is the battery current $i_\text{cell}$, and the output is the SOC
-% voltage $V_\text{SOC}$.  Then, the state space model is
-% \begin{gather}
-%     \dot{x} = - \frac{x}{R_{sd} C_\text{cap}} - i_\text{cell} \\
-%     V_\text{SOC} = \frac{x}{C_\text{cap}}.
-% \end{gather}
-% This is a linear, time-invariant system because of the constant coefficients.
-% 
-% The circuit on the right can also be written in state-space form by choosing the state variables to represent the charges in the capacitors. Specifically, let $x=\left[C_{ts}V_{ts}, C_{tl}V_{tl}\right]^\top$
-% 
-% The circuit on the right is a nonlinear, time-invariant system, because its parameters are functions of the SOC. To better see this, consider $|i\text{cell}|>>V_\text{SOC}/R_{sd}$. Then, 
-% 
-% However, the circuit on the right is a nonlinear, time-invariant system, because its parameters are functions of the SOC, which changes over time. 
-% The circuit on the right is a nonlinear system, since the coefficients are dependent on the voltage $V_\text{SOC}$. The corresponding state space model is [I think that I changed the model a little for my simulations by adding an output for $i_\text{cell}$. Also, the ``nonlinear'' simulations combine both ss systems using the given Voc nonlinearity].
-% \begin{gather}
-%     x = [v_{C_{ts}} \quad v_{C_{tl}} \quad V_\text{OC}] \\
-% 	\dot{x} = \begin{bmatrix}
-% 		-1/R_{ts}C_{ts} & 0 & 0 \\
-% 		0 & -1/R_{tl}C_{tl} & 0 \\
-% 		0 & 0 & 0
-% 		\end{bmatrix} x 
-% 		+ \begin{bmatrix} 1/C_{ts} & 1/C_{tl} \end{bmatrix} i_\text{cell} \\
-% 	v_\text{cell} = [-1 \quad -1 \quad 1] x - R_s i_\text{cell}
-% \end{gather}
-% The two electrical circuits and the nonlinear voltage source that connects them can be written as one state space system for use with nonlinear filters discussed in the first section, yielding
+%To better determine the necessity of nonlinear filtering for thus system, it is useful to determine the degree of nonlinearity. Recent work in quantizing the degree of nonlinearity was conducted by
 
-\section{Filter Design}
+\section{Filter Implementations}
 
-In order to determine the necessity of incorporating the nonlinear relationship between $V_\text{SOC}$ and $V_\text{OC}$ in the filter design, the linearized right-hand circuit with $V_\text{SOC}=0.6$~V and the left-hand circuit were processed by a Kalman filter in each iteration and in that order, with the nonlinearity calculated implicitly.
+%As was seen in the last section, the degree of nonlinearity of the battery model necessitates the use of a nonlinear filter. However, for SOC$>0.2$, the dynamics behave approximately linearly, because the resistance and capacitance parameters are approximately constant. Since the battery operates in this ``linear'' region for the majority of the time, it is useful to compare the performance of a linear filter to the nonlinear filters discussed in \autoref{sec:nl_filt}.
+
+%In order to determine the necessity of incorporating the nonlinear relationship between $V_\text{SOC}$ and $V_\text{OC}$ in the filter design, the linearized right-hand circuit with $V_\text{SOC}=0.6$~V and the left-hand circuit were processed by a Kalman filter in each iteration and in that order, with the nonlinearity calculated implicitly.
 % the left-hand circuit along with the right-hand circuit linearized at $V_\text{SOC}=0.6$~V were consecutively processed by the Kalman filter in each itera
 
 \section{Simulation Setup}
@@ -95,3 +76,5 @@ In order to determine the necessity of incorporating the nonlinear relationship 
 \caption{Discharge current along with the resulting voltage and SOC.}
 \label{fig:idealsim}
 \end{figure}
+
+\end{document}

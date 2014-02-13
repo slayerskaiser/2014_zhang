@@ -12,7 +12,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages we like to use. %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{pslatex}
+\usepackage{subfiles} % allows for better include support
+%\usepackage{pslatex}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -27,7 +28,7 @@
 \usepackage{booktabs}
 \usepackage[version=3]{mhchem}
 \usepackage[caption=false]{subfig}
-\usepackage{url}
+%\usepackage{url}
 \usepackage[final]{graphicx}
 %\DeclareGraphicsExtensions{.pdf, .jpg}
 \graphicspath{{chapter-1/figures/}{chapter-2/figures/}{chapter-3/figures/}{chapter-4/figures/}{appendix-a/figures/}}
@@ -38,13 +39,14 @@
 %\usepackage{lmodern}
 %\usepackage{textcomp}
 \usepackage{setspace}
-%\usepackage[citestyle=numeric-comp,backend=bibtex,sorting=none]{biblatex}
-%\addbibresource{Biblio-Database.bib}
+\usepackage[style=ieee,citestyle=numeric-comp,backend=biber,sorting=none,doi=false,isbn=false]{biblatex}
+\addbibresource{Biblio-Database.bib}
 %\usepackage{epstopdf}
 %\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
 
-%\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
-% activate={true,nocompatibility} - activate protrusion and expansion
+\usepackage[final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\microtypecontext{spacing=nonfrench}
+% activate={true,nocompatibility} - activate protrusion and expansion - (not needed; also works for dvi now)
 % final - enable microtype; use ``draft'' to disable
 % tracking=true, kerning=true, spacing=true - activate these techniques
 % factor=1100 - add 10% to the protrusion amount (default is 1000)
@@ -52,7 +54,6 @@
 
 \doublespacing
 
-%\usepackage{blindtext}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Setup caption format %
@@ -70,6 +71,12 @@
 %\ChTitleVar{\Huge\sffamily\bfseries}
 \ChTitleVar{\Huge\rm\bfseries}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define title and author %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful for matching between paper and PDF
+\def\Title{Comparison of Nonlinear Filtering Methods for Battery State of Charge Estimation}
+\def\Author{Klaus Zhang}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Use of the hyperref package %
@@ -81,6 +88,7 @@
 % To the hyperref package, uncomment the following line:
 \usepackage[linktocpage]{hyperref}
 \usepackage[all]{hypcap}
+\usepackage{breakurl}
 %
 % Note that you should also uncomment the following line:
 \renewcommand{\theHchapter}{\thepart.\thechapter}
@@ -88,8 +96,9 @@
 % to work around some a problem hyperref has with the fact
 % the psuthesis class has unnumbered pages after which page
 % counters are reset.
-\hypersetup{pdftitle={},
-	pdfauthor={Klaus Zhang},bookmarksnumbered,pdfstartview=FitH}
+%\hypersetup{pdftitle={},
+%	pdfauthor={Klaus Zhang},bookmarksnumbered,pdfstartview=FitH}
+\hypersetup{pdftitle={\Title},pdfauthor={\Author},bookmarksnumbered,pdfstartview=FitH}
 %
 \labelformat{equation}{\textup{(#1)}}
 \labelformat{enumi}{\textup{(#1)}}
@@ -157,11 +166,12 @@
 % FRONT-MATTER %
 %%%%%%%%%%%%%%%%
 % Title
-% \title{Comparison of Nonlinear Filtering Methods for State Estimation}
-\title{Comparison of Nonlinear Filtering Methods for Battery State of Charge Estimation}
+%\title{Comparison of Nonlinear Filtering Methods for Battery State of Charge Estimation}
+\title{\Title}
 
 % Author and Department
-\author{Klaus Zhang}
+%\author{Klaus Zhang}
+\author{\Author}
 \dept{Department of Electrical Engineering}
 % the degree will be conferred on this date
 \degreedate{May 2014}
@@ -331,12 +341,12 @@
 % THE ACTUAL CONTENT %
 %%%%%%%%%%%%%%%%%%%%%%
 % Chapters
-\include{chapter-1/chapter-1}
-\include{chapter-2/chapter-2}
-%\include{chapter-3/chapter-3}
-%\include{chapter-4/chapter-4}
-%\include{chapter-5/chapter-5}
-%\include{chapter-6/chapter-6}
+\subfile{chapter-1/chapter-1}
+\subfile{chapter-2/chapter-2}
+%\subfile{chapter-3/chapter-3}
+%\subfile{chapter-4/chapter-4}
+%\subfile{chapter-5/chapter-5}
+%\subfile{chapter-6/chapter-6}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Appendices
 %
@@ -358,20 +368,20 @@
 % bibliography. LaTeX's standard stuff is shown below. If you
 % bibtex, then this section should look something like:
 \clearpage
-   \begin{singlespace}
-	 \phantomsection
-   \bibliographystyle{FG-bibstyle}
-   \addcontentsline{toc}{chapter}{Bibliography}
-   \bibliography{Biblio-Database}
-   %\printbibliography
-   \end{singlespace}
+\begin{singlespace}
+    \phantomsection
+    %\bibliographystyle{FG-bibstyle}
+    \addcontentsline{toc}{chapter}{Bibliography}
+    %\bibliography{Biblio-Database}
+    \printbibliography
+\end{singlespace}
 
 %\allowdisplaybreaks{
 %\appendix
 %\include{appendix-vita/appendix-vita}
 %}
 
-\nocite{*}
+%\nocite{*}
 
 \backmatter
 
@@ -381,4 +391,3 @@
 %\vita{SupplementaryMaterial/Vita}
 
 \end{document}
-

@@ -1,63 +1,551 @@
-\begin{thebibliography}{10}
-\newcommand{\enquote}[1]{``#1''}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\providecommand{\eprint}[2][]{\url{#2}}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{doerffel06}
-\textsc{Doerffel, D.} and \textsc{S.~A. Sharkh} (2006) \enquote{A critical
-  review of using the Peukert equation for determining the remaining capacity
-  of lead-acid and lithium-ion batteries,} \emph{Journal of Power Sources},
-  \textbf{155}(2), pp. 395 -- 400.
 
-\bibitem{chiasserini99}
-\textsc{Chiasserini, C.} and \textsc{R.~Rao} (1999) \enquote{A model for
-  battery pulsed discharge with recovery effect,} in \emph{Wireless
-  Communications and Networking Conference, 1999. WCNC. 1999 IEEE}, pp.
-  636--639 vol.2.
+\refsection{0}
+  \sortlist{entry}{none}
+    \entry{doerffel06}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{39290530bf227eb6e2e2a07b27913887}
+      \strng{fullhash}{39290530bf227eb6e2e2a07b27913887}
+      \field{sortinit}{0}
+      \field{labeltitle}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
+      \field{issn}{0378-7753}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{number}{2}
+      \field{title}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
+      \field{volume}{155}
+      \field{year}{2006}
+      \field{pages}{395\bibrangedash 400}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1016/j.jpowsour.2005.04.030
+      \endverb
+    \endentry
+    \entry{chiasserini99}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{685cdaf759102df0e670bb9f89648fd6}
+      \strng{fullhash}{685cdaf759102df0e670bb9f89648fd6}
+      \field{sortinit}{0}
+      \field{labeltitle}{A model for battery pulsed discharge with recovery effect}
+      \field{booktitle}{Wireless Communications and Networking Conference, 1999. WCNC. 1999 IEEE}
+      \field{issn}{1525-3511}
+      \field{title}{A model for battery pulsed discharge with recovery effect}
+      \field{volume}{2}
+      \field{year}{1999}
+      \field{pages}{636\bibrangedash 639}
+      \verb{doi}
+      \verb 10.1109/WCNC.1999.796721
+      \endverb
+    \endentry
+    \entry{jongerden09}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=2aa6849de3a2eeae7fba617f13ddefe4}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=2aa6849de3a2eeae7fba617f13ddefe4}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{dd12efb5493d16e58fb8d1b3f8c31200}
+      \strng{fullhash}{dd12efb5493d16e58fb8d1b3f8c31200}
+      \field{sortinit}{0}
+      \field{labeltitle}{Which battery model to use?}
+      \field{issn}{1751-8806}
+      \field{journaltitle}{IET Software}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{Which battery model to use?}
+      \field{volume}{3}
+      \field{year}{2009}
+      \field{pages}{445\bibrangedash 457}
+      \verb{doi}
+      \verb 10.1049/iet-sen.2009.0001
+      \endverb
+    \endentry
+    \entry{doyle93}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b2cb1323da52a788b460578d38514ad1}
+      \strng{fullhash}{b2cb1323da52a788b460578d38514ad1}
+      \field{sortinit}{0}
+      \field{labeltitle}{Modeling of galvanostatic charge and discharge of the lithium/polymer/insertion cell}
+      \field{journaltitle}{Journal of the Electrochemical Society}
+      \field{number}{6}
+      \field{title}{Modeling of galvanostatic charge and discharge of the lithium/polymer/insertion cell}
+      \field{volume}{140}
+      \field{year}{1993}
+      \field{pages}{1526\bibrangedash 1533}
+    \endentry
+    \entry{fuller94}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{59773cf8875290e3daa4226656a8dd7d}
+      \strng{fullhash}{59773cf8875290e3daa4226656a8dd7d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Simulation and optimization of the dual lithium ion insertion cell}
+      \field{journaltitle}{Journal of the Electrochemical Society}
+      \field{number}{1}
+      \field{title}{Simulation and optimization of the dual lithium ion insertion cell}
+      \field{volume}{141}
+      \field{year}{1994}
+      \field{pages}{1\bibrangedash 10}
+    \endentry
+    \entry{fuller94b}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=67d8016c50f2c2dbb3e645b0b2ba652f}{Fuller}{F\bibinitperiod}{Thomas\bibnamedelima F.}{T\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=4148d28b2c80fe9aadeb19ee31823c7d}{Doyle}{D\bibinitperiod}{Marc}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{59773cf8875290e3daa4226656a8dd7d}
+      \strng{fullhash}{59773cf8875290e3daa4226656a8dd7d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Relaxation phenomena in lithium-ion insertion cells}
+      \field{journaltitle}{Journal of the Electrochemical Society}
+      \field{number}{4}
+      \field{title}{Relaxation phenomena in lithium-ion insertion cells}
+      \field{volume}{141}
+      \field{year}{1994}
+      \field{pages}{982\bibrangedash 990}
+    \endentry
+    \entry{newman98}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=887e883f31937e46bbf9eb74a2db896f}{Newman}{N\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{887e883f31937e46bbf9eb74a2db896f}
+      \strng{fullhash}{887e883f31937e46bbf9eb74a2db896f}
+      \field{sortinit}{0}
+      \field{labeltitle}{FORTRAN Programs for the Simulation of Electrochemical Systems}
+      \field{howpublished}{\url{http://www.cchem.berkeley.edu/jsngrp/fortran.html}}
+      \field{title}{FORTRAN Programs for the Simulation of Electrochemical Systems}
+      \field{year}{1998}
+    \endentry
+    \entry{bezdek92}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=38ce82959812b814cf6aa4d6260407a9}{Bezdek}{B\bibinitperiod}{James\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=38ce82959812b814cf6aa4d6260407a9}{Bezdek}{B\bibinitperiod}{James\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{38ce82959812b814cf6aa4d6260407a9}
+      \strng{fullhash}{38ce82959812b814cf6aa4d6260407a9}
+      \field{sortinit}{0}
+      \field{labeltitle}{On the relationship between neural networks, pattern recognition and intelligence}
+      \field{journaltitle}{International Journal of Approximate Reasoning}
+      \field{number}{2}
+      \field{title}{On the relationship between neural networks, pattern recognition and intelligence}
+      \field{volume}{6}
+      \field{year}{1992}
+      \field{pages}{85\bibrangedash 107}
+    \endentry
+    \entry{bezdek94}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=38ce82959812b814cf6aa4d6260407a9}{Bezdek}{B\bibinitperiod}{James\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=38ce82959812b814cf6aa4d6260407a9}{Bezdek}{B\bibinitperiod}{James\bibnamedelima C.}{J\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=059ddb66058c2e14e5ab71838fdfa2e0}{Zurada}{Z\bibinitperiod}{Jacek\bibnamedelima M.}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=100971ae183998b01d36d17c4e6bdd41}{Marks}{M\bibinitperiod}{Robert\bibnamedelima J.}{R\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=45627eb305acffb500dd61dd57c86fcf}{Robinson}{R\bibinitperiod}{Charles\bibnamedelima J.}{C\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Press}%
+      }
+      \strng{namehash}{38ce82959812b814cf6aa4d6260407a9}
+      \strng{fullhash}{38ce82959812b814cf6aa4d6260407a9}
+      \field{sortinit}{0}
+      \field{labeltitle}{What is computational intelligence?}
+      \field{booktitle}{Computational Intelligence: Imitating Life}
+      \field{title}{What is computational intelligence?}
+      \field{year}{1994}
+      \field{pages}{1\bibrangedash 12}
+    \endentry
+    \entry{ogorman98}{inproceedings}{}
+      \name{labelname}{4}{}{%
+        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{935d12fa38dae20d6f20d28790ac861e}
+      \strng{fullhash}{935d12fa38dae20d6f20d28790ac861e}
+      \field{sortinit}{0}
+      \field{labeltitle}{Artificial neural network simulation of battery performance}
+      \field{booktitle}{Proceedings of the Thirty-First Hawaii International Conference on System Sciences}
+      \field{month}{01}
+      \field{title}{Artificial neural network simulation of battery performance}
+      \field{volume}{5}
+      \field{year}{1998}
+      \field{pages}{115\bibrangedash 121}
+      \verb{doi}
+      \verb 10.1109/HICSS.1998.648303
+      \endverb
+    \endentry
+    \entry{capizzi11}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bc82162919543da0917c5d6f6b1bb5fa}
+      \strng{fullhash}{bc82162919543da0917c5d6f6b1bb5fa}
+      \field{sortinit}{0}
+      \field{labeltitle}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
+      \field{issn}{0885-8969}
+      \field{journaltitle}{IEEE Transactions on Energy Conversion}
+      \field{month}{06}
+      \field{number}{2}
+      \field{title}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
+      \field{volume}{26}
+      \field{year}{2011}
+      \field{pages}{435\bibrangedash 443}
+      \verb{doi}
+      \verb 10.1109/TEC.2010.2095015
+      \endverb
+    \endentry
+    \entry{wang06}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
+        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
+        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e13c2fdb344cd994893701a308d01f5b}
+      \strng{fullhash}{e13c2fdb344cd994893701a308d01f5b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Support vector machine based battery model for electric vehicles}
+      \field{journaltitle}{Energy Conversion and Management}
+      \field{number}{7--8}
+      \field{title}{Support vector machine based battery model for electric vehicles}
+      \field{volume}{47}
+      \field{year}{2006}
+      \field{pages}{858\bibrangedash 864}
+    \endentry
+    \entry{shen02}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{cee79351d94e2c6332bdc5f48d949ecf}
+      \strng{fullhash}{cee79351d94e2c6332bdc5f48d949ecf}
+      \field{sortinit}{0}
+      \field{labeltitle}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
+      \field{issn}{0278-0046}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{month}{06}
+      \field{number}{3}
+      \field{title}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
+      \field{volume}{49}
+      \field{year}{2002}
+      \field{pages}{677\bibrangedash 684}
+      \verb{doi}
+      \verb 10.1109/TIE.2002.1005395
+      \endverb
+    \endentry
+    \entry{manwell93}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=e5096a5bd2a8b3bc1470b2b120c86606}{Manwell}{M\bibinitperiod}{J.\bibnamedelimi F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=d40e9a3a8a55d52317b9b57c1c0136ca}{McGowan}{M\bibinitperiod}{J.\bibnamedelimi G.}{J\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=e5096a5bd2a8b3bc1470b2b120c86606}{Manwell}{M\bibinitperiod}{J.\bibnamedelimi F.}{J\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=d40e9a3a8a55d52317b9b57c1c0136ca}{McGowan}{M\bibinitperiod}{J.\bibnamedelimi G.}{J\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{5350b1816322a6d312af992f83634ea7}
+      \strng{fullhash}{5350b1816322a6d312af992f83634ea7}
+      \field{sortinit}{0}
+      \field{labeltitle}{Lead acid battery storage model for hybrid energy system}
+      \field{journaltitle}{Solar Energy}
+      \field{number}{5}
+      \field{title}{Lead acid battery storage model for hybrid energy system}
+      \field{volume}{50}
+      \field{year}{1993}
+      \field{pages}{399\bibrangedash 405}
+    \endentry
+    \entry{rakhmatov01}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=bd4c662744f054a9d77b62e1c93ec9c9}{Rakhmatov}{R\bibinitperiod}{Daler\bibnamedelima N.}{D\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{hash=dac351633048b798f2719fd18620f5b5}{Vrudhula}{V\bibinitperiod}{Sarma\bibnamedelimb B.\bibnamedelimi K.}{S\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=bd4c662744f054a9d77b62e1c93ec9c9}{Rakhmatov}{R\bibinitperiod}{Daler\bibnamedelima N.}{D\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{hash=dac351633048b798f2719fd18620f5b5}{Vrudhula}{V\bibinitperiod}{Sarma\bibnamedelimb B.\bibnamedelimi K.}{S\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {San Jose, California}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Press}%
+      }
+      \strng{namehash}{10ca2552805936eb120921189df1f6d0}
+      \strng{fullhash}{10ca2552805936eb120921189df1f6d0}
+      \field{sortinit}{0}
+      \field{labeltitle}{An Analytical High-level Battery Model for Use in Energy Management of Portable Electronic Systems}
+      \field{booktitle}{Proceedings of the 2001 IEEE/ACM International Conference on Computer-aided Design}
+      \field{isbn}{0-7803-7249-2}
+      \field{series}{ICCAD '01}
+      \field{title}{An Analytical High-level Battery Model for Use in Energy Management of Portable Electronic Systems}
+      \field{year}{2001}
+      \field{pages}{488\bibrangedash 493}
+    \endentry
+    \entry{chiasserini99b}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{685cdaf759102df0e670bb9f89648fd6}
+      \strng{fullhash}{685cdaf759102df0e670bb9f89648fd6}
+      \field{sortinit}{0}
+      \field{labeltitle}{Pulsed Battery Discharge in Communication Devices}
+      \field{booktitle}{Proceedings of the 5th Annual ACM/IEEE International Conference on Mobile Computing and Networking}
+      \field{series}{MobiCom '99}
+      \field{title}{Pulsed Battery Discharge in Communication Devices}
+      \field{year}{1999}
+      \field{pages}{88\bibrangedash 95}
+    \endentry
+    \entry{chiasserini01}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{685cdaf759102df0e670bb9f89648fd6}
+      \strng{fullhash}{685cdaf759102df0e670bb9f89648fd6}
+      \field{sortinit}{0}
+      \field{labeltitle}{Improving battery performance by using traffic shaping techniques}
+      \field{journaltitle}{IEEE Journal on Selected Areas in Communications}
+      \field{number}{7}
+      \field{title}{Improving battery performance by using traffic shaping techniques}
+      \field{volume}{19}
+      \field{year}{2001}
+      \field{pages}{1385\bibrangedash 1394}
+    \endentry
+    \entry{chiasserini01b}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=0c5ecb1351177b1d4bbffe020bced3b4}{Rao}{R\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{685cdaf759102df0e670bb9f89648fd6}
+      \strng{fullhash}{685cdaf759102df0e670bb9f89648fd6}
+      \field{sortinit}{0}
+      \field{labeltitle}{Energy efficient battery management}
+      \field{journaltitle}{IEEE Journal on Selected Areas in Communications}
+      \field{number}{7}
+      \field{title}{Energy efficient battery management}
+      \field{volume}{19}
+      \field{year}{2001}
+      \field{pages}{1235\bibrangedash 1245}
+    \endentry
+    \entry{rao05}{inproceedings}{}
+      \name{labelname}{4}{}{%
+        {{hash=6ada9efdcfcc4c1ec5d333c78fe38755}{Rao}{R\bibinitperiod}{Venkat}{V\bibinitperiod}{}{}{}{}}%
+        {{hash=eddf89e7651ad93d02ed5d9c7250c919}{Singhal}{S\bibinitperiod}{Gaurav}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=510e667c6275fb00f708fabf8894cf4c}{Kumar}{K\bibinitperiod}{Anshul}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=9bafcbd1e478020a5c61f7826ccf91a0}{Navet}{N\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=6ada9efdcfcc4c1ec5d333c78fe38755}{Rao}{R\bibinitperiod}{Venkat}{V\bibinitperiod}{}{}{}{}}%
+        {{hash=eddf89e7651ad93d02ed5d9c7250c919}{Singhal}{S\bibinitperiod}{Gaurav}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=510e667c6275fb00f708fabf8894cf4c}{Kumar}{K\bibinitperiod}{Anshul}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=9bafcbd1e478020a5c61f7826ccf91a0}{Navet}{N\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Washington, DC, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{dfc1901dda2cbd0c7c46b23bb20a72de}
+      \strng{fullhash}{dfc1901dda2cbd0c7c46b23bb20a72de}
+      \field{sortinit}{0}
+      \field{labeltitle}{Battery Model for Embedded Systems}
+      \field{booktitle}{Proceedings of the 18th International Conference on VLSI Design held jointly with 4th International Conference on Embedded Systems Design}
+      \field{issn}{1063-9667}
+      \field{series}{VLSID '05}
+      \field{title}{Battery Model for Embedded Systems}
+      \field{year}{2005}
+      \field{pages}{105\bibrangedash 110}
+      \verb{doi}
+      \verb http://doi.ieeecomputersociety.org/10.1109/ICVD.2005.61
+      \endverb
+    \endentry
+    \entry{hageman93}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=072e6502154a4b4a3c29dd748761b2c2}{Hageman}{H\bibinitperiod}{S.\bibnamedelimi C.}{S\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=072e6502154a4b4a3c29dd748761b2c2}{Hageman}{H\bibinitperiod}{S.\bibnamedelimi C.}{S\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{072e6502154a4b4a3c29dd748761b2c2}
+      \strng{fullhash}{072e6502154a4b4a3c29dd748761b2c2}
+      \field{sortinit}{0}
+      \field{labeltitle}{Simple {PSpice} models let you simulate common battery types}
+      \field{journaltitle}{Electronic Design News}
+      \field{title}{Simple {PSpice} models let you simulate common battery types}
+      \field{volume}{38}
+      \field{year}{1993}
+      \field{pages}{117\bibrangedash 129}
+    \endentry
+    \entry{chen06}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=fb194450e9046854896c4ca5f2dc8d01}{Chen}{C\bibinitperiod}{Min}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=1d121e160e7920c03cf6e0421e3b2822}{Rinc\'{o}n-Mora}{R\bibinithyphendelim M\bibinitperiod}{G.\bibnamedelimi A.}{G\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=fb194450e9046854896c4ca5f2dc8d01}{Chen}{C\bibinitperiod}{Min}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=1d121e160e7920c03cf6e0421e3b2822}{Rinc\'{o}n-Mora}{R\bibinithyphendelim M\bibinitperiod}{G.\bibnamedelimi A.}{G\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c0c4884c1d080cc605a5481231ea02c8}
+      \strng{fullhash}{c0c4884c1d080cc605a5481231ea02c8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Accurate electrical battery model capable of predicting runtime and I-V performance}
+      \field{issn}{0885-8969}
+      \field{journaltitle}{IEEE Transactions on Energy Conversion}
+      \field{month}{06}
+      \field{number}{2}
+      \field{title}{Accurate electrical battery model capable of predicting runtime and I-V performance}
+      \field{volume}{21}
+      \field{year}{2006}
+      \field{pages}{504\bibrangedash 511}
+      \verb{doi}
+      \verb 10.1109/TEC.2006.874229
+      \endverb
+    \endentry
+    \entry{iec61434}{report}{}
+      \name{labelname}{1}{}{%
+        {{hash=0fbe995e2ed0e457da036da4c00b362a}{{IEC\bibnamedelimb SC\bibnamedelimb 21A}}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=0fbe995e2ed0e457da036da4c00b362a}{{IEC\bibnamedelimb SC\bibnamedelimb 21A}}{I\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {The International Electrotechnical Commission}%
+      }
+      \strng{namehash}{0fbe995e2ed0e457da036da4c00b362a}
+      \strng{fullhash}{0fbe995e2ed0e457da036da4c00b362a}
+      \field{sortinit}{0}
+      \field{labeltitle}{Secondary cells and batteries containing alkaline or other non-acid electrolytes -- Guide to designation of current in alkaline secondary cell and battery standards}
+      \field{number}{IEC 61434}
+      \field{title}{Secondary cells and batteries containing alkaline or other non-acid electrolytes -- Guide to designation of current in alkaline secondary cell and battery standards}
+      \field{type}{techreport}
+      \field{year}{1996}
+    \endentry
+    \entry{linden01_ch3}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=7a0081586d1cea6f628349a985d355b8}{Reddy}{R\bibinitperiod}{Thomas\bibnamedelima B.}{T\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{8f7f0ff47fb58efc3e63f7597140f6bf}
+      \strng{fullhash}{8f7f0ff47fb58efc3e63f7597140f6bf}
+      \field{sortinit}{0}
+      \field{labeltitle}{Factors Affecting Battery Performance}
+      \field{booktitle}{Handbook of Batteries}
+      \field{chapter}{3}
+      \field{edition}{3rd ed.}
+      \field{title}{Factors Affecting Battery Performance}
+      \field{year}{2001}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
 
-\bibitem{jongerden09}
-\textsc{Jongerden, M.} and \textsc{B.~Haverkort} (2009) \enquote{Which battery
-  model to use?} \emph{Software, IET}, \textbf{3}(6), pp. 445--457.
-
-\bibitem{capizzi11}
-\textsc{Capizzi, G.}, \textsc{F.~Bonanno}, and \textsc{G.~Tina} (2011)
-  \enquote{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid
-  Batteries Charge-Discharge,} \emph{Energy Conversion, IEEE Transactions on},
-  \textbf{26}(2), pp. 435--443.
-
-\bibitem{shen02}
-\textsc{Shen, W.}, \textsc{C.~Chan}, \textsc{E.~W.~C. Lo}, and \textsc{K.~Chau}
-  (2002) \enquote{Adaptive neuro-fuzzy modeling of battery residual capacity
-  for electric vehicles,} \emph{Industrial Electronics, IEEE Transactions on},
-  \textbf{49}(3), pp. 677--684.
-
-\bibitem{manwell93}
-\textsc{Manwell, J.} and \textsc{J.~McGowan} (1993) \enquote{Lead acid battery
-  storage model for hybrid energy system,} \emph{Solar Energy}, \textbf{50}(5),
-  pp. 399--405.
-
-\bibitem{rakhmatov01}
-\textsc{Rakhmatov, D.~N.} and \textsc{S.~B.~K. Vrudhula} (2001) \enquote{An
-  Analytical High-level Battery Model for Use in Energy Management of Portable
-  Electronic Systems,} in \emph{Proceedings of the 2001 IEEE/ACM International
-  Conference on Computer-aided Design}, ICCAD '01, IEEE Press, Piscataway, NJ,
-  USA, pp. 488--493.
-
-\bibitem{chen06}
-\textsc{Chen, M.} and \textsc{G.~Rincon-Mora} (2006) \enquote{Accurate
-  electrical battery model capable of predicting runtime and I-V performance,}
-  \emph{Energy Conversion, IEEE Transactions on}, \textbf{21}(2), pp. 504--511.
-
-\bibitem{iec61434}
-\textsc{{IEC SC 21A}} (1996) \emph{Secondary cells and batteries containing
-  alkaline or other non-acid electrolytes -- Guide to designation of current in
-  alkaline secondary cell and battery standards}, \emph{Tech. Rep. IEC 61434},
-  The International Electrotechnical Commission.
-
-\bibitem{linden01_ch3}
-\textsc{Linden, D.} (2001) \enquote{Factors Affecting Battery Performance,} in
-  \emph{Handbook of Batteries} (D.~Linden and T.~B. Reddy, eds.), third ed.,
-  chap.~3, McGraw-Hill.
-
-\end{thebibliography}
