@@ -5,12 +5,12 @@
 \BOOKMARK [2][-]{subsection..1.2.1}{1.2.1 Electrochemical}{section..1.2}% 5
 \BOOKMARK [2][-]{subsection..1.2.2}{1.2.2 Computational Intelligence}{section..1.2}% 6
 \BOOKMARK [2][-]{subsection..1.2.3}{1.2.3 Analytical}{section..1.2}% 7
-\BOOKMARK [2][-]{subsection..1.2.4}{1.2.4 Peukert's Law}{section..1.2}% 8
-\BOOKMARK [2][-]{subsection..1.2.5}{1.2.5 Kinetic Battery Model}{section..1.2}% 9
-\BOOKMARK [2][-]{subsection..1.2.6}{1.2.6 Diffusion Model}{section..1.2}% 10
-\BOOKMARK [2][-]{subsection..1.2.7}{1.2.7 Stochastic}{section..1.2}% 11
-\BOOKMARK [2][-]{subsection..1.2.8}{1.2.8 Electrical-Circuit}{section..1.2}% 12
-\BOOKMARK [2][-]{subsection..1.2.9}{1.2.9 Evaluation}{section..1.2}% 13
+\BOOKMARK [3][-]{subsubsection..1.2.3.1}{1.2.3.1 Peukert's Law}{subsection..1.2.3}% 8
+\BOOKMARK [3][-]{subsubsection..1.2.3.2}{1.2.3.2 Kinetic Battery Model}{subsection..1.2.3}% 9
+\BOOKMARK [3][-]{subsubsection..1.2.3.3}{1.2.3.3 Diffusion Model}{subsection..1.2.3}% 10
+\BOOKMARK [2][-]{subsection..1.2.4}{1.2.4 Stochastic}{section..1.2}% 11
+\BOOKMARK [2][-]{subsection..1.2.5}{1.2.5 Electrical-Circuit}{section..1.2}% 12
+\BOOKMARK [2][-]{subsection..1.2.6}{1.2.6 Evaluation}{section..1.2}% 13
 \BOOKMARK [1][-]{section..1.3}{1.3 Nonlinear Filtering Methods}{chapter..1}% 14
 \BOOKMARK [0][-]{chapter..2}{2 Methodology}{}% 15
 \BOOKMARK [1][-]{section..2.1}{2.1 Battery Model}{chapter..2}% 16

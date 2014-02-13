@@ -429,7 +429,7 @@ A \psu@documenttype
 \vfill
 \begin{center}
 \onehalfspacing
-Submitted to the Graduate Faculty of the \\ University of New Orlenas \\
+Submitted to the Graduate Faculty of the \\ University of New Orleans \\
 in partial fulfillment of the \\ requirements for the degree of \\
 \end{center}
 \vfill

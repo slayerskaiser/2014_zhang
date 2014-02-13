@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2014.1.27)  12 FEB 2014 20:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.27)  13 FEB 2014 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,10 +226,18 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 (/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 130.
 
-(/usr/share/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count104
 )
 (/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
@@ -246,15 +254,15 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\pfg@pcount=\count104
-\pfg@scount=\count105
+\pfg@pcount=\count105
+\pfg@scount=\count106
 \pfg@temp=\write3
 )
 (/usr/share/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2011/10/02 v1.4z package for extended references (FMi)
-\c@vrcnt=\count106
+\c@vrcnt=\count107
 )
 (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -268,12 +276,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen123
 \cmidrulekern=\dimen124
 \defaultaddspace=\dimen125
-\@cmidla=\count107
-\@cmidlb=\count108
+\@cmidla=\count108
+\@cmidlb=\count109
 \@aboverulesep=\dimen126
 \@belowrulesep=\dimen127
-\@thisruleclass=\count109
-\@lastruleclass=\count110
+\@thisruleclass=\count110
+\@lastruleclass=\count111
 \@thisrulewidth=\dimen128
 )
 (/usr/share/texmf-dist/tex/latex/mhchem/mhchem.sty
@@ -290,24 +298,18 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+Package pdftexcmds Info: \pdfdraftmode found.
 )
 \mhchem@ce@result=\toks29
 \mhchem@ce@part=\toks30
@@ -351,17 +353,17 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
-\c@KVtest=\count111
+\c@KVtest=\count112
 \sf@farskip=\skip115
 \sf@captopadj=\dimen136
 \sf@capskip=\skip116
 \sf@nearskip=\skip117
-\c@subfigure=\count112
-\c@subfigure@save=\count113
-\c@lofdepth=\count114
-\c@subtable=\count115
-\c@subtable@save=\count116
-\c@lotdepth=\count117
+\c@subfigure=\count113
+\c@subfigure@save=\count114
+\c@lofdepth=\count115
+\c@subtable=\count116
+\c@subtable@save=\count117
+\c@lotdepth=\count118
 \sf@top=\skip118
 \sf@bottom=\skip119
 )
@@ -372,8 +374,8 @@ Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 )
 (/usr/share/texmf-dist/tex/latex/draftcopy/draftcopy.sty
 Package: draftcopy 2002/02/25 v2.16
-\draftcopy@hour=\count118
-\draftcopy@minute=\count119
+\draftcopy@hour=\count119
+\draftcopy@minute=\count120
 
 (/etc/texmf/tex/latex/draftcopy.d/draftcopy.cfg)
 Prints DRAFT on pages; does not show in your DVI viewer
@@ -387,9 +389,10 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 702.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -404,7 +407,7 @@ Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks41
 \XKV@tempa@toks=\toks42
-\XKV@depth=\count120
+\XKV@depth=\count121
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
@@ -414,22 +417,24 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@old@col=\dimen141
 \TX@target=\dimen142
 \TX@delta=\dimen143
-\TX@cols=\count121
+\TX@cols=\count122
 \TX@ftn=\toks43
 )
 (/usr/share/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count122
+\c@r@tfl@t=\count123
 \rotFPtop=\skip120
 \rotFPbot=\skip121
 \rot@float@box=\box31
 \rot@mess@toks=\toks44
 )
+(/usr/share/texmf-dist/tex/latex/oberdiek/transparent.sty
+Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
-Package ctable Warning: 
-(ctable)                Transparency disabled: pdfTeX is not running in PDF mod
-e .
 
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+))
 \@ctblframesep=\dimen144
 \@defaultctblframesep=\dimen145
 \@ctblframerule=\dimen146
@@ -449,7 +454,8 @@ e .
 \@ctbloldsep=\dimen160
 \@ctbloldrule=\dimen161
 \ctbl@t=\box32
-) (/usr/share/texmf-site/tex/latex/biblatex/biblatex.sty
+)
+(/usr/share/texmf-site/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2013/10/18 v2.8 programmable bibliographies (PK/JW/AB)
 
 (/usr/share/texmf-site/tex/latex/biblatex/biblatex2.sty
@@ -461,9 +467,9 @@ Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 (/usr/share/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count123
+\et@xins=\count124
 )
-\etb@tempcnta=\count124
+\etb@tempcnta=\count125
 )
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
@@ -480,7 +486,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count125
+\lrq@indent=\count126
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -489,44 +495,44 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count126
-\c@listtotal=\count127
-\c@listcount=\count128
-\c@liststart=\count129
-\c@liststop=\count130
-\c@citecount=\count131
-\c@citetotal=\count132
-\c@multicitecount=\count133
-\c@multicitetotal=\count134
-\c@instcount=\count135
-\c@maxnames=\count136
-\c@minnames=\count137
-\c@maxitems=\count138
-\c@minitems=\count139
-\c@citecounter=\count140
-\c@savedcitecounter=\count141
-\c@uniquelist=\count142
-\c@uniquename=\count143
-\c@refsection=\count144
-\c@refsegment=\count145
-\c@maxextratitle=\count146
-\c@maxextratitleyear=\count147
-\c@maxextrayear=\count148
-\c@maxextraalpha=\count149
-\c@abbrvpenalty=\count150
-\c@highnamepenalty=\count151
-\c@lownamepenalty=\count152
-\c@maxparens=\count153
-\c@parenlevel=\count154
-\blx@tempcnta=\count155
-\blx@tempcntb=\count156
-\blx@tempcntc=\count157
-\blx@maxsection=\count158
-\blx@maxsegment@0=\count159
-\blx@notetype=\count160
-\blx@parenlevel@text=\count161
-\blx@parenlevel@foot=\count162
-\blx@sectionciteorder@0=\count163
+\c@tabx@nest=\count127
+\c@listtotal=\count128
+\c@listcount=\count129
+\c@liststart=\count130
+\c@liststop=\count131
+\c@citecount=\count132
+\c@citetotal=\count133
+\c@multicitecount=\count134
+\c@multicitetotal=\count135
+\c@instcount=\count136
+\c@maxnames=\count137
+\c@minnames=\count138
+\c@maxitems=\count139
+\c@minitems=\count140
+\c@citecounter=\count141
+\c@savedcitecounter=\count142
+\c@uniquelist=\count143
+\c@uniquename=\count144
+\c@refsection=\count145
+\c@refsegment=\count146
+\c@maxextratitle=\count147
+\c@maxextratitleyear=\count148
+\c@maxextrayear=\count149
+\c@maxextraalpha=\count150
+\c@abbrvpenalty=\count151
+\c@highnamepenalty=\count152
+\c@lownamepenalty=\count153
+\c@maxparens=\count154
+\c@parenlevel=\count155
+\blx@tempcnta=\count156
+\blx@tempcntb=\count157
+\blx@tempcntc=\count158
+\blx@maxsection=\count159
+\blx@maxsegment@0=\count160
+\blx@notetype=\count161
+\blx@parenlevel@text=\count162
+\blx@parenlevel@foot=\count163
+\blx@sectionciteorder@0=\count164
 \labelnumberwidth=\skip122
 \labelalphawidth=\skip123
 \shorthandwidth=\skip124
@@ -538,9 +544,9 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 \bibhang=\skip130
 \blx@bcfin=\read2
 \blx@bcfout=\write4
-\c@mincomprange=\count164
-\c@maxcomprange=\count165
-\c@mincompwidth=\count166
+\c@mincomprange=\count165
+\c@maxcomprange=\count166
+\c@mincompwidth=\count167
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -549,72 +555,72 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count167
-\c@savedafterword=\count168
-\c@annotator=\count169
-\c@savedannotator=\count170
-\c@author=\count171
-\c@savedauthor=\count172
-\c@bookauthor=\count173
-\c@savedbookauthor=\count174
-\c@commentator=\count175
-\c@savedcommentator=\count176
-\c@editor=\count177
-\c@savededitor=\count178
-\c@editora=\count179
-\c@savededitora=\count180
-\c@editorb=\count181
-\c@savededitorb=\count182
-\c@editorc=\count183
-\c@savededitorc=\count184
-\c@foreword=\count185
-\c@savedforeword=\count186
-\c@holder=\count187
-\c@savedholder=\count188
-\c@introduction=\count189
-\c@savedintroduction=\count190
-\c@namea=\count191
-\c@savednamea=\count192
-\c@nameb=\count193
-\c@savednameb=\count194
-\c@namec=\count195
-\c@savednamec=\count196
-\c@shortauthor=\count197
-\c@savedshortauthor=\count198
-\c@shorteditor=\count199
-\c@savedshorteditor=\count200
-\c@translator=\count201
-\c@savedtranslator=\count202
-\c@labelname=\count203
-\c@savedlabelname=\count204
-\c@institution=\count205
-\c@savedinstitution=\count206
-\c@lista=\count207
-\c@savedlista=\count208
-\c@listb=\count209
-\c@savedlistb=\count210
-\c@listc=\count211
-\c@savedlistc=\count212
-\c@listd=\count213
-\c@savedlistd=\count214
-\c@liste=\count215
-\c@savedliste=\count216
-\c@listf=\count217
-\c@savedlistf=\count218
-\c@location=\count219
-\c@savedlocation=\count220
-\c@organization=\count221
-\c@savedorganization=\count222
-\c@origlocation=\count223
-\c@savedoriglocation=\count224
-\c@origpublisher=\count225
-\c@savedorigpublisher=\count226
-\c@publisher=\count227
-\c@savedpublisher=\count228
-\c@language=\count229
-\c@savedlanguage=\count230
-\c@pageref=\count231
-\c@savedpageref=\count232
+\c@afterword=\count168
+\c@savedafterword=\count169
+\c@annotator=\count170
+\c@savedannotator=\count171
+\c@author=\count172
+\c@savedauthor=\count173
+\c@bookauthor=\count174
+\c@savedbookauthor=\count175
+\c@commentator=\count176
+\c@savedcommentator=\count177
+\c@editor=\count178
+\c@savededitor=\count179
+\c@editora=\count180
+\c@savededitora=\count181
+\c@editorb=\count182
+\c@savededitorb=\count183
+\c@editorc=\count184
+\c@savededitorc=\count185
+\c@foreword=\count186
+\c@savedforeword=\count187
+\c@holder=\count188
+\c@savedholder=\count189
+\c@introduction=\count190
+\c@savedintroduction=\count191
+\c@namea=\count192
+\c@savednamea=\count193
+\c@nameb=\count194
+\c@savednameb=\count195
+\c@namec=\count196
+\c@savednamec=\count197
+\c@shortauthor=\count198
+\c@savedshortauthor=\count199
+\c@shorteditor=\count200
+\c@savedshorteditor=\count201
+\c@translator=\count202
+\c@savedtranslator=\count203
+\c@labelname=\count204
+\c@savedlabelname=\count205
+\c@institution=\count206
+\c@savedinstitution=\count207
+\c@lista=\count208
+\c@savedlista=\count209
+\c@listb=\count210
+\c@savedlistb=\count211
+\c@listc=\count212
+\c@savedlistc=\count213
+\c@listd=\count214
+\c@savedlistd=\count215
+\c@liste=\count216
+\c@savedliste=\count217
+\c@listf=\count218
+\c@savedlistf=\count219
+\c@location=\count220
+\c@savedlocation=\count221
+\c@organization=\count222
+\c@savedorganization=\count223
+\c@origlocation=\count224
+\c@savedoriglocation=\count225
+\c@origpublisher=\count226
+\c@savedorigpublisher=\count227
+\c@publisher=\count228
+\c@savedpublisher=\count229
+\c@language=\count230
+\c@savedlanguage=\count231
+\c@pageref=\count232
+\c@savedpageref=\count233
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -626,14 +632,14 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texmf-site/tex/latex/biblatex/biblatex.def
 File: biblatex.def 
-\c@textcitecount=\count233
 Normal \count register pool exhausted, switching to extended pool.
-\c@textcitetotal=\count277
-\c@textcitemaxnames=\count278
-\c@biburlnumpenalty=\count279
-\c@biburlucpenalty=\count280
-\c@biburllcpenalty=\count281
-\c@smartand=\count282
+\c@textcitecount=\count277
+\c@textcitetotal=\count278
+\c@textcitemaxnames=\count279
+\c@biburlnumpenalty=\count280
+\c@biburlucpenalty=\count281
+\c@biburllcpenalty=\count282
+\c@smartand=\count283
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -655,16 +661,16 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-site/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2013/10/18 v2.8 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count283
-\c@bbx:relatedtotal=\count284
+\c@bbx:relatedcount=\count284
+\c@bbx:relatedtotal=\count285
 ))))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (/usr/share/texmf-site/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2013/10/18 v2.8 biblatex citation style (PK/JW/AB)
-\c@cbx@tempcnta=\count285
-\c@cbx@tempcntb=\count286
+\c@cbx@tempcnta=\count286
+\c@cbx@tempcntb=\count287
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -686,11 +692,11 @@ File: biblatex.cfg
 (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks45
-\MT@count=\count287
+\MT@count=\count288
 LaTeX Info: Redefining \textls on input line 766.
 \MT@outer@kern=\dimen162
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
-\MT@listname@count=\count288
+\MT@listname@count=\count289
 
 (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
@@ -753,17 +759,14 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
 \@linkdim=\dimen163
-\Hy@linkcounter=\count289
-\Hy@pagecounter=\count290
+\Hy@linkcounter=\count290
+\Hy@pagecounter=\count291
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count291
+\Hy@SavedSpaceFactor=\count292
 
 (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -776,10 +779,10 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count292
+\c@Hy@tempcnt=\count293
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen164
-\Fld@menulength=\count293
+\Fld@menulength=\count294
 \Field@Width=\dimen165
 \Fld@charsize=\dimen166
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -791,23 +794,15 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count294
-\c@Item=\count295
-\c@Hfootnote=\count296
+\Hy@abspage=\count295
+\c@Item=\count296
+\c@Hfootnote=\count297
 )
 
-Package hyperref Message: Driver (default): hdvips.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
-
-(/usr/share/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks46
-\pdf@box=\box33
-\pdf@toks=\toks47
-\pdf@defaulttoks=\toks48
-\HyField@AnnotCount=\count297
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count298
 \c@bookmark@seq@number=\count299
 
@@ -817,18 +812,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip139
-))
+)
 (/usr/share/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
 (/usr/share/texmf-dist/tex/latex/breakurl/breakurl.sty
 Package: breakurl 2013/04/10 v1.40 Breakable hyperref URLs
-\burl@toks=\toks49
+
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 48.
+
 )
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 101.
 
-
-(./SupplementaryMaterial/UserDefinedCommands.tex)
+ (./SupplementaryMaterial/UserDefinedCommands.tex)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -854,6 +854,34 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 262.
 LaTeX Font Info:    ... okay on input line 262.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 262.
 LaTeX Font Info:    ... okay on input line 262.
+(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen167
+\scratchbox=\box33
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen168
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks47
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -865,15 +893,18 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'zhang_thesis.bbl' found.
+
 (./zhang_thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 262.
 Package biblatex Info: Reference segment=0 on input line 262.
 LaTeX Info: Redefining \microtypecontext on input line 262.
-Package microtype Info: Generating DVI output.
+Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
 Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: No font expansion.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: Tracking enabled.
 Package microtype Info: Using default tracking set `smallcaps'.
 Package microtype Info: Adjustment of interword spacing enabled.
@@ -893,7 +924,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count302
+\c@section@level=\count308
 LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 262.
@@ -906,9 +937,12 @@ LaTeX Info: Redefining \nameref on input line 262.
 
 LaTeX Info: Redefining \Ref on input line 262.
  [1
+Non-PDF special ignored!
 
 
-]
+Non-PDF special ignored!
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (./SupplementaryMaterial/Abstract.tex) [2
 
 ] (./zhang_thesis.toc
@@ -969,40 +1003,71 @@ Package microtype Info: Loading generic settings for font family
 Chapter 2.
 [10
 
-]
-File: chapter-2/figures/batt_model.eps Graphic file (type eps)
- <chapter-2/figures/batt_model.eps> [11]
-Overfull \hbox (17.97998pt too wide) in paragraph at lines 38--40
-\T1/cmr/m/n/12 where $\OML/cmm/m/it/12 V[]$ \T1/cmr/m/n/12 is the nom-i-nal vol
-t-age. The en-ergy stored in the ca-pac-i-tor $\OML/cmm/m/it/12 C[]$ \T1/cmr/m/
-n/12 is $\OML/cmm/m/it/12 E[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 C[]V[]=\OT1/cm
-r/m/n/12 2$\T1/cmr/m/n/12 .
- []
+] <chapter-2/figures/batt_model.png, id=233, 1467.4825pt x 663.47874pt>
+File: chapter-2/figures/batt_model.png Graphic file (type png)
 
-[12]
-File: chapter-2/figures/sim_ideal.eps Graphic file (type eps)
- <chapter-2/figures/sim_ideal.eps>) [13] [14] [15
+<use chapter-2/figures/batt_model.png>
+Package pdftex.def Info: chapter-2/figures/batt_model.png used on input line 24
+.
+(pdftex.def)             Requested size: 422.77661pt x 191.13841pt.
+ [11 <./chapter-2/figures/batt_model.png>] [12] <chapter-2/figures/sim_ideal.pd
+f, id=260, 420.57124pt x 316.18124pt>
+File: chapter-2/figures/sim_ideal.pdf Graphic file (type pdf)
+
+<use chapter-2/figures/sim_ideal.pdf>
+Package pdftex.def Info: chapter-2/figures/sim_ideal.pdf used on input line 75.
+
+(pdftex.def)             Requested size: 422.77661pt x 317.84492pt.
+) [13] [14 <./chapter-2/figures/sim_ideal.pdf>] [15
 
 
 ] [16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
  (./zhang_thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
 Package rerunfilecheck Info: File `zhang_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A59C82681C493BA5960BD8C9025A4C64;1344.
+(rerunfilecheck)             Checksum: C97C1CDEEFD1B1A71F387C4EA8939D88;1380.
 Package logreq Info: Writing requests to 'zhang_thesis.run.xml'.
 \openout1 = `zhang_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15987 strings out of 495034
- 257339 string characters out of 6182247
- 718626 words of memory out of 5000000
- 18872 multiletter control sequences out of 15000+600000
- 24808 words of font info for 63 fonts, out of 8000000 for 9000
+ 16637 strings out of 495033
+ 266397 string characters out of 6182221
+ 721250 words of memory out of 5000000
+ 19330 multiletter control sequences out of 15000+600000
+ 30097 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,16n,61p,1261b,1159s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,16n,61p,1261b,1172s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texm
+f-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
+uper/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.p
+fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/
+texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/font
+s/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/
+cm-super/sfrm0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm10
+00.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/
+fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sf
+tt1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></us
+r/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb>
+Output written on zhang_thesis.pdf (19 pages, 588474 bytes).
+PDF statistics:
+ 399 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 27299 words of extra memory for PDF output out of 29859 (max. 10000000)
 
-Output written on zhang_thesis.dvi (19 pages, 86100 bytes).

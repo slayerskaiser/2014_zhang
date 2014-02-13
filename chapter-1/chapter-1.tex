@@ -50,11 +50,11 @@ models.
 
 \emph{[Needs rewrite to include more detail, eg equations]}
 
-\subsection{Peukert's Law}
+\subsubsection{Peukert's Law}
 
 Analytical models are simplified electrochemical models that trade off accuracy for simplicity. One of the simplest such models is Peukert's law, described above. It is able to model the rate-capacity effect but not the recovery effect. More complicated models, such as the kinetic battery model and the diffusion model, are able to describe both the rate-capacity effect and the recovery effect. However, the current examples of analytical models cannot describe the transient i-v characteristics of batteries.
 
-\subsection{Kinetic Battery Model}
+\subsubsection{Kinetic Battery Model}
 
 The kinetic battery model (KiBaM), initially created for large lead-acid batteries, describes the battery as a kinetic process, using two charge wells for the bound and available charges connected by a valve whose flow rate is proportional to the height difference between the wells~\cite{manwell93}. 
 
@@ -72,7 +72,7 @@ where $y_1,y_2$ are the charges, $h_1,h_2$ are the heights of the wells, the par
 The flow rate of the valve should be lower than the typical discharge rate of the battery. During discharge from the available-charge well, the bound charges flow through the valve to equalize the heights of the two wells. It can be seen that for slower discharge
 rates, more charge flows through the valve and the effective capacity increases. Likewise, during idle periods for the battery, the available charge increases. Thus, the model is able to describe the rate-capacity and recovery effects.
 
-\subsection{Diffusion Model}
+\subsubsection{Diffusion Model}
 
 Related to the kinetic battery model is the diffusion model, which describes the movement of the ions in the electrolyte of a lithium-ion battery~\cite{rakhmatov01}. Like in the kinetic battery model, the difference in the concentration of adjacent ions along the length of the battery determines the diffusion rate of the ions. The available charges are those ions directly touching the electrode of the battery. It can be seen that the kinetic battery model is a first-order approximation of the diffusion
 model~\cite{jongerden09}, so naturally the diffusion model also describes the rate-capacity and recovery effects.
