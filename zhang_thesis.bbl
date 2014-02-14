@@ -460,6 +460,44 @@
       \verb http://doi.ieeecomputersociety.org/10.1109/ICVD.2005.61
       \endverb
     \endentry
+    \entry{jossen06}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \strng{fullhash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Fundamentals of battery dynamics}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{number}{2}
+      \field{title}{Fundamentals of battery dynamics}
+      \field{volume}{154}
+      \field{year}{2006}
+      \field{pages}{530\bibrangedash 538}
+    \endentry
+    \entry{randles47}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=70ccff8a39352d99c49872f62ccfc9f7}{Randles}{R\bibinitperiod}{J.\bibnamedelimi E.\bibnamedelimi B.}{J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=70ccff8a39352d99c49872f62ccfc9f7}{Randles}{R\bibinitperiod}{J.\bibnamedelimi E.\bibnamedelimi B.}{J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society of Chemistry}%
+      }
+      \strng{namehash}{70ccff8a39352d99c49872f62ccfc9f7}
+      \strng{fullhash}{70ccff8a39352d99c49872f62ccfc9f7}
+      \field{sortinit}{0}
+      \field{labeltitle}{Kinetics of rapid electrode reactions}
+      \field{journaltitle}{Discussions of the Faraday Society}
+      \field{title}{Kinetics of rapid electrode reactions}
+      \field{volume}{1}
+      \field{year}{1947}
+      \field{pages}{11\bibrangedash 19}
+    \endentry
     \entry{hageman93}{article}{}
       \name{labelname}{1}{}{%
         {{hash=072e6502154a4b4a3c29dd748761b2c2}{Hageman}{H\bibinitperiod}{S.\bibnamedelimi C.}{S\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
@@ -476,6 +514,26 @@
       \field{volume}{38}
       \field{year}{1993}
       \field{pages}{117\bibrangedash 129}
+    \endentry
+    \entry{hageman97}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=072e6502154a4b4a3c29dd748761b2c2}{Hageman}{H\bibinitperiod}{S.\bibnamedelimi C.}{S\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=072e6502154a4b4a3c29dd748761b2c2}{Hageman}{H\bibinitperiod}{S.\bibnamedelimi C.}{S\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {{MicroSim} Corporation}%
+      }
+      \strng{namehash}{072e6502154a4b4a3c29dd748761b2c2}
+      \strng{fullhash}{072e6502154a4b4a3c29dd748761b2c2}
+      \field{sortinit}{0}
+      \field{labeltitle}{Using {PSpice} to Simulate the Discharge Behavior of Common Batteries}
+      \field{booktitle}{{MicroSim} Application Notes}
+      \field{edition}{ver.\ 8.0}
+      \field{title}{Using {PSpice} to Simulate the Discharge Behavior of Common Batteries}
+      \field{year}{1997}
+      \field{pages}{260\bibrangedash 286}
     \endentry
     \entry{chen06}{article}{}
       \name{labelname}{2}{}{%

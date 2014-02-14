@@ -132,6 +132,8 @@ Input Package::/usr/share/texmf-dist/tex/latex/tools/tabularx.sty::0::0::tabular
 Input File::/usr/share/texmf-dist/tex/latex/rotating/rotating.sty::0::0::Input File
 Input Package::/usr/share/texmf-dist/tex/latex/rotating/rotating.sty::0::0::rotating 2009/03/28 v2.16a rotated objects in LaTeX
 Package Warning::/usr/share/texmf-dist/tex/latex/ctable/ctable.sty::0::0:: Transparency disabled: pdfTeX is not running in PDF mod (ctable package)
+Input File::/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty::0::0::Input File
+Input Package::/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty::0::0::enumitem 2011/09/28 v3.5.2 Customized lists
 Input File::/usr/share/texmf-site/tex/latex/biblatex/biblatex.sty::0::0::Input File
 Input Package::/usr/share/texmf-site/tex/latex/biblatex/biblatex.sty::0::0::biblatex 2013/10/18 v2.8 programmable bibliographies (PK/JW/AB)
 Input File::/usr/share/texmf-site/tex/latex/biblatex/biblatex2.sty::0::0::Input File
@@ -263,26 +265,26 @@ Input File::/usr/share/texmf-dist/tex/latex/oberdiek/hypcap.sty::0::0::Input Fil
 Input Package::/usr/share/texmf-dist/tex/latex/oberdiek/hypcap.sty::0::0::hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 Input File::/usr/share/texmf-dist/tex/latex/breakurl/breakurl.sty::0::0::Input File
 Input Package::/usr/share/texmf-dist/tex/latex/breakurl/breakurl.sty::0::0::breakurl 2013/04/10 v1.40 Breakable hyperref URLs
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::101::0::Option `bookmarksnumbered' set `true'. (hyperref)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::102::0::Option `bookmarksnumbered' set `true'. (hyperref)
 Input File::./SupplementaryMaterial/UserDefinedCommands.tex::0::0::Input File
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Trying to load language 'english'... (biblatex)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::... file 'english.lbx' found. (biblatex)
 Input File::/usr/share/texmf-site/tex/latex/biblatex/lbx/english.lbx::0::0::Input File
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.aux::0::0::Input File
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for OML/cmm/m/it.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for T1/cmr/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for OT1/cmr/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for OMS/cmsy/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for OMX/cmex/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for U/cmr/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   Checking defaults for PD1/pdf/m/n.
-LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for OML/cmm/m/it.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for T1/cmr/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for OT1/cmr/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for OMS/cmsy/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for OMX/cmex/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for U/cmr/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   Checking defaults for PD1/pdf/m/n.
+LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::   ... okay.
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Begin \AtBeginDocument code. (caption)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::subfig package v1.3 is loaded. (caption)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::End \AtBeginDocument code. (caption)
@@ -291,9 +293,9 @@ Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Automatic
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Trying to load bibliographic data... (biblatex)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::... file 'zhang_thesis.bbl' found. (biblatex)
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.bbl::0::0::Input File
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Reference section=0. (biblatex)
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Reference segment=0. (biblatex)
-LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Redefining \microtypecontext.
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Reference section=0. (biblatex)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Reference segment=0. (biblatex)
+LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Redefining \microtypecontext.
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Generating DVI output. (microtype)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Character protrusion enabled (level 2), factor: 1100. (microtype)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Using default protrusion set `alltext'. (microtype)
@@ -305,18 +307,18 @@ Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Using def
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Adjustment of character kerning enabled. (microtype)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Using default kerning set `alltext'. (microtype)
 Input File::/etc/texmf/tex/latex/microtype.d/mt-cmr.cfg::0::0::Input File
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Link coloring OFF. (hyperref)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Link coloring OFF. (hyperref)
 Input File::/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty::0::0::Input File
 Input Package::/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty::0::0::nameref 2012/10/27 v2.43 Cross-referencing by name of section
 Input File::/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty::0::0::Input File
 Input Package::/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty::0::0::gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info::/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty::513::0::Redefining \Ref.
-LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Redefining \ref.
-LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Redefining \pageref.
-LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Redefining \nameref.
+LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Redefining \ref.
+LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Redefining \pageref.
+LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Redefining \nameref.
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.out::0::0::Input File
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.out::0::0::Input File
-LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::262::0::Redefining \Ref.
+LaTeX Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::263::0::Redefining \Ref.
 Input File::./SupplementaryMaterial/Abstract.tex::0::0::Input File
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.toc::0::0::Input File
 LaTeX Font Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.toc::3::0::   Try loading font information for U+msa.
@@ -336,11 +338,11 @@ LaTeX Font Info::./chapter-1/chapter-1.tex::40::0::   Try loading font informati
 Input File::/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd::0::0::Input File
 Package Info::./chapter-1/chapter-1.tex::0::0::Loading generic settings for font family `cmtt' (encoding: T1). For optimal results, create family-specific settings. See the microtype manual for details. (microtype)
 Input File::./chapter-2/chapter-2.tex::0::0::Input File
-hbox Warning::./chapter-2/chapter-2.tex::38::0::Overfull \hbox (17.97998pt too wide) in paragraph at lines 38--40
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::393::0::Empty hook `BeforeClearDocument'. (atveryend)
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::393::0::Empty hook `AfterLastShipout'. (atveryend)
+hbox Warning::./chapter-2/chapter-2.tex::42::0::Overfull \hbox (17.97998pt too wide) in paragraph at lines 42--44
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Empty hook `BeforeClearDocument'. (atveryend)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Empty hook `AfterLastShipout'. (atveryend)
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.aux::0::0::Input File
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::393::0::Empty hook `AtVeryEndDocument'. (atveryend)
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::393::0::Executing hook `AtEndAfterFileList'. (atveryend)
-Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::File `zhang_thesis.out' has not changed. Checksum: A59C82681C493BA5960BD8C9025A4C64;1344. (rerunfilecheck)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Empty hook `AtVeryEndDocument'. (atveryend)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Executing hook `AtEndAfterFileList'. (atveryend)
+Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::File `zhang_thesis.out' has not changed. Checksum: C97C1CDEEFD1B1A71F387C4EA8939D88;1380. (rerunfilecheck)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::0::0::Writing requests to 'zhang_thesis.run.xml'. (logreq)

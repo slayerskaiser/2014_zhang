@@ -1,4 +1,4 @@
-" ATP project vim script: Tue Feb 11, 2014 at 10:25 PM -0600.
+" ATP project vim script: Thu Feb 13, 2014 at 11:10 PM -0600.
 
 let b:atp_MainFile = 'zhang_thesis.tex'
 let g:atp_mapNn = 0

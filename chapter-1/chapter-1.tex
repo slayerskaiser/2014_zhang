@@ -100,7 +100,39 @@ battery, with a maximum error of 2.65\%.
 
 \subsection{Electrical-Circuit}
 
-Hageman was the first to investigate electrical-circuit models in 1993~\cite{hageman93}.
+One of the earliest investigations into using electrical circuits to represent batteries came about from a desire to represent impedance spectra created using electrochemical impedance spectroscopy (EIS). There are several major chemical processes within a battery with different time constants. Short-term processes include electric and magnetic, electric double layer, and mass transport effects; long-term processes include cyclical effects based on SOC, reversible effects such
+as acid stratification and memory effects, and the irreversible aging effect~\cite{jossen06}. It is convenient to visualize the resultant complex spectra using a Nyquist plot, such as the one shown in \autoref{fig:nyquist_plot_batt}.As shown, the impedance can be divided into three parts, based on the frequency. The approximately linear low frequency portion, on the order of $10^{-6}$ to $10^0$ Hz, is caused by mass transport effects like diffusion. The middle frequency
+range, on the order of $10^0$ to $10^3$ Hz and in the shape of a semicircle, is caused by charge transfer and the electrochemical double layer effects. The remaining high frequency portion, on the order of $10^3$ to $10^4$ Hz, is a combination of the conductance and the skin effect.
+
+In 1947, Randles proposed an equivalent electrical circuit to model interfacial electrochemical reactions~\cite{randles47}. His circuit, shown in \autoref{fig:randles_circuit}, consists of the electrolyte resistance $R_s$ in series with the parallel combination of the double-layer capacitance $C_{dl}$ and the impedance of the charge transfer resistance $R_{ct}$ and the Warburg diffusion element $Z_W$. It is one of the simplest methods to interpret the results of
+EIS. Recently, Randles' circuit was used to study lithium-ion batteries.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{nyquist_plot_batt}
+    \caption{Illustrative Nyquist plot of a battery~\cite{jossen06}. \emph{[Quite low quality from screen capture of article preview. I can recapture for better quality or recreate it.]}}
+    \label{fig:nyquist_plot_batt}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{randles_circuit}
+    \caption{Randles' equivalent circuit.}
+    \label{fig:randles_circuit}
+\end{figure}
+
+In 1993, Hageman created simplified electrical-circuit models using PSpice for nickel-cadmium (NiCd), lead-acid, and alkaline batteries~\cite{hageman93}. The circuits shared the common elements of
+\begin{enumerate*}[label=\emph{\roman*})]
+\item a capacitor that represents the battery capacity,
+\item a discharge rate normalizer that determines the additional capacity loss at high discharge rates,
+\item a circuit that discharges the battery,
+\item a lookup table of battery voltage versus SOC, and
+\item a resistor that represents the battery's internal resistance~\cite{hageman93,hageman97}.
+\end{enumerate*}
+In addition, battery models for NiCd batteries simulated the thermal effects under high discharge rates. The main lookup table is formed by discharging a battery at a low rate at a constant current (20 to 200 hours). At high discharge rates, the discharge rate normalizer reduces the battery voltage below the value from looking up the SOC in the table. This normalizer is implemented using additional lookup tables. These circuit models are much simpler than electrochemical models, but they are also less accurate with an approximately error of 10\%. Furthermore,
+creation of the lookup tables requires considerable data.
+
+Later on, 
 
 \subsection{Evaluation}
 
