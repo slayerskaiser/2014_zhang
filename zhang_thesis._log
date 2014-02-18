@@ -338,7 +338,6 @@ LaTeX Font Info::./chapter-1/chapter-1.tex::40::0::   Try loading font informati
 Input File::/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd::0::0::Input File
 Package Info::./chapter-1/chapter-1.tex::0::0::Loading generic settings for font family `cmtt' (encoding: T1). For optimal results, create family-specific settings. See the microtype manual for details. (microtype)
 Input File::./chapter-2/chapter-2.tex::0::0::Input File
-hbox Warning::./chapter-2/chapter-2.tex::42::0::Overfull \hbox (17.97998pt too wide) in paragraph at lines 42--44
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Empty hook `BeforeClearDocument'. (atveryend)
 Package Info::/home/derkoenig/2014_zhang/latex/zhang_thesis.tex::394::0::Empty hook `AfterLastShipout'. (atveryend)
 Input File::/home/derkoenig/2014_zhang/latex/zhang_thesis.aux::0::0::Input File

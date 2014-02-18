@@ -560,49 +560,6 @@
       \verb 10.1109/TEC.2006.874229
       \endverb
     \endentry
-    \entry{iec61434}{report}{}
-      \name{labelname}{1}{}{%
-        {{hash=0fbe995e2ed0e457da036da4c00b362a}{{IEC\bibnamedelimb SC\bibnamedelimb 21A}}{I\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=0fbe995e2ed0e457da036da4c00b362a}{{IEC\bibnamedelimb SC\bibnamedelimb 21A}}{I\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \list{institution}{1}{%
-        {The International Electrotechnical Commission}%
-      }
-      \strng{namehash}{0fbe995e2ed0e457da036da4c00b362a}
-      \strng{fullhash}{0fbe995e2ed0e457da036da4c00b362a}
-      \field{sortinit}{0}
-      \field{labeltitle}{Secondary cells and batteries containing alkaline or other non-acid electrolytes -- Guide to designation of current in alkaline secondary cell and battery standards}
-      \field{number}{IEC 61434}
-      \field{title}{Secondary cells and batteries containing alkaline or other non-acid electrolytes -- Guide to designation of current in alkaline secondary cell and battery standards}
-      \field{type}{techreport}
-      \field{year}{1996}
-    \endentry
-    \entry{linden01_ch3}{incollection}{}
-      \name{labelname}{1}{}{%
-        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=7a0081586d1cea6f628349a985d355b8}{Reddy}{R\bibinitperiod}{Thomas\bibnamedelima B.}{T\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {McGraw-Hill}%
-      }
-      \strng{namehash}{8f7f0ff47fb58efc3e63f7597140f6bf}
-      \strng{fullhash}{8f7f0ff47fb58efc3e63f7597140f6bf}
-      \field{sortinit}{0}
-      \field{labeltitle}{Factors Affecting Battery Performance}
-      \field{booktitle}{Handbook of Batteries}
-      \field{chapter}{3}
-      \field{edition}{3rd ed.}
-      \field{title}{Factors Affecting Battery Performance}
-      \field{year}{2001}
-    \endentry
   \endsortlist
 \endrefsection
 \endinput
