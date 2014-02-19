@@ -1964,19 +1964,3 @@
     <bcf:citekey order="15">rao05</bcf:citekey>
     <bcf:citekey order="16">jossen06</bcf:citekey>
     <bcf:citekey order="17">randles47</bcf:citekey>
-    <bcf:citekey order="18">jossen06</bcf:citekey>
-    <bcf:citekey order="19">jossen06</bcf:citekey>
-    <bcf:citekey order="20">hageman93</bcf:citekey>
-    <bcf:citekey order="21">hageman93</bcf:citekey>
-    <bcf:citekey order="21">hageman97</bcf:citekey>
-    <bcf:citekey order="22">chen06</bcf:citekey>
-    <bcf:citekey order="23">chen06</bcf:citekey>
-  </bcf:section>
-  <bcf:sortlist section="0" type="entry" label="none">
-  <bcf:sorting>
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">citeorder</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sorting>
-  </bcf:sortlist>
-</bcf:controlfile>
