@@ -181,12 +181,15 @@
 \setlength{\topmargin}{0pt}
 \setlength{\headheight}{12pt}
 \setlength{\headsep}{1.8\baselineskip}
-%\setlength{\textheight}{8.60in}
+\setlength{\textheight}{8.60in}
 %\setlength{\textwidth}{5.8in}
 %
-\setlength{\oddsidemargin}{0in}
-\setlength{\textheight}{9in}
-\setlength{\textwidth}{6.5in}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\textheight}{9in}
+%\setlength{\textwidth}{6.5in}
+%
+\setlength{\oddsidemargin}{0.3in}
+\setlength{\textwidth}{5.9in}
 
 % Set the baselinestretch using the setspace package.
 % The LaTeX Companion claims that a \baselinestretch of

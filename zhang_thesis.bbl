@@ -460,23 +460,33 @@
       \verb http://doi.ieeecomputersociety.org/10.1109/ICVD.2005.61
       \endverb
     \endentry
-    \entry{jossen06}{article}{}
+    \entry{geddes97}{article}{}
       \name{labelname}{1}{}{%
-        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=0caae249705dcbfbbd7ebb5d20ce7286}{Geddes}{G\bibinitperiod}{L.\bibnamedelimi A.}{L\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=0caae249705dcbfbbd7ebb5d20ce7286}{Geddes}{G\bibinitperiod}{L.\bibnamedelimi A.}{L\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{bda13b7aa83d5b194cdef59b0042aae8}
-      \strng{fullhash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{0caae249705dcbfbbd7ebb5d20ce7286}
+      \strng{fullhash}{0caae249705dcbfbbd7ebb5d20ce7286}
       \field{sortinit}{0}
-      \field{labeltitle}{Fundamentals of battery dynamics}
-      \field{journaltitle}{Journal of Power Sources}
-      \field{number}{2}
-      \field{title}{Fundamentals of battery dynamics}
-      \field{volume}{154}
-      \field{year}{2006}
-      \field{pages}{530\bibrangedash 538}
+      \field{labeltitle}{Historical evolution of circuit models for the electrode-electrolyte interface}
+      \field{issn}{0090-6964}
+      \field{journaltitle}{Annals of Biomedical Engineering}
+      \field{number}{1}
+      \field{title}{Historical evolution of circuit models for the electrode-electrolyte interface}
+      \field{volume}{25}
+      \field{year}{1997}
+      \field{pages}{1\bibrangedash 14}
+      \verb{doi}
+      \verb 10.1007/BF02738534
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/BF02738534
+      \endverb
     \endentry
     \entry{randles47}{article}{}
       \name{labelname}{1}{}{%
@@ -497,6 +507,32 @@
       \field{volume}{1}
       \field{year}{1947}
       \field{pages}{11\bibrangedash 19}
+    \endentry
+    \entry{kovacs95}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=936c91fc9f4641e7d2b7842c2345382b}{Kovacs}{K\bibinitperiod}{Gregory\bibnamedelimb T.\bibnamedelimi A.}{G\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=936c91fc9f4641e7d2b7842c2345382b}{Kovacs}{K\bibinitperiod}{Gregory\bibnamedelimb T.\bibnamedelimi A.}{G\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c1ceead2127e9470f678c437ade606be}{Stenger}{S\bibinitperiod}{D.\bibnamedelimi A.}{D\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=11ad08f4740f5c45581aa8e79efe64d8}{McKenna}{M\bibinitperiod}{T.\bibnamedelimi M.}{T\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{936c91fc9f4641e7d2b7842c2345382b}
+      \strng{fullhash}{936c91fc9f4641e7d2b7842c2345382b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Introduction to the Theory, Design, and Modeling of Thin-Film Microelectrodes for Neural Interfaces}
+      \field{booktitle}{Enabling Technologies for Cultured Neural Networks}
+      \field{chapter}{7}
+      \field{title}{Introduction to the Theory, Design, and Modeling of Thin-Film Microelectrodes for Neural Interfaces}
+      \field{year}{1994}
     \endentry
     \entry{hageman93}{article}{}
       \name{labelname}{1}{}{%
@@ -559,6 +595,48 @@
       \verb{doi}
       \verb 10.1109/TEC.2006.874229
       \endverb
+    \endentry
+    \entry{boggs95}{inproceedings}{}
+      \name{labelname}{3}{}{%
+        {{hash=3634eeb26e2221295661e6962d6d5703}{Boggs}{B\bibinitperiod}{C.\bibnamedelimi K.}{C\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=f7ca752b26cdf6ee4679f2eaa04bce5d}{Doak}{D\bibinitperiod}{A.\bibnamedelimi D.}{A\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=87bd71be6422f5325eb529fd0b59fd5c}{Walls}{W\bibinitperiod}{F.\bibnamedelimi L.}{F\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=3634eeb26e2221295661e6962d6d5703}{Boggs}{B\bibinitperiod}{C.\bibnamedelimi K.}{C\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=f7ca752b26cdf6ee4679f2eaa04bce5d}{Doak}{D\bibinitperiod}{A.\bibnamedelimi D.}{A\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=87bd71be6422f5325eb529fd0b59fd5c}{Walls}{W\bibinitperiod}{F.\bibnamedelimi L.}{F\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3bb09cb2f4e256a671fe42896de41d54}
+      \strng{fullhash}{3bb09cb2f4e256a671fe42896de41d54}
+      \field{sortinit}{0}
+      \field{labeltitle}{Measurement of voltage noise in chemical batteries}
+      \field{booktitle}{Proceedings of the 49th IEEE International Frequency Control Symposium}
+      \field{month}{05}
+      \field{title}{Measurement of voltage noise in chemical batteries}
+      \field{year}{1995}
+      \field{pages}{367\bibrangedash 373}
+    \endentry
+    \entry{stremler82}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=7162996de2e488df268c44e59b3e21ed}{Stremler}{S\bibinitperiod}{Ferrel\bibnamedelima G.}{F\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7162996de2e488df268c44e59b3e21ed}{Stremler}{S\bibinitperiod}{Ferrel\bibnamedelima G.}{F\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Reading, MA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{7162996de2e488df268c44e59b3e21ed}
+      \strng{fullhash}{7162996de2e488df268c44e59b3e21ed}
+      \field{sortinit}{0}
+      \field{labeltitle}{Introduction to Communication Systems}
+      \field{edition}{2nd ed}
+      \field{title}{Introduction to Communication Systems}
+      \field{year}{1982}
     \endentry
   \endsortlist
 \endrefsection

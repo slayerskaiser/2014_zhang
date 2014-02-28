@@ -4,36 +4,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter..1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Electrical Characteristics of Rechargeable Batteries}{1}{section..1.1}
+\contentsline {section}{\numberline {1.1}Electrical Characteristics of Rechargeable Batteries}{2}{section..1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Battery Models}{4}{section..1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Electrochemical}{4}{subsection..1.2.1}
+\contentsline {subsection}{\numberline {1.2.1}Electrochemical}{5}{subsection..1.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}Computational Intelligence}{5}{subsection..1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Analytical}{5}{subsection..1.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Analytical}{6}{subsection..1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.3.1}Peukert's Law}{5}{subsubsection..1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Peukert's Law}{6}{subsubsection..1.2.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.2.3.2}Kinetic Battery Model}{6}{subsubsection..1.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.2.3.3}Diffusion Model}{6}{subsubsection..1.2.3.3}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Diffusion Model}{7}{subsubsection..1.2.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.4}Stochastic}{7}{subsection..1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Electrical-Circuit}{9}{subsection..1.2.5}
+\contentsline {subsection}{\numberline {1.2.5}Electrical-Circuit}{10}{subsection..1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.6}Evaluation}{11}{subsection..1.2.6}
+\contentsline {subsection}{\numberline {1.2.6}Evaluation}{12}{subsection..1.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Nonlinear Filtering Methods}{11}{section..1.3}
+\contentsline {section}{\numberline {1.3}Nonlinear Filtering Methods}{12}{section..1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Methodology}{12}{chapter..2}
+\contentsline {chapter}{\numberline {2}Methodology}{13}{chapter..2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Battery Model}{12}{section..2.1}
+\contentsline {section}{\numberline {2.1}Battery Model}{13}{section..2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Simulation Setup}{14}{section..2.2}
+\contentsline {section}{\numberline {2.2}Simulation Setup}{19}{section..2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Filter Implementations}{14}{section..2.3}
+\contentsline {section}{\numberline {2.3}Filter Implementations}{22}{section..2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{16}{section*.3}
+\contentsline {chapter}{Bibliography}{23}{section*.9}
