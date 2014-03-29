@@ -1969,9 +1969,23 @@
     <bcf:citekey order="20">hageman93</bcf:citekey>
     <bcf:citekey order="20">hageman97</bcf:citekey>
     <bcf:citekey order="21">chen06</bcf:citekey>
-    <bcf:citekey order="22">chen06</bcf:citekey>
-    <bcf:citekey order="23">boggs95</bcf:citekey>
-    <bcf:citekey order="24">stremler82</bcf:citekey>
+    <bcf:citekey order="22">kalman60</bcf:citekey>
+    <bcf:citekey order="23">li04</bcf:citekey>
+    <bcf:citekey order="24">lambert91</bcf:citekey>
+    <bcf:citekey order="24">brugnano11</bcf:citekey>
+    <bcf:citekey order="25">jossen06</bcf:citekey>
+    <bcf:citekey order="26">sarkka12</bcf:citekey>
+    <bcf:citekey order="27">mazzoni07</bcf:citekey>
+    <bcf:citekey order="28">mazzoni07</bcf:citekey>
+    <bcf:citekey order="29">mazzoni07</bcf:citekey>
+    <bcf:citekey order="30">arasaratnam10</bcf:citekey>
+    <bcf:citekey order="31">kloeden99</bcf:citekey>
+    <bcf:citekey order="32">morelande05</bcf:citekey>
+    <bcf:citekey order="33">arasaratnam10</bcf:citekey>
+    <bcf:citekey order="34">sarkka12</bcf:citekey>
+    <bcf:citekey order="35">chen06</bcf:citekey>
+    <bcf:citekey order="36">boggs95</bcf:citekey>
+    <bcf:citekey order="37">stremler82</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>

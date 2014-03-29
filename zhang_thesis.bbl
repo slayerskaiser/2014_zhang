@@ -596,6 +596,201 @@
       \verb 10.1109/TEC.2006.874229
       \endverb
     \endentry
+    \entry{kalman60}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=9fb0dafbf7fbe0408bfb40f5232f7665}{Kalman}{K\bibinitperiod}{Rudolph\bibnamedelima Emil}{R\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=9fb0dafbf7fbe0408bfb40f5232f7665}{Kalman}{K\bibinitperiod}{Rudolph\bibnamedelima Emil}{R\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9fb0dafbf7fbe0408bfb40f5232f7665}
+      \strng{fullhash}{9fb0dafbf7fbe0408bfb40f5232f7665}
+      \field{sortinit}{0}
+      \field{labeltitle}{A New Approach to Linear Filtering and Prediction Problems}
+      \field{journaltitle}{Transactions of the ASME---Journal of Basic Engineering}
+      \field{title}{A New Approach to Linear Filtering and Prediction Problems}
+      \field{volume}{82}
+      \field{year}{1960}
+      \field{pages}{35\bibrangedash 45}
+    \endentry
+    \entry{li04}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=12946896f1b0904706ae2a682e4ae2ac}{Li}{L\bibinitperiod}{Xiao-Rong}{X\bibinithyphendelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=a442c03199edc2306bc8642178fa4b39}{Jilkov}{J\bibinitperiod}{Vesselin\bibnamedelima P.}{V\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=12946896f1b0904706ae2a682e4ae2ac}{Li}{L\bibinitperiod}{Xiao-Rong}{X\bibinithyphendelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=a442c03199edc2306bc8642178fa4b39}{Jilkov}{J\bibinitperiod}{Vesselin\bibnamedelima P.}{V\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{38b68745c135278e725345ead6ffd275}
+      \strng{fullhash}{38b68745c135278e725345ead6ffd275}
+      \field{sortinit}{0}
+      \field{labeltitle}{A Survey of Maneuvering Target Tracking: Approximation Techniques for Nonlinear Filtering}
+      \field{journaltitle}{Proceedings of the 2004 SPIE Conference on Signal and Data Processing of Small Targets}
+      \field{title}{A Survey of Maneuvering Target Tracking: Approximation Techniques for Nonlinear Filtering}
+      \field{volume}{5428}
+      \field{year}{2004}
+      \field{pages}{537\bibrangedash 550}
+    \endentry
+    \entry{lambert91}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley}%
+      }
+      \strng{namehash}{0df385e4d509437c2f2d311f80eef743}
+      \strng{fullhash}{0df385e4d509437c2f2d311f80eef743}
+      \field{sortinit}{0}
+      \field{labeltitle}{Numerical Methods for Ordinary Differential Equations}
+      \field{title}{Numerical Methods for Ordinary Differential Equations}
+      \field{year}{1991}
+    \endentry
+    \entry{brugnano11}{incollection}{}
+      \name{labelname}{3}{}{%
+        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d7e51154c8af005f33f9b2dbaeb91f49}{Simos}{S\bibinitperiod}{T.\bibnamedelimi E.}{T\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{a5553f61b55834c6c31e6c029ecc72a7}
+      \strng{fullhash}{a5553f61b55834c6c31e6c029ecc72a7}
+      \field{sortinit}{0}
+      \field{labeltitle}{Fifty Years of Stiffness}
+      \field{booktitle}{Recent Advances in Computational and Applied Mathematics}
+      \field{title}{Fifty Years of Stiffness}
+      \field{pages}{1\bibrangedash 21}
+    \endentry
+    \entry{jossen06}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \strng{fullhash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Fundamentals of battery dynamics}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{number}{2}
+      \field{title}{Fundamentals of battery dynamics}
+      \field{volume}{154}
+      \field{year}{2006}
+      \field{pages}{530\bibrangedash 538}
+    \endentry
+    \entry{sarkka12}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \strng{fullhash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \field{sortinit}{0}
+      \field{labeltitle}{On continuous-discrete cubature Kalman filtering}
+      \field{booktitle}{Proceedings of SYSID}
+      \field{title}{On continuous-discrete cubature Kalman filtering}
+      \field{year}{2012}
+      \field{pages}{1221\bibrangedash 1226}
+    \endentry
+    \entry{mazzoni07}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ea50781c1a628935b70aaac6e4287d46}
+      \strng{fullhash}{ea50781c1a628935b70aaac6e4287d46}
+      \field{sortinit}{0}
+      \field{labeltitle}{Computational Aspects of Continuous-Discrete Extended Kalman-Filtering}
+      \field{journaltitle}{Computational Statistics}
+      \field{number}{4}
+      \field{title}{Computational Aspects of Continuous-Discrete Extended Kalman-Filtering}
+      \field{volume}{23}
+      \field{year}{2007}
+      \field{pages}{519\bibrangedash 539}
+    \endentry
+    \entry{arasaratnam10}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=b237b0d9cbef8fdb01c5ca8a77fee07f}{Arasaratnam}{A\bibinitperiod}{Ienkaran}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=91e57481898b943d6a72a1deba06a6a9}{Haykin}{H\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=978a76af7f5ef8bc2d5ce6e7c1683e12}{Hurd}{H\bibinitperiod}{Tom\bibnamedelima R.}{T\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=b237b0d9cbef8fdb01c5ca8a77fee07f}{Arasaratnam}{A\bibinitperiod}{Ienkaran}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=91e57481898b943d6a72a1deba06a6a9}{Haykin}{H\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=978a76af7f5ef8bc2d5ce6e7c1683e12}{Hurd}{H\bibinitperiod}{Tom\bibnamedelima R.}{T\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7aa309a876bd25b251c88e2bc1792323}
+      \strng{fullhash}{7aa309a876bd25b251c88e2bc1792323}
+      \field{sortinit}{0}
+      \field{labeltitle}{Cubature Kalman Filtering for Continuous-Discrete Systems: Theory and Simulations}
+      \field{journaltitle}{IEEE Transactions on Signal Processing}
+      \field{number}{10}
+      \field{title}{Cubature Kalman Filtering for Continuous-Discrete Systems: Theory and Simulations}
+      \field{volume}{58}
+      \field{year}{2010}
+      \field{pages}{4977\bibrangedash 4993}
+    \endentry
+    \entry{kloeden99}{book}{}
+      \name{labelname}{2}{}{%
+        {{hash=99fb43daff4fd65aa9f27ae4d486ad9c}{Kloeden}{K\bibinitperiod}{P.\bibnamedelimi E.}{P\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{hash=fc7a6923dcae1e56171aa0030d70323e}{Platen}{P\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=99fb43daff4fd65aa9f27ae4d486ad9c}{Kloeden}{K\bibinitperiod}{P.\bibnamedelimi E.}{P\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{hash=fc7a6923dcae1e56171aa0030d70323e}{Platen}{P\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5c6297df01c08f48d850a23c42affb53}
+      \strng{fullhash}{5c6297df01c08f48d850a23c42affb53}
+      \field{sortinit}{0}
+      \field{labeltitle}{Numerical Solution of Stochastic Differential Equations}
+      \field{title}{Numerical Solution of Stochastic Differential Equations}
+      \field{year}{1999}
+    \endentry
+    \entry{morelande05}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=8bc8abab100c248fbbbe2e6b58dce689}{Morelande}{M\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=62c70fc0d5b0520ef031dbd0ba0f2960}{Gordon}{G\bibinitperiod}{N.\bibnamedelimi J.}{N\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=8bc8abab100c248fbbbe2e6b58dce689}{Morelande}{M\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=62c70fc0d5b0520ef031dbd0ba0f2960}{Gordon}{G\bibinitperiod}{N.\bibnamedelimi J.}{N\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2ca23426824bce6a1f2df2e8345d5555}
+      \strng{fullhash}{2ca23426824bce6a1f2df2e8345d5555}
+      \field{sortinit}{0}
+      \field{labeltitle}{Target Tracking Through a Coordinated Turn}
+      \field{booktitle}{IEEE International Conference on Acoustics, Speech, and Signal Processing, 2005. Proceedings. (ICASSP '05)}
+      \field{title}{Target Tracking Through a Coordinated Turn}
+      \field{volume}{4}
+      \field{year}{2005}
+      \field{pages}{21\bibrangedash 24}
+    \endentry
     \entry{boggs95}{inproceedings}{}
       \name{labelname}{3}{}{%
         {{hash=3634eeb26e2221295661e6962d6d5703}{Boggs}{B\bibinitperiod}{C.\bibnamedelimi K.}{C\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%

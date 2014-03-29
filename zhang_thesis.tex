@@ -42,6 +42,7 @@
 %\usepackage{lmodern}
 %\usepackage{textcomp}
 \usepackage{setspace}
+\usepackage{rotating}
 \usepackage[style=ieee,citestyle=numeric-comp,backend=biber,sorting=none,doi=false,isbn=false]{biblatex}
 \addbibresource{Biblio-Database.bib}
 %\usepackage{epstopdf}
@@ -55,6 +56,17 @@
 % tracking=true, kerning=true, spacing=true - activate these techniques
 % factor=1100 - add 10% to the protrusion amount (default is 1000)
 % stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+
+% Define math scaling command
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+% Define some math operators
+\DeclareMathOperator{\sgn}{sgn}
+% Define some math abbreviations
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vf}{\mathbf{f}}
+\newcommand{\vh}{\mathbf{h}}
+
 
 \doublespacing
 
@@ -347,7 +359,7 @@
 % Chapters
 \subfile{chapter-1/chapter-1}
 \subfile{chapter-2/chapter-2}
-%\subfile{chapter-3/chapter-3}
+\subfile{chapter-3/chapter-3}
 %\subfile{chapter-4/chapter-4}
 %\subfile{chapter-5/chapter-5}
 %\subfile{chapter-6/chapter-6}
