@@ -2,6 +2,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{ii}{chapter*.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{v}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{vi}{chapter*.4}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter..1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Electrical Characteristics of Rechargeable Batteries}{2}{section..1.1}
@@ -46,4 +50,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Results}{40}{chapter..3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{43}{section*.9}
+\contentsline {chapter}{Bibliography}{43}{section*.11}

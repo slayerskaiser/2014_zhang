@@ -5,9 +5,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For a sampling period of $T_s=90,300$~s, refinement steps of $M=1,2,\dots,2^5$ were used. For the 100 Monte Carlo trials and the four filters, the number of divergences were counted, where a divergence is considered an absolute error in the estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. If a failure occurs, no attempt was made to keep filtering the system, and the remainder of
+For a sampling period of $T_s=90,300$~s, refinement steps of $M=1,2,\dots,2^5$ were used. The filtering was performed assuming an initial state of $x_0=[1,0,0]^\top$ and an initial covariance matrix of $P_0=10^{-6} I_3$, where the initial state was chosen to match the actual state and the initial covariance was experimentally tuned for fast convergence. For the 100 Monte Carlo trials and the four filters, the number of divergences were counted, where a divergence is considered an absolute error in the estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. If a failure occurs, no attempt was made to keep filtering the system, and the remainder of
 the SOC values are assumed to be zero. Additionally, the mean RMSE (MRMSE) is given, where the squared error for each filter is averaged over
-time and the square root of the result is averaged over the trials.
+the trials and the square root of the result is averaged time.
 
 \begin{sidewaystable}
 \caption{Divergences and MRMSE for various filters at $T_s=90$~s.}
@@ -21,7 +21,7 @@ Filter & \multicolumn{2}{c}{$M=1$} & \multicolumn{2}{c}{2} & \multicolumn{2}{c}{
 EKF & 100 & 0.4245 &  99 & 0.5044 \\
 CKF & 100 & 16202  & 100 & 0.4609 \\
 UKF & 100 & 7.4105 & 100 & 980.69 \\
-SLF \\
+SLF & 100 & 0.3007 & 100 & 0.2253 \\
 \bottomrule
 \end{tabular}
 \end{sidewaystable}
@@ -35,10 +35,10 @@ Filter & \multicolumn{2}{c}{$M=1$} & \multicolumn{2}{c}{2} & \multicolumn{2}{c}{
 \cmidrule(r){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11} \cmidrule(lr){12-13} \\
 & Divs. & MRMSE & Divs. & MRMSE & Divs. & MRMSE & Divs. & MRMSE & Divs. & MRMSE & Divs. & MRMSE \\
 \midrule
-EKF & 100 & 0.5317                & 100 & 0.4869 & 100 & --- &  99 & 0.4793 & 23 & 0.1247 & --- & --- \\
-CKF & 100 & 3403.7                & 100 & 0.5457 & 100 & --- & 100 & 0.4620 & 27 & 0.0830 & --- & --- \\
-UKF & 100 & $4.7829\times 10^{8}$ & 100 & 0.6686 & 100 & --- & 100 & 6910.3 & 34 & 0.1141 & --- & --- \\
-SLF & 100 & 0.4501                & 100 & 0.4617 & --- & --- & --- & ---   & 100 & 0.6444 & --- & --- \\
+EKF & 100 & 0.8583 & 100 & 0.4269 & 100 & 0.5213 & 100 & 18.34  &  23 & 0.1247 & 100 & 0.1523 \\
+CKF & 100 & 494.4  & 100 & 0.4274 & 100 & 0.3045 & 100 & 0.3044 &  27 & 0.0830 & 100 & 0.1769 \\
+UKF & 100 & 248.3  & 100 & 4.061  & 100 & 0.3137 & 100 & 0.3026 &  34 & 0.1141 & 100 & 0.2307 \\
+SLF & 100 & 0.2750 & 100 & 0.3038 & 100 & 0.3050 & 100 & 1.3081 & 100 & 0.2099 & 100 & 0.0125 \\
 \bottomrule
 \end{tabular}
 \end{sidewaystable}

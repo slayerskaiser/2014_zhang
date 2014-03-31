@@ -250,6 +250,14 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/microtype/mt-msb.cfg
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 OUTPUT zhang_thesis.toc
+INPUT D:/Matlab/2014_zhang/latex/zhang_thesis.lof
+INPUT D:/Matlab/2014_zhang/latex/zhang_thesis.lof
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm0600.tfm
+OUTPUT zhang_thesis.lof
+INPUT D:/Matlab/2014_zhang/latex/zhang_thesis.lot
+INPUT D:/Matlab/2014_zhang/latex/zhang_thesis.lot
+OUTPUT zhang_thesis.lot
 INPUT D:/Matlab/2014_zhang/latex/chapter-1/chapter-1.tex
 INPUT D:/Matlab/2014_zhang/latex/chapter-1/chapter-1.tex
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/psnfss/ot1phv.fd
@@ -262,8 +270,6 @@ INPUT C:/Program Files/MiKTeX 2.9/tex/latex/microtype/mt-ptm.cfg
 INPUT C:/Program Files/MiKTeX 2.9/tex/latex/microtype/mt-ptm.cfg
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecbx1728.tfm
-INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1000.tfm
