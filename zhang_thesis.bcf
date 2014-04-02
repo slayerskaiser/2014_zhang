@@ -1941,19 +1941,19 @@
     <bcf:datasource type="file" datatype="bibtex">Biblio-Database.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">doerffel06</bcf:citekey>
-    <bcf:citekey order="2">chiasserini99</bcf:citekey>
-    <bcf:citekey order="3">jongerden09</bcf:citekey>
-    <bcf:citekey order="4">doyle93</bcf:citekey>
-    <bcf:citekey order="4">fuller94</bcf:citekey>
-    <bcf:citekey order="4">fuller94b</bcf:citekey>
-    <bcf:citekey order="5">newman98</bcf:citekey>
-    <bcf:citekey order="6">bezdek92</bcf:citekey>
-    <bcf:citekey order="6">bezdek94</bcf:citekey>
-    <bcf:citekey order="7">ogorman98</bcf:citekey>
-    <bcf:citekey order="7">capizzi11</bcf:citekey>
-    <bcf:citekey order="8">wang06</bcf:citekey>
-    <bcf:citekey order="9">shen02</bcf:citekey>
+    <bcf:citekey order="1">chiasserini99</bcf:citekey>
+    <bcf:citekey order="2">jongerden09</bcf:citekey>
+    <bcf:citekey order="3">doyle93</bcf:citekey>
+    <bcf:citekey order="3">fuller94</bcf:citekey>
+    <bcf:citekey order="3">fuller94b</bcf:citekey>
+    <bcf:citekey order="4">newman98</bcf:citekey>
+    <bcf:citekey order="5">bezdek92</bcf:citekey>
+    <bcf:citekey order="5">bezdek94</bcf:citekey>
+    <bcf:citekey order="6">ogorman98</bcf:citekey>
+    <bcf:citekey order="6">capizzi11</bcf:citekey>
+    <bcf:citekey order="7">wang06</bcf:citekey>
+    <bcf:citekey order="8">shen02</bcf:citekey>
+    <bcf:citekey order="9">doerffel06</bcf:citekey>
     <bcf:citekey order="10">manwell93</bcf:citekey>
     <bcf:citekey order="11">rakhmatov01</bcf:citekey>
     <bcf:citekey order="12">jongerden09</bcf:citekey>
@@ -1982,10 +1982,15 @@
     <bcf:citekey order="31">kloeden99</bcf:citekey>
     <bcf:citekey order="32">morelande05</bcf:citekey>
     <bcf:citekey order="33">arasaratnam10</bcf:citekey>
-    <bcf:citekey order="34">sarkka12</bcf:citekey>
-    <bcf:citekey order="35">chen06</bcf:citekey>
-    <bcf:citekey order="36">boggs95</bcf:citekey>
-    <bcf:citekey order="37">stremler82</bcf:citekey>
+    <bcf:citekey order="34">sarkka07</bcf:citekey>
+    <bcf:citekey order="35">arasaratnam10</bcf:citekey>
+    <bcf:citekey order="36">sarkka12</bcf:citekey>
+    <bcf:citekey order="37">sarkka13</bcf:citekey>
+    <bcf:citekey order="37">li04</bcf:citekey>
+    <bcf:citekey order="38">chen06</bcf:citekey>
+    <bcf:citekey order="39">linden01_ch3</bcf:citekey>
+    <bcf:citekey order="40">boggs95</bcf:citekey>
+    <bcf:citekey order="41">stremler82</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>

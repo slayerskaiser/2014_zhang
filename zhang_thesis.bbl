@@ -19,30 +19,6 @@
 
 \refsection{0}
   \sortlist{entry}{none}
-    \entry{doerffel06}{article}{}
-      \name{labelname}{2}{}{%
-        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{39290530bf227eb6e2e2a07b27913887}
-      \strng{fullhash}{39290530bf227eb6e2e2a07b27913887}
-      \field{sortinit}{0}
-      \field{labeltitle}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
-      \field{issn}{0378-7753}
-      \field{journaltitle}{Journal of Power Sources}
-      \field{number}{2}
-      \field{title}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
-      \field{volume}{155}
-      \field{year}{2006}
-      \field{pages}{395\bibrangedash 400}
-      \verb{doi}
-      \verb http://dx.doi.org/10.1016/j.jpowsour.2005.04.030
-      \endverb
-    \endentry
     \entry{chiasserini99}{inproceedings}{}
       \name{labelname}{2}{}{%
         {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
@@ -320,6 +296,30 @@
       \field{pages}{677\bibrangedash 684}
       \verb{doi}
       \verb 10.1109/TIE.2002.1005395
+      \endverb
+    \endentry
+    \entry{doerffel06}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=2ce8f625eb0669ee9c93299d71067967}{Doerffel}{D\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=b0cc57215c4478a60a34c3a0ab5ff2b0}{Sharkh}{S\bibinitperiod}{Suleiman\bibnamedelima Abu}{S\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{39290530bf227eb6e2e2a07b27913887}
+      \strng{fullhash}{39290530bf227eb6e2e2a07b27913887}
+      \field{sortinit}{0}
+      \field{labeltitle}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
+      \field{issn}{0378-7753}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{number}{2}
+      \field{title}{A critical review of using the Peukert equation for determining the remaining capacity of lead-acid and lithium-ion batteries}
+      \field{volume}{155}
+      \field{year}{2006}
+      \field{pages}{395\bibrangedash 400}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1016/j.jpowsour.2005.04.030
       \endverb
     \endentry
     \entry{manwell93}{article}{}
@@ -790,6 +790,65 @@
       \field{volume}{4}
       \field{year}{2005}
       \field{pages}{21\bibrangedash 24}
+    \endentry
+    \entry{sarkka07}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
+      \strng{fullhash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
+      \field{sortinit}{0}
+      \field{labeltitle}{On unscented Kalman filtering for state estimation of continuous-time nonlinear systems}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{9}
+      \field{title}{On unscented Kalman filtering for state estimation of continuous-time nonlinear systems}
+      \field{volume}{52}
+      \field{year}{2007}
+      \field{pages}{1631\bibrangedash 1641}
+    \endentry
+    \entry{sarkka13}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
+      \strng{fullhash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
+      \field{sortinit}{0}
+      \field{labeltitle}{Bayesian Filtering and Smoothing}
+      \field{title}{Bayesian Filtering and Smoothing}
+      \field{year}{2013}
+    \endentry
+    \entry{linden01_ch3}{incollection}{}
+      \name{labelname}{1}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=8f7f0ff47fb58efc3e63f7597140f6bf}{Linden}{L\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=7a0081586d1cea6f628349a985d355b8}{Reddy}{R\bibinitperiod}{Thomas\bibnamedelima B.}{T\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{8f7f0ff47fb58efc3e63f7597140f6bf}
+      \strng{fullhash}{8f7f0ff47fb58efc3e63f7597140f6bf}
+      \field{sortinit}{0}
+      \field{labeltitle}{Factors Affecting Battery Performance}
+      \field{booktitle}{Handbook of Batteries}
+      \field{chapter}{3}
+      \field{edition}{3rd ed.}
+      \field{title}{Factors Affecting Battery Performance}
+      \field{year}{2001}
     \endentry
     \entry{boggs95}{inproceedings}{}
       \name{labelname}{3}{}{%

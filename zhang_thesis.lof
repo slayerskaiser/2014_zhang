@@ -16,10 +16,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Modeling of thermal noise in resistances as voltage sources in series with the resistances.\relax }}{30}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{37}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{38}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{38}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces True SOC for one run due to input load.\relax }}{39}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces True SOC for one run due to input load.\relax }}{39}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{40}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

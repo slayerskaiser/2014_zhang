@@ -6,6 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Battery Model}
+\label{sec:batt_mdl}
 
 As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} and shown in \autoref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient i-v characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and
 $R_{sd}$ are assumed constant for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient i-v response as well as the open-circuit voltage $V_\text{OC}$. From a typical TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters and fit them to curves, obtaining
@@ -51,7 +52,7 @@ Then, $R_{sd}=\tau/C_\text{cap}$. Thus, the parameters are $C_\text{cap}=3600$~F
 
 In order to simulate the use of the modeled battery, discharging and charging loads were implemented, as shown in \autorefs{fig:batt_loads}. For discharging, a resistive load $R_L$ is placed across the battery terminals, creating a discharge rate of $i_\text{cell}=V_\text{cell}/R_L$. For charging, a negative resistance $-R_L$, where $R_L>0$, is used, creating a charging current of $-i_\text{cell}=V_\text{cell}/R_L$. Thus, any arbitrary charging or discharging current can be set
 by choosing the appropriate resistance $R_L$. Furthermore, an open circuit can be simulated by choosing $R_L$ sufficiently large so that $i_\text{cell}\approx 0$. Additional consideration has to be taken to produce constant current and constant voltage charging conditions for standard charging procedure. Typically, the specific battery modeled by the given parameters is charged at a rate of $C_5/5$ until a terminal voltage of $4.2$~V is reached, where $C_5/5$ is the discharge
-rate at which a full battery is completely discharged in 5 hours. Then, the battery is charged at a constant voltage of $4.2$~V until the charging current is below $C_5/20$. The constant current condition is met by varying $R_L$ so that $V_\text{cell}/R_L$ stays constant, while the constant voltage condition is met by varying $R_L$ so that $i_\text{cell} R_L$ stays constant.
+rate at which a full battery is completely discharged in 5 hours~\cite{linden01_ch3}. Then, the battery is charged at a constant voltage of $4.2$~V until the charging current is below $C_5/20$. The constant current condition can be met by varying $R_L$ so that $V_\text{cell}/R_L$ stays constant, while the constant voltage condition is met by varying $R_L$ so that $i_\text{cell} R_L$ stays constant.
 
 \begin{figure}[ht]
 \centering
@@ -119,11 +120,6 @@ It can be seen that the system can be written in the form
 \end{align}
 It is useful to find the derivatives of $\vf$ and $h$ with respect to $\vx$, $\mathbf{w}$, and $\mathbf{v}$ for use with the filters. This thesis defines the Jacobians $F=(\partial\vf/\partial\vx)$, $H=(\partial h/\partial\vx)$, $L=(\partial\vf/\partial\mathbf{w})$, and $M=(\partial h/\partial\mathbf{v})$. Their equations are
 \begin{align}
-%    F & = \scalemath{0.8}{ \begin{bmatrix}
-%            \dfrac{-1}{R_{sd}C_\text{cap}} + \dfrac{\splitfrac{(Voc-x_2-x_3)R_s' C_\text{cap}}{- (R_s+R_L)C_\text{cap}V_\text{OC}'}}{\big[(R_s+R_L)C_\text{cap}\big]^2} & \dfrac{1}{(R_s+R_L)C_\text{cap}} & \dfrac{1}{(R_s+R_L)C_\text{cap}} \\
-%            \dfrac{(R_{ts}C_{ts})' x_2}{R_{ts}C_{ts}} + \dfrac{\splitfrac{(R_s+R_L)C_{ts}V_\text{OC}'}{- (Voc-x_2-x_3)\big((R_s+R_L)C_{ts}\big)'}}{\big[(R_s+R_L)C_{ts}\big]^2} & \dfrac{-1}{R_{ts}C_{ts}}+\dfrac{-1}{(R_s+R_L)C_{ts}} & \dfrac{-1}{(R_s+R_L)C_{ts}} \\
-%            \dfrac{(R_{tl}C_{tl})' x_3}{R_{tl}C_{tl}} + \dfrac{\splitfrac{(R_s+R_L)C_{tl}V_\text{OC}'}{- (Voc-x_2-x_3)\big((R_s+R_L)C_{tl}\big)'}}{\big[(R_s+R_L)C_{tl}\big]^2} & \dfrac{-1}{(R_s+R_L)C_{tl}} & \dfrac{-1}{R_{tl}C_{tl}}+\dfrac{-1}{(R_s+R_L)C_{tl}}
-%        \end{bmatrix} } \\
     F & = \scalemath{0.9}{ \left[ \begin{multlined} \begin{array}{@{}c}
         \dfrac{-1}{R_{sd}C_\text{cap}} + \dfrac{\splitfrac{(Voc-x_2-x_3)R_s'}{- (R_s+R_L)V_\text{OC}'}}{(R_s+R_L)^2 C_\text{cap}} \\[3ex]
         \dfrac{(R_{ts}C_{ts})' x_2}{R_{ts}C_{ts}} + \dfrac{\splitfrac{(R_s+R_L)C_{ts}V_\text{OC}'}{- (Voc-x_2-x_3)\big[(R_s+R_L)C_{ts}\big]'}}{\big[(R_s+R_L)C_{ts}\big]^2}  \\[3ex]
@@ -148,17 +144,17 @@ It is useful to find the derivatives of $\vf$ and $h$ with respect to $\vx$, $\m
 \end{align}
 where $()'$ indicates derivation with respect to $x_1$ and the dependence on $x_1$ has been omitted due to space constraints. Furthermore, it is useful to find the Hessian of $\vf$ with respect to $\vx$. Due to symmetry and $\partial^2 f_k/\partial x_i\partial x_j = 0$ for $i,j=2,3$, only the first column of each tensor component of the Hessian is given. The resultant Hessian is
 \begin{align}
-    \frac{\partial f_1}{\partial x_i \partial x_1} & = \begin{bmatrix}
+    \frac{\partial^2 f_1}{\partial x_i \partial x_1} & = \begin{bmatrix}
             \dfrac{\splitfrac{(R_s+R_L)\big[(V_\text{OC}-x_2-x_3)R_s''-(R_s+R_L)V_\text{OC}''\big]}{- 2R_s' \big[(V_\text{OC}-x_2-x_3)R_s' - (R_s+R_L)V_\text{OC}'\big]}}{(R_s+R_L)^3 C_\text{cap}} \\[3ex]
             \dfrac{-R_s'}{(R_s+R_L)^2 C_\text{cap}} \\[3ex]
             \dfrac{-R_s'}{(R_s+R_L)^2 C_\text{cap}}
         \end{bmatrix} \\
-    \frac{\partial f_2}{\partial x_i \partial x_1} & = \scalemath{0.8}{ \begin{bmatrix}
+    \frac{\partial^2 f_2}{\partial x_i \partial x_1} & = \scalemath{0.8}{ \begin{bmatrix}
             \dfrac{\splitfrac{\big\{R_{ts}C_{ts}(R_{ts}C_{ts})''}{- \big[(R_{ts}C_{ts})'\big]^2\big\}x_2}}{(R_{ts}C_{ts})^2} + \dfrac{\splitfrac{(R_s+R_L)C_{ts}\big\{(R_s+R_L)C_{ts}V_\text{OC}'' - (V_\text{OC}-x_2-x_3)\big[(R_s+R_L)C_{ts}\big]''\big\}}{+ 2 \big[(R_s+R_L)C_{ts}\big]' \big\{(R_s+R_L)C_{ts}V_\text{OC}' - (Voc-x_2-x_3)\big[(R_s+R_L)C_{ts}\big]'\big\}}}{\big[(R_s+R_L)C_{ts}\big]^3} \\[3ex]
             \dfrac{(R_{ts}C_{ts})'}{R_{ts}C_{ts}}+\dfrac{\big[(R_s+R_L)C_{ts}\big]'}{\big[(R_s+R_L)C_{ts}\big]^2} \\[3ex]
             \dfrac{\big[(R_s+R_L)C_{ts}\big]'}{\big[(R_s+R_L)C_{ts}\big]^2}
         \end{bmatrix} } \\
-    \frac{\partial f_3}{\partial x_i \partial x_1} & = \scalemath{0.8}{ \begin{bmatrix}
+    \frac{\partial^2 f_3}{\partial x_i \partial x_1} & = \scalemath{0.8}{ \begin{bmatrix}
             \dfrac{\splitfrac{\big\{R_{tl}C_{tl}(R_{tl}C_{tl})''}{- \big[(R_{tl}C_{tl})'\big]^2\big\}x_3}}{(R_{tl}C_{tl})^2} + \dfrac{\splitfrac{(R_s+R_L)C_{tl}\big\{(R_s+R_L)C_{tl}V_\text{OC}'' - (V_\text{OC}-x_2-x_3)\big[(R_s+R_L)C_{tl}\big]''\big\}}{+ 2 \big[(R_s+R_L)C_{tl}\big]' \big\{(R_s+R_L)C_{tl}V_\text{OC}' - (Voc-x_2-x_3)\big[(R_s+R_L)C_{tl}\big]'\big\}}}{\big[(R_s+R_L)C_{tl}\big]^3} \\[3ex]
             \dfrac{\big[(R_s+R_L)C_{tl}\big]'}{\big[(R_s+R_L)C_{tl}\big]^2} \\[3ex]
             \dfrac{(R_{tl}C_{tl})'}{R_{tl}C_{tl}}+\dfrac{\big[(R_s+R_L)C_{tl}\big]'}{\big[(R_s+R_L)C_{tl}\big]^2}
@@ -173,8 +169,9 @@ where $I_n$ is a $n\times n$ identity matrix.
 
 \section{Simulation Setup}
 
-In order to simulate the stochastic system, the covariances of the noises as well as their generation and simulation methods have to be determined. This thesis assumed that a standard temperature of $T=290$~Kelvin. Therefore, the noise variables have covariances of $\sigma^2=2kT=8.0078\times 10^{-21}$~W/Hz. Furthermore, to better differentiate the performance of the filters, additional measurement noise was introduced based on measurement using an oscilloscope. Specifically, consider the Tektronix TBS1022 oscilloscope with a DC gain accuracy of $\pm 3\%$ of the full range. Based on numerical simulations, a range of 4~V peak-to-peak
-is sufficient to fully capture the range of possible $V_\text{cell}$ values, resulting in a measurement inaccuracy of $\pm 0.12$~V. This noise is assumed to be white Gaussian noise, and its range lies within three standard deviations. Thus, an additional measurement noise variable $v_3$ is introduced with a variance of
+In order to simulate the stochastic system, the covariances of the noises as well as their generation and simulation methods have to be determined. This thesis assumed that a standard temperature of $T=290$~Kelvin. Therefore, the noise variables have covariances of $\sigma^2=2kT=8.0078\times 10^{-21}$~W/Hz. Furthermore, to better differentiate the performance of the filters, additional measurement noise was introduced assuming an oscilloscope was used to perform the measurement.
+Specifically, consider the Tektronix TBS1022 oscilloscope with a DC gain accuracy of $\pm 3\%$ of the full range. Based on numerical simulations, an approximate range of 4~V peak-to-peak is necessary to fully capture the range of possible $V_\text{cell}$ values, resulting in a measurement inaccuracy of $\pm 0.12$~V. This noise is assumed to be white Gaussian noise, and its range lies within three standard deviations. Thus, an additional measurement noise variable $v_3$ is introduced with
+a variance of
 \begin{equation}
     \sigma_{v_3}^2 = \left( \frac{0.12~\text{V}}{3} \right)^2 = 0.0016~\text{V}.
 \end{equation}
@@ -188,16 +185,20 @@ and the corresponding Jacobian $M=(\partial h/\partial\mathbf{v})$ is
          \dfrac{-\sqrt{R_s}}{(R_s+R_L)C_\text{cap}} & \dfrac{-\sgn{R_L}\sqrt{|R_L|}}{(R_s+R_L)C_\text{cap}} & 1
         \end{bmatrix} .
 \end{equation}
-In order to numerically simulate the effect of white noise on a system, the simulation time step must be sufficiently smaller than the time constant of the fastest battery process. This is approximated as the product of the constant terms of the functions for $R_{ts}$ and $C_{ts}$, halved to satisfy Nyquist conditions. Then, the simulation time step is taken to be $1/100$ of the calculated maximum time step, as suggested by Matlab documentation. Thus, simulation used a time step of
+In order to numerically simulate the effect of white noise on a system, the simulation time step must be sufficiently smaller than the time constant of the fastest battery process. This is approximated as the product of the constant terms of the functions for $R_{ts}$ and $C_{ts}$, halved to satisfy Nyquist conditions. Then, the simulation time step is taken to be $1/100$ of the calculated maximum time step, as suggested by Matlab documentation. Thus, the simulations used a time step of
 \begin{equation}
     \delta_\text{sim} = \frac{R_{ts,\text{const.}}C_{ts,\text{const.}}}{200} = \frac{0.04669\times 703.6}{200} = 0.164255~\text{s}.
 \end{equation}
-Simulation showed that the resulting time step is sufficiently small to capture the effects of the white noise, i.e.\ further reducing the step size had negligible effect. With the chosen step size, the noise is simulated as band-limited white Gaussian noise with a correlation time equal to the step size. At each time step, the noise values are generated using random number generators producing
-normally-distributed numbers with means of zero and variances equal to the diagonals of the covariance matrix divided by the correlation time. The scaling of the variance by the correlation time ensures the response of the system to the approximate white noise has the same covariance as it would have to actual white noise. For reproducibility, the random number generators were seeded with predictable numbers. This was done in Matlab by first seeding the main random number generator with a
-seed of 0. Then, for each Monte Carlo trial, five positive integers were generated, for the five noise sources, with the integers uniformly distributed between 1 and $2^{32}-1$. These integers were used to seed the random number generators in a Simulink model so that the predictable sequence in Matlab is unaffected.
+Simulation showed that the resulting time step is sufficiently small to capture the effects of the white noise, i.e.\ further reducing the step size had negligible effect. With the chosen step size, the noise is simulated as band-limited white Gaussian noise with a correlation time equal to the step size. At each time step, the noise values for the process noise sources are generated using random number generators producing normally-distributed numbers with means of zero and variances equal
+to the diagonals of the covariance matrix divided by the correlation time. The scaling of the variance by the correlation time ensures the response of the system to the approximate white noise has the same covariance as it would have to actual white noise. Note that the measurement noise is bandlimited not by the system but by the measurement device, in this case an oscilloscope. Thus, the calculated variance already takes into account the measurement bandwidth of the oscilloscope and
+scaling is unnecessary. For reproducibility, the random number generators were seeded with predictable numbers. This was done in Matlab by first seeding the main random number generator with a seed of 0. Then, for each Monte Carlo trial, five positive integers were generated, for the five noise sources, with the integers uniformly distributed between 1 and $2^{32}-1$. These integers were used to seed the random number generators in a Simulink model. The use of the Simulink model allows for the
+random number generators to be easily seeds with different integers and does not affect the predictable sequence in Matlab.
 
-Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \autoref{fig:input} shows the input load on the battery system. It can be seen that it is piecewise constant. In order to simulate idle periods, a very large input of $R_L=10^{10}~\Omega$ was
-used so that the battery current is approximately zero. The noisy measurement $V_\text{cell}$ for one run is shown in \autoref{fig:meas}. The corresponding SOC is shown in \autoref{fig:soc}.
+Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \autoref{fig:input} shows the input load on the battery system, where the values off the graph are idle periods, simulated using a very large input of $R_L=10^{10}~\Omega$ so that the battery
+current is approximately zero. It can be seen that the input is piecewise constant. This input was chosen to to test the performance of the filters by gradually increasing the strength of the nonlinear rate-capacity and recovery effects. Note that care was taken to ensure the SOC remained within the range of zero to one, so discharge and charge times could not always be equal. Intially, the battery is idle for 10 minutes to allow the estimated covariances of the filters to converge. Then, the
+battery is discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, respectively. The resulting low current from this load is approximately the testing current $C_5/5$ used to determine battery capacity, as discussed in \autoref{sec:batt_mdl}. In order to increase the strength of the nonlinear effects, the absolute value of the current was increased by decreasing the input to $R_L=10~\Omega$ and discharging and charging for 150 minutes, each. Then, the input was further reduced to
+$R_L=5~\Omega$ and discharged and charged for 80 minutes and 70 minutes, respectively. Next, the battery was discharged and charged at $R_L=4~\Omega$ for 60 minutes, each. Following were discharge and charge periods at $R_L=2~\Omega$ for 35, 25, 25, 20, 25, 25, 20, and 15 minutes. The high current results in very strong rate-capacity effects. Finally, the battery was rested for 70 minutes, discharged at $R_L=2~\Omega$ for 25 minutes, rested for 75 minutes, and charged at $R_L=10~\Omega$
+for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time is 1635 minutes. The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input is shown one Monte Carlo trial in \autorefs{fig:soc} and \ref{fig:meas}, respectively.
 
 \begin{figure}[htb]
 \centering
@@ -208,16 +209,16 @@ used so that the battery current is approximately zero. The noisy measurement $V
 
 \begin{figure}[htb]
 \centering
-\input{chapter-2/figures/meas}
-\caption{Noisy measurement $V_\text{cell}$ for one run.}
-\label{fig:meas}
+\input{chapter-2/figures/soc}
+\caption{True SOC for one run due to input load.}
+\label{fig:soc}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\input{chapter-2/figures/soc}
-\caption{True SOC for one run due to input load.}
-\label{fig:soc}
+\input{chapter-2/figures/meas}
+\caption{Noisy measurement $V_\text{cell}$ for one run.}
+\label{fig:meas}
 \end{figure}
 
 The Monte Carlo trials used varying sampling periods, calculated as some multiple $K$ of the simulation step size. For example, for a desired sampling period of 300 seconds, the actual sampling period is
@@ -226,9 +227,6 @@ The Monte Carlo trials used varying sampling periods, calculated as some multipl
 \end{equation}
 where the factor $K$ is chosen to minimize the difference between the desired and actual periods. For convenience, the sampling period will refer to the actual sampling period calculated in this manner. Additionally, to increase the accuracy of the discretization in the prediction steps, the sampling period is divided by a positive integer $M$ and the prediction step is performed $M$ times prior to each update step. Thus, the prediction and update portions of the filters can be calculated at different rates. The next chapter discusses the simulation results for a range of sampling periods
 and refinement steps $M$.
-
-%Any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix, counts as a filter divergence. Additionally, an absolute error in the estimated SOC greater than $0.1$~V counts as a divergence.
-
 
 %In order to generate the input and output of the system, the battery model was implemented in Simulink. \autoref{fig:batt_load_exp} shows a simulation of the battery, assuming no noise, discharged with $R_L=5~\Omega$ from 5 to 120 minutes and charged with $R_L=-5~\Omega$ from 150 to 250 minutes. A mechanism was implemented that bounded the SOC to $0\le\text{SOC}\le 1$, which can be seen in $i_\text{cell}$. \autoref{fig:batt_load_exp_noisy} shows a simulation with the same input, assuming
 %thermal noise. It can be seen that the effect of noise is minimal. This is better seen in \autoref{fig:batt_noise_comp}, which shows the squared difference between the outputs of the noiseless and noisy systems.
@@ -247,21 +245,11 @@ and refinement steps $M$.
 %\label{fig:batt_load_exp_noisy}
 %\end{figure}
 
-%\clearpage
-
 %\begin{figure}[ht]
 %\centering
 %\input{chapter-2/figures/batt_noise_comp}
 %\caption{Comparison of outputs between noiseless and noisy systems.}
 %\label{fig:batt_noise_comp}
 %\end{figure}
-
-%\section{Filter Implementations}
-
-%As was seen in the last section, the degree of nonlinearity of the battery model necessitates the use of a nonlinear filter. However, for SOC$>0.2$, the dynamics behave approximately linearly, because the resistance and capacitance parameters are approximately constant. Since the battery operates in this ``linear'' region for the majority of the time, it is useful to compare the performance of a linear filter to the nonlinear filters discussed in \autoref{sec:nl_filt}.
-
-%In order to determine the necessity of incorporating the nonlinear relationship between $V_\text{SOC}$ and $V_\text{OC}$ in the filter design, the linearized right-hand circuit with $V_\text{SOC}=0.6$~V and the left-hand circuit were processed by a Kalman filter in each iteration and in that order, with the nonlinearity calculated implicitly.
-% the left-hand circuit along with the right-hand circuit linearized at $V_\text{SOC}=0.6$~V were consecutively processed by the Kalman filter in each itera
-
 
 \end{document}

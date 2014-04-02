@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.9.11)  30 MAR 2014 00:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.9.11)  2 APR 2014 11:59
 entering extended mode
 **./zhang_thesis.tex
 (D:\Matlab\2014_zhang\latex\zhang_thesis.tex
@@ -955,11 +955,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [3
-
-])
+))
 \tf@toc=\write6
- [4]
+ [3
+
+] [4]
 (D:\Matlab\2014_zhang\latex\zhang_thesis.lof)
 \tf@lof=\write7
  [5
@@ -994,7 +994,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 
 
 ] [2] [3]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 42.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1005,13 +1005,13 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
  [4] [5] [6] [7]
 [8] [9] [10]
-Overfull \hbox (23.67093pt too wide) in paragraph at lines 136--138
+Overfull \hbox (23.67093pt too wide) in paragraph at lines 128--130
 \T1/cmr/m/n/12 Of the model types, only some are fit for use with fil-ter-ing a
 l-go-rithms. The computational-
  []
 
 [11] [12] [13]
-Overfull \hbox (15.23445pt too wide) in paragraph at lines 164--166
+Overfull \hbox (15.23445pt too wide) in paragraph at lines 156--158
 []\T1/cmr/m/n/12 Särkkä and Solin state that a lin-earized dis-cre-tion ap-proa
 ch, in which the continuous-
  []
@@ -1037,35 +1037,30 @@ File: chapter-2/figures/nrc.eps Graphic file (type eps)
 File: chapter-2/figures/batt_noisy.eps Graphic file (type eps)
 
 <chapter-2/figures/batt_noisy.eps>) [30] [31] [32]
-Overfull \hbox (56.03612pt too wide) in paragraph at lines 166--166
+Overfull \hbox (56.03612pt too wide) in paragraph at lines 162--162
 [] 
  []
 
-[33] [34] [35] (D:\Matlab\2014_zhang\latex\chapter-2/figures/input.tex
+[33] [34] [35] [36] (D:\Matlab\2014_zhang\latex\chapter-2/figures/input.tex
 File: chapter-2/figures/input.eps Graphic file (type eps)
 
 <psfrag:chapter-2/figures/input.eps>
 (D:\Matlab\2014_zhang\latex\zhang_thesis.pfg) <chapter-2/figures/input.eps>)
+(D:\Matlab\2014_zhang\latex\chapter-2/figures/soc.tex
+File: chapter-2/figures/soc.eps Graphic file (type eps)
+
+<psfrag:chapter-2/figures/soc.eps> (D:\Matlab\2014_zhang\latex\zhang_thesis.pfg
+) <chapter-2/figures/soc.eps>)
 (D:\Matlab\2014_zhang\latex\chapter-2/figures/meas.tex
 File: chapter-2/figures/meas.eps Graphic file (type eps)
 
 <psfrag:chapter-2/figures/meas.eps>
 (D:\Matlab\2014_zhang\latex\zhang_thesis.pfg) <chapter-2/figures/meas.eps>)
-(D:\Matlab\2014_zhang\latex\chapter-2/figures/soc.tex
-File: chapter-2/figures/soc.eps Graphic file (type eps)
-
-<psfrag:chapter-2/figures/soc.eps> (D:\Matlab\2014_zhang\latex\zhang_thesis.pfg
-) <chapter-2/figures/soc.eps>) [36])
-(D:\Matlab\2014_zhang\latex\chapter-3/chapter-3.tex [37] [38] [39]
+[37]) (D:\Matlab\2014_zhang\latex\chapter-3/chapter-3.tex [38] [39] [40]
 Chapter 3.
+) [41
 
-Overfull \hbox (15.50536pt too wide) in paragraph at lines 32--44
- [][] 
- []
-
-) [40
-
-] [41] [42] [43
+] [42] [43] [44] [45
 
 
 ]
@@ -1074,23 +1069,23 @@ Overfull \hbox (5.42905pt too wide) in paragraph at lines 392--392
  for the electrode-electrolyte
  []
 
-[44] [45] [46]
+[46] [47] [48]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 408.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 408.
  (D:\Matlab\2014_zhang\latex\zhang_thesis.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 408.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 408.
 Package rerunfilecheck Info: File `zhang_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C543F6238AD82E72ED9AF343B270601B;1932.
+(rerunfilecheck)             Checksum: 2D1F77E338AF7867BCF59ACA18EC3E9A;1658.
 Package logreq Info: Writing requests to 'zhang_thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17164 strings out of 493922
- 279021 string characters out of 3147302
+ 17166 strings out of 493922
+ 279029 string characters out of 3147302
  756239 words of memory out of 3000000
- 20088 multiletter control sequences out of 15000+200000
+ 20090 multiletter control sequences out of 15000+200000
  23256 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  47i,31n,76p,1264b,1156s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on zhang_thesis.dvi (52 pages, 218036 bytes).
+Output written on zhang_thesis.dvi (54 pages, 223696 bytes).
