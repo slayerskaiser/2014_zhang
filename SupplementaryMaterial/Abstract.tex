@@ -1,11 +1,15 @@
 % Battery State of Charge estimation is one of the key procedures in battery management systems.
 % Typically, the measured voltage and current of a battery are used to estimate the state of charge.
-In battery management systems, the State of Charge, obtained from voltage and current measurements, is a figure of merit.
+% In battery management systems, the State of Charge, obtained from voltage and current measurements, is a figure of merit.
+In battery management systems, the main figure of merit is the battery's State of Charge, typically obtained from voltage and current measurements.
+Present estimation methods use simplified battery models that do not fully capture the electrical characteristics of the battery, which is useful for system design.
+This thesis studied State of Charge estimation for a lithium-ion battery using a nonlinear, electrical-circuit battery model that better describes the electrical characteristics of the battery.
 % However, these measurements are prone to noise and the battery does not behave linearly.
-The estimation of State of Charge is challenging due to the nonlinear behavior of the battery, measurement noise, and the trade-off between accuracy and computational complexity in selecting the sample rate.
-Additionally, for the purposes of system design, an electrical-circuit battery model is useful, which presents additional filtering difficulties when compared to presently-used analytical models.
+% The estimation of State of Charge is challenging due to the nonlinear behavior of the battery, measurement noise, and the trade-off between accuracy and computational complexity in selecting the sample rate.
+% Additionally, for the purposes of system design, an electrical-circuit battery model is useful, which presents additional filtering difficulties when compared to presently-used analytical models.
 % This means that the prediction method has to be able to handle the effect of nonlinear noise on the system.
 % This thesis investigated noise removal and state estimation for a nonlinear model of a battery cell.
-This thesis investigated the performance of various nonlinear filters for estimating the State of Charge using an electrical-circuit battery model.
+% This thesis investigated the performance of various nonlinear filters for estimating the State of Charge using an electrical-circuit battery model.
+The accuracy and speed of the estimation was investigated for various nonlinear filters through numerical simulation.
 % The effect of the choice of filtering method and sampling rate was determined for various amounts of additive white Gaussian noise.
 % The results can be applied to any battery system.

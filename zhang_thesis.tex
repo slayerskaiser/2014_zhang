@@ -25,7 +25,7 @@
 \usepackage{eqlist} % Makes for a nice list of symbols.
 \usepackage[dvipsnames]{color}
 \usepackage{psfrag}
-\usepackage{varioref}
+%\usepackage{varioref}
 \usepackage{booktabs}
 \usepackage[version=3]{mhchem}
 %\usepackage[caption=false]{subfig}
@@ -34,9 +34,9 @@
 \usepackage[final]{graphicx}
 %\DeclareGraphicsExtensions{.pdf, .jpg}
 \graphicspath{{chapter-1/figures/}{chapter-2/figures/}{chapter-3/figures/}{chapter-4/figures/}{appendix-a/figures/}}
-\usepackage[first,timestamp]{draftcopy}
+%\usepackage[first,timestamp]{draftcopy}
 %\usepackage{rotating}
-\usepackage{ctable}
+%\usepackage{ctable}
 \usepackage[inline]{enumitem}
 %\usepackage{lmodern}
 %\usepackage{textcomp}
@@ -101,7 +101,7 @@
 % who want to use it.
 %
 % To the hyperref package, uncomment the following line:
-\usepackage[linktocpage]{hyperref}
+\usepackage[linktocpage,dvips]{hyperref}
 \usepackage[all]{hypcap}
 \usepackage{breakurl}
 %
@@ -115,8 +115,8 @@
 %	pdfauthor={Klaus Zhang},bookmarksnumbered,pdfstartview=FitH}
 \hypersetup{pdftitle={\Title},pdfauthor={\Author},bookmarksnumbered,pdfstartview=FitH}
 %
-\labelformat{equation}{\textup{(#1)}}
-\labelformat{enumi}{\textup{(#1)}}
+%\labelformat{equation}{\textup{(#1)}}
+%\labelformat{enumi}{\textup{(#1)}}
 %\renewcommand\thesubfigure{(\alph{subfigure})}
 %
 \let\orgautoref\autoref
@@ -139,7 +139,9 @@
          \def\subsubsectionautorefname{Section}%
          \def\Itemautorefname{Item}%
          \def\tableautorefname{Table}%
-         \orgautoref}				
+         \orgautoref}
+%
+\usepackage[capitalise,noabbrev]{cleveref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SPECIAL SYMBOLS AND NEW COMMANDS %
@@ -359,7 +361,7 @@
 \subfile{chapter-1/chapter-1}
 \subfile{chapter-2/chapter-2}
 \subfile{chapter-3/chapter-3}
-%\subfile{chapter-4/chapter-4}
+\subfile{chapter-4/chapter-4}
 %\subfile{chapter-5/chapter-5}
 %\subfile{chapter-6/chapter-6}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

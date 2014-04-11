@@ -1,14 +1,14 @@
 \documentclass[../zhang_thesis.tex]{subfiles}
 \begin{document}
 
-\chapter{Methodology}
+\chapter{Problem Setup}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Battery Model}
 \label{sec:batt_mdl}
 
-As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} and shown in \autoref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient i-v characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and
+As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} and shown in \cref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient i-v characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and
 $R_{sd}$ are assumed constant for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient i-v response as well as the open-circuit voltage $V_\text{OC}$. From a typical TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters and fit them to curves, obtaining
 \begin{gather}
     R_s(V_\text{SOC}) = 0.1562 e^{-24.37 V_\text{SOC}} + 0.07446 \label{eq:nl_param_1} \\
@@ -38,7 +38,7 @@ The threshold $v_T$ was chosen based on the experimental data of Chen and Rin\'o
 \label{fig:batt_model}
 \end{figure}
 
-This study used the nonlinear parameters given by Chen and Rinc\'on-Mora for the implementation of a battery using their battery model in Matlab. In addition, the thresholding defined in \autorefs{eq:Cts_thres} and \ref{eq:Ctl_thres} was used with $v_T=0.015$~V. The other, constant parameters were chosen to produce a capacity of 1~Ah and a self-discharge rate of 4\% per month. To do so, the capacitance $C_\text{cap}$ is calculated to hold the desired capacity
+This study used the nonlinear parameters given by Chen and Rinc\'on-Mora for the implementation of a battery using their battery model in Matlab. In addition, the thresholding defined in \cref{eq:Cts_thres,eq:Ctl_thres} was used with $v_T=0.015$~V. The other, constant parameters were chosen to produce a capacity of 1~Ah and a self-discharge rate of 4\% per month. To do so, the capacitance $C_\text{cap}$ is calculated to hold the desired capacity
 when $V_\text{SOC}=1$~V, and then the resistance $R_{sd}$ is set to produce the desired self-discharge rate. For a given capacity of $C^\dag$ in Ah, $C_\text{cap}$ needs to be
 \begin{equation}
     C_\text{cap} = \frac{Q}{V_\text{SOC}} = \frac{C^\dag}{1~\text{V}} = 3600 C^\dag \,[\text{F}].
@@ -76,7 +76,7 @@ For ease of numerical simulation, it is useful to find the state-space system fo
     \dot{x}_3 &= - \frac{x_3}{R_{tl}(x_1)C_{tl}(x_1)} + \frac{V_\text{OC}(x_1) - x_2 - x_3}{(R_s(x_1)+R_L)C_{tl}(x_1)} + f_{w,3}(\mathbf{x},R_L,\mathbf{w}) \\
     V_\text{cell} &= \frac{V_\text{OC}(x_1) - x_2 - x_3}{1+R_s(x_1)/R_L} + f_v(\mathbf{x},R_L,\mathbf{v}),
 \end{align}
-where $R_L$ is the input to the system, $V_\text{cell}$ is the output, $f_w$ is the process noise function, $f_v$ is the measurement noise function, and the nonlinear parameters depending on $x_1$ are given by \autorefs{eq:nl_param_1} through \ref{eq:nl_param_6} along with the thresholding defined in \autorefs{eq:Cts_thres} and \ref{eq:Ctl_thres}. It is obvious from this formulation that the system is nonlinear to both the input and the states. In order to establish the noise expressions, the types of
+where $R_L$ is the input to the system, $V_\text{cell}$ is the output, $f_w$ is the process noise function, $f_v$ is the measurement noise function, and the nonlinear parameters depending on $x_1$ are given by \crefrange{eq:nl_param_1}{eq:nl_param_6} along with the thresholding defined in \cref{eq:Cts_thres,eq:Ctl_thres}. It is obvious from this formulation that the system is nonlinear to both the input and the states. In order to establish the noise expressions, the types of
 noise present in the battery have to first be determined.
 
 This thesis assumes that the process and measurement noises in this system are due to thermal noise in the resistances for the internal impedance of the battery $R_s$, $R_{ts}$, and $R_{tl}$, and for the load $R_L$. This is motivated by measurements of the voltage noise in batteries conducted by Boggs et al.\ that showed the measured noise is mainly due to thermal noise; the correlation between the battery terminals suppresses shot noise~\cite{boggs95}. This thermal noise is assumed to
@@ -84,7 +84,7 @@ be Gaussian white noise with a power spectral density (PSD) of~\cite{stremler82}
 \begin{equation}
     S_n(\omega) \cong 2kT\ \text{watts per Hz} \qquad \text{for} \qquad |\omega| \ll 2\pi kT/h,
 \end{equation}
-where $T$ is the temperature of the conducting medium in Kelvin, $k$ is the Boltzmann's constant, and $h$ is the Planck's constant. \autoref{fig:batt_noisy} shows that the thermal noise due to the resistances is modeled as voltage sources in series with the resistances, with PSDs of $S_v(\omega)=2kTR$ for a corresponding resistance $R$. Using this definition, the noise functions are given by
+where $T$ is the temperature of the conducting medium in Kelvin, $k$ is the Boltzmann's constant, and $h$ is the Planck's constant. \cref{fig:batt_noisy} shows that the thermal noise due to the resistances is modeled as voltage sources in series with the resistances, with PSDs of $S_v(\omega)=2kTR$ for a corresponding resistance $R$. Using this definition, the noise functions are given by
 \begin{figure}[tb]
 \input{chapter-2/figures/batt_noisy}
 \caption{Modeling of thermal noise in resistances as voltage sources in series with the resistances.}
@@ -173,7 +173,7 @@ In order to simulate the stochastic system, the covariances of the noises as wel
 Specifically, consider the Tektronix TBS1022 oscilloscope with a DC gain accuracy of $\pm 3\%$ of the full range. Based on numerical simulations, an approximate range of 4~V peak-to-peak is necessary to fully capture the range of possible $V_\text{cell}$ values, resulting in a measurement inaccuracy of $\pm 0.12$~V. This noise is assumed to be white Gaussian noise, and its range lies within three standard deviations. Thus, an additional measurement noise variable $v_3$ is introduced with
 a variance of
 \begin{equation}
-    \sigma_{v_3}^2 = \left( \frac{0.12~\text{V}}{3} \right)^2 = 0.0016~\text{V}.
+    \sigma_{v_3}^2 = \left( \frac{0.12~\text{V}}{3} \right)^2 = 0.0016~\text{V}^2.
 \end{equation}
 Then, the new measurement covariance matrix is
 \begin{equation}
@@ -194,11 +194,11 @@ to the diagonals of the covariance matrix divided by the correlation time. The s
 scaling is unnecessary. For reproducibility, the random number generators were seeded with predictable numbers. This was done in Matlab by first seeding the main random number generator with a seed of 0. Then, for each Monte Carlo trial, five positive integers were generated, for the five noise sources, with the integers uniformly distributed between 1 and $2^{32}-1$. These integers were used to seed the random number generators in a Simulink model. The use of the Simulink model allows for the
 random number generators to be easily seeds with different integers and does not affect the predictable sequence in Matlab.
 
-Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \autoref{fig:input} shows the input load on the battery system, where the values off the graph are idle periods, simulated using a very large input of $R_L=10^{10}~\Omega$ so that the battery
+Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \cref{fig:input} shows the input load on the battery system, where the values off the graph are idle periods, simulated using a very large input of $R_L=10^{10}~\Omega$ so that the battery
 current is approximately zero. It can be seen that the input is piecewise constant. This input was chosen to to test the performance of the filters by gradually increasing the strength of the nonlinear rate-capacity and recovery effects. Note that care was taken to ensure the SOC remained within the range of zero to one, so discharge and charge times could not always be equal. Intially, the battery is idle for 10 minutes to allow the estimated covariances of the filters to converge. Then, the
-battery is discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, respectively. The resulting low current from this load is approximately the testing current $C_5/5$ used to determine battery capacity, as discussed in \autoref{sec:batt_mdl}. In order to increase the strength of the nonlinear effects, the absolute value of the current was increased by decreasing the input to $R_L=10~\Omega$ and discharging and charging for 150 minutes, each. Then, the input was further reduced to
+battery is discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, respectively. The resulting low current from this load is approximately the testing current $C_5/5$ used to determine battery capacity, as discussed in \cref{sec:batt_mdl}. In order to increase the strength of the nonlinear effects, the absolute value of the current was increased by decreasing the input to $R_L=10~\Omega$ and discharging and charging for 150 minutes, each. Then, the input was further reduced to
 $R_L=5~\Omega$ and discharged and charged for 80 minutes and 70 minutes, respectively. Next, the battery was discharged and charged at $R_L=4~\Omega$ for 60 minutes, each. Following were discharge and charge periods at $R_L=2~\Omega$ for 35, 25, 25, 20, 25, 25, 20, and 15 minutes. The high current results in very strong rate-capacity effects. Finally, the battery was rested for 70 minutes, discharged at $R_L=2~\Omega$ for 25 minutes, rested for 75 minutes, and charged at $R_L=10~\Omega$
-for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time is 1635 minutes. The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input is shown one Monte Carlo trial in \autorefs{fig:soc} and \ref{fig:meas}, respectively.
+for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time is 1635 minutes. The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input is shown one Monte Carlo trial in \cref{fig:soc,fig:meas}, respectively.
 
 \begin{figure}[htb]
 \centering
@@ -225,31 +225,14 @@ The Monte Carlo trials used varying sampling periods, calculated as some multipl
 \begin{equation}
     T_s = K \delta_\text{sim} = 1826 \times 0.164255~\text{s} = 299.93~\text{s},
 \end{equation}
-where the factor $K$ is chosen to minimize the difference between the desired and actual periods. For convenience, the sampling period will refer to the actual sampling period calculated in this manner. Additionally, to increase the accuracy of the discretization in the prediction steps, the sampling period is divided by a positive integer $M$ and the prediction step is performed $M$ times prior to each update step. Thus, the prediction and update portions of the filters can be calculated at different rates. The next chapter discusses the simulation results for a range of sampling periods
-and refinement steps $M$.
+where the factor $K$ is chosen to minimize the difference between the desired and actual periods. For convenience, the sampling period will refer to the actual sampling period calculated in this manner.
 
-%In order to generate the input and output of the system, the battery model was implemented in Simulink. \autoref{fig:batt_load_exp} shows a simulation of the battery, assuming no noise, discharged with $R_L=5~\Omega$ from 5 to 120 minutes and charged with $R_L=-5~\Omega$ from 150 to 250 minutes. A mechanism was implemented that bounded the SOC to $0\le\text{SOC}\le 1$, which can be seen in $i_\text{cell}$. \autoref{fig:batt_load_exp_noisy} shows a simulation with the same input, assuming
-%thermal noise. It can be seen that the effect of noise is minimal. This is better seen in \autoref{fig:batt_noise_comp}, which shows the squared difference between the outputs of the noiseless and noisy systems.
+\section{Filtering Setup}
 
-%\begin{figure}[ht]
-%\centering
-%\input{chapter-2/figures/batt_load_exp}
-%\caption{Test of discharging battery with resistive load and charging using negative resistance assuming no noise.}
-%\label{fig:batt_load_exp}
-%\end{figure}
+The filters used in this study were implemented in Fortran for speed reasons. The programs used LAPACK 3.5.0 and were compiled using gfortran 4.8 for a 32-bit Cygwin environment on a 64-bit Windows 7 computer with optimization flags of \texttt{-O3}. Due to the large size of the data, the input and output were performed using files. The time measurements were of the CPU time used by the filters, disregarding the time taken to read and write the data. The use of CPU time results in less
+variability between runs. Additionally, to increase the accuracy of the discretized integration in the prediction steps, the sampling period is divided by a positive integer $M$ and the integration is performed in $M$ steps. Thus, the prediction and update portions of the filters can be calculated at different rates.
 
-%\begin{figure}[ht]
-%\centering
-%\input{chapter-2/figures/batt_load_exp_noisy}
-%\caption{Test of discharging battery with resistive load and charging using negative resistance assuming thermal noise.}
-%\label{fig:batt_load_exp_noisy}
-%\end{figure}
-
-%\begin{figure}[ht]
-%\centering
-%\input{chapter-2/figures/batt_noise_comp}
-%\caption{Comparison of outputs between noiseless and noisy systems.}
-%\label{fig:batt_noise_comp}
-%\end{figure}
+The formulas used to implement the filters were already described in Chapter 1. The only filter with tunable parameters was the UKF. Parameter values of $\alpha=0.05$, $\beta=2$, and $\kappa=0$ were used, where the values were chosen to be the typical values for a Gaussian distribution. It was noticed that $\alpha$ could not be too small for this problem; otherwise, the covariance matrix quickly loses positive definiteness. The choice of $\alpha$ was a compromise between the typical
+choice of a small value and the stability gained from a larger value. Additionally, as $\alpha$ approaches 1, the UKF becomes very similar to the third-order CKF used by this thesis, so the chosen value is on the small side to better differentiate the two filters. The filtering was performed assuming an initial state of $x_0=[1,0,0]^\top$ and an initial covariance matrix of $P_0=10^{-6} I_3$, where the initial state was chosen to match the actual state and the initial covariance was experimentally tuned for fast convergence. 
 
 \end{document}
