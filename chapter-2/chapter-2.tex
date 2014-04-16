@@ -139,7 +139,8 @@ It is useful to find the derivatives of $\vf$ and $h$ with respect to $\vx$, $\m
             \dfrac{-\sqrt{R_s}}{(R_s+R_L)C_\text{cap}} & 0 & \dfrac{\sqrt{R_{tl}}}{R_{tl}C_{tl}} & \dfrac{-\sgn{R_L}\sqrt{|R_L|}}{(R_s+R_L)C_\text{cap}}
         \end{bmatrix} \\[3ex]
     M & = \begin{bmatrix}
-            \dfrac{-\sqrt{R_s}}{(R_s+R_L)C_\text{cap}} & \dfrac{-\sgn{R_L}\sqrt{|R_L|}}{(R_s+R_L)C_\text{cap}}
+            %\dfrac{-\sqrt{R_s}}{(R_s+R_L)C_\text{cap}} & \dfrac{-\sgn{R_L}\sqrt{|R_L|}}{(R_s+R_L)C_\text{cap}}
+            \dfrac{-\sqrt{R_s}}{1+R_s/R_L} & \dfrac{-\sgn{R_L}\sqrt{|R_L|}}{1+R_s/R_L}
         \end{bmatrix} ,
 \end{align}
 where $()'$ indicates derivation with respect to $x_1$ and the dependence on $x_1$ has been omitted due to space constraints. Furthermore, it is useful to find the Hessian of $\vf$ with respect to $\vx$. Due to symmetry and $\partial^2 f_k/\partial x_i\partial x_j = 0$ for $i,j=2,3$, only the first column of each tensor component of the Hessian is given. The resultant Hessian is
