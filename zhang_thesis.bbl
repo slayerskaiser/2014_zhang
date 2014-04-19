@@ -474,19 +474,12 @@
       \strng{fullhash}{0caae249705dcbfbbd7ebb5d20ce7286}
       \field{sortinit}{0}
       \field{labeltitle}{Historical evolution of circuit models for the electrode-electrolyte interface}
-      \field{issn}{0090-6964}
       \field{journaltitle}{Annals of Biomedical Engineering}
       \field{number}{1}
       \field{title}{Historical evolution of circuit models for the electrode-electrolyte interface}
       \field{volume}{25}
       \field{year}{1997}
       \field{pages}{1\bibrangedash 14}
-      \verb{doi}
-      \verb 10.1007/BF02738534
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1007/BF02738534
-      \endverb
     \endentry
     \entry{randles47}{article}{}
       \name{labelname}{1}{}{%

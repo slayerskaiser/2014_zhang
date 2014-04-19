@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.9.11)  14 APR 2014 21:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2013.9.11)  17 APR 2014 11:41
 entering extended mode
 **zhang_thesis.tex
 (D:\Matlab\2014_zhang\latex\zhang_thesis.tex
@@ -1230,10 +1230,10 @@ Package logreq Info: Writing requests to 'zhang_thesis.run.xml'.
 Here is how much of TeX's memory you used:
  22967 strings out of 493922
  407991 string characters out of 3147302
- 850022 words of memory out of 3000000
+ 850023 words of memory out of 3000000
  25802 multiletter control sequences out of 15000+200000
  23256 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  47i,31n,76p,10377b,1185s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on zhang_thesis.dvi (66 pages, 295880 bytes).
+Output written on zhang_thesis.dvi (66 pages, 294056 bytes).
