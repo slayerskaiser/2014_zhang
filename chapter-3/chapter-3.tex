@@ -5,6 +5,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Performance Measures}
+
 The study was concerned with the accuracy and speed of the nonlinear filters on estimation of the SOC $x_1$. The accuracy was measured using the mean RMSE (MRMSE). The RMSE is defined as
 \begin{equation}
     \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^j(kT_s) - x_1^j(kT_s) \Big)^2 },
@@ -16,10 +18,11 @@ where $T_s$ is the sample period and the superscript $j$ indicates the $j$th Mon
 where $N$ is the total number of times at which the filtering was performed. An additional measure of accuracy was the number of trials in which the filter estimate diverged. A divergence is considered an absolute error in teh estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition, after a numerical failure for a filter in a trial, no attempt was made to keep filtering the
 system, and the remainder of the SOC values are assumed to be the worst case of zero. The speed was measured using the CPU time, which is the sum of the times used by the filter program on each of the CPU cores. The use of the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data is not counted.
 
-The accuracy and speed were compared for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period. The divergences of the filters for the different sampling periods is shown as a function of the number of integration steps in \cref{tab:div_30,tab:div_150,tab:div_300}. The filtering times are shown in \cref{tab:time_30,tab:time_150,tab:time_300}. The MRMSE for the
-filters are shown in \cref{fig:mrmse_30,fig:mrmse_150,fig:mrmse_300}. Detailed views of the MRMSE for large $M$ are shown in \cref{fig:mrmse_det_30,fig:mrmse_det_150,fig:mrmse_det_300}.
+The remainder of this chapter shows the filtering results for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period.
 
 \clearpage
+
+\section{Sampling Period of 30 Seconds}
 
 \begin{table}[h]
 \centering
@@ -69,6 +72,8 @@ SLF        & 5.057 & 7.585 & 19.03 & 36.91 & 74.06 & 147.0 & 293.7 & 583.2 & 115
 
 \clearpage
 
+\section{Sampling Period of 150 Seconds}
+
 \begin{table}[h]
 \centering
 \caption{Number of divergences in 100 Monte Carlo runs for $T_s=150$~s as a function of number of integration steps $M$}
@@ -116,6 +121,8 @@ SLF        & 1.027  & 2.000 & 3.684 & 7.443 & 14.65 & 29.52 & 58.87 & 118.4 & 23
 \end{figure}
 
 \clearpage
+
+\section{Sampling Period of 300 Seconds}
 
 \begin{table}[h]
 \centering

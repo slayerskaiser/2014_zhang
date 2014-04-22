@@ -163,9 +163,9 @@ where $\vx\in\mathcal{R}^n$, $\vu\in\mathcal{R}^{N_u}$, and $\vz\in\mathcal{R}^m
 variable indicates the value of that variable at time $t_k$. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathcal{R}^{n\times n}$ according to
 \begin{align}
     \hat{\vx}_{k|k-1} &= F_k \hat{\vx}_{k-1|k-1} + B_k \mathbf{u}_k \label{eq:kfp1} \\
-    P_{k|k-1} &= F_k P_{k-1|k-1} F_k^\top + L Q_k L^\top. \label{eq:kfp2}
+    P_{k|k-1} &= F_k P_{k-1|k-1} F_k^\top + L Q_k L^\top, \label{eq:kfp2}
 \end{align}
-Then, the estimates are updated using the measurements according to
+where $\hat{()}$ indicates the estimated value. Then, the estimates are updated using the measurements according to
 \begin{align}
     \tilde{\mathbf{z}}_k &= \mathbf{z}_k - H_k \hat{\vx}_{k|k-1} \label{eq:kfu1} \\
     S_k &= H_k P_{k|k-1} H_k^\top + M R_k M^\top \\
@@ -191,8 +191,9 @@ where $\vf\in\mathcal{R}^n$ and $\vh\in\mathcal{R}^m$ are nonlinear vector funct
 %The most popular methods in each category were studied, which were the extended Kalman filter (EKF), mainly classified in three groups: function approximation, moment approximation, and stochastic model approximation~\cite{li04}. Function approximation techniques approximate the nonlinear dynamic and measurement processes, commonly using the Taylor series expansion. A moment approximation technique uses a representative set of sample points and calculates integrals as weighted averages. Stochastic model approximation simplifies the original nonlinear stochastic system to a linear system so that linear filtering results are applicable.
 
 \subsection{Extended Kalman Filter}
+\label{sec:ekf}
 
-One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement functions using Taylor series expansion. This study uses the first-order expansion for the EKF. The prediction step follows the discretization approach proposed by Mazzoni~\cite{mazzoni07} to numerically approximate the continuous-time dynamics in \cref{eq:gen_ct_f} and the continuous-time covariance differential equation
+One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement functions using Taylor series expansion. This study uses the first-order expansion for the EKF. The prediction step follows the discretization approach proposed by Mazzoni~\cite{mazzoni07} to numerically approximate the continuous-time dynamics in \cref{eq:ct_diff} and the continuous-time covariance differential equation
 \begin{equation}
     \dot{P} = F(\vx,\vu) P + P F^\top(\vx,\vu) + L(\vx,\vu) Q L^\top(\vx,\vu),
 \end{equation}
@@ -215,7 +216,7 @@ The update equations for the EKF come from the LMMSE filter and are
 \begin{align}
     K_k &= P_{k|k-1} H_k^\top \left( H_k P_{k|k-1} H_k^\top + M(\hat{\vx}_k) R_k M^\top(\hat{\vx}_k) \right)^{-1} \\
     \hat{\vx}_{k|k} &= \hat{\vx}_{k|k-1} + K_k \big( \mathbf{z}_k - \vh(\hat{\vx}_{k|k-1}) \big) \\
-    P_{k|k} &= (I - K_k H_k) P_{k|k-1},
+    P_{k|k} &= (I - K_k H_k) P_{k|k-1}, \label{eq:ekf_l}
 \end{align}
 with the Jacobian $H=\partial\vh/\partial\vx$.
 

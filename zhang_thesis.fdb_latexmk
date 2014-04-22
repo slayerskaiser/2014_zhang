@@ -1,15 +1,15 @@
 # Fdb version 3
-["biber zhang_thesis"] 1398134496 "zhang_thesis.bcf" "zhang_thesis.bbl" "zhang_thesis" 1398134544
-  "Biblio-Database.bib" 1398126186 15311 e891027013264ff016f37134853ba8d9 ""
-  "zhang_thesis.bcf" 1398134538 93102 32fa0008224bff5ce538f401fdabfc65 ""
+["biber zhang_thesis"] 1398179009 "zhang_thesis.bcf" "zhang_thesis.bbl" "zhang_thesis" 1398181695
+  "Biblio-Database.bib" 1398179007 15469 273d7c1a23f9f05a841c6763956a14ef ""
+  "zhang_thesis.bcf" 1398181690 93203 f76ac5503ce0c3a9c6cb235d5d89b2ec ""
   (generated)
   "zhang_thesis.blg"
   "zhang_thesis.bbl"
-["dvips"] 1398134539 "zhang_thesis.dvi" "zhang_thesis.ps" "zhang_thesis" 1398134544
-  "zhang_thesis.dvi" 1398134538 330716 d90510e41ec8fb6fc0413fe81dbe2697 "latex"
+["dvips"] 1398181690 "zhang_thesis.dvi" "zhang_thesis.ps" "zhang_thesis" 1398181695
+  "zhang_thesis.dvi" 1398181690 338344 e2c1a056e3b24e1e34b218a4fa26e837 "latex"
   (generated)
   "zhang_thesis.ps"
-["latex"] 1398134532 "zhang_thesis.tex" "zhang_thesis.dvi" "zhang_thesis" 1398134544
+["latex"] 1398181684 "zhang_thesis.tex" "zhang_thesis.dvi" "zhang_thesis" 1398181695
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm" 1136768653 2520 53e01eef820ca829e42c1333c3fd02b9 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1136768653 2124 2601a75482e9426d33db523edf23570a ""
@@ -176,8 +176,8 @@
   "/usr/local/texlive/2013/texmf.cnf" 1391991040 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "SupplementaryMaterial/Abstract.tex" 1398004809 1996 077244b9704f7cc3d8cacd61949698c9 ""
   "SupplementaryMaterial/UserDefinedCommands.tex" 1391989279 37 9505dfa2e93901c64de68198f954bb56 ""
-  "chapter-1/chapter-1.tex" 1398134530 54703 6ef7304af6f4f2796bbf0658ae017bd5 ""
-  "chapter-2/chapter-2.tex" 1398108415 32243 a9862c39831a601c1396c1ee8e02f699 ""
+  "chapter-1/chapter-1.tex" 1398179578 54783 b00264edaa1a774fbd1b15c7510086c4 ""
+  "chapter-2/chapter-2.tex" 1398179909 33951 cdca16c227cacd8d98069dc1d4c3f1e4 ""
   "chapter-2/figures/batt_model.eps" 1397965233 45107 dad973cd2705044c3828494c7c21d503 ""
   "chapter-2/figures/batt_model.tex" 1397965233 495 a543d6cb795c34872d2bf1f936f4eee5 ""
   "chapter-2/figures/batt_noisy.eps" 1397965233 54872 b29ff3c3c909e2c85580927b98bab81f ""
@@ -192,7 +192,7 @@
   "chapter-2/figures/resistive_load.tex" 1397965233 194 ace88b6873717fc5cf7907ba62758a14 ""
   "chapter-2/figures/soc.eps" 1397965233 43122 54cc563fb1cb1463a78a654d7f904481 ""
   "chapter-2/figures/soc.tex" 1397965233 1429 483a1f3b6e530883507f6d30782c5e82 ""
-  "chapter-3/chapter-3.tex" 1397965233 7412 95d45375a3b7724d7060a6f6b1ac3ca8 ""
+  "chapter-3/chapter-3.tex" 1398181650 7137 bc5b739cd13b5d108dd5e9b5a8d53397 ""
   "chapter-3/figures/mrmse_150.eps" 1397965233 9861 1ec294b9930ae208d79ab0e14a0a5a7b ""
   "chapter-3/figures/mrmse_150.tex" 1397965233 2450 9b4b64c0dfcd99be8c3c8e0424d83f8b ""
   "chapter-3/figures/mrmse_30.eps" 1397965233 9839 b5c804b91c239cd05b167ce6c8dbf97b ""
@@ -207,14 +207,14 @@
   "chapter-3/figures/mrmse_det_300.tex" 1397965233 2320 72b25b33d28941676ac581d6c2d0935e ""
   "chapter-4/chapter-4.tex" 1397965233 5676 c6f9366066cb18eb14ebc5dcef1249d3 ""
   "psuthesis.cls" 1397965233 36986 784473bf5f34512bff4d039b4b61a3a9 ""
-  "zhang_thesis.aux" 1398134538 20564 f6c84899f88bd03e7385d56e73ef6548 ""
-  "zhang_thesis.bbl" 1398134500 59245 f534279f891794465812488a3402e1a6 "biber zhang_thesis"
-  "zhang_thesis.lof" 1398134538 2842 962f82119de7c55fddc1e414568a7688 ""
-  "zhang_thesis.lot" 1398134538 2132 99eec36ef19d9b065958433d13d48593 ""
-  "zhang_thesis.out" 1398134538 1923 1c569f20f0a982ff1581555f81bbdb52 ""
-  "zhang_thesis.run.xml" 1398134538 2435 c575177b92e647a587ee0b741affec3b ""
+  "zhang_thesis.aux" 1398181690 21754 77bbda31fbce7dbac469755918ad7574 ""
+  "zhang_thesis.bbl" 1398179012 60927 3a09cdb2e002aa5561d8733ef1e2c0fa "biber zhang_thesis"
+  "zhang_thesis.lof" 1398181690 2842 94dcdadb17b0c7b2f15d0ef0ee3c5c32 ""
+  "zhang_thesis.lot" 1398181690 2132 69bd2df55dcbd7d96edc1932f2273990 ""
+  "zhang_thesis.out" 1398181690 2244 af4f583c788dcd2e62410f5539c6d256 ""
+  "zhang_thesis.run.xml" 1398181690 2435 c575177b92e647a587ee0b741affec3b ""
   "zhang_thesis.tex" 1398045892 13104 3bc289ebfa8d19bd275972c38c2169a4 ""
-  "zhang_thesis.toc" 1398134538 3225 407805a302af4154463567b26c0e158c ""
+  "zhang_thesis.toc" 1398181690 3718 ead1ae2935f4ae9233c417a139ea3a1a ""
   (generated)
   "zhang_thesis.out"
   "zhang_thesis.dvi"
@@ -226,7 +226,7 @@
   "zhang_thesis.aux"
   "zhang_thesis.toc"
   "zhang_thesis.run.xml"
-["ps2pdf"] 1398134539 "zhang_thesis.ps" "zhang_thesis.pdf" "zhang_thesis" 1398134544
-  "zhang_thesis.ps" 1398134539 1658949 f166c23d0ba69c073071f875f0aa3fc2 "dvips"
+["ps2pdf"] 1398181690 "zhang_thesis.ps" "zhang_thesis.pdf" "zhang_thesis" 1398181695
+  "zhang_thesis.ps" 1398181690 1674628 dc8ed80abc15316e20e38b11767b8dd9 "dvips"
   (generated)
   "zhang_thesis.pdf"

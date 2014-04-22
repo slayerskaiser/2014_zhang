@@ -2001,14 +2001,16 @@
     <bcf:citekey order="43">linden01_ch3</bcf:citekey>
     <bcf:citekey order="44">boggs95</bcf:citekey>
     <bcf:citekey order="45">stremler82</bcf:citekey>
-    <bcf:citekey order="46">lambert91</bcf:citekey>
-    <bcf:citekey order="46">brugnano11</bcf:citekey>
-    <bcf:citekey order="47">jossen06</bcf:citekey>
-    <bcf:citekey order="48">sarkka12</bcf:citekey>
-    <bcf:citekey order="49">mazzoni07</bcf:citekey>
+    <bcf:citekey order="46">sarkka12</bcf:citekey>
+    <bcf:citekey order="47">kloeden99</bcf:citekey>
+    <bcf:citekey order="48">lambert91</bcf:citekey>
+    <bcf:citekey order="48">brugnano11</bcf:citekey>
+    <bcf:citekey order="49">jossen06</bcf:citekey>
     <bcf:citekey order="50">mazzoni07</bcf:citekey>
     <bcf:citekey order="51">mazzoni07</bcf:citekey>
-    <bcf:citekey order="52">kalman60</bcf:citekey>
+    <bcf:citekey order="52">kloeden99</bcf:citekey>
+    <bcf:citekey order="53">matlab</bcf:citekey>
+    <bcf:citekey order="54">kalman60</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">
   <bcf:sorting>
