@@ -21,6 +21,6 @@ let b:atp_StarEnvDefault = ''
 let b:atp_StarMathEnvDefault = ''
 let b:atp_updatetime_insert = 4000
 let b:atp_updatetime_normal = 2000
-let b:atp_LocalCommands = ['\Title', '\Author', '\figureautorefname', '\subfigureautorefname', '\sectionautorefname', '\subsectionautorefname', '\subsubsectionautorefname', '\Itemautorefname', '\tableautorefname', '\figureautorefname', '\subfigureautorefname', '\sectionautorefname', '\subsectionautorefname', '\subsubsectionautorefname', '\Itemautorefname', '\tableautorefname']
+let b:atp_LocalCommands = ['\vx', '\vu', '\vf', '\vh', '\Title', '\Author', '\figureautorefname', '\subfigureautorefname', '\sectionautorefname', '\subsectionautorefname', '\subsubsectionautorefname', '\Itemautorefname', '\tableautorefname', '\figureautorefname', '\subfigureautorefname', '\sectionautorefname', '\subsectionautorefname', '\subsubsectionautorefname', '\Itemautorefname', '\tableautorefname']
 let b:atp_LocalEnvironments = ['narrow']
 let b:atp_LocalColors = []

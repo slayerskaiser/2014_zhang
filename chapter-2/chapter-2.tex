@@ -168,6 +168,60 @@ Additionally, the covariances of the error variables are
 \end{align}
 where $I_n$ is a $n\times n$ identity matrix.
 
+\section{Discretization of System Dynamics}
+\label{sec:discret}
+
+Note that the choice of discretization method tends to depend on the filter, especially for highly nonlinear systems. Therefore, the simulations used a continuous-discrete (mixed) time system, with the form
+\begin{align}
+    \dot{\vx}(t) &= \vf(\vx(t),\vu(t),\vw(t)) \label{eq:gen_ct_f} \\
+    \vz_k &= \vh(\vx(t_k),\vu(t_k),\vv(t_k)),
+\end{align}
+where $\vx$, $\vu$, $\mathbf{z}$, $\mathbf{w}$, and $\mathbf{v}$ are the vectors of the states, the inputs, the measurements, the process noises, and the measurement noises, respectively. For simplicity of simulation, the input $\mathbf{u}(t)$ is assumed to be constant over each time step so that $\mathbf{u}(t)=\mathbf{u}(t_k)$ for $t_k\le t < t_{k+1}$. For the prediction phase, the continuous-time dynamics were solved numerically, with each filter using different approximation
+techniques. The state error covariances are also approximated numerically. Then, the updates were performed based on the update of the linear Kalman filter.
+
+Furthermore, note that the system is extremely stiff for some inputs $\mathbf{u}$, which can be seen from the stiffness ratio based on the ratio of the largest eigenvalue of $F$ to its smallest eigenvalue, where $F$ is the Jacobian of the dynamics $\vf(\mathbf{x},\mathbf{u})$; when the stiffness ratio is much greater than unity, the system is stiff~\cite{lambert91,brugnano11}. From EIS studies of batteries, the major chemical processes have widely differing time constants; low frequency
+mass transport effects like diffusion are on the order of $10^{-6}$ to $10^0$ Hz, middle frequency effects caused by charge transfer and the electrochemical double layer are on the order of $10^0$ to $10^3$ Hz, and the high frequency conductance and skin effects are on the order of $10^3$ to $10^4$ Hz~\cite{jossen06}. Therefore, the approximate stiffness ratio is $10^{10} \gg 1$, and the system is stiff. As a result of the stiffness, any numerical integration method needs to be A-stable,
+i.e.\ the method converges for all systems whose eigenvalues have negative real parts. For example, simulation results show that the fourth-order Runge-Kutta method diverges even at step sizes $<10^{-2}$ seconds.
+
+S\"arkk\"a and Solin state that a linearized discretization approach, in which the continuous-time system is first discretized and then approximated as Gaussian, tends to work better than a discretized linearization approach, in which the system is first approximated as a Gaussian process and then discretized~\cite{sarkka12}. This thesis follows this guideline and performs the prediction using linearized approximations of a discretization of the continuous-time dynamics. To increase the
+accuracy of the discretized integration in the prediction phase, the sampling period is divided into $M$ steps of equal length and the integration is performed in $M$ steps. The specifics of the linearized discretization approach for each filter along with their general implementation are discussed in the remainder of this chapter.
+
+One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement equations, typically using Taylor series expansion. The standard Kalman filter formulas are used for the update. For the discrete-time EKF, Taylor series expansion can be directly used on the system dynamics to linearize them. For the mixed-time system of this study, a linearized discretization approach proposed by Mazzoni~\cite{mazzoni07} is used, in
+which the dynamics are first discretized and then approximated using Taylor series expansion. This approach has the advantage of A-stability. The discretization is performed using the trapezoidal approximation (Heun's method) of \cref{eq:gen_ct_f}. For convenience, denote the value of a quantity at time $t_k$ using the subscript $k$ and assume that $\delta=t_{k+1}-t_k$ is the time step. Additionally, a subscript of $k|k-1$ indicates the value at time $t_k$ given the information at
+$t_{k-1}$. Then, the approximation produces
+\begin{equation}
+    \vx_{k+1} \approx \vx_k + \frac{1}{2} \big( \vf(\vx_k) + \vf(\vx_{k+1}) \big) \delta.
+\end{equation}
+The vector field $\vf$ at $\vx_{k+1}$ is approximated by first-order Taylor expansion around $\vx_k$, giving
+\begin{equation}
+    \vx_{k+1} \approx \vx_k + \vf(\vx_k)\delta + \frac{1}{2} F(\vx_k) \left( \vx_{k+1} - \vx_k \right) \delta,
+\end{equation}
+where $F(\vx_k)$ is the Jacobian of $\vf$ at $\vx_k$. Solving for $\vx_{k+1}$ yields
+\begin{equation}
+    \vx_{k+1} \approx \vx_k + \left( I - F(\vx_k) \frac{\delta}{2} \right)^{-1} \vf(\vx_k) \delta,
+\end{equation}
+with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. This numerical integration scheme is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. For the state error covariance ODE given by
+\begin{equation}
+    \dot{P} = F(\vx) P + P F^\top(\vx) + L(\vx) Q(\vx) L^\top(\vx),
+\end{equation}
+where $Q$ is the covariance of the error variables and $L$ is the Jacobian of $\vf$ with respect to the state error variables $\mathbf{w}$, the numerical integration method should have the key features of being consistent with the same order as the Taylor-Heun scheme, able to process nonautonomous differential equations, and A-stable. Mazzoni proposed using a modified Gauss-Legendre formula with an implicit increment rule, producing
+\begin{gather}
+    P_{k+1} \approx P_k + M_\tau \left( F(\vx_\tau) P_k + P_k F^\top(\vx_\tau) + L(\vx_\tau) Q(\vx_\tau) L^\top(\vx_\tau) \right) M_\tau^\top \delta, \\
+    \intertext{with}
+    M_\tau = \left( I - F(\vx_\tau) \frac{\delta}{2} \right)^{-1} \quad \text{and} \quad \tau = t_k + \frac{\delta}{2}.
+\end{gather}
+The value of $\vx_\tau$ can be interpolated from $\vx_k$ and $\vx_{k+1}$ with a precision of $\mathcal{O}(\delta^3)$ using series expansion, producing
+\begin{equation}
+    \vx_\tau \approx \frac{1}{2} \left( \vx_k + \vx_{k+1} - F(\vx_k) f(\vx_k) \frac{\delta^2}{4} \right).
+\end{equation}
+This modified Gauss-Legendre approximation is A-stable, consistent with order $\mathcal{O}(\delta^2)$, and ensures the positive definiteness of the resultant error covariance matrix~\cite{mazzoni07}. This numerical integration can be repeated multiple times with a smaller step size should greater accuracy be desired. The update equations for the EKF come from the LMMSE filter and are
+\begin{align}
+    K_k &= P_{k|k-1} H_k^\top \left( H_k P_{k|k-1} H_k^\top + M(\vx_k) R(\vx_k) M^\top(\vx_k) \right)^{-1} \\
+    \vx_{k|k} &= \vx_{k|k-1} + K_k \big( \mathbf{z}_k - \vh(\vx_{k|k-1}) \big) \\
+    P_{k|k} &= (I - K_k H_k) P_{k|k-1},
+\end{align}
+where $R$ is the covariance of the measurement error variables, $M$ is the Jacobian of $\vf$ with respect to the measurement error variables $\mathbf{v}$, and $H_k$ is the Jacobian of $\vf$ at $\vx_{k|k-1}$.
+
 \section{Simulation Setup}
 
 In order to simulate the stochastic system, the covariances of the noises as well as their generation and simulation methods have to be determined. This thesis assumed that a standard temperature of $T=290$~Kelvin. Therefore, the noise variables have covariances of $\sigma^2=2kT=8.0078\times 10^{-21}$~W/Hz. Furthermore, to better differentiate the performance of the filters, additional measurement noise was introduced assuming an oscilloscope was used to perform the measurement.

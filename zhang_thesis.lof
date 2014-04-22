@@ -10,30 +10,30 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Electrical-circuit battery model.\relax }}{28}{figure.caption.5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Electrical-circuit battery model.\relax }}{29}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Loads to (a) discharge and (b) charge the battery.\relax }}{29}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Loads to (a) discharge and (b) charge the battery.\relax }}{30}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Modeling of thermal noise in resistances as voltage sources in series with the resistances.\relax }}{31}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Modeling of thermal noise in resistances as voltage sources in series with the resistances.\relax }}{32}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{39}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{44}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces True SOC for one run due to input load.\relax }}{40}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces True SOC for one run due to input load.\relax }}{45}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{41}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{46}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{45}{figure.caption.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{50}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Detailed view of SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{46}{figure.caption.14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Detailed view of SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{51}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{48}{figure.caption.17}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{53}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Detailed view of SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{49}{figure.caption.18}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Detailed view of SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{54}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{51}{figure.caption.21}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{56}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detailed view of SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{52}{figure.caption.22}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Detailed view of SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{57}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

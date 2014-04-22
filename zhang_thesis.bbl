@@ -19,6 +19,24 @@
 
 \refsection{0}
   \sortlist{entry}{none}
+    \entry{chen03}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=03bd7d5826bc7b1c11f8759ff9a0573c}{Chen}{C\bibinitperiod}{Zhe}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=03bd7d5826bc7b1c11f8759ff9a0573c}{Chen}{C\bibinitperiod}{Zhe}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{03bd7d5826bc7b1c11f8759ff9a0573c}
+      \strng{fullhash}{03bd7d5826bc7b1c11f8759ff9a0573c}
+      \field{sortinit}{0}
+      \field{labeltitle}{Bayesian filtering: From {Kalman} filters to particle filters, and beyond}
+      \field{journaltitle}{Statistics}
+      \field{number}{1}
+      \field{title}{Bayesian filtering: From {Kalman} filters to particle filters, and beyond}
+      \field{volume}{182}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 69}
+    \endentry
     \entry{chiasserini99}{inproceedings}{}
       \name{labelname}{2}{}{%
         {{hash=2aa5590ecdbc5c9fa3c0c52725731fd0}{Chiasserini}{C\bibinitperiod}{C.\bibnamedelimi F.}{C\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
@@ -42,17 +60,180 @@
       \verb 10.1109/WCNC.1999.796721
       \endverb
     \endentry
-    \entry{jongerden09}{article}{}
+    \entry{jongerden08}{report}{}
       \name{labelname}{2}{}{%
         {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=2aa6849de3a2eeae7fba617f13ddefe4}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=8553bd95bb037a5803056b6a33339b72}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.\bibnamedelimi H.\bibnamedelimi M.}{B\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{2}{}{%
         {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=2aa6849de3a2eeae7fba617f13ddefe4}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.}{B\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=8553bd95bb037a5803056b6a33339b72}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.\bibnamedelimi H.\bibnamedelimi M.}{B\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{dd12efb5493d16e58fb8d1b3f8c31200}
-      \strng{fullhash}{dd12efb5493d16e58fb8d1b3f8c31200}
+      \list{institution}{2}{%
+        {Centre for Telematics}%
+        {Information Technology University of Twente}%
+      }
+      \list{location}{1}{%
+        {Enschede}%
+      }
+      \list{publisher}{2}{%
+        {Centre for Telematics}%
+        {Information Technology University of Twente}%
+      }
+      \strng{namehash}{4797e488ac1df48c26f74c522add6e2e}
+      \strng{fullhash}{4797e488ac1df48c26f74c522add6e2e}
+      \field{sortinit}{0}
+      \field{labeltitle}{Battery Modeling}
+      \field{number}{TR-CTIT-08-01}
+      \field{title}{Battery Modeling}
+      \field{type}{techreport}
+      \field{year}{2008}
+    \endentry
+    \entry{man12}{inproceedings}{}
+      \name{labelname}{7}{}{%
+        {{hash=ffaf5f105c99cb1df74e870384f913fa}{Man}{M\bibinitperiod}{K.\bibnamedelimi L.}{K\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=082f6ebc2a6279dc4abc56ddcafbbff0}{Wan}{W\bibinitperiod}{Kaiyu}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=9edc46e5a7bc5d7808fc08f3d32effe2}{Ting}{T\bibinitperiod}{T.\bibnamedelimi O.}{T\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+        {{hash=676217c03ad603f4c1d6315596b73ea5}{Chen}{C\bibinitperiod}{C.}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=426f7859602dc91d2113af35f1df5320}{Krilavi\v{c}ius}{K\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=817a53613112bb9d4a57c4424303e3dc}{Chang}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=9630fcfe897e4e73882441e63818b2b1}{Poon}{P\bibinitperiod}{S.\bibnamedelimi H.}{S\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{7}{}{%
+        {{hash=ffaf5f105c99cb1df74e870384f913fa}{Man}{M\bibinitperiod}{K.\bibnamedelimi L.}{K\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=082f6ebc2a6279dc4abc56ddcafbbff0}{Wan}{W\bibinitperiod}{Kaiyu}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=9edc46e5a7bc5d7808fc08f3d32effe2}{Ting}{T\bibinitperiod}{T.\bibnamedelimi O.}{T\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+        {{hash=676217c03ad603f4c1d6315596b73ea5}{Chen}{C\bibinitperiod}{C.}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=426f7859602dc91d2113af35f1df5320}{Krilavi\v{c}ius}{K\bibinitperiod}{T.}{T\bibinitperiod}{}{}{}{}}%
+        {{hash=817a53613112bb9d4a57c4424303e3dc}{Chang}{C\bibinitperiod}{J.}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=9630fcfe897e4e73882441e63818b2b1}{Poon}{P\bibinitperiod}{S.\bibnamedelimi H.}{S\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c2bbe73fa08e2c9b0988565a1726260d}
+      \strng{fullhash}{c2bbe73fa08e2c9b0988565a1726260d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Towards a hybrid approach to SoC estimation for a smart Battery Management System ({BMS}) and battery supported Cyber-Physical Systems ({CPS})}
+      \field{booktitle}{2012 2nd Baltic Congress on Future Internet Communications (BCFIC)}
+      \field{month}{04}
+      \field{title}{Towards a hybrid approach to SoC estimation for a smart Battery Management System ({BMS}) and battery supported Cyber-Physical Systems ({CPS})}
+      \field{year}{2012}
+      \field{pages}{113\bibrangedash 116}
+    \endentry
+    \entry{ogorman98}{inproceedings}{}
+      \name{labelname}{4}{}{%
+        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{935d12fa38dae20d6f20d28790ac861e}
+      \strng{fullhash}{935d12fa38dae20d6f20d28790ac861e}
+      \field{sortinit}{0}
+      \field{labeltitle}{Artificial neural network simulation of battery performance}
+      \field{booktitle}{Proceedings of the Thirty-First Hawaii International Conference on System Sciences}
+      \field{month}{01}
+      \field{title}{Artificial neural network simulation of battery performance}
+      \field{volume}{5}
+      \field{year}{1998}
+      \field{pages}{115\bibrangedash 121}
+      \verb{doi}
+      \verb 10.1109/HICSS.1998.648303
+      \endverb
+    \endentry
+    \entry{capizzi11}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bc82162919543da0917c5d6f6b1bb5fa}
+      \strng{fullhash}{bc82162919543da0917c5d6f6b1bb5fa}
+      \field{sortinit}{0}
+      \field{labeltitle}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
+      \field{issn}{0885-8969}
+      \field{journaltitle}{IEEE Transactions on Energy Conversion}
+      \field{month}{06}
+      \field{number}{2}
+      \field{title}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
+      \field{volume}{26}
+      \field{year}{2011}
+      \field{pages}{435\bibrangedash 443}
+      \verb{doi}
+      \verb 10.1109/TEC.2010.2095015
+      \endverb
+    \endentry
+    \entry{wang06}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
+        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
+        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e13c2fdb344cd994893701a308d01f5b}
+      \strng{fullhash}{e13c2fdb344cd994893701a308d01f5b}
+      \field{sortinit}{0}
+      \field{labeltitle}{Support vector machine based battery model for electric vehicles}
+      \field{journaltitle}{Energy Conversion and Management}
+      \field{number}{7--8}
+      \field{title}{Support vector machine based battery model for electric vehicles}
+      \field{volume}{47}
+      \field{year}{2006}
+      \field{pages}{858\bibrangedash 864}
+    \endentry
+    \entry{shen02}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{cee79351d94e2c6332bdc5f48d949ecf}
+      \strng{fullhash}{cee79351d94e2c6332bdc5f48d949ecf}
+      \field{sortinit}{0}
+      \field{labeltitle}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
+      \field{issn}{0278-0046}
+      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
+      \field{month}{06}
+      \field{number}{3}
+      \field{title}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
+      \field{volume}{49}
+      \field{year}{2002}
+      \field{pages}{677\bibrangedash 684}
+      \verb{doi}
+      \verb 10.1109/TIE.2002.1005395
+      \endverb
+    \endentry
+    \entry{jongerden09}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=8553bd95bb037a5803056b6a33339b72}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.\bibnamedelimi H.\bibnamedelimi M.}{B\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b11772862dca1caa24d3c3053fa7da84}{Jongerden}{J\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=8553bd95bb037a5803056b6a33339b72}{Haverkort}{H\bibinitperiod}{B.\bibnamedelimi R.\bibnamedelimi H.\bibnamedelimi M.}{B\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4797e488ac1df48c26f74c522add6e2e}
+      \strng{fullhash}{4797e488ac1df48c26f74c522add6e2e}
       \field{sortinit}{0}
       \field{labeltitle}{Which battery model to use?}
       \field{issn}{1751-8806}
@@ -192,111 +373,6 @@
       \field{title}{What is computational intelligence?}
       \field{year}{1994}
       \field{pages}{1\bibrangedash 12}
-    \endentry
-    \entry{ogorman98}{inproceedings}{}
-      \name{labelname}{4}{}{%
-        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=ace164835a9a51e03e68b75a3aba0f0c}{O'Gorman}{O\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=b05f5c094af208b72aa811567d1bbc13}{Ingersoll}{I\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
-        {{hash=37a6690f01e403c64a5109d27ef1f78a}{Jungst}{J\bibinitperiod}{R.\bibnamedelimi G.}{R\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=9b89c17a7d8b4f49a8cb68fb528e87a8}{Paez}{P\bibinitperiod}{T.\bibnamedelimi L.}{T\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{935d12fa38dae20d6f20d28790ac861e}
-      \strng{fullhash}{935d12fa38dae20d6f20d28790ac861e}
-      \field{sortinit}{0}
-      \field{labeltitle}{Artificial neural network simulation of battery performance}
-      \field{booktitle}{Proceedings of the Thirty-First Hawaii International Conference on System Sciences}
-      \field{month}{01}
-      \field{title}{Artificial neural network simulation of battery performance}
-      \field{volume}{5}
-      \field{year}{1998}
-      \field{pages}{115\bibrangedash 121}
-      \verb{doi}
-      \verb 10.1109/HICSS.1998.648303
-      \endverb
-    \endentry
-    \entry{capizzi11}{article}{}
-      \name{labelname}{3}{}{%
-        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
-        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{3}{}{%
-        {{hash=fcb9d1700862e40fbf1b5968e957824f}{Capizzi}{C\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
-        {{hash=05634e4558353970465aa1d91d62dfd5}{Bonanno}{B\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=ac9224af54837591dc82903cc0486eb4}{Tina}{T\bibinitperiod}{G.\bibnamedelimi M.}{G\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{bc82162919543da0917c5d6f6b1bb5fa}
-      \strng{fullhash}{bc82162919543da0917c5d6f6b1bb5fa}
-      \field{sortinit}{0}
-      \field{labeltitle}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
-      \field{issn}{0885-8969}
-      \field{journaltitle}{IEEE Transactions on Energy Conversion}
-      \field{month}{06}
-      \field{number}{2}
-      \field{title}{Recurrent Neural Network-Based Modeling and Simulation of Lead-Acid Batteries Charge-Discharge}
-      \field{volume}{26}
-      \field{year}{2011}
-      \field{pages}{435\bibrangedash 443}
-      \verb{doi}
-      \verb 10.1109/TEC.2010.2095015
-      \endverb
-    \endentry
-    \entry{wang06}{article}{}
-      \name{labelname}{3}{}{%
-        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
-        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
-        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{3}{}{%
-        {{hash=b0a418007699dfd908c985e9018b5b93}{Wang}{W\bibinitperiod}{Junping}{J\bibinitperiod}{}{}{}{}}%
-        {{hash=b69f5e149b7a4f04e1796f800c8b8222}{Chen}{C\bibinitperiod}{Quanshi}{Q\bibinitperiod}{}{}{}{}}%
-        {{hash=12c904834bd7a4888e81305d30ccbb0c}{Cao}{C\bibinitperiod}{Binggang}{B\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{e13c2fdb344cd994893701a308d01f5b}
-      \strng{fullhash}{e13c2fdb344cd994893701a308d01f5b}
-      \field{sortinit}{0}
-      \field{labeltitle}{Support vector machine based battery model for electric vehicles}
-      \field{journaltitle}{Energy Conversion and Management}
-      \field{number}{7--8}
-      \field{title}{Support vector machine based battery model for electric vehicles}
-      \field{volume}{47}
-      \field{year}{2006}
-      \field{pages}{858\bibrangedash 864}
-    \endentry
-    \entry{shen02}{article}{}
-      \name{labelname}{4}{}{%
-        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
-        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=3dccaed906bf2710cca3506d5aa4c871}{Shen}{S\bibinitperiod}{W.\bibnamedelimi X.}{W\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
-        {{hash=33914f4e9836217d0af9dd8fd7abe79f}{Chan}{C\bibinitperiod}{C.\bibnamedelimi C.}{C\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=fbd484cdef0e8316fe342f04a6684a4a}{Lo}{L\bibinitperiod}{E.\bibnamedelimi W.\bibnamedelimi C.}{E\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=7e107ecfcd3eac1ae38ea1ddbfa5e3fe}{Chau}{C\bibinitperiod}{K.\bibnamedelimi T.}{K\bibinitperiod\bibinitdelim T\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{cee79351d94e2c6332bdc5f48d949ecf}
-      \strng{fullhash}{cee79351d94e2c6332bdc5f48d949ecf}
-      \field{sortinit}{0}
-      \field{labeltitle}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
-      \field{issn}{0278-0046}
-      \field{journaltitle}{IEEE Transactions on Industrial Electronics}
-      \field{month}{06}
-      \field{number}{3}
-      \field{title}{Adaptive neuro-fuzzy modeling of battery residual capacity for electric vehicles}
-      \field{volume}{49}
-      \field{year}{2002}
-      \field{pages}{677\bibrangedash 684}
-      \verb{doi}
-      \verb 10.1109/TIE.2002.1005395
-      \endverb
     \endentry
     \entry{doerffel06}{article}{}
       \name{labelname}{2}{}{%
@@ -625,104 +701,57 @@
       \field{year}{2004}
       \field{pages}{537\bibrangedash 550}
     \endentry
-    \entry{lambert91}{book}{}
+    \entry{jazwinski70}{book}{}
       \name{labelname}{1}{}{%
-        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{hash=849d53c47ae79576be4243fc6c5d3020}{Jazwinski}{J\bibinitperiod}{A.\bibnamedelimi H.}{A\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {New York}%
+        {{hash=849d53c47ae79576be4243fc6c5d3020}{Jazwinski}{J\bibinitperiod}{A.\bibnamedelimi H.}{A\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
       }
       \list{publisher}{1}{%
-        {John Wiley}%
+        {Academic Press}%
       }
-      \strng{namehash}{0df385e4d509437c2f2d311f80eef743}
-      \strng{fullhash}{0df385e4d509437c2f2d311f80eef743}
+      \strng{namehash}{849d53c47ae79576be4243fc6c5d3020}
+      \strng{fullhash}{849d53c47ae79576be4243fc6c5d3020}
       \field{sortinit}{0}
-      \field{labeltitle}{Numerical Methods for Ordinary Differential Equations}
-      \field{title}{Numerical Methods for Ordinary Differential Equations}
-      \field{year}{1991}
+      \field{labeltitle}{Stochastic Processes and Filtering Theory}
+      \field{title}{Stochastic Processes and Filtering Theory}
+      \field{year}{1970}
     \endentry
-    \entry{brugnano11}{incollection}{}
-      \name{labelname}{3}{}{%
-        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
-        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{3}{}{%
-        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
-        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
-        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+    \entry{gelb74}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=29b00aa93717334dd9ce22272a2ab5cd}{Gelb}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
       }
       \name{editor}{1}{}{%
-        {{hash=d7e51154c8af005f33f9b2dbaeb91f49}{Simos}{S\bibinitperiod}{T.\bibnamedelimi E.}{T\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{hash=29b00aa93717334dd9ce22272a2ab5cd}{Gelb}{G\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
       }
       \list{publisher}{1}{%
-        {Springer Netherlands}%
+        {The MIT Press}%
       }
-      \strng{namehash}{a5553f61b55834c6c31e6c029ecc72a7}
-      \strng{fullhash}{a5553f61b55834c6c31e6c029ecc72a7}
+      \strng{namehash}{29b00aa93717334dd9ce22272a2ab5cd}
+      \strng{fullhash}{29b00aa93717334dd9ce22272a2ab5cd}
       \field{sortinit}{0}
-      \field{labeltitle}{Fifty Years of Stiffness}
-      \field{booktitle}{Recent Advances in Computational and Applied Mathematics}
-      \field{title}{Fifty Years of Stiffness}
-      \field{pages}{1\bibrangedash 21}
+      \field{labeltitle}{Applied Optimal Estimation}
+      \field{title}{Applied Optimal Estimation}
+      \field{year}{1974}
     \endentry
-    \entry{jossen06}{article}{}
-      \name{labelname}{1}{}{%
-        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{bda13b7aa83d5b194cdef59b0042aae8}
-      \strng{fullhash}{bda13b7aa83d5b194cdef59b0042aae8}
-      \field{sortinit}{0}
-      \field{labeltitle}{Fundamentals of battery dynamics}
-      \field{journaltitle}{Journal of Power Sources}
-      \field{number}{2}
-      \field{title}{Fundamentals of battery dynamics}
-      \field{volume}{154}
-      \field{year}{2006}
-      \field{pages}{530\bibrangedash 538}
-    \endentry
-    \entry{sarkka12}{inproceedings}{}
+    \entry{julier97}{inproceedings}{}
       \name{labelname}{2}{}{%
-        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=8e37cb9b14037fd375b2f46179a71d0e}{Julier}{J\bibinitperiod}{Simon\bibnamedelima J.}{S\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=ae2317de627fa44f702801832d2ed176}{Uhlmann}{U\bibinitperiod}{Jeffrey\bibnamedelima K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{2}{}{%
-        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=8e37cb9b14037fd375b2f46179a71d0e}{Julier}{J\bibinitperiod}{Simon\bibnamedelima J.}{S\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=ae2317de627fa44f702801832d2ed176}{Uhlmann}{U\bibinitperiod}{Jeffrey\bibnamedelima K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{a7cc37a38cb316f803b4128bdf7179c9}
-      \strng{fullhash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \strng{namehash}{a458fdb300cb811922c8721aaf162eb7}
+      \strng{fullhash}{a458fdb300cb811922c8721aaf162eb7}
       \field{sortinit}{0}
-      \field{labeltitle}{On continuous-discrete cubature Kalman filtering}
-      \field{booktitle}{Proceedings of SYSID}
-      \field{title}{On continuous-discrete cubature Kalman filtering}
-      \field{year}{2012}
-      \field{pages}{1221\bibrangedash 1226}
-    \endentry
-    \entry{mazzoni07}{article}{}
-      \name{labelname}{1}{}{%
-        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{ea50781c1a628935b70aaac6e4287d46}
-      \strng{fullhash}{ea50781c1a628935b70aaac6e4287d46}
-      \field{sortinit}{0}
-      \field{labeltitle}{Computational Aspects of Continuous-Discrete Extended Kalman-Filtering}
-      \field{journaltitle}{Computational Statistics}
-      \field{number}{4}
-      \field{title}{Computational Aspects of Continuous-Discrete Extended Kalman-Filtering}
-      \field{volume}{23}
-      \field{year}{2007}
-      \field{pages}{519\bibrangedash 539}
+      \field{labeltitle}{A new extension of the {Kalman} filter to nonlinear systems}
+      \field{booktitle}{Proceedings of {AeroSense}: The 11th International Symposium on Aerospace/Defense Sensing, Simulation, and Controls}
+      \field{title}{A new extension of the {Kalman} filter to nonlinear systems}
+      \field{year}{1997}
+      \field{pages}{182\bibrangedash 193}
     \endentry
     \entry{arasaratnam10}{article}{}
       \name{labelname}{3}{}{%
@@ -738,51 +767,31 @@
       \strng{namehash}{7aa309a876bd25b251c88e2bc1792323}
       \strng{fullhash}{7aa309a876bd25b251c88e2bc1792323}
       \field{sortinit}{0}
-      \field{labeltitle}{Cubature Kalman Filtering for Continuous-Discrete Systems: Theory and Simulations}
+      \field{labeltitle}{Cubature {Kalman} Filtering for Continuous-Discrete Systems: Theory and Simulations}
       \field{journaltitle}{IEEE Transactions on Signal Processing}
       \field{number}{10}
-      \field{title}{Cubature Kalman Filtering for Continuous-Discrete Systems: Theory and Simulations}
+      \field{title}{Cubature {Kalman} Filtering for Continuous-Discrete Systems: Theory and Simulations}
       \field{volume}{58}
       \field{year}{2010}
       \field{pages}{4977\bibrangedash 4993}
     \endentry
-    \entry{kloeden99}{book}{}
-      \name{labelname}{2}{}{%
-        {{hash=99fb43daff4fd65aa9f27ae4d486ad9c}{Kloeden}{K\bibinitperiod}{P.\bibnamedelimi E.}{P\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
-        {{hash=fc7a6923dcae1e56171aa0030d70323e}{Platen}{P\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+    \entry{mazzoni07}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{2}{}{%
-        {{hash=99fb43daff4fd65aa9f27ae4d486ad9c}{Kloeden}{K\bibinitperiod}{P.\bibnamedelimi E.}{P\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
-        {{hash=fc7a6923dcae1e56171aa0030d70323e}{Platen}{P\bibinitperiod}{E.}{E\bibinitperiod}{}{}{}{}}%
+      \name{author}{1}{}{%
+        {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
       }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{5c6297df01c08f48d850a23c42affb53}
-      \strng{fullhash}{5c6297df01c08f48d850a23c42affb53}
+      \strng{namehash}{ea50781c1a628935b70aaac6e4287d46}
+      \strng{fullhash}{ea50781c1a628935b70aaac6e4287d46}
       \field{sortinit}{0}
-      \field{labeltitle}{Numerical Solution of Stochastic Differential Equations}
-      \field{title}{Numerical Solution of Stochastic Differential Equations}
-      \field{year}{1999}
-    \endentry
-    \entry{morelande05}{inproceedings}{}
-      \name{labelname}{2}{}{%
-        {{hash=8bc8abab100c248fbbbe2e6b58dce689}{Morelande}{M\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=62c70fc0d5b0520ef031dbd0ba0f2960}{Gordon}{G\bibinitperiod}{N.\bibnamedelimi J.}{N\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{hash=8bc8abab100c248fbbbe2e6b58dce689}{Morelande}{M\bibinitperiod}{M.\bibnamedelimi R.}{M\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
-        {{hash=62c70fc0d5b0520ef031dbd0ba0f2960}{Gordon}{G\bibinitperiod}{N.\bibnamedelimi J.}{N\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{2ca23426824bce6a1f2df2e8345d5555}
-      \strng{fullhash}{2ca23426824bce6a1f2df2e8345d5555}
-      \field{sortinit}{0}
-      \field{labeltitle}{Target Tracking Through a Coordinated Turn}
-      \field{booktitle}{IEEE International Conference on Acoustics, Speech, and Signal Processing, 2005. Proceedings. (ICASSP '05)}
-      \field{title}{Target Tracking Through a Coordinated Turn}
-      \field{volume}{4}
-      \field{year}{2005}
-      \field{pages}{21\bibrangedash 24}
+      \field{labeltitle}{Computational Aspects of Continuous-Discrete Extended {Kalman}-Filtering}
+      \field{journaltitle}{Computational Statistics}
+      \field{number}{4}
+      \field{title}{Computational Aspects of Continuous-Discrete Extended {Kalman}-Filtering}
+      \field{volume}{23}
+      \field{year}{2007}
+      \field{pages}{519\bibrangedash 539}
     \endentry
     \entry{sarkka07}{article}{}
       \name{labelname}{1}{}{%
@@ -794,13 +803,115 @@
       \strng{namehash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
       \strng{fullhash}{b7b397ee5cf2c5ffdd104f5f05c0a347}
       \field{sortinit}{0}
-      \field{labeltitle}{On unscented Kalman filtering for state estimation of continuous-time nonlinear systems}
+      \field{labeltitle}{On unscented {Kalman} filtering for state estimation of continuous-time nonlinear systems}
       \field{journaltitle}{IEEE Transactions on Automatic Control}
       \field{number}{9}
-      \field{title}{On unscented Kalman filtering for state estimation of continuous-time nonlinear systems}
+      \field{title}{On unscented {Kalman} filtering for state estimation of continuous-time nonlinear systems}
       \field{volume}{52}
       \field{year}{2007}
       \field{pages}{1631\bibrangedash 1641}
+    \endentry
+    \entry{julier00}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=8e37cb9b14037fd375b2f46179a71d0e}{Julier}{J\bibinitperiod}{Simon\bibnamedelima J.}{S\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=ae2317de627fa44f702801832d2ed176}{Uhlmann}{U\bibinitperiod}{Jeffrey\bibnamedelima K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=72da89c38b083343e4d3d07e97708094}{Durrant-Whyte}{D\bibinithyphendelim W\bibinitperiod}{Hugh\bibnamedelima F.}{H\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=8e37cb9b14037fd375b2f46179a71d0e}{Julier}{J\bibinitperiod}{Simon\bibnamedelima J.}{S\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=ae2317de627fa44f702801832d2ed176}{Uhlmann}{U\bibinitperiod}{Jeffrey\bibnamedelima K.}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=72da89c38b083343e4d3d07e97708094}{Durrant-Whyte}{D\bibinithyphendelim W\bibinitperiod}{Hugh\bibnamedelima F.}{H\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c236ce492cddb61ec2cdf0b728f02a02}
+      \strng{fullhash}{c236ce492cddb61ec2cdf0b728f02a02}
+      \field{sortinit}{0}
+      \field{labeltitle}{A new method for the nonlinear transformation of means and covariances in filters and estimators}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{3}
+      \field{title}{A new method for the nonlinear transformation of means and covariances in filters and estimators}
+      \field{volume}{45}
+      \field{year}{2000}
+      \field{pages}{477\bibrangedash 482}
+    \endentry
+    \entry{arasaratnam09}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=b237b0d9cbef8fdb01c5ca8a77fee07f}{Arasaratnam}{A\bibinitperiod}{Ienkaran}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=91e57481898b943d6a72a1deba06a6a9}{Haykin}{H\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b237b0d9cbef8fdb01c5ca8a77fee07f}{Arasaratnam}{A\bibinitperiod}{Ienkaran}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=91e57481898b943d6a72a1deba06a6a9}{Haykin}{H\bibinitperiod}{Simon}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eb589521d73da9fe8a4a305f6786e31d}
+      \strng{fullhash}{eb589521d73da9fe8a4a305f6786e31d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Cubature {Kalman} filters}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{number}{6}
+      \field{title}{Cubature {Kalman} filters}
+      \field{volume}{54}
+      \field{year}{2009}
+      \field{pages}{1254\bibrangedash 1269}
+    \endentry
+    \entry{sarkka12}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \strng{fullhash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \field{sortinit}{0}
+      \field{labeltitle}{On continuous-discrete cubature {Kalman} filtering}
+      \field{booktitle}{Proceedings of SYSID}
+      \field{title}{On continuous-discrete cubature {Kalman} filtering}
+      \field{year}{2012}
+      \field{pages}{1221\bibrangedash 1226}
+    \endentry
+    \entry{jia13}{article}{}
+      \name{labelname}{3}{}{%
+        {{hash=4f2208d3e9f0ac64958979e707628efa}{Jia}{J\bibinitperiod}{Bin}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=34cc71af74499c2582d7321bee0f74c9}{Xin}{X\bibinitperiod}{Ming}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=a00c5050f276cbfa0ac70050e61ef474}{Cheng}{C\bibinitperiod}{Yang}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=4f2208d3e9f0ac64958979e707628efa}{Jia}{J\bibinitperiod}{Bin}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=34cc71af74499c2582d7321bee0f74c9}{Xin}{X\bibinitperiod}{Ming}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=a00c5050f276cbfa0ac70050e61ef474}{Cheng}{C\bibinitperiod}{Yang}{Y\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{89c18a086e6b9a2c815bcc3ed34466ac}
+      \strng{fullhash}{89c18a086e6b9a2c815bcc3ed34466ac}
+      \field{sortinit}{0}
+      \field{labeltitle}{High-degree Cubature {Kalman} Filter}
+      \field{journaltitle}{Automatica}
+      \field{number}{2}
+      \field{title}{High-degree Cubature {Kalman} Filter}
+      \field{volume}{49}
+      \field{year}{2013}
+      \field{pages}{510\bibrangedash 518}
+    \endentry
+    \entry{stroud71}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=4b4bef23d01ea0afa47b37fee18f6ed8}{Stroud}{S\bibinitperiod}{A.\bibnamedelimi H.}{A\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=4b4bef23d01ea0afa47b37fee18f6ed8}{Stroud}{S\bibinitperiod}{A.\bibnamedelimi H.}{A\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Edgewood Cliffs, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall, Inc.}%
+      }
+      \strng{namehash}{4b4bef23d01ea0afa47b37fee18f6ed8}
+      \strng{fullhash}{4b4bef23d01ea0afa47b37fee18f6ed8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Approximate Calculation of Multiple Integrals}
+      \field{title}{Approximate Calculation of Multiple Integrals}
+      \field{year}{1971}
     \endentry
     \entry{sarkka13}{book}{}
       \name{labelname}{1}{}{%
@@ -884,6 +995,69 @@
       \field{edition}{2nd ed}
       \field{title}{Introduction to Communication Systems}
       \field{year}{1982}
+    \endentry
+    \entry{lambert91}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=0df385e4d509437c2f2d311f80eef743}{Lambert}{L\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley}%
+      }
+      \strng{namehash}{0df385e4d509437c2f2d311f80eef743}
+      \strng{fullhash}{0df385e4d509437c2f2d311f80eef743}
+      \field{sortinit}{0}
+      \field{labeltitle}{Numerical Methods for Ordinary Differential Equations}
+      \field{title}{Numerical Methods for Ordinary Differential Equations}
+      \field{year}{1991}
+    \endentry
+    \entry{brugnano11}{incollection}{}
+      \name{labelname}{3}{}{%
+        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{hash=ce30829ed39ff1cb076b326c8374c658}{Brugnano}{B\bibinitperiod}{L.}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=b53435d2179aba1f64dd8e92ebbf2467}{Mazzia}{M\bibinitperiod}{F.}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=21460e2abd86980a52909502961e0ff9}{Trigiante}{T\bibinitperiod}{D.}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d7e51154c8af005f33f9b2dbaeb91f49}{Simos}{S\bibinitperiod}{T.\bibnamedelimi E.}{T\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{a5553f61b55834c6c31e6c029ecc72a7}
+      \strng{fullhash}{a5553f61b55834c6c31e6c029ecc72a7}
+      \field{sortinit}{0}
+      \field{labeltitle}{Fifty Years of Stiffness}
+      \field{booktitle}{Recent Advances in Computational and Applied Mathematics}
+      \field{title}{Fifty Years of Stiffness}
+      \field{pages}{1\bibrangedash 21}
+    \endentry
+    \entry{jossen06}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=bda13b7aa83d5b194cdef59b0042aae8}{Jossen}{J\bibinitperiod}{A.}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \strng{fullhash}{bda13b7aa83d5b194cdef59b0042aae8}
+      \field{sortinit}{0}
+      \field{labeltitle}{Fundamentals of battery dynamics}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{number}{2}
+      \field{title}{Fundamentals of battery dynamics}
+      \field{volume}{154}
+      \field{year}{2006}
+      \field{pages}{530\bibrangedash 538}
     \endentry
   \endsortlist
 \endrefsection

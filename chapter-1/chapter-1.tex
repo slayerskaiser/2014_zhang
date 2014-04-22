@@ -3,8 +3,9 @@
 
 \chapter{Introduction}
 
-Batteries, particularly rechargeable ones, are used extensively in daily life. They provide the energy for such electrical systems as communication, automotive, and renewable power systems. In order to design for and operate these systems, an accurate battery model and a means of simulating the model efficiently is needed. For example, modern battery charge and health management schemes use high-fidelity battery models to track the state of charge (SOC) and state of
-health (SOH); this information is then used to predict and optimize the runtime of the battery. However, widely-used chemical batteries have nonlinear capacitive effects, which require the use of a nonlinear filter for accurate prediction of its states in the presence of noise. This thesis explores one possible solutions to this problem by choosing an appropriate battery model and testing the accuracy and speed of various nonlinear filters in determining the SOC through simulation.
+Batteries, particularly rechargeable ones, are used extensively in daily life. They provide the energy for such electrical systems as communication, automotive, and renewable power systems. In order to design for and operate these systems, an accurate battery model and a means of simulating the model efficiently is needed. For example, modern battery charge and health management schemes use high-fidelity battery models to track the state of charge (SOC) and state of health (SOH); this
+information is then used to predict and optimize the runtime of the battery. However, widely-used chemical batteries have nonlinear capacitive effects, which require the use of a nonlinear filter for accurate prediction of its states in the presence of noise. This thesis explores one possible solutions to this problem by choosing an appropriate battery model and testing the accuracy and speed of various nonlinear filters in determining the SOC through simulation. Note that only filters
+using point-based numerical approximation methods were studied, as opposed to those using density-based methods. See~\cite{chen03} for more information about the differences between various numerical approximation methods in relationship to Bayesian filtering.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -33,18 +34,23 @@ This thesis is mainly concerned with estimating the SOC from noisy measurements.
 
 \section{Battery Models}
 
-This thesis studied the predition of the SOC of a battery given knowledge of the resistive load on the battery as well as noisy measurements of the voltage across its terminals. A known load profile, rather than the current, was used because in a realistic usuage scenario, it is difficult to exactly control the current drawn by a load. In order to do so for a general load profile, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics is
-desirable. Furthermore it is useful to have a model easily tunable for different battery types. This section reviews the characteristics of major types of battery models. Battery models can be divided into five categories, namely electrochemical, computational intelligence, analytical, stochastic, and electrical-circuit. The remainder of this section reviews each type and determines the most suitable battery model for this study.
+This thesis studied the estimation of the SOC of a battery given knowledge of the resistive load on the battery as well as noisy measurements of the voltage across its terminals. A known resistive load profile, rather than the current, was used because in a real-life usage, it is difficult to exactly control the current drawn by a load. In order to estimate the SOC for a general load profile, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics
+is desirable. Furthermore it is useful to have a model easily tunable for different battery types. To find a battery model that meets these goals, the major types of battery models are reviewed and their characteristics are compared.
+%This section reviews the characteristics of major types of battery models.
+Jongerden and Haverkort determined four main categories for battery models, namely electrochemical, analytical, stochastic, and electrical-circuit~\cite{jongerden08}.
+Additionally, battery models that use computational intelligence exist, e.g.~\cite{man12,ogorman98,capizzi11,wang06,shen02}.
+%Battery models can be divided into five categories, namely electrochemical, computational intelligence, analytical, stochastic, and electrical-circuit.
+The remainder of this section reviews these five types and determines the most suitable battery model for this study.
 
 \subsection{Electrochemical}
 
 Electrochemical models are describe the chemical processes that place in the battery in great detail. These are generally the most accurate, but they require in-depth knowledge of the chemical processes to create and impose large computational costs~\cite{jongerden09}. One of the most widely known electrochemical models was developed by Doyle, Fuller, and Newman for lithium and lithium-ion batteries using noninvasive voltage-current cycling
-experiments~\cite{doyle93,fuller94,fuller94b}. It consists of six coupled, nonlinear differential equatons that capture lithium diffusion dynamics and charge transfer kinetics. The model is able to predict i-v response and provides a design guide for thermodynamics, kinetics, and transport across electrodes. A implementation of their model in Fortran, called Dualfoil, is available for free online.\footfullcite{newman98} The program needs more than 60 parameters along with the load profile
+experiments~\cite{doyle93,fuller94,fuller94b}. It consists of six coupled, nonlinear differential equations that capture lithium diffusion dynamics and charge transfer kinetics. The model is able to predict i-v response and provides a design guide for thermodynamics, kinetics, and transport across electrodes. A implementation of their model in Fortran, called Dualfoil, is available for free online.\footfullcite{newman98} The program needs more than 60 parameters along with the load profile
 in order to compute the battery properties. Setting the parameters requires detailed knowledge of the battery, but the result of the program is highly accurate. Other battery models are often compared to it rather than to experimental results.
 
 \subsection{Computational Intelligence}
 
-Computational intelligence is a brance of computer science interested in problems that require the intelligence of humans and animals to solve. One of the earliest definitions by Bezdek states that computational intelligent systems use pattern recognition on low-level, numerical data and do not use knowledge as with artificial intelligence~\cite{bezdek92,bezdek94}. Methods such as neural networks, fuzzy systems, and evolutionary computation are commonly classified as computational
+Computational intelligence is a branch of computer science interested in problems that require the intelligence of humans and animals to solve. One of the earliest definitions by Bezdek states that computational intelligent systems use pattern recognition on low-level, numerical data and do not use knowledge as with artificial intelligence~\cite{bezdek92,bezdek94}. Methods such as neural networks, fuzzy systems, and evolutionary computation are commonly classified as computational
 intelligence. Battery models using such methods as neural networks~\cite{ogorman98,capizzi11}, support vector machines~\cite{wang06}, and hybrid neural-fuzzy models~\cite{shen02} have been studied. These models learn the nonlinear relationships between battery properties, such as SOC, current, voltage, and temperature, through a computationally costly training process. However, once trained, they incur a much lower cost and can achieve comparable accuracy to electrochemical
 models.
 
@@ -95,8 +101,8 @@ battery, with a maximum error of 2.65\%.
 \subsection{Electrical-Circuit}
 
 Electrical-circuit models for batteries developed from the discovery of capacitative effects at the electrode-electrolyte interface. Helmholtz first proposed the existence of a double layer of charge at the interface in 1879. In 1899, Warburg proposed a series resistance and capacitance circuit model with an infinitely low current density. The Warburg capacitance $C_W$ named after him varies inversely with the square root of the frequency~\cite{geddes97}. In 1947, Randles proposed a model
-consisting of a double-layer polarization capacitance $C_p$ in parallel with the series combination of a resistor $R$ and a capacitance $C$~\cite{randles47}. In 1994, Kovacs improved Randles circuit with the addition of Warburg impedence $Z_W$ replacing the capacitance $C$ and the solution resistance $R_s$ in series with the original Randles circuit~\cite{kovacs95}. In addition, he renamed $C_p$ to the double layer capacitance $C_{dl}$ and $R$ to the charge-transfer resistance
-$R_{ct}$. These proposals came from a desire to represnt impedance spectra created using electrochemical impedance spectroscopy (EIS). The various elements in the models represent the different processes within a battery, which have different time constants. While these attempts model the impedance and, thus, account for the nonlinear rate-capacity and recovery effects, they do not consider the capacity and self-discharge of the battery.
+consisting of a double-layer polarization capacitance $C_p$ in parallel with the series combination of a resistor $R$ and a capacitance $C$~\cite{randles47}. In 1994, Kovacs improved Randles circuit with the addition of Warburg impedance $Z_W$ replacing the capacitance $C$ and the solution resistance $R_s$ in series with the original Randles circuit~\cite{kovacs95}. In addition, he renamed $C_p$ to the double layer capacitance $C_{dl}$ and $R$ to the charge-transfer resistance
+$R_{ct}$. These proposals came from a desire to represent impedance spectra created using electrochemical impedance spectroscopy (EIS). The various elements in the models represent the different processes within a battery, which have different time constants. While these attempts model the impedance and, thus, account for the nonlinear rate-capacity and recovery effects, they do not consider the capacity and self-discharge of the battery.
 
 In 1993, Hageman created simplified electrical-circuit models using PSpice for nickel-cadmium (NiCd), lead-acid, and alkaline batteries~\cite{hageman93}. The circuits shared the common elements of
 \begin{enumerate*}[label=\emph{\roman*})]
@@ -114,138 +120,181 @@ accurate prediction of the SOC using the runtime-based portion while also modeli
 
 \subsection{Evaluation}
 
-Of the model types, only some are fit for use with filtering algorithms. The computational-intelligence and stochastic models do not model the dyanmics of the battery system, so they cannot be used. The electrochemical models, the related analytical models, and the electrical-circuit models describe the system dynamics and the nonlinear rate-capacity and recovery effects. However, only the electrical-circuit model has the advantage of modeling the internal impedance of the battery,
-which is useful in the design of battery systems. Of the electrical-circuit models, the proposal by Chen and Rinc\'on-Mora is best suited for the purposes of this thesis since it is the only one discussed by this paper that describes both the capacity and the transient effects. Therefore, their proposal is used for the simulation of the battery and comparing the performance of different filters.
+Of the model types, only some are fit for use with filtering algorithms. The computational-intelligence and stochastic models do not adequately describe the dynamics of the battery system for use in the filters covered by this study. On the other hand, electrochemical, analytical, and electrical-circuit models do describe the system dynamics in a compatible manner. Furthermore, they model the nonlinear rate-capacity and recovery effects. Of these, only the electrical-circuit model has the
+advantage of modeling the internal impedance of the battery, which is useful in the design of battery systems. The relevant characteristics of the model types are summarized in \cref{tab:model_charac}. It can be seen that electrical-circuit models are the most suitable for this study. Among them, the proposal by Chen and Rinc\'on-Mora is most appropriate for the purposes of this thesis, because it is the only one discussed by this paper that describes both the capacity and the transient
+effects. Therefore, their proposed model is used for the simulation of the battery and comparing the performance of different filters.
+
+\begin{table}[htb]
+\centering
+\caption{Summary of relevant characteristics of various battery model types.}
+\begin{tabular}{lccccc}
+    \toprule
+    Model Type & Dynamics & $\vcenter{\setbox0\hbox{\strut Nonlinear}\copy0\hbox to\wd0{\hss\strut Effects\hss}}$ & $\vcenter{\setbox0\hbox{\strut Transient}\copy0\hbox to\wd0{\hss\strut Effects\hss}}$ & $\vcenter{\setbox0\hbox{\strut Characteristics}\hbox to\wd0{\hss\strut I-V\hss}\copy0}$ & $\vcenter{\setbox0\hbox{\strut Difficulty}\hbox to\wd0{\hss\strut Design\hss}\copy0}$ \\
+    \midrule
+	Electrochemical & Y & Y & Y & N & High \\
+    $\vcenter{\setbox0\hbox{\strut Computational\strut}\copy0\hbox to\wd0{\hspace{2ex}\strut Intelligence\hss}}$ & N & Y & Y & N & High \\
+    Analytical & Y & Y & N & N & Low \\
+    Stochastic & N & Y & N & N & Low \\
+    Electrical-Circuit & Y & Y & Y & Y & Medium \\
+    \bottomrule
+\end{tabular}
+\label{tab:model_charac}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Nonlinear Filtering Methods}
 
-Filtering refers to the methodology for estimating the state of a time-varying system that is indirectly observed through noisy measurements. Specifically, the current state is estimated from the current and previous measurements. The state of a system is a group of dynamic variables that evolve through time, and its evolution through time is governed by a dynamic system, perturbed by process noise. The measurements are functions of the state and measurement noise. A battery can be modeled as a
-time-varying system, with state variables that describe such states as the SOC and the SOH. The measurements are typically the voltage and the current. Note that this thesis uses a resistive load instead of the current, because this is more realistic from a usage standpoint. Additionally, the SOH is not considered by this thesis for reasons descirbed in \cref{sec:echar}. The dynamic system for the battery is described in more detail in the following chapter.
+Filtering refers to the methodology for estimating the state of a time-varying system that is indirectly observed through noisy measurements. Specifically, the state at the current time is estimated using the measurements from the current and previous times. The state of a system is a group of dynamic variables that evolve through time, and its evolution through time is governed by a dynamic system, perturbed by process noise. The measurements are functions of the state and the
+measurement noise.
 
-For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the optimal least squares solution equals the posterior mean. A closed form solution to the discrete-time linearing filtering problem is given by the Kalman filter~\cite{kalman60}, which is a linear MMSSE (LMMSE) filter. For a linear system whose states and measurements are defined by
+Systems are classified as either linear or nonlinear. The state dynamics and measurements of a linear system are linear functions of the state, inputs, and noises. Particularly, the superposition principles of additivity and homogeneity are satisfied by a linear system. Nonlinear systems do not satisfy the principle of superposition because the functions defining the systems are not all linear, i.e.\ some are nonlinear. A battery can be modeled as a nonlinear, time-varying system,
+with state variables that describe such states as the SOC and the SOH. The measurements are typically the voltage and the current. Note that the SOH was not considered by this thesis for reasons described in \cref{sec:echar}. Additionally, only the voltage was measured since a known resistive load was used as an input to the system in place of the current measurement. This replacement was done because a piecewise constant discharge profile is convenient for simulation purposes and it is
+more realistic to have a constant discharge load than a constant discharge current. A state-space representation of the battery system proposed by Chen and Rinc\'on-Mora in~\cite{chen06} is described in more detail in the following chapter.
+
+%Note that this thesis uses a resistive load instead of the current, because this is more realistic from a usage standpoint. Additionally, the SOH is not considered by this thesis for reasons describe in \cref{sec:echar}. The dynamic system for the battery is described in more detail in the following chapter.
+
+For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the least squares solution equals the posterior mean. A closed form solution to the discrete-time linear filtering problem is given by the Kalman filter~\cite{kalman60}, which is a linear MMSSE (LMMSE) filter. Consider a linear system in discrete time with $n$ states and $m$ measurements defined by
 \begin{align}
-    \vx_k &= F_k \vx_{k-1} + B_k \mathbf{u}_k + \mathbf{w}_k \\
-    \mathbf{z}_k &= H_k \vx_k + \mathbf{v}_k,
+    \vx_k &= F_k \vx_{k-1} + B_k \vu_k + L \vw_k \\
+    \vz_k &= H_k \vx_k + M \vv_k,
 \end{align}
-where the noises are distributed as $\mathbf{w}_k \sim \mathcal{N}(0,Q_k)$ and $\mathbf{v}_k \sim \mathcal{N}(0,R_k)$, the linear Kalman filter consists of a prediction phase and an update phase. In the prediction phase, the estimates of the states and their covariances are propagated according to
+where $\vx\in\mathcal{R}^n$, $\vu\in\mathcal{R}^{N_u}$, and $\vz\in\mathcal{R}^m$ are vectors of the state variables, known inputs, and measurements, respectively; $\vw\sim\mathcal{N}(0,Q_k)$, $Q_k\in\mathcal{R}^{N_w\times N_w}$, and $\vv\sim\mathcal{N}(0,R_k)$, $R_k\in\mathcal{R}^{N_v\times N_v}$ are normally distributed noise variables; $F\in\mathcal{R}^{n\times n}$, $B\in\mathcal{R}^{n\times N_u}$, $H\in\mathcal{R}^{m\times n}$, $L\in\mathcal{R}^{n\times N_w}$, and $M\in\mathcal{R}^{m\times N_v}$ are matrices; and a subscript $k$ on a
+variable indicates the value of that variable at time $t_k$. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathcal{R}^{n\times n}$ according to
 \begin{align}
-    \hat{\vx}_{k|k-1} &= F_k \hat{\vx}_{k-1|k-1} + B_k \mathbf{u}_k \\
-    P_{k|k-1} &= F_k P_{k-1|k-1|} F_k^\top + Q_k.
+    \hat{\vx}_{k|k-1} &= F_k \hat{\vx}_{k-1|k-1} + B_k \mathbf{u}_k \label{eq:kfp1} \\
+    P_{k|k-1} &= F_k P_{k-1|k-1} F_k^\top + L Q_k L^\top. \label{eq:kfp2}
 \end{align}
 Then, the estimates are updated using the measurements according to
 \begin{align}
-    \tilde{\mathbf{z}}_k &= \mathbf{z}_k - H_k \hat{\vx}_{k|k-1} \\
-    S_k &= H_k P_{k|k-1} H_k^\top + R_k \\
+    \tilde{\mathbf{z}}_k &= \mathbf{z}_k - H_k \hat{\vx}_{k|k-1} \label{eq:kfu1} \\
+    S_k &= H_k P_{k|k-1} H_k^\top + M R_k M^\top \\
     K_k &= P_{k|k-1} H_k^\top S_k^{-1} \\
     \hat{\vx}_{k|k} &= \hat{\vx}_{k|k-1} + K_k \tilde{\mathbf{z}}_k \\
-    P_{k|k} &= \left( I - K_k H_k \right) P_{k|k-1}.
+    P_{k|k} &= \left( I - K_k H_k \right) P_{k|k-1}. \label{eq:kful} 
 \end{align}
-The Kalman filter operates under the assumption that the process and measurement noises are Gaussian, so the posterior distribution is also Gaussian and numerical approximations of the posterior distribution are unnecessary.
+The Kalman filter operates under the assumption that the process and measurement noises are Gaussian, so the posterior distribution is also Gaussian and numerical approximations of the posterior distribution are unnecessary. Under this assumption, the Kalman filter produces the optimal solution in the maximum likelihood (ML) and the maximum a posterior (MAP) senses, in addition to in the MMSE sense. However, the Gaussian assumption is unnecessary for the Kalman filter to produce the
+optimal MMSE estimate for a general linear system.
 
-For nonlinear systems, optimal filtering solutions are generally intractable, so various numerical approximation methods have been developed, mainly classified in three groups: function approximation, moment approximation, and stochastic model approximation~\cite{li04}. Function approximation techniques approximate the nonlinear dynamic and measurement processes, commonly using the Taylor series expansion. A moment approximation technique uses a representative
-set of sample points and calculates integrals as weighted averages. Stochastic model approximation simplifies the original nonlinear stochastic system to a linear system so that linear filtering results are applicable.
+For nonlinear systems, optimal filtering solutions are generally intractable, so various numerical approximation methods have been developed. Chen describes seven categories of such methods, namely Gaussian/Laplace approximation, iterative quadrature, multigrid method and point-mass approximation, moment approximation, Gaussian sum approximation, deterministic sampling approximation, and Monte Carlo sampling approximation~\cite{chen03}. Note that only filters using point-based
+numerical approximation methods were studied, as opposed to those using density-based methods. This was done because typical battery management systems do not have the computational power to employ costly density-based methods, and point-based methods use the simple LMMSE update of the Kalman filter. Point-based and density-based methods are also known as local and global approaches, respectively. Additionally, only filters using methods from the two most popular categories of Gaussian
+approximation and deterministic sampling approximation~\cite{li04} were used to further limit the scope of this study.
 
-Note that the choice of discretization method tends to depend on the filter, especially for highly nonlinear systems. Therefore, the simulations used a continuous-discrete (mixed) time system, with the form
+Gaussian approximation operates by assuming the posterior distribution is Gaussian. Then, the Taylor-series-based extended Kalman filter (EKF)~\cite{jazwinski70} or the Gaussian-describing-function-based statistically linearized filter (SLF)~\cite{gelb74} can be used. Li and Jilkov state that the EKF approximates the nonlinear dynamic and measurement functions, while the SLF simplifies the nonlinear stochastic system to a linear system so that linear filtering results are
+applicable~\cite{li04}. Deterministic sampling methods are special numerical methods that estimate the mean and covariance. This category includes the unscented Kalman filter (UKF)~\cite{julier97} and the cubature Kalman filter (CKF)~\cite{arasaratnam10}. The main advantage of the deterministic sampling methods is they are derivative-free. The remainder of this section details the general implementation of these filters for a discrete-time system of the form
 \begin{align}
-    \mathbf{\dot{x}}(t) &= \vf(\mathbf{x}(t),\mathbf{u}(t),\mathbf{w}(t)) \label{eq:gen_ct_f} \\
-    \mathbf{z}_k &= \vh(\mathbf{x}(t_k),\mathbf{u}(t_k),\mathbf{v}(t_k)),
+    \vx_k &= \vf_d(\vx_{k-1},\vu_k) + L(\vx_{k-1},\vu_k) \vw_k \label{eq:dtsys_x} \\
+    \mathbf{z}_k &= \vh(\vx_k,\vu_k) + M(\vx_k,\vu_k) \vv_k, \label{eq:dtsys_z}
 \end{align}
-where $\vx$, $\vu$, $\mathbf{z}$, $\mathbf{w}$, and $\mathbf{v}$ are the vectors of the states, the inputs, the measurements, the process noises, and the measurement noises, respectively. For simplicity of simulation, the input $\mathbf{u}(t)$ is assumed to be constant over each time step so that $\mathbf{u}(t)=\mathbf{u}(t_k)$ for $t_k\le t < t_{k+1}$. For the prediction phase, the continuous-time dynamics were solved numerically, with each filter using different approximation
-techniques. The state error covariances are also approximated numerically. Then, the updates were performed based on the update of the linear Kalman filter.
+where $\vf\in\mathcal{R}^n$ and $\vh\in\mathcal{R}^m$ are nonlinear vector functions, $L\in\mathcal{R}^{n\times N_w}$ and $M\in\mathcal{R}^{m\times N_v}$ are nonlinear matrix functions, and the input $\vu$ is assumed to be piecewise constant, meaning $\vu(t)=\vu(t_k)=\vu_k$ for $t_{k-1}<t\le t_k$. An implicit, first-order Taylor-Heun numerical integration method was used to discretize the continuous-time dynamics $\vf$ of the chosen battery model. The specifics of the discretization are discussed in \cref{sec:discret}.
 
-Furthermore, note that the system is extremely stiff for some inputs $\mathbf{u}$, which can be seen from the stiffness ratio based on the ratio of the largest eigenvalue of $F$ to its smallest eigenvalue, where $F$ is the jacobian of the dynamics $\vf(\mathbf{x},\mathbf{u})$; when the stiffness ratio is much greater than unity, the system is stiff~\cite{lambert91,brugnano11}. From EIS studies of batteries, the major chemical processes have widely differing time constants; low frequency
-mass transport effects like diffusion are on the order of $10^{-6}$ to $10^0$ Hz, middle frequency effects caused by charge transfer and the electrochemical double layer are on the order of $10^0$ to $10^3$ Hz, and the high frequency conductance and skin effects are on the order of $10^3$ to $10^4$ Hz~\cite{jossen06}. Therefore, the approximate stiffness ratio is $10^{10} \gg 1$, and the system is stiff. As a result of the stiffness, any numerical integration method needs to be A-stable,
-i.e.\ the method converges for all systems whose eigenvalues have negative real parts. For example, simulation results show that the fourth-order Runge-Kutta method diverges even at step sizes $<10^{-2}$ seconds.
+%The most popular methods in each category were studied, which were the extended Kalman filter (EKF), mainly classified in three groups: function approximation, moment approximation, and stochastic model approximation~\cite{li04}. Function approximation techniques approximate the nonlinear dynamic and measurement processes, commonly using the Taylor series expansion. A moment approximation technique uses a representative set of sample points and calculates integrals as weighted averages. Stochastic model approximation simplifies the original nonlinear stochastic system to a linear system so that linear filtering results are applicable.
 
-S\"arkk\"a and Solin state that a linearized discretion approach, in which the continuous-time system is first discretized and then approximated as Gaussian, tends to work better than a discretized linearization approach, in which the system is first approximated as a Gaussian process and then discretized~\cite{sarkka12}. This thesis follows this guideline and performs the prediction using linearized approximations of a discretization of the continuous-time dynamics. To increase the
-accuracy of the discretized integration in the prediction phase, the sampling period is divided into $M$ steps of equal length and the integration is performed in $M$ steps. The specifics of the linearized discretion approach for each filter along with their general implementation are discussed in the remainder of this chapter.
+\subsection{Extended Kalman Filter}
 
-\subsection{Function Approximation: Extended Kalman Filter}
-
-One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement equations, typically using Taylor series expansion. The standard Kalman filter formulas are used for the update. For the discrete-time EKF, Taylor series expansion can be directly used on the system dynamics to linearize them. For the mixed-time system of this study, a linearized discretization approach proposed by Mazzoni~\cite{mazzoni07} is used, in
-which the dynamics are first discretized and then approximated using Taylor series expansion. This approach has the advantage of A-stability. The discretization is performed using the trapezoidal approximation (Heun's method) of \cref{eq:gen_ct_f}. For convenience, denote the value of a quantity at time $t_k$ using the subscript $k$ and assume that $\delta=t_{k+1}-t_k$ is the time step. Additionally, a subscript of $k|k-1$ indicates the value at time $t_k$ given the information at
-$t_{k-1}$. Then, the approximation produces
+One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement functions using Taylor series expansion. This study uses the first-order expansion for the EKF. The prediction step follows the discretization approach proposed by Mazzoni~\cite{mazzoni07} to numerically approximate the continuous-time dynamics in \cref{eq:gen_ct_f} and the continuous-time covariance differential equation
 \begin{equation}
-    \vx_{k+1} \approx \vx_k + \frac{1}{2} \big( \vf(\vx_k) + \vf(\vx_{k+1}) \big) \delta.
+    \dot{P} = F(\vx,\vu) P + P F^\top(\vx,\vu) + L(\vx,\vu) Q L^\top(\vx,\vu),
 \end{equation}
-The vector field $\vf$ at $\vx_{k+1}$ is approximated by first-order Taylor expansion around $\vx_k$, giving
-\begin{equation}
-    \vx_{k+1} \approx \vx_k + \vf(\vx_k)\delta + \frac{1}{2} F(\vx_k) \left( \vx_{k+1} - \vx_k \right) \delta,
-\end{equation}
-where $F(\vx_k)$ is the Jacobian of $\vf$ at $\vx_k$. Solving for $\vx_{k+1}$ yields
-\begin{equation}
-    \vx_{k+1} \approx \vx_k + \left( I - F(\vx_k) \frac{\delta}{2} \right)^{-1} \vf(\vx_k) \delta,
-\end{equation}
-with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. This numerical integration scheme is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. For the state error covariance ODE given by
-\begin{equation}
-    \dot{P} = F(\vx) P + P F^\top(\vx) + L(\vx) Q(\vx) L^\top(\vx),
-\end{equation}
-where $Q$ is the covariance of the error variables and $L$ is the Jacobian of $\vf$ with respect to the state error variables $\mathbf{w}$, the numerical integration method should have the key features of being consistent with the same order as the Taylor-Heun scheme, able to process nonautonomous differential equations, and A-stable. Mazzoni proposed using a modified Gauss-Legendre formula with an implicit increment rule, producing
-\begin{gather}
-    P_{k+1} \approx P_k + M_\tau \left( F(\vx_\tau) P_k + P_k F^\top(\vx_\tau) + L(\vx_\tau) Q(\vx_\tau) L^\top(\vx_\tau) \right) M_\tau^\top \delta, \\
-    \intertext{with}
-    M_\tau = \left( I - F(\vx_\tau) \frac{\delta}{2} \right)^{-1} \quad \text{and} \quad \tau = t_k + \frac{\delta}{2}.
-\end{gather}
-The value of $\vx_\tau$ can be interpolated from $\vx_k$ and $\vx_{k+1}$ with a precision of $\mathcal{O}(\delta^3)$ using series expansion, producing
-\begin{equation}
-    \vx_\tau \approx \frac{1}{2} \left( \vx_k + \vx_{k+1} - F(\vx_k) f(\vx_k) \frac{\delta^2}{4} \right).
-\end{equation}
-This modified Gauss-Legendre approximation is A-stable, consistent with order $\mathcal{O}(\delta^2)$, and ensures the positive definiteness of the resultant error covariance matrix~\cite{mazzoni07}. This numerical integration can be repeated multiple times with a smaller step size should greater accuracy be desired. The update equations for the EKF come from the LMMSE filter and are
+with the Jacobian $F=\partial\vf/\partial\vx$. The discretization $\vf_d$ of $\vf$ is given in \cref{sec:discret}, and the discretion of the covariance matrix is as follows. For a time step of $\delta=t_k-t_{k-1}$, where $m$ is a positive integer, the prediction step is given by
 \begin{align}
-    K_k &= P_{k|k-1} H_k^\top \left( H_k P_{k|k-1} H_k^\top + M(\vx_k) R(\vx_k) M^\top(\vx_k) \right)^{-1} \\
-    \vx_{k|k} &= \vx_{k|k-1} + K_k \big( \mathbf{z}_k - \vh(\vx_{k|k-1}) \big) \\
+    \hat{\vx}_{k|k-1} &= \vf_d(\hat{\vx}_{k-1},\vu_k) \label{eq:ekfpredx} \\
+    P_{k|k-1} &= P_{k-1|k-1} + G_\tau \Big\{ F(\hat{\vx}_\tau,\vu_k) P_k + P_k F^\top(\hat{\vx}_\tau,\vu_k) + L(\hat{\vx}_\tau,\vu_k) Q_\tau L^\top(\hat{\vx}_\tau,\vu_k) \Big\} G_\tau^\top \delta, \label{eq:ekfpredz}
+\end{align}
+where $t_\tau = t_{k-1}+\delta/2$, 
+\begin{equation}
+    G_\tau = \left( I - F(\hat{\vx}_\tau) \frac{\delta}{2} \right)^{-1},
+\end{equation}
+and
+\begin{equation}
+    \hat{\vx}_\tau = \frac{1}{2} \left( \hat{\vx}_k + \hat{\vx}_{k+1} - F(\hat{\vx}_k) f(\hat{\vx}_k) \frac{\delta^2}{4} \right).
+\end{equation}
+It can be seen that the differential equation for the covariance matrix was approximated using a modified Gauss-Legendre formula with an implicit increment rule, following Mazzoni. The numerical approximations for the state and covariance are both A-stable, which is necessary for the chosen battery model, and consistent to the first-order. 
+%The accuracy of the prediction step can be increased by choosing a smaller time step $\delta=(t_k-t_{k-1})/M$, where $M$ is a positive integer, and iterating \cref{eq:ekfpredx,eq:ekfpredz} $M$ times. The motivation for this method is given in \cref{sec:discret}. 
+The update equations for the EKF come from the LMMSE filter and are
+\begin{align}
+    K_k &= P_{k|k-1} H_k^\top \left( H_k P_{k|k-1} H_k^\top + M(\hat{\vx}_k) R_k M^\top(\hat{\vx}_k) \right)^{-1} \\
+    \hat{\vx}_{k|k} &= \hat{\vx}_{k|k-1} + K_k \big( \mathbf{z}_k - \vh(\hat{\vx}_{k|k-1}) \big) \\
     P_{k|k} &= (I - K_k H_k) P_{k|k-1},
 \end{align}
-where $R$ is the covariance of the measurement error variables, $M$ is the Jacobian of $\vf$ with respect to the measurement error variables $\mathbf{v}$, and $H_k$ is the Jacobian of $\vf$ at $\vx_{k|k-1}$.
+with the Jacobian $H=\partial\vh/\partial\vx$.
 
-\subsection{Moment Approximation}
+%One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement equations using Taylor series expansion. The standard Kalman filter formulas are used for the update. For the discrete-time EKF, Taylor series expansion can be directly used on the system dynamics to linearize them. For the mixed-time system of this study, a linearized discretization approach proposed by Mazzoni~\cite{mazzoni07} is used, in
+%which the dynamics are first discretized and then approximated using Taylor series expansion. This approach has the advantage of A-stability. The discretization is performed using the trapezoidal approximation (Heun's method) of \cref{eq:gen_ct_f}. For convenience, denote the value of a quantity at time $t_k$ using the subscript $k$ and assume that $\delta=t_{k+1}-t_k$ is the time step. Additionally, a subscript of $k|k-1$ indicates the value at time $t_k$ given the information at
+%$t_{k-1}$. Then, the approximation produces
+%\begin{equation}
+%    \vx_{k+1} \approx \vx_k + \frac{1}{2} \big( \vf(\vx_k) + \vf(\vx_{k+1}) \big) \delta.
+%\end{equation}
+%The vector field $\vf$ at $\vx_{k+1}$ is approximated by first-order Taylor expansion around $\vx_k$, giving
+%\begin{equation}
+%    \vx_{k+1} \approx \vx_k + \vf(\vx_k)\delta + \frac{1}{2} F(\vx_k) \left( \vx_{k+1} - \vx_k \right) \delta,
+%\end{equation}
+%where $F(\vx_k)$ is the Jacobian of $\vf$ at $\vx_k$. Solving for $\vx_{k+1}$ yields
+%\begin{equation}
+%    \vx_{k+1} \approx \vx_k + \left( I - F(\vx_k) \frac{\delta}{2} \right)^{-1} \vf(\vx_k) \delta,
+%\end{equation}
+%with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. This numerical integration scheme is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. For the state error covariance ODE given by
+%\begin{equation}
+%    \dot{P} = F(\vx) P + P F^\top(\vx) + L(\vx) Q(\vx) L^\top(\vx),
+%\end{equation}
+%where $Q$ is the covariance of the error variables and $L$ is the Jacobian of $\vf$ with respect to the state error variables $\mathbf{w}$, the numerical integration method should have the key features of being consistent with the same order as the Taylor-Heun scheme, able to process nonautonomous differential equations, and A-stable. Mazzoni proposed using a modified Gauss-Legendre formula with an implicit increment rule, producing
+%\begin{gather}
+%    P_{k+1} \approx P_k + M_\tau \left( F(\vx_\tau) P_k + P_k F^\top(\vx_\tau) + L(\vx_\tau) Q(\vx_\tau) L^\top(\vx_\tau) \right) M_\tau^\top \delta, \\
+%    \intertext{with}
+%    M_\tau = \left( I - F(\vx_\tau) \frac{\delta}{2} \right)^{-1} \quad \text{and} \quad \tau = t_k + \frac{\delta}{2}.
+%\end{gather}
+%The value of $\vx_\tau$ can be interpolated from $\vx_k$ and $\vx_{k+1}$ with a precision of $\mathcal{O}(\delta^3)$ using series expansion, producing
+%\begin{equation}
+%    \vx_\tau \approx \frac{1}{2} \left( \vx_k + \vx_{k+1} - F(\vx_k) f(\vx_k) \frac{\delta^2}{4} \right).
+%\end{equation}
+%This modified Gauss-Legendre approximation is A-stable, consistent with order $\mathcal{O}(\delta^2)$, and ensures the positive definiteness of the resultant error covariance matrix~\cite{mazzoni07}. This numerical integration can be repeated multiple times with a smaller step size should greater accuracy be desired.
 
-In moment approximation, the mean, covariance, and possibly higher-order moments are approximated directly, rather than approximating the nonlinear integrations of expectations. Of the numerical moment approximation methods, two of the best known are the unscented Kalman filter (UKF) and the cubature Kalman filter (CKF). Note that the CKF is a special case of the UKF, but they are considered separately by this study.
+%\subsection{Moment Approximation}
 
-In order to handle the mixed-time system, the It\^o-Taylor expansion with a strong order of 1.5 (IT-1.5) proposed by Arasaratnam et al.\ is used to discretize the stochastic differential equations (SDE) for numerical integration~\cite{arasaratnam10}. In the context of Gaussian filtering, the weak order of convergence is more important, because the moments of the distributions and not the functionals of the path are of importance. Thus, the IT-1.5 expansion is equivalent to the weak It\^o-Taylor expansion
-of order 2.0~\cite{kloeden99}, which was proposed as a SDE discretization method for target tracking applications by Morelande and Gordon~\cite{morelande05}. For a SDE of the form
-\begin{equation}
-    d\vx(t) = \vf(\vx(t),t)dt + \sqrt{Q} d\mathbf{\beta}(t),
-\end{equation}
-Arasaratnam et al. gives the IT-1.5 expansion as~\cite{arasaratnam10}
-\begin{equation}
-    \vx_{k+1} = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big) + \sqrt{Q} \mathbf{w} + \big( \mathbb{L} \vf(\vx_k) \big) \mathbf{y},
-\end{equation}
-where
-\begin{align}
-    \mathbb{L}_0 & = \frac{\partial}{\partial t} + \sum_{i=1}^n \vf_i \frac{\partial}{\partial \vx_i} + \frac{1}{2} \sum_{j,p,q=1}^n \sqrt{Q}_{p,j} \sqrt{Q}_{q,j} \frac{\partial^2}{\partial \vx_p \partial \vx_q} \\
-    \mathbb{L}_j & = \sum_{i=1}^n \sqrt{Q}_{i,j} \frac{\partial}{\partial \vx_i}
-\end{align}
-and $(\mathbf{w},\mathbf{y})$ are a pair of correlated Gaussian random variables generated from a pair of independent standard Gaussian random variables. In the absense of noise, the discretization is
-\begin{equation}
-    \vx_{k+1} = \vf_d(\vx_k) = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big).
-\end{equation}
-It can be shown that the expected value of the state is given by
-\begin{equation}
-    \vx_{k+1} = \int_{\mathcal{R}^n} \vf_d(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k.
-\end{equation}
-The propagation of the covariance matrix is given by
-\begin{align}
-    P_{k|k} = \begin{multlined}[t] \int_{\mathcal{R}^n} \vf_d(\vx_k) \vf_d^\top(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k + \frac{\delta^3}{3} \big( \mathbb{L}\vf(\vx_k) \big) \big( \mathbb{L}\vf(\vx_k) \big)^\top \\ 
-    + \frac{\delta^2}{2} \left[ \sqrt{Q} \big(\mathbb{L}\vf(\vx_k)\big)^\top + \big(\mathbb{L}\vf(\vx_k)\big)^\top \sqrt{Q} \right] - (\hat{\vx}_{k|k})(\hat{\vx}_{k|k})^\top + \delta Q.
-    \end{multlined}
-\end{align}
-The Gaussian integrals can then be approximated using the unscented transform in the UKF and the third-degree cubature rule in the CKF. It can be seen that the IT-1.5 expansion needs to evaluate the first and second order derivatives of the dynamic system, which makes these moment approximation methods no longer derivative-free. There is also a performance hit associated with the evaluations of the derivatives. However, the advantages are greater stability of the filter and impproved numerical accuracy, which are necessary for the stiff system.
+%In moment approximation, the mean, covariance, and possibly higher-order moments are approximated directly, rather than approximating the nonlinear integrations of expectations. Of the numerical moment approximation methods, two of the best known are the unscented Kalman filter (UKF) and the cubature Kalman filter (CKF). Note that the CKF is a special case of the UKF, but they are considered separately by this study.
 
-The following two sections discuss the implementation of the UKF and CKF in mixed-time using IT-1.5 for the propagation of the dynamics.
+%In order to handle the mixed-time system, the It\^o-Taylor expansion with a strong order of 1.5 (IT-1.5) proposed by Arasaratnam et al.\ is used to discretize the stochastic differential equations (SDE) for numerical integration~\cite{arasaratnam10}. In the context of Gaussian filtering, the weak order of convergence is more important, because the moments of the distributions and not the functionals of the path are of importance. Thus, the IT-1.5 expansion is equivalent to the weak It\^o-Taylor expansion
+%of order 2.0~\cite{kloeden99}, which was proposed as a SDE discretization method for target tracking applications by Morelande and Gordon~\cite{morelande05}. For a SDE of the form
+%\begin{equation}
+%    d\vx(t) = \vf(\vx(t),t)dt + \sqrt{Q} d\mathbf{\beta}(t),
+%\end{equation}
+%Arasaratnam et al. gives the IT-1.5 expansion as~\cite{arasaratnam10}
+%\begin{equation}
+%    \vx_{k+1} = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big) + \sqrt{Q} \mathbf{w} + \big( \mathbb{L} \vf(\vx_k) \big) \mathbf{y},
+%\end{equation}
+%where
+%\begin{align}
+%    \mathbb{L}_0 & = \frac{\partial}{\partial t} + \sum_{i=1}^n \vf_i \frac{\partial}{\partial \vx_i} + \frac{1}{2} \sum_{j,p,q=1}^n \sqrt{Q}_{p,j} \sqrt{Q}_{q,j} \frac{\partial^2}{\partial \vx_p \partial \vx_q} \\
+%    \mathbb{L}_j & = \sum_{i=1}^n \sqrt{Q}_{i,j} \frac{\partial}{\partial \vx_i}
+%\end{align}
+%and $(\mathbf{w},\mathbf{y})$ are a pair of correlated Gaussian random variables generated from a pair of independent standard Gaussian random variables. In the absence of noise, the discretization is
+%\begin{equation}
+%    \vx_{k+1} = \vf_d(\vx_k) = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big).
+%\end{equation}
+%It can be shown that the expected value of the state is given by
+%\begin{equation}
+%    \vx_{k+1} = \int_{\mathcal{R}^n} \vf_d(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k.
+%\end{equation}
+%The propagation of the covariance matrix is given by
+%\begin{align}
+%    P_{k|k} = \begin{multlined}[t] \int_{\mathcal{R}^n} \vf_d(\vx_k) \vf_d^\top(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k + \frac{\delta^3}{3} \big( \mathbb{L}\vf(\vx_k) \big) \big( \mathbb{L}\vf(\vx_k) \big)^\top \\ 
+%    + \frac{\delta^2}{2} \left[ \sqrt{Q} \big(\mathbb{L}\vf(\vx_k)\big)^\top + \big(\mathbb{L}\vf(\vx_k)\big)^\top \sqrt{Q} \right] - (\hat{\vx}_{k|k})(\hat{\vx}_{k|k})^\top + \delta Q.
+%    \end{multlined}
+%\end{align}
+%The Gaussian integrals can then be approximated using the unscented transform in the UKF and the third-degree cubature rule in the CKF. It can be seen that the IT-1.5 expansion needs to evaluate the first and second order derivatives of the dynamic system, which makes these moment approximation methods no longer derivative-free. There is also a performance hit associated with the evaluations of the derivatives. However, the advantages are greater stability of the filter and improved numerical accuracy, which are necessary for the stiff system.
 
-\subsubsection{Unscented Kalman Filter}
+%The following two sections discuss the implementation of the UKF and CKF in mixed-time using IT-1.5 for the propagation of the dynamics.
 
-The UKF is an efficient, generally derivative-free filtering algorithm that relies on the unscented transformation (UT). The UT is useful for forming the Gaussian approximation to the joint distribution of random variables $x$ and $y$ for $x\sim \mathcal{N}(m,P)$ and $y=g(x)$, where $x\in\mathbb{R}^n$, $y\in\mathbb{R}^m$, and $g:\mathbb{R}^n\mapsto\mathbb{R}^m$ is a nonlinear function. Then, the first and second moments corresponding to the mean and covariance can be
+\subsection{Unscented Kalman Filter}
+
+The unscented Kalman filter (UKF) is an efficient, generally derivative-free filtering algorithm that relies on the unscented transformation (UT). The UT is useful for forming the Gaussian approximation to the joint distribution of random variables $x$ and $y$ for $x\sim \mathcal{N}(m,P)$ and $y=g(x)$, where $x\in\mathbb{R}^n$, $y\in\mathbb{R}^m$, and $g:\mathbb{R}^n\mapsto\mathbb{R}^m$ is a nonlinear function. Then, the first and second moments corresponding to the mean and covariance can be
 easily found. Specifically, suppose the Gaussian approximation of the joint probability density of $x$ and $y$ has the form
 \begin{equation}
     \begin{bmatrix} x \\ y \end{bmatrix} = \mathcal{N} \left( \begin{bmatrix} m \\ \mu_U \end{bmatrix}, \begin{bmatrix} P & C_U \\ C_U^\top & S_U \end{bmatrix} \right).
 \end{equation}
 Then, the UT picks $2n+1$ sample points $\{x_i\}$, commonly known as sigma points, along with the same number of weights $\{w_i\}$, as follows~\cite{sarkka07}. First, the sigma points are chosen from the columns of the matrix $\sqrt{(n+\lambda)P}$, giving
 \begin{align}
-    x^{(0)} & = m_x \\
+    x^{(0)} & = m_x \label{eq:ut1} \\
     x^{(i)} & = m_x + \left[ \sqrt{(n+\lambda)P} \right]_i, \quad i=1,\dots,n \\
     x^{(i)} & = m_x - \left[ \sqrt{(n+\lambda)P} \right]_{i-n}, \quad i=n+1,\dots,2n
 \end{align}
@@ -253,7 +302,7 @@ with the weights
 \begin{align}
     W_0^{(m)} & = \frac{\lambda}{n+\lambda} \\
     W_0^{(c)} & = \frac{\lambda}{n+\lambda} + (1-\alpha^2+\beta) \\
-    W_i^{(m)} & = W_i^{(c)} = \frac{1}{2(n+\lambda)}, \quad i=1,\dots,2n.
+    W_i^{(m)} & = W_i^{(c)} = \frac{1}{2(n+\lambda)}, \quad i=1,\dots,2n. \label{eq:ut2}
 \end{align}
 The parameter $\lambda$ is defined as
 \begin{equation}
@@ -261,55 +310,111 @@ The parameter $\lambda$ is defined as
 \end{equation}
 and the constants $\alpha$, $\beta$, and $\kappa$ are parameters of the method. For the UKF, $\alpha$ is a small positive number, e.g.\ $10^{-3}$, $\beta=2$ is ideal for a Gaussian distribution, and $\kappa$ is typically 0. Each sigma point is transformed by
 \begin{equation}
-    y^{(i)} = g(x^{(i)}), \quad i=0,\dots,2n.
+    y^{(i)} = g(x^{(i)}), \quad i=0,\dots,2n. \label{eq:ut3}
 \end{equation}
 Then, moments are approximated by
 \begin{align}
     \mu_U & = \sum_{i=0}^{2n} W_i^{(m)} y^{(i)} \\
     S_U & = \sum_{i=0}^{2n} W_i^{(c)} ( y^{(i)} - \mu_U ) ( y^{(i)} - \mu_U )^\top \\
-    C_U & = \sum_{i=0}^{2n} W_i^{(c)} ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top.
+    C_U & = \sum_{i=0}^{2n} W_i^{(c)} ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top. \label{eq:ut4}
 \end{align}
-The square root of the positive definite matrix P is defined as a matrix $A$ such that $P=AA^\top$. Note that $A$ is not unique. For performance reasons, the Cholesky factorization is typically used. The UT algorithm is denoted as
+The square root of the positive definite matrix P is defined as a matrix $A$ such that $P=AA^\top$. Note that $A$ is not unique. For performance reasons, the Cholesky factorization is typically used. Let the UT algorithm be denoted by
 \begin{equation}
     [\mu_U,S_U,C_U] = \mathrm{UT}(g,m,P).
 \end{equation}
-Then, for the discretized system
+Then, for the discretized system in \cref{eq:dtsys_x,eq:dtsys_z}, the prediction and update steps for the UKF can be written as
 \begin{align}
-    \vx_k & = \vf_d(\vx_{k-1}) + \mathbf{q}_{k-1} \\
-    \mathbf{y}_k & = \mathbf{h}(\vx_k) + \mathbf{r}_k,
-\end{align}
-where $\mathbf{q}_k\sim\mathcal{N}(0,Q_{k})$ and $\mathbf{r}_k\sim\mathcal{N}(0,R_{k})$, the prediction and update steps for the UKF can be written as
-\begin{align}
-    [m_k^{-},\tilde{P}_k] & = \mathrm{UT}(\vf_d,m_{k-1},P_{k-1}) \\
-    P^{-}_k & = \tilde{P}_k + Q_{k-1} \\
-    [\mu_k,\tilde{S}_k,C_k] & = \mathrm{UT}(\mathbf{h},m_k^{-},P^{-}_k) \\
-    S_k & = \tilde{S}_k + R_k \\
+	[\hat{\vx}_{k|k-1},\tilde{P}_{k|k-1}] & = \mathrm{UT}(\vf_d,\hat{\vx}_{k-1|k-1},P_{k-1|k-1}) \label{eq:ukfp1} \\
+	P_{k|k-1} & = \tilde{P}_{k|k-1} + L(\hat{\vx}_{k|k-1}) Q_k L^\top(\hat{\vx}_{k|k-1})\\
+	[\mu_k,\tilde{S}_k,C_k] & = \mathrm{UT}(\mathbf{h},\hat{\vx}_{k|k-1},P_{k|k-1}) \label{eq:ukfu1} \\
+    S_k & = \tilde{S}_k + M(\hat{\vx}_{k|k-1}) R_k M^\top(\hat{\vx}_{k|k-1}) \\
     K_k & = C_k S_k^{-1} \\
-    m_k & = m_k^{-} + K_k (y_k-\mu_k) \\
-    P_k & = P^{-}_k - K_k S_k K_k^\top.
+    \hat{\vx}_{k|k} & = \hat{\vx}_{k|k-1}+ K_k (z_k-\mu_k) \\
+	P_{k|k} & = P_{k|k-1}- K_k S_k K_k^\top. \label{eq:ukful}
 \end{align}
-The discretized dynamics are those from the previous section.
+Note that the mean and covariances were estimated using the UT, but the update is equivalent to the LMSSE update used in the Kalman filter.
 
-\subsubsection{Cubature Kalman Filter}
+For numerical stability reasons, this study employed a change to the above UKF procedure as suggested by Julier et al.~\cite{julier00}. In \cref{eq:ukfp1}, the covariance is estimated by
+\begin{equation}
+    \tilde{P}_{k|k-1} = \sum_{i=0}^{2n} W_i^{(c)} ( \hat{\vx}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1}^{(0)} ) ( \hat{\vx}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1}^{(0)} )^\top,
+    \label{eq:ukf_c1}
+\end{equation}
+where the covariance is evaluated about the projected mean rather than the weighted mean. This change ensures the positive definiteness of the covariance matrix, as required by the definition of covariance. Another change, discovered by the author, that results in better numerical stability and lower MSE is the estimation of the cross-covariance in \cref{eq:ukfu1} by
+\begin{equation}
+    C_k = \sum_{i=0}^{2n} W_i^{(c)} ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(0)} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top,
+    \label{eq:ukf_c2}
+\end{equation}
+where the prescripts indicate the estimate covariance matrix that was used to calculate the sigma points, so $\prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)}$ comes from the transformation of $\prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k-1|k-1}^{(i)}$ through $\vf_d$ and $\prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)}$ comes from the transformation of $\prescript{}{P_{k|k-1}}{\hat{\vx}}_{k|k-1}^{(i)}$ through $\vh$. Note that similar to \cref{eq:ukf_c1}, the cross-covariance is
+evaluated about the projected mean $\hat{\vx}_{k|k-1}^{(0)}$ and the weighted mean $\mu_k$. The increase in stability and accuracy with the change in \cref{eq:ukf_c2} was discovered through experimentation. The reason for the improvement is unknown, but the change was used to produce the simulation results.
 
-The CKF uses the cubature rule rather than the UT to approximate the Gaussian integrals. For the third-order spherical-radial CKF, $2n$ sigma points are chosen, giving~\cite{arasaratnam10}
+\subsection{Cubature Kalman Filter}
+
+The cubature Kalman filter (CKF) is similar to the UKF except that it uses the spherical-radial cubature rule rather than the UT to approximate the Gaussian integrals. Indeed, the prediction and update steps of the CKF follow \crefrange{eq:ukfp1}{eq:ukful} except that the UT algorithms in \cref{eq:ukfp1,eq:ukfu1} are replaced by the corresponding cubature algorithm. This thesis explores the third-order and fifth-order CKFs, whose implementations are discussed in the following two sections.
+
+\subsubsection{Third-Order CKF}
+\label{sec:ckf3}
+
+The third-order spherical-radial CKF of Arasaratnam et al.~\cite{arasaratnam09,arasaratnam10} is a special case of the UKF with $\alpha=1$, $\beta=0$, and $\kappa=0$. The third-order cubature rule chooses $2n$ cubature points, giving~\cite{arasaratnam10}
 \begin{align}
-    x^{(i)} & = m_x + \left[ \sqrt{nP} \right]_i, \quad i=1,\dots,n \\
-    x^{(i)} & = m_x - \left[ \sqrt{nP} \right]_{i-n}, \quad i=n+1,\dots,2n.
+    x^{(i)} & = m_x + \left[ \sqrt{nP} \right]_i, \quad i=1,\dots,n \label{eq:cr3_1} \\
+    x^{(i)} & = m_x - \left[ \sqrt{nP} \right]_{i-n}, \quad i=n+1,\dots,2n,
 \end{align}
-The weights are uniformly $W_i=1/2n$. Thus, the moments are approximated by
+where the matrix square root is computed using Cholesky factorization, as in the UT. Then, the moments are approximated by
 \begin{align}
-    \mu_U & = \frac{1}{2n} \sum_{i=0}^{2n} y^{(i)} \\
-    S_U & = \frac{1}{2n} \sum_{i=0}^{2n} ( y^{(i)} - \mu_U ) ( y^{(i)} - \mu_U )^\top \\
-    C_U & = \frac{1}{2n} \sum_{i=0}^{2n} ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top.
+    \mu_U & = \frac{1}{2n} \sum_{i=1}^{2n} y^{(i)} \\
+    S_U & = \frac{1}{2n} \sum_{i=1}^{2n} ( y^{(i)} - \mu_U ) ( y^{(i)} - \mu_U )^\top \\
+    C_U & = \frac{1}{2n} \sum_{i=1}^{2n} ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top. \label{eq:cr3_l}
 \end{align}
-It can be seen that the cubature rule is a special case of the UT with $\alpha=1$, $\beta=0$, and $\kappa=0$. This choice of parameters results in $W_0=0$, eliminating one of the sigma points. The prediction and update steps then proceed as in the UKF.
+The prediction and update steps follow \crefrange{eq:ukfp1}{eq:ukful} with the UTs in \cref{eq:ukfp1,eq:ukfu1} replaced by the third-order cubature rule given by \crefrange{eq:cr3_1}{eq:cr3_l}. The resulting third-order CKF is exact for polynomials of order three. Compared to the UKF, the third-order CKF is numerically more stable due to its positive weights. While the UKF has some desirable theoretical properties, its weights can be negative, causing numerical problems in some
+cases~\cite{sarkka12}.
 
-Compared to the UKF, the CKF is numerically more stable due to its positive weights. While the UKF has some desirable theoretical properties, some of its weights can be negative, causing numerical problems in some cases~\cite{sarkka12}.
+To increase numerical stability and accuracy, a change similar to that in \cref{eq:ukf_c2} was used, giving
+\begin{equation}
+    C_k = \frac{1}{2n} \sum_{i=0}^{2n} ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top.
+    \label{eq:ckf3_c}
+\end{equation}
+This change was verified through experimentation to produce better results.
 
-\subsection{Stochastic Model Approximation: Statistically Linearized Filter}
+\subsubsection{Fifth-Order CKF}
 
-In stochastic model approximation, the nonlinear state and measurement functions are statistically linearized to minimize the MSE. Then, the resulting linear system can be filtered using the linear Kalman filter. This study refers to this method as the statistically linearized filter (SLF). Specifically, given $\vx\sim\mathcal{N}(m,P)$, the nonlinear function $\vf(\vx)$ is linearized as~\cite{sarkka13,li04}
+The fifth-order spherical-radial CKF is a higher-order extension of the third-order CKF that is exact for polynomials of order five. Its cubature rule chooses $2n^2+1$ cubature points, giving~\cite{jia13,stroud71}
+\begin{align}
+    x^{(0)} & = m_x \\
+    x^{(i)} & = m_x + \left[ \sqrt{n+2} e_i \right], & i&=1,\dots,n \label{eq:cr5_1} \\
+    x^{(i)} & = m_x - \left[ \sqrt{n+2} e_{i-n} \right], & i&=n+1,\dots,2n \\
+    x^{(i)} & = m_x + \left[ \sqrt{n+2} s^+_{i-2n} \right], & i&=2n+1,\dots,2n+\frac{n(n-1)}{2} \\
+    x^{(i)} & = m_x - \left[ \sqrt{n+2} s^+_{i-2n-n(n-1)/2} \right], & i&=2n+\frac{n(n-1)}{2}+1,\dots,2n+n(n-1) \\
+    x^{(i)} & = m_x + \left[ \sqrt{n+2} s^-_{i-2n-n(n-1)} \right], & i&=2n+n(n-1)+1,\dots,2n+\frac{3n(n-1)}{2} \\
+    x^{(i)} & = m_x - \left[ \sqrt{n+2} s^-_{i-2n-3n(n-1)/2} \right], & i&=2n+\frac{3n(n-1)}{2}+1,\dots,2n^2,
+\end{align}
+where $e_i$ are the columns of the Cholesky factorization $\sqrt{P}$ and
+\begin{equation}
+    {s^{\pm}_i} = \left\{ \frac{1}{\sqrt{2}} (e_j \pm e_k) : j<k; j,k=1,2,\dots,n \right\}
+\end{equation}
+are scaled linear combinations of the columns $e_i$. The weights on the points are
+\begin{align}
+    W_0 & = \frac{2}{n+2} \\
+    W_i & = \frac{4-n}{2(n+2)^2}, \quad i=1,\dots,2n \\
+    W_i & = \frac{1}{(n+2)^2}, \quad i=2n+1,\dots,2n^2.
+\end{align}
+Then, moments are approximated by
+\begin{align}
+    \mu_U & = \sum_{i=0}^{2n^2} W_i y^{(i)} \\
+    S_U & = \sum_{i=0}^{2n^2} W_i ( y^{(i)} - \mu_U ) ( y^{(i)} - \mu_U )^\top \\
+    C_U & = \sum_{i=0}^{2n^2} W_i ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top. \label{eq:cr5_l}
+\end{align}
+As in the third-order CKF, the prediction and update steps follow \crefrange{eq:ukfp1}{eq:ukful} with the UTs in \cref{eq:ukfp1,eq:ukfu1} replaced by the fifth-order cubature rule given by \crefrange{eq:cr5_1}{eq:cr5_l}. Note that unlike the third-order CKF and like the UKF, the weights of the fifth-order CKF can be negative.
+
+As in the third-order CKF, to increase numerical stability and accuracy, a change similar to that in \cref{eq:ukf_c2} was used, giving
+\begin{equation}
+    C_k = \sum_{i=0}^{2n^2} W_i ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top.
+    \label{eq:ckf5_c}
+\end{equation}
+This change was verified through experimentation to produce better results.
+
+\subsection{Statistically Linearized Filter}
+
+In the statistically linearized filter (SLF), the nonlinear state and measurement functions are statistically linearized to minimize the MSE. Then, the resulting linear system can be filtered using the linear Kalman filter. Specifically, given $\vx\sim\mathcal{N}(m,P)$, the nonlinear function $\vf(\vx)$ is linearized as~\cite{sarkka13,gelb74,li04}
 \begin{equation}
     \vf(\vx) \approx \mathbf{b} + A (\vx - m),
 \end{equation}
@@ -317,21 +422,33 @@ where the parameters $\mathbf{b}$ and $A$ are chosen to minimize the error
 \begin{equation}
     \text{MSE}(\mathbf{b},A) = E \left[ \| \vf(\vx) - \mathbf{b} - A(\vx-m) \|^2 \right].
 \end{equation}
-Differentiating the MSE expression and setting the derivatives to zero produces the optimal values gives
+Differentiating the MSE expression and setting the derivatives to zero, produces the optimal values
 \begin{align}
     \mathbf{b} & = E[\vf(\vx)] \\
     A & = E[\vf(\vx) (\vx-m)^\top] P^{-1}.
 \end{align}
-These values reproduce the mean exactly but the covariance is an approximation. These expectations can be calculated analytically or numerically. Due to the difficulty of finding the analytical forms of the expectations, they are approximated numerically using the third-order cubature rule, giving
+These values reproduce the mean exactly but the covariance is an approximation. The expectations can be calculated analytically or numerically. Due to the difficulty of finding the analytical forms of the expectations, this study chooses to approximated them numerically using the third-order spherical-radial cubature rule described in~\cref{sec:ckf3}, which has the advantages of numerical stability and low computational complexity compared to the UT and fifth-order cubature rule,
+respectively. The cubature approximation results in
 \begin{align}
-    \mathbf{b}_\vx & = E[\vf_d(\vx)] \approx \frac{1}{2n} \sum_{i=1}^{2n} \vf_d(\vx^{(i)}) \\
+    \mathbf{b}_\vx & = E[\vf_d(\vx)] \approx \frac{1}{2n} \sum_{i=1}^{2n} \vf_d(\vx^{(i)}) \label{eq:slf1} \\
     A_\vx & = E[\vf(\vx)(\vx-m)^\top] E[(\vx-m)(\vx-m)^\top]^{-1} = E[F(\vx)] \approx \frac{1}{2n} \sum_{i=1}^{2n} F(\vx^{(i)})
     \intertext{for the expectations of the state mean and covariance and}
     \mathbf{b}_\mathbf{z} & = E[\mathbf{h}(\vx)] \approx \frac{1}{2n} \sum_{i=1}^{2n} \mathbf{h}(\vx^{(i)}) \\
     A_\mathbf{z} & = E[\mathbf{h}(\vx)(\vx-m)^\top] E[(\vx-m)(\vx-m)^\top]^{-1} = E[H(\vx)] \approx \frac{1}{2n} \sum_{i=1}^{2n} H(\vx^{(i)})
 \end{align}
-for the expectations of the measurement state and covariance, where the sigma points come from the columns of $\sqrt{nP}$ as in the CKF described in the previous section. A similar linearization can be created for the nonlinear measurement function. With the given statistically optimal linearization, the resulting linear system can be filtered using the Kalman filter. For the given mixed-time system, the Taylor-Heun scheme discussed in the section on the EKF is used to discretize the
-    continuous-time dynamics. The resulting filter is similar to the CKF implementation in the estimation of the mean, but the covariance is calculated using the first-order derivatives of the nonlinear function. The schemes for the discretization and the estimation of the expectations were chosen for numerical stability and computational complexity. Thus, this SLF implementation with numerically approximated expectation values is less computationally expensive than the CKF and UKF
-    implementations and more computationally expensive than the EKF implementation. However, as long as the discretization and the estimation of the mean are sufficiently accurate, the SLF should perform best in the MMSE sense. Overall, ignoring the numerical approximation of the expectations, the SLF resembles the EKF expect that the Taylor series expansion is replaced by a first-order Fourier-Hermite series expansion.
+for the expectations of the measurement state and covariance, where the cubature points come from the columns of $\sqrt{nP}$. With the given statistically optimal linearization, the resulting linear system can be filtered using a procedure similar to the linear Kalman filter. The prediction phase consists of
+\begin{align}
+    \hat{\vx}_{k|k-1} &= \mathbf{b}_\vx \\
+    P_{k|k-1} &= A_\vx P_{k-1|k-1} A_\vx^\top + L(\vx,\vu) Q_k L^\top(\vx,\vu).
+\end{align}
+Note that the form is very similar to the Kalman filter prediction steps given by \cref{eq:kfp1,eq:kfp2}, where $E[\vx-m]=0$ has been used to simplify the calculation for $\hat{\vx}_{k|k-1}$. The update phase consists of
+\begin{align}
+    S_k &= A_\vz P_{k|k-1} A_\vz^\top + M(\vx,\vu) R_k M^\top(\vx,\vu) \\
+    K_k &= P_{k|k-1} A_\vz^\top S_k^{-1} \\
+    \hat{\vx}_{k|k} &= \hat{\vx}_{k|k-1} + K_k (\vz_k - \mathbf{b}_\vz) \\
+    P_{k|k} &= \left( I - K_k A_\vz \right) P_{k|k-1}. \label{eq:slfl}
+\end{align}
+Again, this is very similar to the Kalman filter update steps given by \crefrange{eq:kfu1}{eq:kful}. The SLF is similar to the EKF in the sense that its equations have a similar form to the Kalman filter equations. In fact, ignoring the numerical approximation of the expectations, the SLF uses first-order Fourier-Hermite series expansion to approximate the nonlinear functions whereas the EKF uses Taylor series expansion. Furthermore, the SLF implementation of this study uses the same
+mean estimation method as the third-order CKF. The covariance estimation differs because the SLF uses information about the first derivatives of the state and measurement functions.
 
 \end{document}
