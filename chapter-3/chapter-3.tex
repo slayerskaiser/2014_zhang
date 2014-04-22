@@ -9,7 +9,7 @@
 
 The study was concerned with the accuracy and speed of the nonlinear filters on estimation of the SOC $x_1$. The accuracy was measured using the mean RMSE (MRMSE). The RMSE is defined as
 \begin{equation}
-    \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^j(kT_s) - x_1^j(kT_s) \Big)^2 },
+    \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^{(j)}(kT_s) - x_1^{(j)}(kT_s) \Big)^2 },
 \end{equation}
 where $T_s$ is the sample period and the superscript $j$ indicates the $j$th Monte Carlo trial. This study used $N_\text{trials}=100$ Monte Carlo trials. Then, the MRMSE is the mean of the RMSE over time, giving
 \begin{equation}
@@ -24,6 +24,8 @@ The remainder of this chapter shows the filtering results for sampling periods o
 
 \section{Sampling Period of 30 Seconds}
 
+From \cref{tab:div_30}, it can be seen that the filters have no divergences for $M=4,\dots,64$. For small $M$, all filters diverge, as expected. However, the UKF and the CKF3 also diverge for large $M$, which can be explained by numerical problems arising from the large number of integration steps. The times shown in \cref{tab:time_30} show that the EKF is the fastest by far, about three to four times the speed of the next fastest, the SLF. Additionally, the EKF is about five times the speed of the UKF and the CKF3 and more than twelve times the speed of the CKF5. 
+
 \begin{table}[h]
 \centering
 \caption{Number of divergences in 100 Monte Carlo runs for $T_s=30$~s as a function of number of integration steps $M$}
@@ -31,10 +33,11 @@ The remainder of this chapter shows the filtering results for sampling periods o
 \toprule
 Filter/$M$ & 1   & 2   & 4 & 8 & 16 & 32 & 64 & 128 & 256 \\
 \midrule
-EKF        & 90  & 56  & 0 & 0 & 0  & 0  & 0  & 0   & 0   \\
-UKF        & 100 & 100 & 0 & 0 & 0  & 0  & 0  & 2   & 15  \\
-CKF        & 100 & 100 & 0 & 0 & 0  & 0  & 0  & 0   & 0   \\
-SLF        & 100 & 100 & 0 & 0 & 0  & 0  & 0  & 0   & 0   \\
+EKF        & 88  & 56  & 0 & 0 & 0  & 0 & 0 & 0 & 0   \\
+UKF        & 91  & 8   & 0 & 0 & 0  & 0 & 0 & 3 & 26  \\
+CKF3       & 96  & 6   & 0 & 0 & 0  & 0 & 0 & 0 & 1   \\
+CKF5       & 100 & 95  & 0 & 0 & 0  & 0 & 0 & 0 & 0   \\
+SLF        & 100 & 100 & 0 & 0 & 0  & 0 & 0 & 0 & 0   \\
 \bottomrule
 \end{tabular}
 \label{tab:div_30}
@@ -42,37 +45,47 @@ SLF        & 100 & 100 & 0 & 0 & 0  & 0  & 0  & 0   & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time for 100 Monte Carlo runs for $T_s=30$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=30$~s as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
 Filter/$M$ & 1     & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
-EKF        & 5.655 & 5.568 & 5.753 & 11.23 & 22.43 & 44.27 & 87.85 & 174.0 & 356.0 \\
-UKF        & 6.116 & 14.49 & 39.79 & 79.01 & 157.7 & 314.8 & 626.8 & 1237  & 2297  \\
-CKF        & 5.545 & 12.76 & 34.80 & 68.81 & 137.4 & 274.0 & 546.1 & 1091  & 2173  \\
-SLF        & 5.057 & 7.585 & 19.03 & 36.91 & 74.06 & 147.0 & 293.7 & 583.2 & 1153  \\ \bottomrule
+EKF        & 4.253 & 5.017 & 4.951 & 9.708 & 19.32 & 38.8  & 77.11 & 154   & 307.9 \\
+UKF        & 4.834 & 11.85 & 23.65 & 47.24 & 93.46 & 186.5 & 373.1 & 732.9 & 1274  \\
+CKF3       & 4.221 & 10.61 & 21.1  & 41.33 & 82.57 & 165   & 328.2 & 657.9 & 1317  \\
+CKF5       & 9.533 & 28.82 & 59.49 & 117.8 & 234.9 & 468.8 & 937.9 & 1873  & 3748  \\
+SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 1006  \\ \bottomrule
 \end{tabular}
 \label{tab:time_30}
 \end{table}
 
-\clearpage
+\cref{fig:mrmse_30} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be see that the EKF result shows a decrease over this range as expected. However, the other results have minimum error at $M=16$, with an increase in error for larger $M$. This could be due to numerical errors that also caused divergences for large $M$ in the case of the UKF and the CKF3. The global minimum error is given by both the CKF5 and the SLF at $M=16$. For comparison purposes, the RMSE at $M=4$ and 64 are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The RMSEs for the filters are all very close in value, as expected from the closeness of the MRMSE values. It can be seen that the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest. These increases are less pronounced for $M=64$ than for $M=4$, as expected. The fluctuations in the RMSE occur when transitioning between charging and discharging.
 
-\begin{figure}[p]
+\begin{figure}[b]
 \centering
 \input{chapter-3/figures/mrmse_30}
 \caption{SOC error for $T_s=30$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_30}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}
 \centering
-\input{chapter-3/figures/mrmse_det_30}
-\caption{Detailed view of SOC error for $T_s=30$~s as a function of number of integration steps $M$.}
-\label{fig:mrmse_det_30}
+\input{chapter-3/figures/rmse_30_4}
+\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
+\label{fig:rmse_30_4}
+\end{figure}
+
+\begin{figure}
+\centering
+\input{chapter-3/figures/rmse_30_64}
+\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
+\label{fig:rmse_30_64}
 \end{figure}
 
 \clearpage
 
 \section{Sampling Period of 150 Seconds}
+
+From \cref{tab:div_150}, it can be seen that the filters have no divergences for $M=16,\dots,256$. For small $M$, all filters diverge, as expected. For large $M$, there are no divergences, unlike with $T_s=30$ seconds. The times shown in \cref{tab:time_150} show that the EKF is again the fastest with a similar ratio between the speeds as with $T_s=30$ seconds. 
 
 \begin{table}[h]
 \centering
@@ -83,8 +96,9 @@ Filter/$M$ & 1   & 2   & 4   & 8   & 16 & 32 & 64 & 128 & 256 \\
 \midrule
 EKF        & 100 & 100 & 98  & 77  & 0  & 0  & 0  & 0   & 0   \\
 UKF        & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
-CKF        & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
-SLF        & 100 & 100 & 100 & 0   & 0  & 0  & 0  & 0   & 0   \\
+CKF3       & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
+CKF5       & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
+SLF        & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
 \bottomrule
 \end{tabular}
 \label{tab:div_150}
@@ -92,37 +106,47 @@ SLF        & 100 & 100 & 100 & 0   & 0  & 0  & 0  & 0   & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time for 100 Monte Carlo runs for $T_s=150$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=150$~s as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
 Filter/$M$ & 1      & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
-EKF        & 0.8610 & 2.494 & 7.534 & 8.623 & 4.272 & 8.454 & 17.22 & 34.41 & 68.39 \\
-UKF        & 0.8559 & 1.744 & 3.616 & 11.45 & 31.48 & 62.96 & 125.4 & 251.8 & 502.8 \\
-CKF        & 0.0310 & 1.621 & 3.204 & 10.11 & 28.04 & 55.88 & 112.4 & 221.2 & 437.9 \\
-SLF        & 1.027  & 2.000 & 3.684 & 7.443 & 14.65 & 29.52 & 58.87 & 118.4 & 235.8 \\ \bottomrule
+EKF        & 0.544  & 2.359 & 6.297 & 7.787 & 3.868 & 7.753 & 15.49 & 30.97 & 61.67 \\
+UKF        & 0.6749 & 1.185 & 2.414 & 6.983 & 18.81 & 37.53 & 74.89 & 149.8 & 299.2 \\
+CKF        & 0.499  & 1.173 & 2.147 & 6.098 & 16.49 & 33.09 & 66.08 & 131.9 & 264.1 \\
+CKF5       & 2.949  & 5.709 & 10.93 & 22.49 & 47.34 & 94.14 & 188.2 & 377.6 & 753.7 \\
+SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 201.9 \\ \bottomrule
 \end{tabular}
 \label{tab:time_150}
 \end{table}
 
-\clearpage
+\cref{fig:mrmse_150} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for all five filters. The EKF results in the least error by far, with its MRMSE at $M=16$ approximately equal to the MRMSEs of the other filters at $M=256$. For small $M$, the UKF has the second smallest error with the two CKFs and the SLF having approximately the same error. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF. For comparison purposes, the RMSE at $M=16$ and 256 are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The RMSEs for the filters are all very close in value. It can be seen that the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest. These increases are less pronounced for $M=256$ than for $M=16$, as expected. The fluctuations in the RMSE occur when transitioning between charging and discharging.
 
-\begin{figure}[p]
+\begin{figure}[b]
 \centering
 \input{chapter-3/figures/mrmse_150}
 \caption{SOC error for $T_s=150$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_150}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}
 \centering
-\input{chapter-3/figures/mrmse_det_150}
-\caption{Detailed view of SOC error for $T_s=150$~s as a function of number of integration steps $M$.}
-\label{fig:mrmse_det_150}
+\input{chapter-3/figures/rmse_150_16}
+\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
+\label{fig:rmse_150_16}
+\end{figure}
+
+\begin{figure}
+\centering
+\input{chapter-3/figures/rmse_150_256}
+\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
+\label{fig:rmse_150_256}
 \end{figure}
 
 \clearpage
 
 \section{Sampling Period of 300 Seconds}
+
+From \cref{tab:div_300}, it can be seen that the filters have no divergences for $M=64,\dots,256$. It can be seen that the UKF has more numerical problems for small $M$than the CKF3. The CKF5 and SLF are the best in terms of divergences. The times shown in \cref{tab:time_300} show that the EKF is again the fastest with a similar ratio between the speeds as with $T_s=30$ seconds. 
 
 \begin{table}[h]
 \centering
@@ -131,9 +155,10 @@ SLF        & 1.027  & 2.000 & 3.684 & 7.443 & 14.65 & 29.52 & 58.87 & 118.4 & 23
 \toprule
 Filter/$M$ & 1   & 2   & 4   & 8   & 16  & 32 & 64 & 128 & 256 \\
 \midrule
-EKF        & 100 & 100 & 100 & 100 & 68  & 0  & 0  & 0   & 0   \\
-UKF        & 100 & 100 & 100 & 100 & 100 & 0  & 0  & 0   & 0   \\
-CKF        & 100 & 100 & 100 & 100 & 0   & 0  & 0  & 0   & 0   \\
+EKF        & 100 & 100 & 100 & 100 & 71  & 0  & 0  & 0   & 0   \\
+UKF        & 100 & 100 & 100 & 100 & 99  & 5  & 0  & 0   & 0   \\
+CKF3       & 100 & 100 & 100 & 100 & 99  & 0  & 0  & 0   & 0   \\
+CKF5       & 100 & 100 & 100 & 100 & 0   & 0  & 0  & 0   & 0   \\
 SLF        & 100 & 100 & 100 & 100 & 0   & 0  & 0  & 0   & 0   \\
 \bottomrule
 \end{tabular}
@@ -142,32 +167,40 @@ SLF        & 100 & 100 & 100 & 100 & 0   & 0  & 0  & 0   & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time for 100 Monte Carlo runs for $T_s=300$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=300$~s as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
-Filter/$M$ & 1      & 2      & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
-EKF        & 0.2470 & 0.8910 & 3.572 & 7.913 & 8.174 & 4.451 & 8.755 & 17.62 & 34.38 \\
-UKF        & 0.0480 & 0.0480 & 1.543 & 3.477 & 9.372 & 31.64 & 63.17 & 125.9 & 252.0 \\
-CKF        & 0.0320 & 0.0640 & 1.535 & 3.061 & 10.28 & 28.27 & 55.80 & 109.7 & 217.9 \\
-SLF        & 0.4580 & 1.055  & 1.933 & 3.638 & 7.393 & 14.86 & 29.44 & 58.90 & 117.6 \\ \bottomrule
+Filter/$M$ & 1     & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
+EKF        & 0.39  & 0.763 & 2.998 & 7.169 & 8.21  & 3.969 & 7.582 & 15.22 & 30.4  \\
+UKF        & 0.39  & 0.578 & 1.151 & 2.276 & 6.925 & 18.55 & 37.52 & 75.1  & 150.1 \\
+CKF        & 0.328 & 0.45  & 0.872 & 1.807 & 6.175 & 16.52 & 33.16 & 66.35 & 132.1 \\
+CKF5       & 1.532 & 2.908 & 5.31  & 11.12 & 23.65 & 47.23 & 94.11 & 188.1 & 376.5 \\
+SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101.1 \\ \bottomrule
 \end{tabular}
 \label{tab:time_300}
 \end{table}
 
-\clearpage
+\cref{fig:mrmse_300} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for four of the filters, while the decrease shown by the EKF is less steep. The EKF results in the least error by far, with its MRMSE lower than those of the other filters for all combinations of $M$ in the divergence-free range. For small $M$, the UKF has the second smallest error, followed by the CKF5 and the SLF, and then the CKF3. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF. For comparison purposes, the RMSE at $M=64$ and 256 are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As with the other two sampling periods, the RMSEs are all very close in value. Again, the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest, and these increases are less pronounced for $M=256$ than for $M=16$, as expected.
 
-\begin{figure}[p]
+\begin{figure}[b]
 \centering
 \input{chapter-3/figures/mrmse_300}
 \caption{SOC error for $T_s=300$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_300}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}
 \centering
-\input{chapter-3/figures/mrmse_det_300}
-\caption{Detailed view of SOC error for $T_s=300$~s as a function of number of integration steps $M$.}
-\label{fig:mrmse_det_300}
+\input{chapter-3/figures/rmse_300_64}
+\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
+\label{fig:rmse_300_64}
+\end{figure}
+
+\begin{figure}
+\centering
+\input{chapter-3/figures/rmse_300_256}
+\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
+\label{fig:rmse_300_256}
 \end{figure}
 
 \end{document}

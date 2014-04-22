@@ -26,14 +26,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{51}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Detailed view of SOC error for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{52}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}s and $M=4$.\relax }}{52}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{54}{figure.caption.18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}s and $M=64$.\relax }}{53}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Detailed view of SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{55}{figure.caption.19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces SOC error for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{55}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{57}{figure.caption.22}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}s and $M=16$.\relax }}{56}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Detailed view of SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{58}{figure.caption.23}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}s and $M=256$.\relax }}{57}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces SOC error for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{59}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}s and $M=64$.\relax }}{60}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}s and $M=256$.\relax }}{61}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

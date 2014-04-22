@@ -54,10 +54,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Sampling Period of 30 Seconds}{50}{section..3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Sampling Period of 150 Seconds}{53}{section..3.3}
+\contentsline {section}{\numberline {3.3}Sampling Period of 150 Seconds}{54}{section..3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Sampling Period of 300 Seconds}{56}{section..3.4}
+\contentsline {section}{\numberline {3.4}Sampling Period of 300 Seconds}{58}{section..3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Discussion}{59}{chapter..4}
+\contentsline {chapter}{\numberline {4}Discussion}{62}{chapter..4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{63}{section*.24}
+\contentsline {section}{\numberline {4.1}Summary}{62}{section..4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Future Work}{63}{section..4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{64}{section*.27}
