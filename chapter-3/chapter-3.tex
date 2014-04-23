@@ -7,16 +7,16 @@
 
 \section{Performance Measures}
 
-The study was concerned with the accuracy and speed of the nonlinear filters on estimation of the SOC $x_1$. The accuracy was measured using the mean RMSE (MRMSE). The RMSE is defined as
+This study was concerned with the accuracy and speed of the nonlinear filters for estimation of the SOC. The accuracy of the estimation was measured using the mean RMSE (MRMSE). Recall that the state variable $x_1$ represents the SOC. Then, the RMSE is defined as
 \begin{equation}
     \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^{(j)}(kT_s) - x_1^{(j)}(kT_s) \Big)^2 },
 \end{equation}
-where $T_s$ is the sample period and the superscript $j$ indicates the $j$th Monte Carlo trial. This study used $N_\text{trials}=100$ Monte Carlo trials. Then, the MRMSE is the mean of the RMSE over time, giving
+where $T_s$ is the sample period, the superscript $j$ indicates the $j$th Monte Carlo trial. Note that the squared error was averaged over the Monte Carlo trials. Additionally, recall that $N_\text{trials}=100$ Monte Carlo trials were used in this study. Note that the defined RMSE is a function of discrete time steps. Then, the MRMSE is the mean of the RMSE over time, giving
 \begin{equation}
     \mathrm{MRMSE} = \frac{1}{N} \sum_{k=1}^N \mathrm{RMSE}(kT_s),
 \end{equation}
-where $N$ is the total number of times at which the filtering was performed. An additional measure of accuracy was the number of trials in which the filter estimate diverged. A divergence is considered an absolute error in teh estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition, after a numerical failure for a filter in a trial, no attempt was made to keep filtering the
-system, and the remainder of the SOC values are assumed to be the worst case of zero. The speed was measured using the CPU time, which is the sum of the times used by the filter program on each of the CPU cores. The use of the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data is not counted.
+where $N$ is the total number of time instances at which the filtering was performed. Note that the MRMSE is a nonnegative number, and it is desired to be minimal to indicate a more accurate estimate. An additional measure of accuracy was the number of trials in which the filter estimate diverged. A divergence is considered an absolute error in teh estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition,
+after a numerical failure for a filter in a trial, no attempt was made to keep filtering the system, and the remainder of the SOC values are assumed to be the worst case of zero. The speed was measured using the CPU time, which is the sum of the times used by the filter program on each of the CPU cores. The use of the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data is not counted.
 
 The remainder of this chapter shows the filtering results for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period.
 

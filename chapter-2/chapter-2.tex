@@ -209,12 +209,17 @@ where $F(\vx_{k-1},\vu_k)$ is the Jacobian of $\vf$ at $\vx_{k-1}$. Solving for 
 \begin{equation}
     \vx_k \approx \vx_{k-1} + \left( I - F(\vx_{k-1},\vu_k) \frac{\delta}{2} \right)^{-1} \vf(\vx_{k-1},\vu_k) \delta,
 \end{equation}
-with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. It is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. Furthermore, this approximation is equivalent to the It\^o-Taylor expansion of order $\beta=0.5$~\cite{kloeden99}. This means the accuracy of the integration can be improved by using iterating the integration over multiple steps, as follows. Choose some
-positive integer $M$ and let $\vx^{(i)}_{k-1}$ denote the $i$th iteration of the $M$-step integration method from $\vx_{k-1}$ to $\vx_k$, where $i=1,\dots,M$. Note that $\vx^{(0)}_{k-1}=\vx_{k-1}$ and $\vx^{(M)}_{k-1}=\vx_k$. Additionally, let $\delta=(t_k-t_{k-1})/M$. Then, the following procedure is iterated from $i=1$ to $M$:
+with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. It is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. Furthermore, this approximation is equivalent to the It\^o-Taylor expansion of order $\beta=0.5$~\cite{kloeden99}. This means the accuracy of the integration can be improved by iterating the integration over multiple steps, using a procedure similar to that of
+S\"arkk\"a~\cite{sarkka12}, as follows. Choose some positive integer $M$ and let $\vx^{(i)}_{k-1}$ denote the $i$th iteration of the $M$-step integration method from $\vx_{k-1}$ to $\vx_k$, where $i=1,\dots,M$. Note that $\vx^{(0)}_{k-1}=\vx_{k-1}$ and $\vx^{(M)}_{k-1}=\vx_k$. Additionally, let $\delta=(t_k-t_{k-1})/M$. Then, the following procedure is iterated from $i=1$ to $M$:
 \begin{equation}
     \vx^{(i)}_{k-1} = \vx^{(i-1)}_{k-1} + \left( I - F(\vx^{(i-1)}_{k-1},\vu_k) \frac{\delta}{2} \right)^{-1} \vf(\vx^{(i-1)}_{k-1},\vu_k) \delta.
 \end{equation}
-This thesis refers to this $M$-step integration procedure as $\vx_k=\vf_d(\vx_{k-1},\vu_k)$.
+This thesis refers to each step of the $M$-step integration procedure as
+\begin{equation}
+    \vx_{k-1}^{(i)} = \vf_d(\vx_{k-1}^{(i-1)},\vu_k,\delta,i),
+    \label{eq:mstep_int}
+\end{equation}
+where $\delta==(t_k-t_{k-1})/M$ is the time step for each iteration and $i=1,\dots,M$ is the current iteration. For convenience, the result of the iterative integration is referred to as $\vx_k=\vf_d(\vx_{k-1},\vu_k)$. This iterated numerical integration was used in the prediction steps of the filters.
 
 \section{Simulation Setup}
 

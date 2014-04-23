@@ -775,6 +775,24 @@
       \field{year}{2010}
       \field{pages}{4977\bibrangedash 4993}
     \endentry
+    \entry{sarkka12}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \strng{fullhash}{a7cc37a38cb316f803b4128bdf7179c9}
+      \field{sortinit}{0}
+      \field{labeltitle}{On continuous-discrete cubature {Kalman} filtering}
+      \field{booktitle}{Proceedings of SYSID}
+      \field{title}{On continuous-discrete cubature {Kalman} filtering}
+      \field{year}{2012}
+      \field{pages}{1221\bibrangedash 1226}
+    \endentry
     \entry{mazzoni07}{article}{}
       \name{labelname}{1}{}{%
         {{hash=ea50781c1a628935b70aaac6e4287d46}{Mazzoni}{M\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
@@ -852,24 +870,6 @@
       \field{volume}{54}
       \field{year}{2009}
       \field{pages}{1254\bibrangedash 1269}
-    \endentry
-    \entry{sarkka12}{inproceedings}{}
-      \name{labelname}{2}{}{%
-        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{hash=b7b397ee5cf2c5ffdd104f5f05c0a347}{S\"arkk\"a}{S\bibinitperiod}{Simo}{S\bibinitperiod}{}{}{}{}}%
-        {{hash=4592dc3c98e842594b9416db6b6470ae}{Solin}{S\bibinitperiod}{Arno}{A\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{a7cc37a38cb316f803b4128bdf7179c9}
-      \strng{fullhash}{a7cc37a38cb316f803b4128bdf7179c9}
-      \field{sortinit}{0}
-      \field{labeltitle}{On continuous-discrete cubature {Kalman} filtering}
-      \field{booktitle}{Proceedings of SYSID}
-      \field{title}{On continuous-discrete cubature {Kalman} filtering}
-      \field{year}{2012}
-      \field{pages}{1221\bibrangedash 1226}
     \endentry
     \entry{jia13}{article}{}
       \name{labelname}{3}{}{%
