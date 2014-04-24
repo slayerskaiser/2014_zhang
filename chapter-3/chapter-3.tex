@@ -7,7 +7,7 @@
 
 \section{Performance Measures}
 
-This study was concerned with the accuracy and speed of the nonlinear filters for estimation of the SOC. The accuracy of the estimation was measured using the mean RMSE (MRMSE). Recall that the state variable $x_1$ represents the SOC. Then, the RMSE is defined as
+This study was concerned with the accuracy and speed of the nonlinear filters for estimation of the SOC. The accuracy of the estimation was measured using the mean RMSE (MRMSE). Recall that the state variable $x_1$ represents the SOC. The other two state variables don't directly represent physical properties of the battery and are less useful in battery management, so they are ignored in determining the RMSE. However, they likely have similar error as the SOC estimates. For the SOC, the RMSE is defined as
 \begin{equation}
     \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^{(j)}(kT_s) - x_1^{(j)}(kT_s) \Big)^2 },
 \end{equation}
@@ -18,7 +18,7 @@ where $T_s$ is the sample period, the superscript $(j)$ indicates the $j$th Mont
 where $N$ is the total number of time instances at which the filtering was performed. Note that the MRMSE is a nonnegative number, and it is desired to be minimal to indicate a more accurate estimate. An additional measure of accuracy was the number of trials in which the filter estimate diverged. A divergence is considered an absolute error in teh estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition,
 after a numerical failure for a filter in a trial, no attempt was made to keep filtering the system, and the remainder of the SOC values are assumed to be the worst case of zero. The speed was measured using the CPU time, which is the sum of the times used by the filter program on each of the CPU cores. The use of the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data is not counted.
 
-The remainder of this chapter shows the filtering results for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period.
+The remainder of this chapter shows the filtering results for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period. For each sampling period, the number of divergences and filtering times are displayed as a function of the number of integration steps. Then, the MRMSE are plotted for those integration steps that have zero divergences. Finally, the RMSE is plotted as a function of time at the least and most number of integration steps that produce zero divergences.
 
 \clearpage
 
@@ -58,9 +58,9 @@ SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 100
 \label{tab:time_30}
 \end{table}
 
-\cref{fig:mrmse_30} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be see that the EKF result shows a decrease over this range as expected. However, the other results have minimum error at $M=16$, with an increase in error for larger $M$. This could be due to numerical errors that also caused divergences for large $M$ in the case of the UKF and the CKF3. The global minimum error is given by both the CKF5 and the SLF at $M=16$. For comparison purposes, the RMSE at $M=4$ and 64 are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The RMSEs for the filters are all very close in value, as expected from the closeness of the MRMSE values. It can be seen that the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest. These increases are less pronounced for $M=64$ than for $M=4$, as expected. The fluctuations in the RMSE occur when transitioning between charging and discharging.
+\cref{fig:mrmse_30} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be see that the EKF result shows a decrease over this range as expected. However, the other results have minimum error at $M=16$, with an increase in error for larger $M$. This could be due to numerical errors that also caused divergences for large $M$ in the case of the UKF and the CKF3. The global minimum error is given by both the CKF5 and the SLF at $M=16$.
 
-\begin{figure}[b]
+\begin{figure}[ht]
 \centering
 %\input{chapter-3/figures/mrmse_30}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_30}
@@ -68,19 +68,23 @@ SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 100
 \label{fig:mrmse_30}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\input{chapter-3/figures/rmse_30_4}
-%\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
-%\label{fig:rmse_30_4}
-%\end{figure}
+For comparison purposes, the RMSE at $M=4$ and 64 are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. For $M=4$, the EKF has lower error initially during the high-rate charge and discharge period from about $k=1900$ to 2300, but its error reaches those of the other filter near the end of that period. The other filters have very comparable errors. For $M=64$, the EKF has higher median error, but its lower worst case error results in the slightly lower MRMSE. The other filters are again very close in errors, with the UKF having slighly higher error on average.
 
-%\begin{figure}
-%\centering
+\begin{figure}[h]
+\centering
+%\input{chapter-3/figures/rmse_30_4}
+\pstool[width=15cm]{chapter-3/figures/rmse_30_4}{\input{chapter-3/figures/rmse_30_4.tex}}
+\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
+\label{fig:rmse_30_4}
+\end{figure}
+
+\begin{figure}
+\centering
 %\input{chapter-3/figures/rmse_30_64}
-%\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
-%\label{fig:rmse_30_64}
-%\end{figure}
+\pstool[width=15cm]{chapter-3/figures/rmse_30_64}{\input{chapter-3/figures/rmse_30_64.tex}}
+\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
+\label{fig:rmse_30_64}
+\end{figure}
 
 \clearpage
 
@@ -120,9 +124,9 @@ SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 20
 \label{tab:time_150}
 \end{table}
 
-\cref{fig:mrmse_150} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for all five filters. The EKF results in the least error by far, with its MRMSE at $M=16$ approximately equal to the MRMSEs of the other filters at $M=256$. For small $M$, the UKF has the second smallest error with the two CKFs and the SLF having approximately the same error. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF. For comparison purposes, the RMSE at $M=16$ and 256 are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The RMSEs for the filters are all very close in value. It can be seen that the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest. These increases are less pronounced for $M=256$ than for $M=16$, as expected. The fluctuations in the RMSE occur when transitioning between charging and discharging.
+\cref{fig:mrmse_150} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for all five filters. The EKF results in the least error by far, with its MRMSE at $M=16$ approximately equal to the MRMSEs of the other filters at $M=256$. For small $M$, the UKF has the second smallest error with the two CKFs and the SLF having approximately the same error. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF.
 
-\begin{figure}[b]
+\begin{figure}[ht]
 \centering
 %\input{chapter-3/figures/mrmse_150}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_150}
@@ -130,19 +134,23 @@ SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 20
 \label{fig:mrmse_150}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\input{chapter-3/figures/rmse_150_16}
-%\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
-%\label{fig:rmse_150_16}
-%\end{figure}
+For comparison purposes, the RMSE at $M=16$ and 256 are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. For both sampling periods shown, the EKF has much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=16$, the UKF has higher error than the CKFs and the SLF until about $k=350$ and then has lower error afterwards. Both CKFs and the SLF have approximately the same error. For $M=256$, the UKF has higher error than the CKFs and the SLF after about $k=380$ and about the same error before. The CKF5 and the SLF are very close in error. The CKF3 is very close in error to them except for a short period from about $k=290$ to 350.
 
-%\begin{figure}
-%\centering
+\begin{figure}[h]
+\centering
+%\input{chapter-3/figures/rmse_150_16}
+\pstool[width=15cm]{chapter-3/figures/rmse_150_16}{\input{chapter-3/figures/rmse_150_16.tex}}
+\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
+\label{fig:rmse_150_16}
+\end{figure}
+
+\begin{figure}
+\centering
 %\input{chapter-3/figures/rmse_150_256}
-%\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
-%\label{fig:rmse_150_256}
-%\end{figure}
+\pstool[width=15cm]{chapter-3/figures/rmse_150_256}{\input{chapter-3/figures/rmse_150_256.tex}}
+\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
+\label{fig:rmse_150_256}
+\end{figure}
 
 \clearpage
 
@@ -182,9 +190,9 @@ SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101
 \label{tab:time_300}
 \end{table}
 
-\cref{fig:mrmse_300} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for four of the filters, while the decrease shown by the EKF is less steep. The EKF results in the least error by far, with its MRMSE lower than those of the other filters for all combinations of $M$ in the divergence-free range. For small $M$, the UKF has the second smallest error, followed by the CKF5 and the SLF, and then the CKF3. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF. For comparison purposes, the RMSE at $M=64$ and 256 are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As with the other two sampling periods, the RMSEs are all very close in value. Again, the RMSEs increase during the period of high-rate charge and discharge, when the nonlinear effects are the strongest, and these increases are less pronounced for $M=256$ than for $M=16$, as expected.
+\cref{fig:mrmse_300} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for four of the filters, while the decrease shown by the EKF is less steep. The EKF results in the least error by far, with its MRMSE lower than those of the other filters for all combinations of $M$ in the divergence-free range. For small $M$, the UKF has the second smallest error, followed by the CKF5 and the SLF, and then the CKF3. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF.
 
-\begin{figure}[b]
+\begin{figure}[ht]
 \centering
 %\input{chapter-3/figures/mrmse_300}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_300}
@@ -192,18 +200,22 @@ SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101
 \label{fig:mrmse_300}
 \end{figure}
 
-%\begin{figure}
-%\centering
-%\input{chapter-3/figures/rmse_300_64}
-%\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
-%\label{fig:rmse_300_64}
-%\end{figure}
+For comparison purposes, the RMSE at $M=64$ and 256 are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As before, the period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. As before for $T_s=150$ seconds, for both sampling periods shown, the EKF has much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=64$, the UKF approximately the same error as the CKFs and the SLF until about $k=200$ and then has lower error afterwards. Both CKFs and the SLF have approximately the same error. For $M=256$, the UKF has higher error than the CKFs and the SLF after about $k=180$ and about the same error before. The CKF5 and the SLF are very close in error. The CKF3 is roughly equal in error to them with short periods of lower and higher error.
 
-%\begin{figure}
-%\centering
+\begin{figure}[h]
+\centering
+%\input{chapter-3/figures/rmse_300_64}
+\pstool[width=15cm]{chapter-3/figures/rmse_300_64}{\input{chapter-3/figures/rmse_300_64.tex}}
+\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
+\label{fig:rmse_300_64}
+\end{figure}
+
+\begin{figure}
+\centering
 %\input{chapter-3/figures/rmse_300_256}
-%\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
-%\label{fig:rmse_300_256}
-%\end{figure}
+\pstool[width=15cm]{chapter-3/figures/rmse_300_256}{\input{chapter-3/figures/rmse_300_256.tex}}
+\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
+\label{fig:rmse_300_256}
+\end{figure}
 
 \end{document}

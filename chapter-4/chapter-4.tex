@@ -12,9 +12,13 @@ accurate for long sampling periods. Its speed comes mainly from its evaluation o
 additional nonlinear effect, the first-order EKF could not as well performs worse. It would be interesting to see whether this outperformance of the EKF is seen at even shorter sampling periods. The reason for the overall performance of the EKF is unknown. The general recommendation would be to use the EKF for estimation using the chosen electrical-circuit model, because its accuracy is either the best or very close to the best while being several times faster than the next fastest
 filter.
 
+The UKF has more numerical problems than the other filters, and its error improves less with increases in the number of integration steps than the CKFs and the SLF. However, there is a small range of integration steps for which the UKF exhibits lower error than them. The CKF3 and the CKF5 are very close in performance for small numbers of integration steps, but the CKF5 has slighly less error for large numbers of integration steps. The SLF is almost the same error as the CKF5 for all tested sampling periods and integration steps. Thus, the SLF, using the same third-order cubature rule as the CKF3 to calculate its expectations, is preferable to both CKFs, because it has the same error as the higher-order CKF5 while being faster than either CKFs.
+
 \section{Future Work}
 
 Future work should focus on the update phases of the filters, since that is mainly where the various filters differ. This can be done by, for example, using the EKF prediction for all the filters, and using different updates. This would better isolate inaccuracies arising from the numerical integration so that the accuracy of the estimation of the nonlinearities of the different filters can be compared. Additionally, filtering at shorter sampling periods should be examined,
 since again, the inaccuracies from the numerical integration would be decreased. The lower error of the CKF5 and the SLF at a sampling period of 30~seconds could indicate that the nonlinearities are stronger for short sampling periods rather than for longer ones. This possibly could come from the short-term transient effects described by the battery model.
+
+Furthermore, the chosen battery model is likely able to model battery chemistries other than lithium-ion. This is because the nonlinear part of the model uses information about the impedance of the battery. For a general chemical battery, the impedance can be determined using EIS or pulsed-discharge experiments. It would be interesting to test whether other battery types can be modeled using the same model and whether the performance advantage of the EKF over the other test filters holds for over those battery types.
 
 \end{document}

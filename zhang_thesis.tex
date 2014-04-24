@@ -12,9 +12,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages we like to use. %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%\usepackage{fouriernc}
 \usepackage{subfiles} % allows for better include support
 %\usepackage{pslatex}
-\usepackage[T1]{fontenc}
 %\usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amssymb}
@@ -30,7 +32,7 @@
 %\usepackage[caption=false]{subfig}
 \usepackage{subcaption}
 %\usepackage{url}
-%\usepackage{psfrag}
+\usepackage[scanall]{psfrag}
 %\usepackage[final]{graphicx}
 %\DeclareGraphicsExtensions{.pdf, .jpg}
 \graphicspath{{chapter-1/figures/}{chapter-2/figures/}{chapter-3/figures/}{chapter-4/figures/}{appendix-a/figures/}}
@@ -49,7 +51,7 @@
 \usepackage[crop=pdfcrop,process=auto]{pstool}
 
 %\usepackage[final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
-\usepackage[final]{microtype}
+%\usepackage[final]{microtype}
 %\microtypecontext{spacing=nonfrench}
 % activate={true,nocompatibility} - activate protrusion and expansion - (not needed; also works for dvi now)
 % final - enable microtype; use ``draft'' to disable
@@ -336,12 +338,12 @@
 
 % Generates the Acknowledgments. The argument should point to
 % the file containing your Acknowledgments. 
-\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
+%\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
 
 % Generates the Epigraph/Dedication. The first argument should
 % point to the file containing your Epigraph/Dedication and
 % the second argument should be the title of this page. 
-\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
+%\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
 
 
 
