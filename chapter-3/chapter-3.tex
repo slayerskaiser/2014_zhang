@@ -11,7 +11,7 @@ This study was concerned with the accuracy and speed of the nonlinear filters fo
 \begin{equation}
     \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^{(j)}(kT_s) - x_1^{(j)}(kT_s) \Big)^2 },
 \end{equation}
-where $T_s$ is the sample period, the superscript $j$ indicates the $j$th Monte Carlo trial. Note that the squared error was averaged over the Monte Carlo trials. Additionally, recall that $N_\text{trials}=100$ Monte Carlo trials were used in this study. Note that the defined RMSE is a function of discrete time steps. Then, the MRMSE is the mean of the RMSE over time, giving
+where $T_s$ is the sample period, the superscript $(j)$ indicates the $j$th Monte Carlo trial. Note that the squared error was averaged over the Monte Carlo trials. Additionally, recall that $N_\text{trials}=100$ Monte Carlo trials were used in this study. Note that the defined RMSE is a function of discrete time steps. Then, the MRMSE is the mean of the RMSE over time, giving
 \begin{equation}
     \mathrm{MRMSE} = \frac{1}{N} \sum_{k=1}^N \mathrm{RMSE}(kT_s),
 \end{equation}
@@ -62,24 +62,25 @@ SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 100
 
 \begin{figure}[b]
 \centering
-\input{chapter-3/figures/mrmse_30}
+%\input{chapter-3/figures/mrmse_30}
+\psfragfig[width=15cm]{chapter-3/figures/mrmse_30}
 \caption{SOC error for $T_s=30$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_30}
 \end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_30_4}
-\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
-\label{fig:rmse_30_4}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_30_4}
+%\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
+%\label{fig:rmse_30_4}
+%\end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_30_64}
-\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
-\label{fig:rmse_30_64}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_30_64}
+%\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
+%\label{fig:rmse_30_64}
+%\end{figure}
 
 \clearpage
 
@@ -123,24 +124,25 @@ SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 20
 
 \begin{figure}[b]
 \centering
-\input{chapter-3/figures/mrmse_150}
+%\input{chapter-3/figures/mrmse_150}
+\psfragfig[width=15cm]{chapter-3/figures/mrmse_150}
 \caption{SOC error for $T_s=150$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_150}
 \end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_150_16}
-\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
-\label{fig:rmse_150_16}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_150_16}
+%\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
+%\label{fig:rmse_150_16}
+%\end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_150_256}
-\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
-\label{fig:rmse_150_256}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_150_256}
+%\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
+%\label{fig:rmse_150_256}
+%\end{figure}
 
 \clearpage
 
@@ -184,23 +186,24 @@ SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101
 
 \begin{figure}[b]
 \centering
-\input{chapter-3/figures/mrmse_300}
+%\input{chapter-3/figures/mrmse_300}
+\psfragfig[width=15cm]{chapter-3/figures/mrmse_300}
 \caption{SOC error for $T_s=300$~s as a function of number of integration steps $M$.}
 \label{fig:mrmse_300}
 \end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_300_64}
-\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
-\label{fig:rmse_300_64}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_300_64}
+%\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
+%\label{fig:rmse_300_64}
+%\end{figure}
 
-\begin{figure}
-\centering
-\input{chapter-3/figures/rmse_300_256}
-\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
-\label{fig:rmse_300_256}
-\end{figure}
+%\begin{figure}
+%\centering
+%\input{chapter-3/figures/rmse_300_256}
+%\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
+%\label{fig:rmse_300_256}
+%\end{figure}
 
 \end{document}

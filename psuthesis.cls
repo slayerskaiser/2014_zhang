@@ -984,7 +984,8 @@ Approved: \= \rule{2.75in}{0.5pt} \quad Date: \= \rule{1.5in}{0.5pt} \\[-3pt]
 
 
 \newcommand{\thesisdedication}[2]{%
-\chapter*{#2}
+%\chapter*{#2}
+\chapter{#2}
 \begin{singlespace}
     \input{#1}
 \end{singlespace}
@@ -1014,15 +1015,16 @@ Approved: \= \rule{2.75in}{0.5pt} \quad Date: \= \rule{1.5in}{0.5pt} \\[-3pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\textheight}{8.5in}
 \mainmatter
-\pagestyle{empty}
-\renewcommand{\@oddhead}{\mbox{}\hfill\arabic{page}}
-\let\ps@plain = \ps@empty
+%\pagestyle{empty}
+%\renewcommand{\@oddhead}{\mbox{}\hfill\arabic{page}}
+\renewcommand{\@oddfoot}{\mbox{}\hfill\arabic{page}\hfill}
+%\let\ps@plain = \ps@empty
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\vita}[1]{%
 \begin{singlespace}
-\thispagestyle{empty}
+%\thispagestyle{empty}
 %\begin{center}
     %\textbf{{\large Vita} \\[0.1in] \psu@author}
 		%\textbf{{\Huge Vita}}

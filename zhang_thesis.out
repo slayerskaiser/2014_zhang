@@ -1,33 +1,36 @@
 \BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 2
 \BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 3
-\BOOKMARK [0][-]{chapter..1}{1 Introduction}{}% 4
-\BOOKMARK [1][-]{section..1.1}{1.1 Electrical Characteristics of Rechargeable Batteries}{chapter..1}% 5
-\BOOKMARK [1][-]{section..1.2}{1.2 Battery Models}{chapter..1}% 6
-\BOOKMARK [2][-]{subsection..1.2.1}{1.2.1 Electrochemical}{section..1.2}% 7
-\BOOKMARK [2][-]{subsection..1.2.2}{1.2.2 Computational Intelligence}{section..1.2}% 8
-\BOOKMARK [2][-]{subsection..1.2.3}{1.2.3 Analytical}{section..1.2}% 9
-\BOOKMARK [2][-]{subsection..1.2.4}{1.2.4 Stochastic}{section..1.2}% 10
-\BOOKMARK [2][-]{subsection..1.2.5}{1.2.5 Electrical-Circuit}{section..1.2}% 11
-\BOOKMARK [2][-]{subsection..1.2.6}{1.2.6 Evaluation}{section..1.2}% 12
-\BOOKMARK [1][-]{section..1.3}{1.3 Nonlinear Filtering Methods}{chapter..1}% 13
-\BOOKMARK [2][-]{subsection..1.3.1}{1.3.1 Extended Kalman Filter}{section..1.3}% 14
-\BOOKMARK [2][-]{subsection..1.3.2}{1.3.2 Unscented Kalman Filter}{section..1.3}% 15
-\BOOKMARK [2][-]{subsection..1.3.3}{1.3.3 Cubature Kalman Filter}{section..1.3}% 16
-\BOOKMARK [3][-]{subsubsection..1.3.3.1}{1.3.3.1 Third-Order CKF}{subsection..1.3.3}% 17
-\BOOKMARK [3][-]{subsubsection..1.3.3.2}{1.3.3.2 Fifth-Order CKF}{subsection..1.3.3}% 18
-\BOOKMARK [2][-]{subsection..1.3.4}{1.3.4 Statistically Linearized Filter}{section..1.3}% 19
-\BOOKMARK [0][-]{chapter..2}{2 Problem Setup}{}% 20
-\BOOKMARK [1][-]{section..2.1}{2.1 Battery Model}{chapter..2}% 21
-\BOOKMARK [1][-]{section..2.2}{2.2 Discretization of System Dynamics}{chapter..2}% 22
-\BOOKMARK [1][-]{section..2.3}{2.3 Simulation Setup}{chapter..2}% 23
-\BOOKMARK [1][-]{section..2.4}{2.4 Filtering Setup}{chapter..2}% 24
-\BOOKMARK [0][-]{chapter..3}{3 Filtering Results}{}% 25
-\BOOKMARK [1][-]{section..3.1}{3.1 Performance Measures}{chapter..3}% 26
-\BOOKMARK [1][-]{section..3.2}{3.2 Sampling Period of 30 Seconds}{chapter..3}% 27
-\BOOKMARK [1][-]{section..3.3}{3.3 Sampling Period of 150 Seconds}{chapter..3}% 28
-\BOOKMARK [1][-]{section..3.4}{3.4 Sampling Period of 300 Seconds}{chapter..3}% 29
-\BOOKMARK [0][-]{chapter..4}{4 Discussion}{}% 30
-\BOOKMARK [1][-]{section..4.1}{4.1 Summary}{chapter..4}% 31
-\BOOKMARK [1][-]{section..4.2}{4.2 Future Work}{chapter..4}% 32
-\BOOKMARK [0][-]{section*.27}{Bibliography}{}% 33
+\BOOKMARK [0][-]{chapter*.5}{Acknowledgments}{}% 4
+\BOOKMARK [0][-]{chapter*.6}{Dedication}{}% 5
+\BOOKMARK [0][-]{chapter..1}{1 Introduction}{}% 6
+\BOOKMARK [1][-]{section..1.1}{1.1 Electrical Characteristics of Rechargeable Batteries}{chapter..1}% 7
+\BOOKMARK [1][-]{section..1.2}{1.2 Battery Models}{chapter..1}% 8
+\BOOKMARK [2][-]{subsection..1.2.1}{1.2.1 Electrochemical}{section..1.2}% 9
+\BOOKMARK [2][-]{subsection..1.2.2}{1.2.2 Computational Intelligence}{section..1.2}% 10
+\BOOKMARK [2][-]{subsection..1.2.3}{1.2.3 Analytical}{section..1.2}% 11
+\BOOKMARK [2][-]{subsection..1.2.4}{1.2.4 Stochastic}{section..1.2}% 12
+\BOOKMARK [2][-]{subsection..1.2.5}{1.2.5 Electrical-Circuit}{section..1.2}% 13
+\BOOKMARK [2][-]{subsection..1.2.6}{1.2.6 Evaluation}{section..1.2}% 14
+\BOOKMARK [1][-]{section..1.3}{1.3 Nonlinear Filtering Methods}{chapter..1}% 15
+\BOOKMARK [2][-]{subsection..1.3.1}{1.3.1 Extended Kalman Filter}{section..1.3}% 16
+\BOOKMARK [2][-]{subsection..1.3.2}{1.3.2 Unscented Kalman Filter}{section..1.3}% 17
+\BOOKMARK [2][-]{subsection..1.3.3}{1.3.3 Cubature Kalman Filter}{section..1.3}% 18
+\BOOKMARK [3][-]{subsubsection..1.3.3.1}{1.3.3.1 Third-Order CKF}{subsection..1.3.3}% 19
+\BOOKMARK [3][-]{subsubsection..1.3.3.2}{1.3.3.2 Fifth-Order CKF}{subsection..1.3.3}% 20
+\BOOKMARK [2][-]{subsection..1.3.4}{1.3.4 Statistically Linearized Filter}{section..1.3}% 21
+\BOOKMARK [0][-]{chapter..2}{2 Problem Setup}{}% 22
+\BOOKMARK [1][-]{section..2.1}{2.1 Battery Model}{chapter..2}% 23
+\BOOKMARK [1][-]{section..2.2}{2.2 Discretization of System Dynamics}{chapter..2}% 24
+\BOOKMARK [1][-]{section..2.3}{2.3 Simulation Setup}{chapter..2}% 25
+\BOOKMARK [1][-]{section..2.4}{2.4 Filtering Setup}{chapter..2}% 26
+\BOOKMARK [0][-]{chapter..3}{3 Filtering Results}{}% 27
+\BOOKMARK [1][-]{section..3.1}{3.1 Performance Measures}{chapter..3}% 28
+\BOOKMARK [1][-]{section..3.2}{3.2 Sampling Period of 30 Seconds}{chapter..3}% 29
+\BOOKMARK [1][-]{section..3.3}{3.3 Sampling Period of 150 Seconds}{chapter..3}% 30
+\BOOKMARK [1][-]{section..3.4}{3.4 Sampling Period of 300 Seconds}{chapter..3}% 31
+\BOOKMARK [0][-]{chapter..4}{4 Discussion}{}% 32
+\BOOKMARK [1][-]{section..4.1}{4.1 Summary}{chapter..4}% 33
+\BOOKMARK [1][-]{section..4.2}{4.2 Future Work}{chapter..4}% 34
+\BOOKMARK [0][-]{section*.23}{Bibliography}{}% 35
+\BOOKMARK [0][-]{section*.25}{Vita}{}% 36

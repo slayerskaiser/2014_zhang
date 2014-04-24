@@ -187,7 +187,7 @@ applicable~\cite{li04}. Deterministic sampling methods are special numerical met
     \mathbf{z}_k &= \vh(\vx_k,\vu_k) + M(\vx_k,\vu_k) \vv_k, \label{eq:dtsys_z}
 \end{align}
 where $\vf\in\mathcal{R}^n$ and $\vh\in\mathcal{R}^m$ are nonlinear vector functions, $L\in\mathcal{R}^{n\times N_w}$ and $M\in\mathcal{R}^{m\times N_v}$ are nonlinear matrix functions, and the input $\vu$ is assumed to be piecewise constant, meaning $\vu(t)=\vu(t_k)=\vu_k$ for $t_{k-1}<t\le t_k$. An implicit, first-order Taylor-Heun numerical integration method was used to discretize the continuous-time dynamics $\vf$ of the chosen battery model. In particular, an iterated integration
-procedure was used, as was done by S\"arkk\"a~\cite{sarkka12}. The specifics of the discretization are discussed in \cref{sec:discret}.
+procedure was used, as was done by S\"arkk\"a~\cite{sarkka12}. For the iterations, a superscript of $(i)$ indicates the $i$th step of a $M$-step iterative integration scheme. Note that $\vx^{(0)}_{k-1}=\vx_{k-1}$ and $\vx^{(M)}_{k-1}=\vx_k$. The specifics of the discretization along with the notation used are discussed in \cref{sec:discret}.
 
 \subsection{Extended Kalman Filter}
 \label{sec:ekf}
@@ -204,11 +204,11 @@ iterations of the following equations:
 \end{align}
 where $t_\tau = t_{k-1}+\delta(i+1/2)$, 
 \begin{equation}
-    G_\tau = \left( I - F(\hat{\vx}^{(i-1)}_\tau,\vu_k) \frac{\delta}{2} \right)^{-1},
+    G_\tau = \left( I - F(\hat{\vx}_\tau,\vu_k) \frac{\delta}{2} \right)^{-1},
 \end{equation}
 and
 \begin{equation}
-    \hat{\vx}^{(i)}_\tau = \frac{1}{2} \left( \hat{\vx}_{k-1}^{(i-1)} + \hat{\vx}_{k-1}^{(i)} - F(\hat{\vx}_{k-1}^{(i)},\vu_k) f(\hat{\vx}_{k-1}^{(i)}) \frac{\delta^2}{4} \right).
+    \hat{\vx}_\tau = \frac{1}{2} \left( \hat{\vx}_{k-1}^{(i-1)} + \hat{\vx}_{k-1}^{(i)} - F(\hat{\vx}_{k-1}^{(i)},\vu_k) f(\hat{\vx}_{k-1}^{(i)}) \frac{\delta^2}{4} \right).
 \end{equation}
 The iteration given by \cref{eq:ekfpredx,eq:ekfpredz} is repeated $M$-times to complete the prediction step.  It can be seen that the differential equation for the covariance matrix was approximated using a modified Gauss-Legendre formula with an implicit increment rule, following Mazzoni. The numerical approximations for the state and covariance are both A-stable, which is necessary for the chosen battery model, and consistent to the first-order. 
 The update equations for the EKF come from the LMMSE filter and are
@@ -322,10 +322,13 @@ The square root of the positive definite matrix P is defined as a matrix $A$ suc
 \begin{equation}
     [\mu_U,S_U,C_U] = \mathrm{UT}(g,m,P).
 \end{equation}
-Then, for the discretized system in \cref{eq:dtsys_x,eq:dtsys_z}, for an $M$-step numerical integration scheme, the prediction and update steps for the UKF can be written as
+Then, for the discretized system in \cref{eq:dtsys_x,eq:dtsys_z}, for an $M$-step numerical integration scheme, the prediction step for the UKF can be written as
 \begin{align}
-    [\hat{\vx}_{k|k-1},\tilde{P}_{k|k-1}] & = \mathrm{UT}(\vf_d,\hat{\vx}_{k-1|k-1},P_{k-1|k-1}) \quad \text{(Repeated $M$ times)} \label{eq:ukfp1} \\
-	P_{k|k-1} & = \tilde{P}_{k|k-1} + L(\hat{\vx}_{k|k-1}) Q_k L^\top(\hat{\vx}_{k|k-1})\\
+    [\hat{\vx}_{k-1|k-1}^{(i)},\tilde{P}_{k-1|k-1}^{(i)}] & = \mathrm{UT}(\vf_d,\hat{\vx}_{k-1|k-1}^{(i-1)},P_{k-1|k-1}^{(i-1)}) \label{eq:ukfp1} \\
+	P_{k-1|k-1}^{(i)} & = \tilde{P}_{k-1|k-1}^{(i)} + L(\hat{\vx}_{k-1|k-1}^{(i)}) Q_k L^\top(\hat{\vx}_{k-1|k-1}^{(i)}), \\
+\end{align}
+where the equations are performed for $i=1,\dots,M$. Then, the update step is given by
+\begin{align}
 	[\mu_k,\tilde{S}_k,C_k] & = \mathrm{UT}(\mathbf{h},\hat{\vx}_{k|k-1},P_{k|k-1}) \label{eq:ukfu1} \\
     S_k & = \tilde{S}_k + M(\hat{\vx}_{k|k-1}) R_k M^\top(\hat{\vx}_{k|k-1}) \\
     K_k & = C_k S_k^{-1} \\
@@ -438,10 +441,10 @@ respectively. The cubature approximation results in
 \end{align}
 for the expectations of the measurement state and covariance, where the cubature points come from the columns of $\sqrt{nP}$. With the given statistically optimal linearization, the resulting linear system can be filtered using a procedure similar to the linear Kalman filter. The prediction phase, for an $M$-step numerical integration scheme, consists of peforming the following equations $M$ times for $i=1,\dots,M$ using the notation from \cref{sec:discret}:
 \begin{align}
-    \hat{\vx}_{k-1|k-1}^{(i)} &= \mathbf{b}_{\vx^{(i-1)}} \\
-    P_{k-1|k-1}^{(i)} &= A_\vx P_{k-1|k-1}^{(i-1)} A_\vx^\top + L(\vx,\vu) Q_k L^\top(\vx,\vu).
+    \hat{\vx}_{k-1|k-1}^{(i)} &= \mathbf{b}_{\hat{\vx}_{k-1|k-1}^{(i-1)}} \\
+    P_{k-1|k-1}^{(i)} &= A_{\hat{\vx}_{k-1|k-1}^{(i-1)}} P_{k-1|k-1}^{(i-1)} A_{\hat{\vx}_{k-1|k-1}^{(i-1)}}^\top + L({\hat{\vx}_{k-1|k-1}^{(i-1)}},\vu) Q_k L^\top({\hat{\vx}_{k-1|k-1}^{(i-1)}},\vu),
 \end{align}
-Note that the form is very similar to the Kalman filter prediction steps given by \cref{eq:kfp1,eq:kfp2}, where $E[\vx-m]=0$ has been used to simplify the calculation for $\hat{\vx}_{k|k-1}$. The update phase consists of
+where the above equations are iterated over $i=1,\dots,M$. Note that the form is very similar to the Kalman filter prediction steps given by \cref{eq:kfp1,eq:kfp2}, where $E[\vx-m]=0$ has been used to simplify the calculation for $\hat{\vx}_{k|k-1}$. The update phase consists of
 \begin{align}
     S_k &= A_\vz P_{k|k-1} A_\vz^\top + M(\vx,\vu) R_k M^\top(\vx,\vu) \\
     K_k &= P_{k|k-1} A_\vz^\top S_k^{-1} \\

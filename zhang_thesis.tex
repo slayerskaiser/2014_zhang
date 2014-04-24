@@ -24,14 +24,14 @@
 %\usepackage{bm}
 \usepackage{eqlist} % Makes for a nice list of symbols.
 \usepackage[dvipsnames]{color}
-\usepackage{psfrag}
 %\usepackage{varioref}
 \usepackage{booktabs}
 \usepackage[version=3]{mhchem}
 %\usepackage[caption=false]{subfig}
 \usepackage{subcaption}
 %\usepackage{url}
-\usepackage[final]{graphicx}
+%\usepackage{psfrag}
+%\usepackage[final]{graphicx}
 %\DeclareGraphicsExtensions{.pdf, .jpg}
 \graphicspath{{chapter-1/figures/}{chapter-2/figures/}{chapter-3/figures/}{chapter-4/figures/}{appendix-a/figures/}}
 %\usepackage[first,timestamp]{draftcopy}
@@ -46,10 +46,11 @@
 \addbibresource{Biblio-Database.bib}
 %\usepackage{epstopdf}
 %\epstopdfsetup{update} % only regenerate pdf files when eps file is newer
+\usepackage[crop=pdfcrop,process=auto]{pstool}
 
 %\usepackage[final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[final]{microtype}
-\microtypecontext{spacing=nonfrench}
+%\microtypecontext{spacing=nonfrench}
 % activate={true,nocompatibility} - activate protrusion and expansion - (not needed; also works for dvi now)
 % final - enable microtype; use ``draft'' to disable
 % tracking=true, kerning=true, spacing=true - activate these techniques
@@ -104,7 +105,7 @@
 % who want to use it.
 %
 % To the hyperref package, uncomment the following line:
-\usepackage[linktocpage,ps2pdf]{hyperref}
+\usepackage[linktocpage]{hyperref}
 \usepackage[all]{hypcap}
 \usepackage{breakurl}
 %
@@ -203,7 +204,7 @@
 % contain every after the word ``requirements'' that appears on
 % the title page. This provides the needed flexibility for
 % all the degree types.
-\honorsdegreeinfo{Masters of Science \\ in \\ Electrical Engineering}
+\honorsdegreeinfo{Masters of Science \\ in \\ Engineering \\ Electrical Engineering}
 
 % This is the document type. For example, this could also be:
 %     Comprehensive Document
@@ -335,12 +336,12 @@
 
 % Generates the Acknowledgments. The argument should point to
 % the file containing your Acknowledgments. 
-%\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
+\thesisacknowledgments{SupplementaryMaterial/Acknowledgments}
 
 % Generates the Epigraph/Dedication. The first argument should
 % point to the file containing your Epigraph/Dedication and
 % the second argument should be the title of this page. 
-%\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
+\thesisdedication{SupplementaryMaterial/Dedication}{Dedication}
 
 
 
@@ -406,8 +407,8 @@
 \backmatter
 
 % Vita
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Vita}
-%\vita{SupplementaryMaterial/Vita}
+\phantomsection
+\addcontentsline{toc}{chapter}{Vita}
+\vita{SupplementaryMaterial/Vita}
 
 \end{document}

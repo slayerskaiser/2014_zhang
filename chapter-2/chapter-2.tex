@@ -6,7 +6,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}[b]
-\input{chapter-2/figures/batt_model}
+\centering
+%\input{chapter-2/figures/batt_model}
+\psfragfig[width=\columnwidth]{chapter-2/figures/batt_model}
 \caption{Electrical-circuit battery model.}
 \label{fig:batt_model}
 \end{figure}
@@ -57,10 +59,14 @@ rate at which a full battery is completely discharged in 5 hours~\cite{linden01_
 \begin{figure}[ht]
 \centering
 \begin{subfigure}[c]{0.4\textwidth}
-    \input{chapter-2/figures/resistive_load}
+    %\input{chapter-2/figures/resistive_load}
+    \centering
+    \psfragfig[width=0.3\textwidth]{chapter-2/figures/resistive_load}
 \end{subfigure}
 \begin{subfigure}[c]{0.55\textwidth}
-    \input{chapter-2/figures/nrc}
+    %\input{chapter-2/figures/nrc}
+    \centering
+    \psfragfig[width=0.495\textwidth]{chapter-2/figures/nrc}
 \end{subfigure}
 \caption{Loads to (a) discharge and (b) charge the battery.}
 \label{fig:batt_loads}
@@ -86,7 +92,9 @@ is assumed to be Gaussian white noise with a power spectral density (PSD) of~\ci
 \end{equation}
 where $T$ is the temperature of the conducting medium in Kelvin, $k$ is the Boltzmann's constant, and $h$ is the Planck's constant. \cref{fig:batt_noisy} shows that the thermal noise due to the resistances is modeled as voltage sources in series with the resistances, with PSDs of $S_v(\omega)=2kTR$ for a corresponding resistance $R$. Using this definition, the noise functions are given by
 \begin{figure}[b]
-\input{chapter-2/figures/batt_noisy}
+\centering
+%\input{chapter-2/figures/batt_noisy}
+\psfragfig[width=\columnwidth]{chapter-2/figures/batt_noisy}
 \caption{Modeling of thermal noise in resistances as voltage sources in series with the resistances.}
 \label{fig:batt_noisy}
 \end{figure}
@@ -258,7 +266,9 @@ random number generators to be easily seeds with different integers and does not
 
 \begin{figure}[htb]
 \centering
-\input{chapter-2/figures/input}
+%\input{chapter-2/figures/input}
+%\psfragfig[width=15cm]{chapter-2/figures/input}
+\pstool[width=15cm]{chapter-2/figures/input}{\input{chapter-2/figures/input.tex}}
 \caption{Input load $R_L$ on the battery.}
 \label{fig:input}
 \end{figure}
@@ -271,14 +281,18 @@ for 135 minutes. The two resting periods should show the strongest recovery effe
 
 \begin{figure}[htb]
 \centering
-\input{chapter-2/figures/soc}
+%\input{chapter-2/figures/soc}
+%\psfragfig[width=15cm]{chapter-2/figures/soc}
+\pstool[width=15cm]{chapter-2/figures/soc}{\input{chapter-2/figures/soc.tex}}
 \caption{True SOC for one run due to input load.}
 \label{fig:soc}
 \end{figure}
 
 \begin{figure}[htb]
 \centering
-\input{chapter-2/figures/meas}
+%\input{chapter-2/figures/meas}
+%\psfragfig[width=15cm]{chapter-2/figures/meas}
+\pstool[width=15cm]{chapter-2/figures/meas}{\input{chapter-2/figures/meas.tex}}
 \caption{Noisy measurement $V_\text{cell}$ for one run.}
 \label{fig:meas}
 \end{figure}
