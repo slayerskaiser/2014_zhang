@@ -1,0 +1,1 @@
+pdflatex -shell-escape zhang_thesis

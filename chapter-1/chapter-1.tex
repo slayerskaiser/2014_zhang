@@ -3,8 +3,8 @@
 
 \chapter{Introduction}
 
-Batteries, particularly rechargeable ones, are used extensively in daily life. They provide the energy for such electrical systems as communication, automotive, and renewable power systems. In order to design for and operate these systems, an accurate battery model and a means of simulating the model efficiently is needed. For example, modern battery charge and health management schemes use high-fidelity battery models to track the state of charge (SOC) and state of health (SOH); this
-information is then used to predict and optimize the runtime of the battery. However, widely-used chemical batteries have nonlinear capacitive effects, which require the use of a nonlinear filter for accurate prediction of its states in the presence of noise. This thesis explores one possible solutions to this problem by choosing an appropriate battery model and testing the accuracy and speed of various nonlinear filters in determining the SOC through simulation. Note that only filters
+Batteries, particularly rechargeable ones, are used extensively in daily life. They provide the energy for such electrical systems as communication, automotive, and renewable power systems. In order to design for and operate these systems, an accurate battery model and a means of simulating the model efficiently are needed. For example, modern battery charge and health management schemes use high-fidelity battery models to track the state of charge (SOC) and state of health (SOH); this
+information is then used to predict and optimize the runtime of the battery. However, widely-used chemical batteries have nonlinear capacitive effects, which require the use of a nonlinear filter for accurate prediction of their states in the presence of noise. This thesis explores one possible solution to this problem by choosing an appropriate battery model and testing the accuracy and speed of various nonlinear filters in determining the SOC through simulation. Note that only filters
 using point-based numerical approximation methods were studied, as opposed to those using density-based methods. See~\cite{chen03} for more information about the differences between various numerical approximation methods in relationship to Bayesian filtering.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,18 +15,20 @@ using point-based numerical approximation methods were studied, as opposed to th
 A high-fidelity battery model has to accurately reproduce the various characteristics of a battery. Most models keep track of the total capacity and SOC in order to predict remaining runtime. More accurate models include nonlinear effects, such as the rate-capacity effect and the recovery effect, along with self-discharge and the effects of ambient temperature. The dynamic electrical attributes, such as the current-voltage (i-v) characteristics and transient responses, can also be
 modeled. The remainder of this section defines these characteristics.
 
-The capacity of a battery is the amount of electric charge it can store, measured in the SI unit Ampere-hours (Ah). Commonly, for rechargeable battery specifications, the subunit milliampere-hour (mAh) is used. Related is the available capacity, which is the amount of charge that the battery can currently deliver. Due to the electrochemical nature of batteries, a battery's available capacity decreases as the rate of discharge increases, known as the rate-capacity effect. Therefore, the capacity for a
-battery is typically stated for a given discharge rate.  Related to this is the recovery effect, so called because when a battery is allowed to rest during an idle period, the battery ``recovers'' available capacity previously lost during discharge due to the rate-capacity effect. Thus, a battery that is discharged at a high rate until its available capacity reaches zero, when allowed to rest, regains a portion of its lost capacity.
+The capacity of a battery is the amount of electric charge it can store, measured in the SI unit Ampere-hours (Ah). Commonly, for rechargeable battery specifications, the subunit milliampere-hour (mAh) is used instead. Related is the available capacity, which is the amount of charge that the battery can currently deliver. Due to the electrochemical nature of batteries, a battery's available capacity decreases as the rate of discharge increases, which is known as the rate-capacity effect. Therefore, the capacity for a
+battery is typically stated for a given discharge rate.  Related to this is the recovery effect, so called because when a battery is allowed to rest during an idle period, the battery ``recovers'' available capacity previously lost during discharge because of the rate-capacity effect. Thus, a battery that is discharged at a high rate until its available capacity reaches zero, when allowed to rest, regains a portion of its lost capacity.
 
 Both the rate-capacity effect and the recovery effect can be explained by the electrochemical nature of the battery. During discharge, the concentration of the active material around the electrode is depleted, and the active materials in the depletion region move towards the electrode to reduce the concentration gradient~\cite{chiasserini99}. Because the speed at which the concentration gradient is equalized is limited, the faster the rate of discharge, the less the active material is
 replenished, resulting in a decrease in the available capacity. Likewise, when the battery is allowed to rest, the active material gradient has additional time to equalize, and the available capacity is increased.
 
-Closely related to the capacity is the SOC. This thesis defines it as the ratio between the remaining capacity and the maximum capacity, with both capacities measured using the amount of active material within the battery. This definition then denotes the proportion of remaining chemical energy rather the available energy and is unaffected by the rate-capacity and recovery effects. Note that a fully charged battery has an SOC of unity and a fully discharged battery has an SOC of zero, regardless
-of the available capacity. Additionally, there exists a nonlinear relationship between the SOC of the battery and its open-circuit voltage $V_{OC}$, which is useful for simulation of the i-v characteristics and transient responses. $V_\text{OC}$ is the limit of the measured battery voltage after recovery.
+Closely related to the capacity is the SOC. This thesis defines it as the ratio between the remaining capacity and the maximum capacity, with both capacities measured using the total amount of active material within the battery. Thus, this definition denotes the proportion of remaining chemical energy rather than the available chemical energy and is unaffected by the rate-capacity and recovery effects. Note that a fully charged battery has an SOC of unity and a fully discharged battery has an SOC of zero, regardless
+of the available capacity. Additionally, there exists a nonlinear relationship between the SOC of the battery and its open-circuit voltage $V_{OC}$, which is useful for simulation of the i-v characteristics and transient responses. The $V_\text{OC}$ is the limit of the measured battery voltage after recovery, assuming no self-discharge.
 
-Other more minor effects that are usually incorporated into models are self-discharge, the effect of ambient temperature, and aging. Self-discharge refers to an idle battery decreasing its SOC over time due to internal chemical reactions. It is dependent on the type of battery, SOC, ambient temperatures, and other factors. The ambient temperature has effects on the internal resistance of the battery and the self-discharge rate. Commonly, the battery is designed to operate with a narrow range of temperatures. Below the operating temperature range, the internal resistance increases, decreasing the capacity. Above the operating range, the internal resistance decreases, not only increasing the capacity but also the self-discharge rate; thus, the actual capacity is lowered due to the increased self-discharge. Aging refers to the decrease in battery performance measures, such as capacity, self-discharge, and internal resistance, over time due to unwanted chemical reactions. In practice, aging is indicated by the SOH, defined as the ratio between the current maximum capacity and that of a new battery. The SOH threshold at which the battery performance is considered too degraded varies by application.
+Other, more minor effects that are commonly modeled are self-discharge, the effect of ambient temperature, and aging. Self-discharge refers to the decrease of an idle battery's SOC over time due to internal chemical reactions. It is dependent on the type of battery, SOC, ambient temperatures, and other factors. The ambient temperature has effects on the internal resistance of the battery and the self-discharge rate. Commonly, the battery is designed to operate within a narrow range of
+temperatures. Below the operating temperature range, the internal resistance increases, decreasing the capacity. Above the operating range, the internal resistance decreases, not only increasing the capacity but also the self-discharge rate; thus, the deliverable capacity is lowered due to the increased self-discharge. Aging refers to the decrease in battery performance measures, such as capacity, self-discharge, and internal resistance, over time due to unwanted chemical reactions. In
+practice, aging is indicated by the SOH, defined as the ratio between the current maximum capacity and that of a new battery. The SOH threshold at which the battery performance is considered too degraded varies by application.
 
-This thesis is mainly concerned with estimating the SOC from noisy measurements. The SOH is much easier to estimate as it changes slowly over charge cycles. Additionally, no simplified expression exists for the SOH, and it is usually determined empirically. Thus, only the estimation of the SOC was studied by this paper.
+This thesis is mainly concerned with estimating the SOC from noisy measurements. The SOH is easier to estimate as it changes slowly over charge cycles, rather than within each charge cycle. Additionally, no simplified expressions exist for the SOH, so it is usually determined empirically. Thus, only the estimation of the SOC was studied by this paper.
 
 %This thesis studied the prediction of the SOC of a battery using noisy measurements of its current and voltage. To do so accurately for a general load, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics is desirable. Furthermore, it is useful to have a model easily tunable for different battery types. The following section reviews the characteristics of different battery models and chooses the one most suitable for the purposes of this study.
 
@@ -44,9 +46,9 @@ The remainder of this section reviews these five types and determines the most s
 
 \subsection{Electrochemical}
 
-Electrochemical models are describe the chemical processes that place in the battery in great detail. These are generally the most accurate, but they require in-depth knowledge of the chemical processes to create and impose large computational costs~\cite{jongerden09}. One of the most widely known electrochemical models was developed by Doyle, Fuller, and Newman for lithium and lithium-ion batteries using noninvasive voltage-current cycling
+Electrochemical models describe the chemical processes that take place in the battery in great detail. These are generally the most accurate, but they require in-depth knowledge of the chemical processes to create and impose large computational costs~\cite{jongerden09}. One of the most widely known electrochemical models was developed by Doyle, Fuller, and Newman for lithium and lithium-ion batteries using noninvasive voltage-current cycling
 experiments~\cite{doyle93,fuller94,fuller94b}. It consists of six coupled, nonlinear differential equations that capture lithium diffusion dynamics and charge transfer kinetics. The model is able to predict i-v response and provides a design guide for thermodynamics, kinetics, and transport across electrodes. A implementation of their model in Fortran, called Dualfoil, is available for free online.\footfullcite{newman98} The program needs more than 60 parameters along with the load profile
-in order to compute the battery properties. Setting the parameters requires detailed knowledge of the battery, but the result of the program is highly accurate. Other battery models are often compared to it rather than to experimental results.
+in order to compute the battery properties. Setting the parameters requires detailed knowledge of the battery, but as a result, the program is highly accurate. It is so accurate that other battery models are often compared to it rather than to experimental results.
 
 \subsection{Computational Intelligence}
 
@@ -60,8 +62,8 @@ Analytical models are simplified electrochemical models that trade off accuracy 
 \begin{equation}
 C_p = I^k t,
 \end{equation}
-where $C_p$ is the capacity at a one-ampere discharge rate in Ah, $I$ is the discharge current in A, $t$ is the time to discharge the battery in hours, and $k\ge 1$ is the dimensionless Peukert constant, typically between 1.1 and 1.3 for a lead-acid battery. The constant $k$ only equals unity for an ideal accumulator, so for real batteries, $k$ is always greater than unity. Thus, for a given increase in the discharge current, the discharge time decreases by a proportionally greater
-amount. Therefore, the effective, or available, capacity $C\times t$ is reduced. Peukert's law can be extended to some other battery chemistries, such as lithium-ion. Note that Peukert's law only models the rate-capacity effect and not the recovery effect. More complicated models, such as the kinetic battery model and the diffusion model, are able to describe both effects.
+where $C_p$ is the capacity at a one-ampere discharge rate in Ah, $I$ is the discharge current in A, $t$ is the time to discharge the battery in hours, and $k\ge 1$ is the dimensionless Peukert constant, typically between $1.1$ and $1.3$ for a lead-acid battery. The constant $k$ only equals unity for an ideal accumulator, so for real batteries, $k$ is always greater than unity. Thus, for a given increase in the discharge current, the discharge time decreases by a proportionally greater
+amount. Therefore, the effective, or available, capacity $C\times t$ is reduced. Peukert's law can be extended to some other battery chemistries, such as lithium-ion~\cite{doerffel06}. Note that Peukert's law models only the rate-capacity effect and not the recovery effect. More complicated models, such as the kinetic battery model and the diffusion model, are able to describe both effects.
 
 The kinetic battery model (KiBaM), initially created for large lead-acid batteries, describes the battery as a kinetic process, using two charge wells for the bound and available charges connected by a valve whose flow rate is proportional to the height difference between the wells~\cite{manwell93}. The change of charge in the wells is given by
 \begin{equation}
@@ -72,7 +74,7 @@ The kinetic battery model (KiBaM), initially created for large lead-acid batteri
     \label{eq:kibam}
 \end{equation}
 where $y_1,y_2$ are the charges, $h_1,h_2$ are the heights of the wells, the parameter $k$ controls the rate of charge flow between the wells, and $I$ is the applied load. The flow rate of the valve should be lower than the typical discharge rate of the battery. During discharge from the available-charge well, the bound charges flow through the valve to equalize the heights of the two wells. It can be seen that for slower discharge rates, more charge flows through the valve and the effective
-capacity increases. Likewise, during idle periods for the battery, the available charge increases.
+capacity increases. Likewise, during idle periods, the battery recovers available charge.
 
 Related to the KiBaM is the diffusion model, which describes the movement of the ions in the electrolyte of a lithium-ion battery~\cite{rakhmatov01}. Like in the kinetic battery model, the difference in the concentration of adjacent ions along the length of the battery determines the diffusion rate of the ions. The available charges are those ions directly touching the electrode of the battery. It can be seen that the KiBaM is a first-order approximation of the diffusion
 model~\cite{jongerden09}, since the individual ions in the diffusion model are replaced by two charge wells in the KiBaM.
@@ -82,12 +84,12 @@ model~\cite{jongerden09}, since the individual ions in the diffusion model are r
 Stochastic models describe the discharging and the recovery effect as stochastic processes. The first models were developed by Chiasserini and Rao and based on discrete-time Markov chains~\cite{chiasserini99b}. They studied two models of a battery in a communication device that transmitted packets. The simpler model described the battery as a discrete-time Markov chain with $N+1$ states, numbered from $0$ to $N$ and corresponding to the number of charge units available in the battery.
 Transmitting one packet requires one charge unit of energy. Thus, in continuous transmission, $N$ packets can be sent. At every time step, a charge unit is either consumed with probability $a_1=q$ or recovered with probability $a_0=1-q$. The battery is considered empty when the $0$ state is reached or when a theoretical maximum of $T$ charge units have been consumed. The second model is an extension of the first, allowing for more than one charge unit to be consumed in a time step, modeling
 more bursty usage. Additionally, the battery has a non-zero probability of staying in the same charge state, indicating no consumption or recovery during a time step. Chiasserini and Rao extended their model further in following papers by adding state and phase dependence~\cite{chiasserini99,chiasserini01,chiasserini01b}. The state number is the number of charge units, and the phase number is the number of consumed charge units. Having fewer charge units decreases the probability of
-recovery, while having more consumed charge units increases the probability of recover. Using these models, one can model different loads by setting the transitions probabilities. However, the order of the transitions is uncontrollable, so it is impossible to model fixed load patterns and compute their impact on battery life.
+recovery, while having more consumed charge units increases the probability of recover. Using these models, one can model different loads by setting the transition probabilities. However, the order of the transitions is uncontrollable, so it is impossible to model fixed load patterns and compute their impact on battery life.
 
 Chiasserini and Rao mainly investigated the gain $G$ in transmitted packets using a pulsed discharge relative to using a constant discharge, defined as $G=m/N$, where $m$ is the mean number of transmitted packets. The gain increases when the load decreases, due to an increase in the recovery probability. Additionally, the gain increases for lower discharge demand rates and higher current densities. These load profiles result in discharge currents close to the specified limits of the battery, causing the
 available capacity to decrease overly quickly. Therefore, the recovery effect is especially strong for these cases during pulsed discharge, greatly increasing the gain. Chiasserini and Rao compared the computation of the gain parameter for different current densities and demand rates using the stochastic model to that of the electrochemical model of Doyle et al. They found an average deviation of 1\% and a maximum deviation of 4\%. This shows that the stochastic model accurately describes battery behavior during pulsed discharge. However, this model is only able to compute relative lifetimes.
 
-In 2005, Rao et al.~\cite{rao05} proposed a stochastic battery model based on the Kinetic Battery Model (KiBaM) of Manwell and McGowan. This stochastic KiBaM was for a nickel-metal hydride (NiMH) battery. The differential equations governing the original KiBaM were modified to include an extra factor $h_2$ governing the flow of charge between the wells. This changes \cref{eq:kibam} into
+In 2005, Rao et al.~\cite{rao05} proposed a stochastic battery model for a nickel-metal hydride (NiMH) battery based on the Kinetic Battery Model (KiBaM) of Manwell and McGowan. The differential equations governing the original KiBaM were modified to include an extra factor $h_2$ governing the flow of charge between the wells. This changes \cref{eq:kibam} into
 \begin{equation}
     \begin{cases}
         \dfrac{dy_1}{dt} = -I + k_s h_2 \left( h_2 - h_1 \right) \\
@@ -112,17 +114,17 @@ In 1993, Hageman created simplified electrical-circuit models using PSpice for n
 \item a lookup table of battery voltage versus SOC, and
 \item a resistor that represents the battery's internal resistance~\cite{hageman93,hageman97}.
 \end{enumerate*}
-In addition, battery models for NiCd batteries simulated the thermal effects under high discharge rates. The main lookup table is formed by discharging a battery at a low rate at a constant current (20 to 200 hours). At high discharge rates, the discharge rate normalizer reduces the battery voltage below the value from looking up the SOC in the table. This normalizer is implemented using additional lookup tables. These circuit models are much simpler than electrochemical models, but they
-are also less accurate with an approximate error of 10\%. Furthermore, creation of the lookup tables requires considerable data. These circuit-based models are mainly concerned with modeling the remaining discharge time and are referred to as runtime-based models.
+In addition, battery models for NiCd batteries simulated the thermal effects under high discharge rates. The main lookup table is formed by discharging a battery at a low rate at a constant current (20 to 200 hours). At high discharge rates, the discharge rate normalizer reduces the battery voltage below the value from looking up the SOC in the table. This normalizer is implemented using additional lookup tables. These circuit models were much simpler than electrochemical models, but they
+were also less accurate with an approximate error of 10\%. Furthermore, creation of the lookup tables requires considerable data. These circuit-based models were used to estimate the remaining discharge time and are referred to as runtime-based models.
 
-In 2006, Chen and Rinc\'on-Mora proposed a combination of a runtime-based model and a impedance-based model consisting of a series resistor and two parallel resistor-capacitor networks~\cite{chen06}. A schematic for their model is shown in \cref{fig:batt_model}. The elements of the impedance part of the model had parameters that depended on the SOC. Additionally, the runtime model included a resistance that modeled the self-discharge rate. Their proposed model has the advantage of
+In 2006, Chen and Rinc\'on-Mora proposed a combination of a runtime-based model and an impedance-based model consisting of a series resistor and two parallel resistor-capacitor networks~\cite{chen06}. A schematic for their model is shown in \cref{fig:batt_model}. The elements of the impedance part of the model had parameters that depended on the SOC. Additionally, the runtime model included a resistance that modeled the self-discharge rate. Their proposed model has the advantage of
 accurate prediction of the SOC using the runtime-based portion while also modeling nonlinear transient effects, such as the rate-capacity and recover effects, with the impedance-based portion. Furthermore, the battery data can be collected using EIS measurements, which requires neither detailed knowledge of the battery chemistry nor lengthy, low-rate discharge experiments.
 
 \subsection{Evaluation}
 
 Of the model types, only some are fit for use with filtering algorithms. The computational-intelligence and stochastic models do not adequately describe the dynamics of the battery system for use in the filters covered by this study. On the other hand, electrochemical, analytical, and electrical-circuit models do describe the system dynamics in a compatible manner. Furthermore, they model the nonlinear rate-capacity and recovery effects. Of these, only the electrical-circuit model has the
 advantage of modeling the internal impedance of the battery, which is useful in the design of battery systems. The relevant characteristics of the model types are summarized in \cref{tab:model_charac}. It can be seen that electrical-circuit models are the most suitable for this study. Among them, the proposal by Chen and Rinc\'on-Mora is most appropriate for the purposes of this thesis, because it is the only one discussed by this paper that describes both the capacity and the transient
-effects. Therefore, their proposed model is used for the simulation of the battery and comparing the performance of different filters.
+effects. Therefore, their proposed model is used for simulating the battery and comparing the performance of different filters.
 
 \begin{table}[htb]
 \centering
@@ -149,18 +151,18 @@ Filtering refers to the methodology for estimating the state of a time-varying s
 measurement noise.
 
 Systems are classified as either linear or nonlinear. The state dynamics and measurements of a linear system are linear functions of the state, inputs, and noises. Particularly, the superposition principles of additivity and homogeneity are satisfied by a linear system. Nonlinear systems do not satisfy the principle of superposition because the functions defining the systems are not all linear, i.e.\ some are nonlinear. A battery can be modeled as a nonlinear, time-varying system,
-with state variables that describe such states as the SOC and the SOH. The measurements are typically the voltage and the current. Note that the SOH was not considered by this thesis for reasons described in \cref{sec:echar}. Additionally, only the voltage was measured since a known resistive load was used as an input to the system in place of the current measurement. This replacement was done because a piecewise constant discharge profile is convenient for simulation purposes and it is
+with state variables that describe such states as the SOC and the SOH. The measurements are typically the voltage and the current. Note that the SOH was not considered by this thesis for reasons described in \cref{sec:echar}, so this thesis assumes the battery system is time-invariant. Additionally, only the voltage was measured since a known resistive load was used as an input to the system in place of the current measurement. This replacement was done because a piecewise constant discharge profile is convenient for simulation purposes and it is
 more realistic to have a constant discharge load than a constant discharge current. A state-space representation of the battery system proposed by Chen and Rinc\'on-Mora in~\cite{chen06} is described in more detail in the following chapter.
 
 %Note that this thesis uses a resistive load instead of the current, because this is more realistic from a usage standpoint. Additionally, the SOH is not considered by this thesis for reasons describe in \cref{sec:echar}. The dynamic system for the battery is described in more detail in the following chapter.
 
-For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the least squares solution equals the posterior mean. A closed form solution to the discrete-time linear filtering problem is given by the Kalman filter~\cite{kalman60}, which is a linear MMSSE (LMMSE) filter. Consider a linear system in discrete time with $n$ states and $m$ measurements defined by
+For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the least squares solution equals the posterior mean. A closed form solution to the discrete-time linear filtering problem is given by the Kalman filter~\cite{kalman60}, which is a linear MMSSE (LMMSE) filter. Its solution procedure is as follows. Consider a linear system in discrete time with $n$ states and $m$ measurements defined by
 \begin{align}
     \vx_k &= F_k \vx_{k-1} + B_k \vu_k + L \vw_k \\
     \vz_k &= H_k \vx_k + M \vv_k,
 \end{align}
 where $\vx\in\mathbb{R}^n$, $\vu\in\mathbb{R}^{N_u}$, and $\vz\in\mathbb{R}^m$ are vectors of the state variables, known inputs, and measurements, respectively; $\vw\sim\mathcal{N}(0,Q_k)$, $Q_k\in\mathbb{R}^{N_w\times N_w}$, and $\vv\sim\mathcal{N}(0,R_k)$, $R_k\in\mathbb{R}^{N_v\times N_v}$ are normally distributed noise variables; $F\in\mathbb{R}^{n\times n}$, $B\in\mathbb{R}^{n\times N_u}$, $H\in\mathbb{R}^{m\times n}$, $L\in\mathbb{R}^{n\times N_w}$, and $M\in\mathbb{R}^{m\times N_v}$ are matrices; and a subscript $k$ on a
-variable indicates the value of that variable at time $t_k$. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathbb{R}^{n\times n}$ according to
+variable indicates the value of that variable at time $t_k$, where $t_k=t_0+k\delta$ and $\delta$ is the time step. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathbb{R}^{n\times n}$ according to
 \begin{align}
     \hat{\vx}_{k|k-1} &= F_k \hat{\vx}_{k-1|k-1} + B_k \mathbf{u}_k \label{eq:kfp1} \\
     P_{k|k-1} &= F_k P_{k-1|k-1} F_k^\top + L Q_k L^\top, \label{eq:kfp2}
@@ -187,7 +189,7 @@ applicable~\cite{li04}. Deterministic sampling methods are special numerical met
     \mathbf{z}_k &= \vh(\vx_k,\vu_k) + M(\vx_k,\vu_k) \vv_k, \label{eq:dtsys_z}
 \end{align}
 where $\vf\in\mathbb{R}^n$ and $\vh\in\mathbb{R}^m$ are nonlinear vector functions, $L\in\mathbb{R}^{n\times N_w}$ and $M\in\mathbb{R}^{m\times N_v}$ are nonlinear matrix functions, and the input $\vu$ is assumed to be piecewise constant, meaning $\vu(t)=\vu(t_k)=\vu_k$ for $t_{k-1}<t\le t_k$. An implicit, first-order Taylor-Heun numerical integration method was used to discretize the continuous-time dynamics $\vf$ of the chosen battery model. In particular, an iterated integration
-procedure was used, as was done by S\"arkk\"a~\cite{sarkka12}. For the iterations, a superscript of $(i)$ indicates the $i$th step of a $M$-step iterative integration scheme. Note that $\vx^{(0)}_{k-1}=\vx_{k-1}$ and $\vx^{(M)}_{k-1}=\vx_k$. The specifics of the discretization along with the notation used are discussed in \cref{sec:discret}.
+procedure was used, as was done by S\"arkk\"a~\cite{sarkka12}. For the iterations, a superscript of $(i)$ indicates the $i$th step of a $M$-step iterative integration scheme. Note that $\hat{\vx}^{(0)}_{k-1}=\hat{\vx}_{k-1}$ and $\hat{\vx}^{(M)}_{k-1}=\hat{\vx}_k$. The specifics of the discretization along with the notation used are discussed in \cref{sec:discret}.
 
 \subsection{Extended Kalman Filter}
 \label{sec:ekf}
@@ -219,72 +221,6 @@ The update equations for the EKF come from the LMMSE filter and are
 \end{align}
 with the Jacobian $H=\partial\vh/\partial\vx$.
 
-%One of the most popular nonlinear filters is the extended Kalman filter (EKF), which approximates the nonlinear state and measurement equations using Taylor series expansion. The standard Kalman filter formulas are used for the update. For the discrete-time EKF, Taylor series expansion can be directly used on the system dynamics to linearize them. For the mixed-time system of this study, a linearized discretization approach proposed by Mazzoni~\cite{mazzoni07} is used, in
-%which the dynamics are first discretized and then approximated using Taylor series expansion. This approach has the advantage of A-stability. The discretization is performed using the trapezoidal approximation (Heun's method) of \cref{eq:gen_ct_f}. For convenience, denote the value of a quantity at time $t_k$ using the subscript $k$ and assume that $\delta=t_{k+1}-t_k$ is the time step. Additionally, a subscript of $k|k-1$ indicates the value at time $t_k$ given the information at
-%$t_{k-1}$. Then, the approximation produces
-%\begin{equation}
-%    \vx_{k+1} \approx \vx_k + \frac{1}{2} \big( \vf(\vx_k) + \vf(\vx_{k+1}) \big) \delta.
-%\end{equation}
-%The vector field $\vf$ at $\vx_{k+1}$ is approximated by first-order Taylor expansion around $\vx_k$, giving
-%\begin{equation}
-%    \vx_{k+1} \approx \vx_k + \vf(\vx_k)\delta + \frac{1}{2} F(\vx_k) \left( \vx_{k+1} - \vx_k \right) \delta,
-%\end{equation}
-%where $F(\vx_k)$ is the Jacobian of $\vf$ at $\vx_k$. Solving for $\vx_{k+1}$ yields
-%\begin{equation}
-%    \vx_{k+1} \approx \vx_k + \left( I - F(\vx_k) \frac{\delta}{2} \right)^{-1} \vf(\vx_k) \delta,
-%\end{equation}
-%with the identity matrix $I$. This Taylor-Heun scheme uses linear Taylor expansion of $f$ rather than then Euler prediction of the standard Heun scheme. This numerical integration scheme is convergent with order $\mathcal{O}(\delta^2)$ and A-stable~\cite{mazzoni07}. For the state error covariance ODE given by
-%\begin{equation}
-%    \dot{P} = F(\vx) P + P F^\top(\vx) + L(\vx) Q(\vx) L^\top(\vx),
-%\end{equation}
-%where $Q$ is the covariance of the error variables and $L$ is the Jacobian of $\vf$ with respect to the state error variables $\mathbf{w}$, the numerical integration method should have the key features of being consistent with the same order as the Taylor-Heun scheme, able to process nonautonomous differential equations, and A-stable. Mazzoni proposed using a modified Gauss-Legendre formula with an implicit increment rule, producing
-%\begin{gather}
-%    P_{k+1} \approx P_k + M_\tau \left( F(\vx_\tau) P_k + P_k F^\top(\vx_\tau) + L(\vx_\tau) Q(\vx_\tau) L^\top(\vx_\tau) \right) M_\tau^\top \delta, \\
-%    \intertext{with}
-%    M_\tau = \left( I - F(\vx_\tau) \frac{\delta}{2} \right)^{-1} \quad \text{and} \quad \tau = t_k + \frac{\delta}{2}.
-%\end{gather}
-%The value of $\vx_\tau$ can be interpolated from $\vx_k$ and $\vx_{k+1}$ with a precision of $\mathcal{O}(\delta^3)$ using series expansion, producing
-%\begin{equation}
-%    \vx_\tau \approx \frac{1}{2} \left( \vx_k + \vx_{k+1} - F(\vx_k) f(\vx_k) \frac{\delta^2}{4} \right).
-%\end{equation}
-%This modified Gauss-Legendre approximation is A-stable, consistent with order $\mathcal{O}(\delta^2)$, and ensures the positive definiteness of the resultant error covariance matrix~\cite{mazzoni07}. This numerical integration can be repeated multiple times with a smaller step size should greater accuracy be desired.
-
-%\subsection{Moment Approximation}
-
-%In moment approximation, the mean, covariance, and possibly higher-order moments are approximated directly, rather than approximating the nonlinear integrations of expectations. Of the numerical moment approximation methods, two of the best known are the unscented Kalman filter (UKF) and the cubature Kalman filter (CKF). Note that the CKF is a special case of the UKF, but they are considered separately by this study.
-
-%In order to handle the mixed-time system, the It\^o-Taylor expansion with a strong order of 1.5 (IT-1.5) proposed by Arasaratnam et al.\ is used to discretize the stochastic differential equations (SDE) for numerical integration~\cite{arasaratnam10}. In the context of Gaussian filtering, the weak order of convergence is more important, because the moments of the distributions and not the functionals of the path are of importance. Thus, the IT-1.5 expansion is equivalent to the weak It\^o-Taylor expansion
-%of order 2.0~\cite{kloeden99}, which was proposed as a SDE discretization method for target tracking applications by Morelande and Gordon~\cite{morelande05}. For a SDE of the form
-%\begin{equation}
-%    d\vx(t) = \vf(\vx(t),t)dt + \sqrt{Q} d\mathbf{\beta}(t),
-%\end{equation}
-%Arasaratnam et al. gives the IT-1.5 expansion as~\cite{arasaratnam10}
-%\begin{equation}
-%    \vx_{k+1} = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big) + \sqrt{Q} \mathbf{w} + \big( \mathbb{L} \vf(\vx_k) \big) \mathbf{y},
-%\end{equation}
-%where
-%\begin{align}
-%    \mathbb{L}_0 & = \frac{\partial}{\partial t} + \sum_{i=1}^n \vf_i \frac{\partial}{\partial \vx_i} + \frac{1}{2} \sum_{j,p,q=1}^n \sqrt{Q}_{p,j} \sqrt{Q}_{q,j} \frac{\partial^2}{\partial \vx_p \partial \vx_q} \\
-%    \mathbb{L}_j & = \sum_{i=1}^n \sqrt{Q}_{i,j} \frac{\partial}{\partial \vx_i}
-%\end{align}
-%and $(\mathbf{w},\mathbf{y})$ are a pair of correlated Gaussian random variables generated from a pair of independent standard Gaussian random variables. In the absence of noise, the discretization is
-%\begin{equation}
-%    \vx_{k+1} = \vf_d(\vx_k) = \vx_k + \delta \vf(\vx_k) + \frac{\delta^2}{2} \big( \mathbb{L}_0 \vf(\vx_k) \big).
-%\end{equation}
-%It can be shown that the expected value of the state is given by
-%\begin{equation}
-%    \vx_{k+1} = \int_{\mathbb{R}^n} \vf_d(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k.
-%\end{equation}
-%The propagation of the covariance matrix is given by
-%\begin{align}
-%    P_{k|k} = \begin{multlined}[t] \int_{\mathbb{R}^n} \vf_d(\vx_k) \vf_d^\top(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k + \frac{\delta^3}{3} \big( \mathbb{L}\vf(\vx_k) \big) \big( \mathbb{L}\vf(\vx_k) \big)^\top \\ 
-%    + \frac{\delta^2}{2} \left[ \sqrt{Q} \big(\mathbb{L}\vf(\vx_k)\big)^\top + \big(\mathbb{L}\vf(\vx_k)\big)^\top \sqrt{Q} \right] - (\hat{\vx}_{k|k})(\hat{\vx}_{k|k})^\top + \delta Q.
-%    \end{multlined}
-%\end{align}
-%The Gaussian integrals can then be approximated using the unscented transform in the UKF and the third-degree cubature rule in the CKF. It can be seen that the IT-1.5 expansion needs to evaluate the first and second order derivatives of the dynamic system, which makes these moment approximation methods no longer derivative-free. There is also a performance hit associated with the evaluations of the derivatives. However, the advantages are greater stability of the filter and improved numerical accuracy, which are necessary for the stiff system.
-
-%The following two sections discuss the implementation of the UKF and CKF in mixed-time using IT-1.5 for the propagation of the dynamics.
-
 \subsection{Unscented Kalman Filter}
 
 The unscented Kalman filter (UKF) is an efficient, generally derivative-free filtering algorithm that relies on the unscented transformation (UT). The UT is useful for forming the Gaussian approximation to the joint distribution of random variables $x$ and $y$ for $x\sim \mathcal{N}(m,P)$ and $y=g(x)$, where $x\in\mathbb{R}^n$, $y\in\mathbb{R}^m$, and $g:\mathbb{R}^n\mapsto\mathbb{R}^m$ is a nonlinear function. Then, the first and second moments corresponding to the mean and covariance can be
@@ -308,17 +244,19 @@ The parameter $\lambda$ is defined as
 \begin{equation}
     \lambda = \alpha^2 (n+\kappa) - n,
 \end{equation}
-and the constants $\alpha$, $\beta$, and $\kappa$ are parameters of the method. For the UKF, $\alpha$ is a small positive number, e.g.\ $10^{-3}$, $\beta=2$ is ideal for a Gaussian distribution, and $\kappa$ is typically 0. Each sigma point is transformed by
+and the constants $\alpha$, $\beta$, and $\kappa$ are parameters of the method. For the UKF, $\alpha$ is a small positive number, e.g.\ $10^{-3}$, $\beta=2$ is ideal for a Gaussian distribution, and $\kappa$ is typically $0$. Each sigma point is transformed by
 \begin{equation}
     y^{(i)} = g(x^{(i)}), \quad i=0,\dots,2n. \label{eq:ut3}
 \end{equation}
-Then, moments are approximated by
+Then, the moments are approximated by
 \begin{align}
     \mu_U & = \sum_{i=0}^{2n} W_i^{(m)} y^{(i)} \\
     S_U & = \sum_{i=0}^{2n} W_i^{(c)} ( y^{(i)} - \mu_U ) ( y^{(i)} - \mu_U )^\top \\
     C_U & = \sum_{i=0}^{2n} W_i^{(c)} ( x^{(i)} - m ) ( y^{(i)} - \mu_U )^\top. \label{eq:ut4}
 \end{align}
-The square root of the positive definite matrix P is defined as a matrix $A$ such that $P=AA^\top$. Note that $A$ is not unique. For performance reasons, the Cholesky factorization is typically used. Let the UT algorithm be denoted by
+The square root of the positive definite matrix P is defined as a matrix $A$ such that $P=AA^\top$. Note that $A$ is not unique. For performance reasons, the Cholesky factorization is typically used.
+
+Let the described UT algorithm be denoted by
 \begin{equation}
     [\mu_U,S_U,C_U] = \mathrm{UT}(g,m,P).
 \end{equation}
