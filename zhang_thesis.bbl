@@ -665,6 +665,26 @@
       \verb 10.1109/TEC.2006.874229
       \endverb
     \endentry
+    \entry{wiener49}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=4c57f398a86ab1994e9bd661e786e707}{Wiener}{W\bibinitperiod}{Norbert}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=4c57f398a86ab1994e9bd661e786e707}{Wiener}{W\bibinitperiod}{Norbert}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{4c57f398a86ab1994e9bd661e786e707}
+      \strng{fullhash}{4c57f398a86ab1994e9bd661e786e707}
+      \field{sortinit}{0}
+      \field{labeltitle}{Extrapolation, Interpolation, and Smoothing of Stationary Time Series}
+      \field{title}{Extrapolation, Interpolation, and Smoothing of Stationary Time Series}
+      \field{year}{1949}
+    \endentry
     \entry{kalman60}{article}{}
       \name{labelname}{1}{}{%
         {{hash=9fb0dafbf7fbe0408bfb40f5232f7665}{Kalman}{K\bibinitperiod}{Rudolph\bibnamedelima Emil}{R\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%

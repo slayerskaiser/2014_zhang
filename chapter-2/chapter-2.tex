@@ -16,8 +16,8 @@
 \section{Battery Model}
 \label{sec:batt_mdl}
 
-As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} shown in \cref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient i-v characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and
-$R_{sd}$ are assumed constant for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient i-v response as well as the open-circuit voltage $V_\text{OC}$. From a typical TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters experimentally and fit them to curves, obtaining
+As discussed in the previous section, this thesis considers the electrical-circuit battery model proposed by Chen and Rinc\'on-Mora~\cite{chen06} shown in \cref{fig:batt_model}. The left portion of the circuit models the capacity, SOC, and runtime, while the right portion models the transient I-V characteristics.  For convenience, the model is designed so that the SOC of the battery equals the voltage $V_\text{SOC}$, in volts. The parameters $C_\text{cap}$ and
+$R_{sd}$ are assumed constant for a given battery and determine the capacity and self-discharge rate of the battery. The other parameters are all nonlinear functions of $V_\text{SOC}$ and determine the transient I-V response as well as the open-circuit voltage $V_\text{OC}$. From a typical TCL PL-383562 polymer lithium-ion battery, Chen and Rinc\'on-Mora extracted these parameters experimentally and fit them to curves, obtaining
 \begin{gather}
     R_s(V_\text{SOC}) = 0.1562 e^{-24.37 V_\text{SOC}} + 0.07446 \label{eq:nl_param_1} \\
     R_{ts}(V_\text{SOC}) = 0.3208 e^{-29.14 V_\text{SOC}} + 0.04669 \\
@@ -38,10 +38,10 @@ mathematically problematic. To solve this, a lower bound was placed on the $V_\t
         C_{tl}(v_T), & V_\text{SOC} < v_T \label{eq:Ctl_thres}
         \end{cases}
 \end{align}
-The threshold $v_T$ was chosen based on the experimental data of Chen and Rin\'on-Mora, specifically so that the threshold capacitance values are approximately equal to the lowest such values measured by them. A threshold of $v_T=0.015$~V accomplishes this goal.
+The threshold $v_T$ was chosen based on the experimental data of Chen and Rin\'on-Mora, specifically so that the threshold capacitance values are approximately equal to the lowest such values measured by them. A threshold of $v_T=0.015~\mathrm{V}$ accomplishes this goal.
 
-This study used the nonlinear parameters given by Chen and Rinc\'on-Mora for the implementation of a battery using their battery model in Matlab. In addition, the thresholding defined in \cref{eq:Cts_thres,eq:Ctl_thres} was used with $v_T=0.015$~V. The other, constant parameters were chosen to produce a capacity of $1~\mathrm{Ah}$ and a self-discharge rate of $4\%$ per month. To do so, the capacitance $C_\text{cap}$ was calculated to hold the desired capacity
-when $V_\text{SOC}=1$~V, and then the resistance $R_{sd}$ was set to produce the desired self-discharge rate. For a given capacity of $C^\dag$ in Ah, $C_\text{cap}$ is
+This study used the nonlinear parameters given by Chen and Rinc\'on-Mora for the implementation of a battery using their battery model in Matlab. In addition, the thresholding defined in \cref{eq:Cts_thres,eq:Ctl_thres} was used with $v_T=0.015~\mathrm{V}$. The other, constant parameters were chosen to produce a capacity of $1~\mathrm{Ah}$ and a self-discharge rate of $4\%$ per month. To do so, the capacitance $C_\text{cap}$ was calculated to hold the desired capacity
+when $V_\text{SOC}=1~\mathrm{V}$, and then the resistance $R_{sd}$ was set to produce the desired self-discharge rate. For a given capacity of $C^\dag$ in Ah, $C_\text{cap}$ is
 \begin{equation}
     C_\text{cap} = \frac{Q}{V_\text{SOC}} = \frac{C^\dag}{1~\text{V}} = 3600 C^\dag \,[\text{F}].
 \end{equation}
@@ -50,7 +50,7 @@ Next, the resistance $R_{sd}$ is chosen so that the time constant $\tau=RC$ resu
     V(t) = V_0 e^{-T/\tau} = V_0 (1-\xi) \\
     \tau = -T/\ln(1-\xi) = -2592000/\ln 0.96 \,[\text{s}].
 \end{gather}
-Then, $R_{sd}=\tau/C_\text{cap}$. Thus, the parameters are $C_\text{cap}=3600$~F and $R_{sd}=17.6376~\mathrm{k}\Omega$.
+Then, $R_{sd}=\tau/C_\text{cap}$. Thus, the parameters are $C_\text{cap}=3600~\mathrm{F}$ and $R_{sd}=17.6376~\mathrm{k}\Omega$.
 
 \begin{figure}[b]
 \centering
@@ -235,7 +235,7 @@ where $\delta==(t_k-t_{k-1})/M$ is the time step for each iteration and $i=1,\do
 
 \section{Simulation Setup}
 
-In order to simulate the stochastic system, the covariances of the noises as well as their generation and simulation methods have to be determined. This thesis assumed that a standard temperature of $T=290$~Kelvin. Therefore, the PSDs of the white Gaussian noise processes are $\sigma^2=2kT=8.0078\times 10^{-21}$~W/Hz. The covariances of the Gaussian noises in the discrete-time system are scaled versions of the PSDs. Specifically, the value of the constant PSDs are scaled by the
+In order to simulate the stochastic system, the covariances of the noises as well as their generation and simulation methods have to be determined. This thesis assumed that a standard temperature of $T=290$~Kelvin. Therefore, the PSDs of the white Gaussian noise processes are $\sigma^2=2kT=8.0078\times 10^{-21}~\textrm{W}/\textrm{Hz}$. The covariances of the Gaussian noises in the discrete-time system are scaled versions of the PSDs. Specifically, the value of the constant PSDs are scaled by the
 discrete time step $\delta$. Note that due to the use of a multi-step integration method for the discretization of the dynamics, the time step is scaled by the number of integration steps $M$. Therefore, the covariances in \cref{eq:dt1,eq:dt2} are
 \begin{align}
     Q &= 2kT\delta I_4 / M \\
@@ -277,11 +277,14 @@ seed the random number generators in a Simulink model. The use of the Simulink m
 \label{fig:input}
 \end{figure}
 
-Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \cref{fig:input} shows the input load on the battery system, where the values off the graph are idle periods, simulated using a very large input of $R_L=10^{10}~\Omega$ so that the battery
-current is approximately zero. It can be seen that the input is piecewise constant. This input was chosen to to test the performance of the filters by gradually increasing the strength of the nonlinear rate-capacity and recovery effects. Note that care was taken to ensure the SOC remained within the range of zero to one, so discharge and charge times could not always be equal. Initially, the battery was idle for 10 minutes to allow the estimated covariances of the filters to converge. Then, the
-battery was discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, respectively. The resulting low current from this load is approximately the testing current $C_5/5$ used to determine battery capacity, as discussed in \cref{sec:batt_mdl}. In order to increase the strength of the nonlinear effects, the absolute value of the current was increased by decreasing the input to $R_L=10~\Omega$ and discharging and charging for 150 minutes, each. Then, the input was further reduced to
-$R_L=5~\Omega$ and discharged and charged for 80 minutes and 70 minutes, respectively. Next, the battery was discharged and charged at $R_L=4~\Omega$ for 60 minutes, each. Following were discharge and charge periods at $R_L=2~\Omega$ for 35, 25, 25, 20, 25, 25, 20, and 15 minutes. The high current resulted in very strong rate-capacity effects. Finally, the battery was rested for 70 minutes, discharged at $R_L=2~\Omega$ for 25 minutes, rested for 75 minutes, and charged at $R_L=10~\Omega$
-for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time was 1635 minutes. The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input for one Monte Carlo trial is shown in \cref{fig:soc,fig:meas}, respectively.
+Then, the battery was simulated using a Simulink model with the fourth-order Runge-Kutta method and an initial condition of $x_0=[1,0,0]^\top$. A total of 100 Monte Carlo runs of the battery were performed with seed values for the noise sources generated using the method mentioned in the previously. \cref{fig:input} shows the input load on the battery system, where the values off the graph are idle periods, simulated using a very large input of $R_L=10^{10}~\Omega$ so that the battery current
+is approximately zero. It can be seen that the input is piecewise constant. This input was chosen to to test the performance of the filters by gradually increasing the strength of the nonlinear rate-capacity and recovery effects. Note that care was taken to ensure the SOC remained within the range of zero to one, so discharge and charge times could not always be equal. Initially, the battery was idle for 10 minutes to allow the estimated covariances of the filters to converge. Then, the
+battery was discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, respectively. The resulting low current from this load is approximately the testing current $C_5/5$ used to determine battery capacity, as discussed in \cref{sec:batt_mdl}. In order to increase the strength of the nonlinear effects, the absolute value of the current was increased by decreasing the input to $R_L=10~\Omega$ and discharging and charging for 150 minutes, each. Then, the input was further
+reduced to $R_L=5~\Omega$ and discharged and charged for 80 minutes and 70 minutes, respectively. Next, the battery was discharged and charged at $R_L=4~\Omega$ for 60 minutes, each. Following were discharge and charge periods at $R_L=2~\Omega$ for 35, 25, 25, 20, 25, 25, 20, and 15 minutes. The high current resulted in very strong rate-capacity effects. Finally, the battery was rested for 70 minutes, discharged at $R_L=2~\Omega$ for 25 minutes, rested for 75 minutes, and charged at
+$R_L=10~\Omega$ for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time was 1635 minutes.
+
+The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input for one Monte Carlo trial are shown in \cref{fig:soc,fig:meas}, respectively. Note that the noisy measurement has a similar form to the SOC, with increases and decreases in the measured $V_\text{cell}$ corresponding to increases and decreases in the SOC,
+respectively. This is explained by recalling that the open-circuit voltage $V_\text{OC}$ is a function of the SOC and that the measurement $V_\text{cell}$ is the sum of $V_\text{OC}$, the nonlinear and transient effects, and measurement noise. The nonlinear and transient effects along with the measurement noise are generally small enough that the variation of $V_\text{OC}$ as a function of the SOC can be seen.
 
 \begin{figure}[htb]
 \centering

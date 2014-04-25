@@ -10,36 +10,40 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Electrical-circuit battery model.\relax }}{29}{figure.caption.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Loads to (a) discharge and (b) charge the battery.\relax }}{32}{figure.caption.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Modeling of thermal noise in resistances as voltage sources in series with the resistances.\relax }}{34}{figure.caption.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{46}{figure.caption.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces True SOC for one run due to input load.\relax }}{47}{figure.caption.10}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{48}{figure.caption.11}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces MRMSE of SOC estimation for $T_s=30$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{53}{figure.caption.14}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Electrical-circuit battery model.\relax }}{29}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}s and $M=4$.\relax }}{54}{figure.caption.15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Loads to (a) discharge and (b) charge the battery.\relax }}{32}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}s and $M=64$.\relax }}{55}{figure.caption.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Modeling of thermal noise in resistances as voltage sources in series with the resistances.\relax }}{34}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces MRMSE of SOC estimation for $T_s=150$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{57}{figure.caption.19}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Input load $R_L$ on the battery.\relax }}{46}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}s and $M=16$.\relax }}{58}{figure.caption.20}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces True SOC for one run due to input load.\relax }}{48}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}s and $M=256$.\relax }}{59}{figure.caption.21}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Noisy measurement $V_\text {cell}$ for one run.\relax }}{49}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces MRMSE of SOC estimation for $T_s=300$\nobreakspace {}s as a function of number of integration steps $M$.\relax }}{61}{figure.caption.24}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}s and $M=64$.\relax }}{62}{figure.caption.25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces MRMSE of SOC estimation for $T_s=30$\nobreakspace {}seconds as a function of number of integration steps $M$.\relax }}{55}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}s and $M=256$.\relax }}{63}{figure.caption.26}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}seconds and $M=4$.\relax }}{56}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces RMSE of SOC estimation for $T_s=30$\nobreakspace {}seconds and $M=64$.\relax }}{57}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces MRMSE of SOC estimation for $T_s=150$\nobreakspace {}seconds as a function of number of integration steps $M$.\relax }}{59}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}seconds and $M=16$.\relax }}{60}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces RMSE of SOC estimation for $T_s=150$\nobreakspace {}seconds and $M=256$.\relax }}{61}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces MRMSE of SOC estimation for $T_s=300$\nobreakspace {}seconds as a function of number of integration steps $M$.\relax }}{63}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}seconds and $M=64$.\relax }}{64}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces RMSE of SOC estimation for $T_s=300$\nobreakspace {}seconds and $M=256$.\relax }}{65}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

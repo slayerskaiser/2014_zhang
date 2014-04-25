@@ -12,7 +12,7 @@ using point-based numerical approximation methods were studied, as opposed to th
 \section{Electrical Characteristics of Rechargeable Batteries}
 \label{sec:echar}
 
-A high-fidelity battery model has to accurately reproduce the various characteristics of a battery. Most models keep track of the total capacity and SOC in order to predict remaining runtime. More accurate models include nonlinear effects, such as the rate-capacity effect and the recovery effect, along with self-discharge and the effects of ambient temperature. The dynamic electrical attributes, such as the current-voltage (i-v) characteristics and transient responses, can also be
+A high-fidelity battery model has to accurately reproduce the various characteristics of a battery. Most models keep track of the total capacity and SOC in order to predict remaining runtime. More accurate models include nonlinear effects, such as the rate-capacity effect and the recovery effect, along with self-discharge and the effects of ambient temperature. The dynamic electrical attributes, such as the current-voltage (I-V) characteristics and transient responses, can also be
 modeled. The remainder of this section defines these characteristics.
 
 The capacity of a battery is the amount of electric charge it can store, measured in the SI unit Ampere-hours (Ah). Commonly, for rechargeable battery specifications, the subunit milliampere-hour (mAh) is used instead. Related is the available capacity, which is the amount of charge that the battery can currently deliver. Due to the electrochemical nature of batteries, a battery's available capacity decreases as the rate of discharge increases, which is known as the rate-capacity effect. Therefore, the capacity for a
@@ -22,7 +22,7 @@ Both the rate-capacity effect and the recovery effect can be explained by the el
 replenished, resulting in a decrease in the available capacity. Likewise, when the battery is allowed to rest, the active material gradient has additional time to equalize, and the available capacity is increased.
 
 Closely related to the capacity is the SOC. This thesis defines it as the ratio between the remaining capacity and the maximum capacity, with both capacities measured using the total amount of active material within the battery. Thus, this definition denotes the proportion of remaining chemical energy rather than the available chemical energy and is unaffected by the rate-capacity and recovery effects. Note that a fully charged battery has an SOC of unity and a fully discharged battery has an SOC of zero, regardless
-of the available capacity. Additionally, there exists a nonlinear relationship between the SOC of the battery and its open-circuit voltage $V_{OC}$, which is useful for simulation of the i-v characteristics and transient responses. The $V_\text{OC}$ is the limit of the measured battery voltage after recovery, assuming no self-discharge.
+of the available capacity. Additionally, there exists a nonlinear relationship between the SOC of the battery and its open-circuit voltage $V_\text{OC}$, which is useful for simulation of the I-V characteristics and transient responses. The $V_\text{OC}$ is the limit of the measured battery voltage after recovery, assuming no self-discharge.
 
 Other, more minor effects that are commonly modeled are self-discharge, the effect of ambient temperature, and aging. Self-discharge refers to the decrease of an idle battery's SOC over time due to internal chemical reactions. It is dependent on the type of battery, SOC, ambient temperatures, and other factors. The ambient temperature has effects on the internal resistance of the battery and the self-discharge rate. Commonly, the battery is designed to operate within a narrow range of
 temperatures. Below the operating temperature range, the internal resistance increases, decreasing the capacity. Above the operating range, the internal resistance decreases, not only increasing the capacity but also the self-discharge rate; thus, the deliverable capacity is lowered due to the increased self-discharge. Aging refers to the decrease in battery performance measures, such as capacity, self-discharge, and internal resistance, over time due to unwanted chemical reactions. In
@@ -30,13 +30,13 @@ practice, aging is indicated by the SOH, defined as the ratio between the curren
 
 This thesis is mainly concerned with estimating the SOC from noisy measurements. The SOH is easier to estimate as it changes slowly over charge cycles, rather than within each charge cycle. Additionally, no simplified expressions exist for the SOH, so it is usually determined empirically. Thus, only the estimation of the SOC was studied by this paper.
 
-%This thesis studied the prediction of the SOC of a battery using noisy measurements of its current and voltage. To do so accurately for a general load, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics is desirable. Furthermore, it is useful to have a model easily tunable for different battery types. The following section reviews the characteristics of different battery models and chooses the one most suitable for the purposes of this study.
+%This thesis studied the prediction of the SOC of a battery using noisy measurements of its current and voltage. To do so accurately for a general load, incorporation of the rate-capacity and recovery effects as well as the transient I-V characteristics is desirable. Furthermore, it is useful to have a model easily tunable for different battery types. The following section reviews the characteristics of different battery models and chooses the one most suitable for the purposes of this study.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Battery Models}
 
-This thesis studied the estimation of the SOC of a battery given knowledge of the resistive load on the battery as well as noisy measurements of the voltage across its terminals. A known resistive load profile, rather than the current, was used because in a real-life usage, it is difficult to exactly control the current drawn by a load. In order to estimate the SOC for a general load profile, incorporation of the rate-capacity and recovery effects as well as the transient i-v characteristics
+This thesis studied the estimation of the SOC of a battery given knowledge of the resistive load on the battery as well as noisy measurements of the voltage across its terminals. A known resistive load profile, rather than the current, was used because in a real-life usage, it is difficult to exactly control the current drawn by a load. In order to estimate the SOC for a general load profile, incorporation of the rate-capacity and recovery effects as well as the transient I-V characteristics
 is desirable. Furthermore it is useful to have a model easily tunable for different battery types. To find a battery model that meets these goals, the major types of battery models are reviewed and their characteristics are compared.
 %This section reviews the characteristics of major types of battery models.
 Jongerden and Haverkort determined four main categories for battery models, namely electrochemical, analytical, stochastic, and electrical-circuit~\cite{jongerden08}.
@@ -47,7 +47,7 @@ The remainder of this section reviews these five types and determines the most s
 \subsection{Electrochemical}
 
 Electrochemical models describe the chemical processes that take place in the battery in great detail. These are generally the most accurate, but they require in-depth knowledge of the chemical processes to create and impose large computational costs~\cite{jongerden09}. One of the most widely known electrochemical models was developed by Doyle, Fuller, and Newman for lithium and lithium-ion batteries using noninvasive voltage-current cycling
-experiments~\cite{doyle93,fuller94,fuller94b}. It consists of six coupled, nonlinear differential equations that capture lithium diffusion dynamics and charge transfer kinetics. The model is able to predict i-v response and provides a design guide for thermodynamics, kinetics, and transport across electrodes. A implementation of their model in Fortran, called Dualfoil, is available for free online.\footfullcite{newman98} The program needs more than 60 parameters along with the load profile
+experiments~\cite{doyle93,fuller94,fuller94b}. It consists of six coupled, nonlinear differential equations that capture lithium diffusion dynamics and charge transfer kinetics. The model is able to predict I-V response and provides a design guide for thermodynamics, kinetics, and transport across electrodes. A implementation of their model in Fortran, called Dualfoil, is available for free online.\footfullcite{newman98} The program needs more than 60 parameters along with the load profile
 in order to compute the battery properties. Setting the parameters requires detailed knowledge of the battery, but as a result, the program is highly accurate. It is so accurate that other battery models are often compared to it rather than to experimental results.
 
 \subsection{Computational Intelligence}
@@ -122,11 +122,7 @@ accurate prediction of the SOC using the runtime-based portion while also modeli
 
 \subsection{Evaluation}
 
-Of the model types, only some are fit for use with filtering algorithms. The computational-intelligence and stochastic models do not adequately describe the dynamics of the battery system for use in the filters covered by this study. On the other hand, electrochemical, analytical, and electrical-circuit models do describe the system dynamics in a compatible manner. Furthermore, they model the nonlinear rate-capacity and recovery effects. Of these, only the electrical-circuit model has the
-advantage of modeling the internal impedance of the battery, which is useful in the design of battery systems. The relevant characteristics of the model types are summarized in \cref{tab:model_charac}. It can be seen that electrical-circuit models are the most suitable for this study. Among them, the proposal by Chen and Rinc\'on-Mora is most appropriate for the purposes of this thesis, because it is the only one discussed by this paper that describes both the capacity and the transient
-effects. Therefore, their proposed model is used for simulating the battery and comparing the performance of different filters.
-
-\begin{table}[htb]
+\begin{table}[b]
 \centering
 \caption{Summary of relevant characteristics of various battery model types.}
 \begin{tabular}{lccccc}
@@ -143,6 +139,10 @@ effects. Therefore, their proposed model is used for simulating the battery and 
 \label{tab:model_charac}
 \end{table}
 
+Of the model types, only some are fit for use with filtering algorithms. The computational-intelligence and stochastic models do not adequately describe the dynamics of the battery system for use in the filters covered by this study. On the other hand, electrochemical, analytical, and electrical-circuit models do describe the system dynamics in a compatible manner. Furthermore, they model the nonlinear rate-capacity and recovery effects. Of these, only the electrical-circuit model has the
+advantage of modeling the internal impedance of the battery, which is useful in the design of battery systems. The relevant characteristics of the model types are summarized in \cref{tab:model_charac}. It can be seen that electrical-circuit models are the most suitable for this study. Among them, the proposal by Chen and Rinc\'on-Mora is most appropriate for the purposes of this thesis, because it is the only one discussed by this paper that describes both the capacity and the transient
+effects. Therefore, their proposed model is used for simulating the battery and comparing the performance of different filters.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Nonlinear Filtering Methods}
@@ -154,9 +154,8 @@ Systems are classified as either linear or nonlinear. The state dynamics and mea
 with state variables that describe such states as the SOC and the SOH. The measurements are typically the voltage and the current. Note that the SOH was not considered by this thesis for reasons described in \cref{sec:echar}, so this thesis assumes the battery system is time-invariant. Additionally, only the voltage was measured since a known resistive load was used as an input to the system in place of the current measurement. This replacement was done because a piecewise constant discharge profile is convenient for simulation purposes and it is
 more realistic to have a constant discharge load than a constant discharge current. A state-space representation of the battery system proposed by Chen and Rinc\'on-Mora in~\cite{chen06} is described in more detail in the following chapter.
 
-%Note that this thesis uses a resistive load instead of the current, because this is more realistic from a usage standpoint. Additionally, the SOH is not considered by this thesis for reasons describe in \cref{sec:echar}. The dynamic system for the battery is described in more detail in the following chapter.
-
-For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the least squares solution equals the posterior mean. A closed form solution to the discrete-time linear filtering problem is given by the Kalman filter~\cite{kalman60}, which is a linear MMSSE (LMMSE) filter. Its solution procedure is as follows. Consider a linear system in discrete time with $n$ states and $m$ measurements defined by
+For linear systems, the optimal filtering solution with respect to the minimum mean squared error (MMSE) is given by the least squares solution, meaning the least squares solution equals the posterior mean. For the Gaussian case, the best estimate is given by a linear MMSE (LMMSE) estimator, of which the Wiener filter for wide-sense stationary signals~\cite{wiener49} is an example. In 1960, Kalman generalized Wiener filtering to non-stationary, discrete-time signals~\cite{kalman60}, with continuous-time
+versions derived later on. Like the Wiener filter, the Kalman filter is a sequential, LMMSE estimator. For the special case of Gaussian noise, the Kalman filter is the MMSE estimator. Its solution procedure is as follows. Consider a linear system in discrete time with $n$ states and $m$ measurements defined by
 \begin{align}
     \vx_k &= F_k \vx_{k-1} + B_k \vu_k + L \vw_k \\
     \vz_k &= H_k \vx_k + M \vv_k,
@@ -175,8 +174,7 @@ where $\hat{(\ )}$ indicates the estimated value. Then, the estimates are update
     \hat{\vx}_{k|k} &= \hat{\vx}_{k|k-1} + K_k \tilde{\mathbf{z}}_k \\
     P_{k|k} &= \left( I - K_k H_k \right) P_{k|k-1}. \label{eq:kful} 
 \end{align}
-The Kalman filter operates under the assumption that the process and measurement noises are Gaussian, so the posterior distribution is also Gaussian and numerical approximations of the posterior distribution are unnecessary. Under this assumption, the Kalman filter produces the optimal solution in the maximum likelihood (ML) and the maximum a posterior (MAP) senses, in addition to in the MMSE sense. However, the Gaussian assumption is unnecessary for the Kalman filter to produce the
-optimal MMSE estimate for a general linear system.
+Note that it was assumed the noises were Gaussian. Under this assumption, the Kalman filter produces the optimal solution in the maximum likelihood (ML) and the maximum a posterior (MAP) senses, in addition to in the MMSE sense. However, the Gaussian assumption is unnecessary for the Kalman filter to produce the LMMSE estimate for a general linear system.
 
 For nonlinear systems, optimal filtering solutions are generally intractable, so various numerical approximation methods have been developed. Chen describes seven categories of such methods, namely Gaussian/Laplace approximation, iterative quadrature, multigrid method and point-mass approximation, moment approximation, Gaussian sum approximation, deterministic sampling approximation, and Monte Carlo sampling approximation~\cite{chen03}. Note that only filters using point-based
 numerical approximation methods were studied, as opposed to those using density-based methods. This was done because typical battery management systems do not have the computational power to employ costly density-based methods, and point-based methods use the simple LMMSE update of the Kalman filter. Point-based and density-based methods are also known as local and global approaches, respectively. Additionally, only filters using methods from the two most popular categories of Gaussian
@@ -282,10 +280,10 @@ For numerical stability reasons, this study employed a change to the above UKF p
 \end{equation}
 where the covariance is evaluated about the projected mean rather than the weighted mean. This change ensures the positive definiteness of the covariance matrix, as required by the definition of covariance. Another change, discovered by the author, that results in better numerical stability and lower MSE is the estimation of the cross-covariance in \cref{eq:ukfu1} by
 \begin{equation}
-    C_k = \sum_{i=0}^{2n} W_i^{(c)} ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(0)} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top,
+    C_k = \sum_{i=0}^{2n} W_i^{(c)} ( \hat{\chi}_{k|k-1}^{(i)} - \hat{\chi}_{k|k-1}^{(0)} ) ( \hat{\vz}_k^{(i)} - \mu_k )^\top,
     \label{eq:ukf_c2}
 \end{equation}
-where the prescripts indicate the estimate covariance matrix that was used to calculate the sigma points, so $\prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)}$ comes from the transformation of $\prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k-1|k-1}^{(i)}$ through $\vf_d$ and $\prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)}$ comes from the transformation of $\prescript{}{P_{k|k-1}}{\hat{\vx}}_{k|k-1}^{(i)}$ through $\vh$. Note that similar to \cref{eq:ukf_c1}, the cross-covariance is
+where $\hat{\chi}_{k|k-1}^{(i)}$ are the sigma points whose weighted average is $\hat{\vx}_{k|k-1}$. Note that similar to \cref{eq:ukf_c1}, the cross-covariance is
 evaluated about the projected mean $\hat{\vx}_{k|k-1}^{(0)}$ and the weighted mean $\mu_k$. The increase in stability and accuracy with the change in \cref{eq:ukf_c2} was discovered through experimentation. The reason for the improvement is unknown, but the change was used to produce the simulation results.
 
 \subsection{Cubature Kalman Filter}
@@ -311,10 +309,10 @@ cases~\cite{sarkka12}.
 
 To increase numerical stability and accuracy, a change similar to that in \cref{eq:ukf_c2} was used, giving
 \begin{equation}
-    C_k = \frac{1}{2n} \sum_{i=0}^{2n} ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top.
+    C_k = \frac{1}{2n} \sum_{i=0}^{2n} ( \hat{\chi}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \hat{\vz}_k^{(i)} - \mu_k )^\top,
     \label{eq:ckf3_c}
 \end{equation}
-This change was verified through experimentation to produce better results.
+where $\hat{\chi}_{k|k-1}^{(i)}$ are the cubature points whose average is $\hat{\vx}_{k|k-1}$. This change was verified through experimentation to produce better results.
 
 \subsubsection{Fifth-Order CKF}
 
@@ -348,10 +346,10 @@ As in the third-order CKF, the prediction and update steps follow \crefrange{eq:
 
 As in the third-order CKF, to increase numerical stability and accuracy, a change similar to that in \cref{eq:ukf_c2} was used, giving
 \begin{equation}
-    C_k = \sum_{i=0}^{2n^2} W_i ( \prescript{}{P_{k-1|k-1}}{\hat{\vx}}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \prescript{}{P_{k|k-1}}{\hat{\vz}}_k^{(i)} - \mu_k )^\top.
+    C_k = \sum_{i=0}^{2n^2} W_i ( \hat{\vx}_{k|k-1}^{(i)} - \hat{\vx}_{k|k-1} ) ( \hat{\vz}_k^{(i)} - \mu_k )^\top.
     \label{eq:ckf5_c}
 \end{equation}
-This change was verified through experimentation to produce better results.
+where $\hat{\chi}_{k|k-1}^{(i)}$ are the cubature points whose weighted average is $\hat{\vx}_{k|k-1}$. This change was verified through experimentation to produce better results.
 
 \subsection{Statistically Linearized Filter}
 

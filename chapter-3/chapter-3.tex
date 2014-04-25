@@ -21,7 +21,7 @@ as due to a non-invertible matrix or a non-positive definite covariance matrix. 
 the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data was not counted, since that time should be the same for all the filters and this study was concerned about the computational complexity of the filters.
 
 The remainder of this chapter shows the filtering results for sampling periods $T_s$ of 30, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period. For each sampling period, the number of divergences and filtering times are displayed as a function of the number of integration steps. Then, the MRMSEs are plotted for those integration steps that have zero divergences. Finally, the RMSEs are plotted as a function of time for the
-least and most numbers of integration steps that produce zero divergences.
+least and most numbers of integration steps that produce zero divergences. Note that the absolute errors of the filters in each run were not plotted, but they were studied. For each filter, the absolute errors in the runs were generally close to their RMSE when the runs were all divergence-free. Thus, it was determined that plotting the absolute errors was unnecessary.
 
 \section{Sampling Period of 30 Seconds}
 
@@ -30,7 +30,7 @@ speed of the UKF and the CKF3 and more than twelve times the speed of the CKF5. 
 
 \begin{table}[h]
 \centering
-\caption{Number of divergences in 100 Monte Carlo runs for $T_s=30$~s as a function of number of integration steps $M$}
+\caption{Number of divergences in 100 Monte Carlo runs for $T_s=30$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}l*{9}{c}@{}}
 \toprule
 Filter/$M$ & 1   & 2   & 4 & 8 & 16 & 32 & 64 & 128 & 256 \\
@@ -47,7 +47,7 @@ SLF        & 100 & 100 & 0 & 0 & 0  & 0 & 0 & 0 & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=30$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=30$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
 Filter/$M$ & 1     & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
@@ -67,18 +67,18 @@ Interestingly, the EKF resulted in the largest error for that number of integrat
 \centering
 %\input{chapter-3/figures/mrmse_30}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_30}
-\caption{MRMSE of SOC estimation for $T_s=30$~s as a function of number of integration steps $M$.}
+\caption{MRMSE of SOC estimation for $T_s=30$~seconds as a function of number of integration steps $M$.}
 \label{fig:mrmse_30}
 \end{figure}
 
-For comparison purposes, the RMSEs at $M=4$ and $64$ are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. For $M=4$, the EKF had lower error initially during the high-rate charge and discharge period from about $k=1900$ to $2300$, but its error reached those of the other filters near the end of that period. The other filters had very comparable errors. For $M=64$, the EKF
+For comparison purposes, the RMSEs at $M=4$ and $64$ are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The sharp changes in the RMSEs occured when the battery switched between charging and discharging. The period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effects. Due to the higher nonlinearity, the filters were less accurate at estimating the SOC. For $M=4$, the EKF had lower error initially during the high-rate charge and discharge period from about $k=1900$ to $2300$, but its error reached those of the other filters near the end of that period. The other filters had very comparable errors. For $M=64$, the EKF
 had higher median error, but its lower worst case error resulted in the slightly lower MRMSE. The other filters were again very close in error, with the UKF having slightly higher error on average.
 
 \begin{figure}[h]
 \centering
 %\input{chapter-3/figures/rmse_30_4}
 \pstool[width=15cm]{chapter-3/figures/rmse_30_4}{\input{chapter-3/figures/rmse_30_4.tex}}
-\caption{RMSE of SOC estimation for $T_s=30$~s and $M=4$.}
+\caption{RMSE of SOC estimation for $T_s=30$~seconds and $M=4$.}
 \label{fig:rmse_30_4}
 \end{figure}
 
@@ -86,7 +86,7 @@ had higher median error, but its lower worst case error resulted in the slightly
 \centering
 %\input{chapter-3/figures/rmse_30_64}
 \pstool[width=15cm]{chapter-3/figures/rmse_30_64}{\input{chapter-3/figures/rmse_30_64.tex}}
-\caption{RMSE of SOC estimation for $T_s=30$~s and $M=64$.}
+\caption{RMSE of SOC estimation for $T_s=30$~seconds and $M=64$.}
 \label{fig:rmse_30_64}
 \end{figure}
 
@@ -98,7 +98,7 @@ From \cref{tab:div_150}, it can be seen that the filters had no divergences for 
 
 \begin{table}[h]
 \centering
-\caption{Number of divergences in 100 Monte Carlo runs for $T_s=150$~s as a function of number of integration steps $M$}
+\caption{Number of divergences in 100 Monte Carlo runs for $T_s=150$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}l*{9}{c}@{}}
 \toprule
 Filter/$M$ & 1   & 2   & 4   & 8   & 16 & 32 & 64 & 128 & 256 \\
@@ -115,7 +115,7 @@ SLF        & 100 & 100 & 100 & 100 & 0  & 0  & 0  & 0   & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=150$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=150$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
 Filter/$M$ & 1      & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
@@ -135,18 +135,18 @@ approximately tied for the most error. For large $M$, the CKF5 and the SLF had t
 \centering
 %\input{chapter-3/figures/mrmse_150}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_150}
-\caption{MRMSE of SOC estimation for $T_s=150$~s as a function of number of integration steps $M$.}
+\caption{MRMSE of SOC estimation for $T_s=150$~seconds as a function of number of integration steps $M$.}
 \label{fig:mrmse_150}
 \end{figure}
 
-For comparison purposes, the RMSEs at $M=16$ and $256$ are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. For both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=16$, the UKF had higher error than the CKFs and the SLF, which were approximately equal in error, until about $k=350$ and then had lower error for
+For comparison purposes, the RMSEs at $M=16$ and $256$ are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. As before, the sharp changes in the RMSEs occured when the battery switched between charging and discharging, and the period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effects. For both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=16$, the UKF had higher error than the CKFs and the SLF, which were approximately equal in error, until about $k=350$ and then had lower error for
 larger $k$. For $M=256$, the UKF had higher error than the CKFs and the SLF after about $k=380$ and about the same error before. The CKFs and the SLF were again approximately equal in error, with the CKF3 showing a small deviation from $k=290$ to $350$.
 
 \begin{figure}[h]
 \centering
 %\input{chapter-3/figures/rmse_150_16}
 \pstool[width=15cm]{chapter-3/figures/rmse_150_16}{\input{chapter-3/figures/rmse_150_16.tex}}
-\caption{RMSE of SOC estimation for $T_s=150$~s and $M=16$.}
+\caption{RMSE of SOC estimation for $T_s=150$~seconds and $M=16$.}
 \label{fig:rmse_150_16}
 \end{figure}
 
@@ -154,7 +154,7 @@ larger $k$. For $M=256$, the UKF had higher error than the CKFs and the SLF afte
 \centering
 %\input{chapter-3/figures/rmse_150_256}
 \pstool[width=15cm]{chapter-3/figures/rmse_150_256}{\input{chapter-3/figures/rmse_150_256.tex}}
-\caption{RMSE of SOC estimation for $T_s=150$~s and $M=256$.}
+\caption{RMSE of SOC estimation for $T_s=150$~seconds and $M=256$.}
 \label{fig:rmse_150_256}
 \end{figure}
 
@@ -166,7 +166,7 @@ From \cref{tab:div_300}, it can be seen that the filters had no divergences for 
 
 \begin{table}[h]
 \centering
-\caption{Number of divergences in 100 Monte Carlo runs for $T_s=300$~s as a function of number of integration steps $M$}
+\caption{Number of divergences in 100 Monte Carlo runs for $T_s=300$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}l*{9}{c}@{}}
 \toprule
 Filter/$M$ & 1   & 2   & 4   & 8   & 16  & 32 & 64 & 128 & 256 \\
@@ -183,7 +183,7 @@ SLF        & 100 & 100 & 100 & 100 & 0   & 0  & 0  & 0   & 0   \\
 
 \begin{table}[h]
 \centering
-\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=300$~s as a function of number of integration steps $M$}
+\caption{Filtering time in seconds for 100 Monte Carlo runs for $T_s=300$~seconds as a function of number of integration steps $M$}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
 Filter/$M$ & 1     & 2     & 4     & 8     & 16    & 32    & 64    & 128   & 256   \\ \midrule
@@ -203,18 +203,18 @@ $M$, the UKF had the second smallest error, followed by the CKF5 and the SLF, an
 \centering
 %\input{chapter-3/figures/mrmse_300}
 \psfragfig[width=15cm]{chapter-3/figures/mrmse_300}
-\caption{MRMSE of SOC estimation for $T_s=300$~s as a function of number of integration steps $M$.}
+\caption{MRMSE of SOC estimation for $T_s=300$~seconds as a function of number of integration steps $M$.}
 \label{fig:mrmse_300}
 \end{figure}
 
-For comparison purposes, the RMSEs at $M=64$ and $256$ are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As before, the period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. As with $T_s=150$ seconds, for both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=64$, the UKF had approximately the same error as the CKFs
+For comparison purposes, the RMSEs at $M=64$ and $256$ are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As before, the sharp changes in the RMSEs occured when the battery switched between charging and discharging, and the period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effects. As with $T_s=150$ seconds, for both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=64$, the UKF had approximately the same error as the CKFs
 and the SLF, which were approximately equal in error, until about $k=200$ and then had lower error afterwards. For $M=256$, the UKF had higher error than the CKFs and the SLF after about $k=180$, with approximately the same error before. Additionally, the CKF5 and the SLF were very close in error. The CKF3 was roughly equal to them in error with short periods of lower and higher error.
 
 \begin{figure}[h]
 \centering
 %\input{chapter-3/figures/rmse_300_64}
 \pstool[width=15cm]{chapter-3/figures/rmse_300_64}{\input{chapter-3/figures/rmse_300_64.tex}}
-\caption{RMSE of SOC estimation for $T_s=300$~s and $M=64$.}
+\caption{RMSE of SOC estimation for $T_s=300$~seconds and $M=64$.}
 \label{fig:rmse_300_64}
 \end{figure}
 
@@ -222,7 +222,7 @@ and the SLF, which were approximately equal in error, until about $k=200$ and th
 \centering
 %\input{chapter-3/figures/rmse_300_256}
 \pstool[width=15cm]{chapter-3/figures/rmse_300_256}{\input{chapter-3/figures/rmse_300_256.tex}}
-\caption{RMSE of SOC estimation for $T_s=300$~s and $M=256$.}
+\caption{RMSE of SOC estimation for $T_s=300$~seconds and $M=256$.}
 \label{fig:rmse_300_256}
 \end{figure}
 
