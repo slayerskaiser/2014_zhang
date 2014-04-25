@@ -159,13 +159,13 @@ For linear systems, the optimal filtering solution with respect to the minimum m
     \vx_k &= F_k \vx_{k-1} + B_k \vu_k + L \vw_k \\
     \vz_k &= H_k \vx_k + M \vv_k,
 \end{align}
-where $\vx\in\mathcal{R}^n$, $\vu\in\mathcal{R}^{N_u}$, and $\vz\in\mathcal{R}^m$ are vectors of the state variables, known inputs, and measurements, respectively; $\vw\sim\mathcal{N}(0,Q_k)$, $Q_k\in\mathcal{R}^{N_w\times N_w}$, and $\vv\sim\mathcal{N}(0,R_k)$, $R_k\in\mathcal{R}^{N_v\times N_v}$ are normally distributed noise variables; $F\in\mathcal{R}^{n\times n}$, $B\in\mathcal{R}^{n\times N_u}$, $H\in\mathcal{R}^{m\times n}$, $L\in\mathcal{R}^{n\times N_w}$, and $M\in\mathcal{R}^{m\times N_v}$ are matrices; and a subscript $k$ on a
-variable indicates the value of that variable at time $t_k$. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathcal{R}^{n\times n}$ according to
+where $\vx\in\mathbb{R}^n$, $\vu\in\mathbb{R}^{N_u}$, and $\vz\in\mathbb{R}^m$ are vectors of the state variables, known inputs, and measurements, respectively; $\vw\sim\mathcal{N}(0,Q_k)$, $Q_k\in\mathbb{R}^{N_w\times N_w}$, and $\vv\sim\mathcal{N}(0,R_k)$, $R_k\in\mathbb{R}^{N_v\times N_v}$ are normally distributed noise variables; $F\in\mathbb{R}^{n\times n}$, $B\in\mathbb{R}^{n\times N_u}$, $H\in\mathbb{R}^{m\times n}$, $L\in\mathbb{R}^{n\times N_w}$, and $M\in\mathbb{R}^{m\times N_v}$ are matrices; and a subscript $k$ on a
+variable indicates the value of that variable at time $t_k$. First, the Kalman filter propagates the estimates of the state variables $\hat{\vx}$ and the estimation covariances $P\in\mathbb{R}^{n\times n}$ according to
 \begin{align}
     \hat{\vx}_{k|k-1} &= F_k \hat{\vx}_{k-1|k-1} + B_k \mathbf{u}_k \label{eq:kfp1} \\
     P_{k|k-1} &= F_k P_{k-1|k-1} F_k^\top + L Q_k L^\top, \label{eq:kfp2}
 \end{align}
-where $\hat{()}$ indicates the estimated value. Then, the estimates are updated using the measurements according to
+where $\hat{(\ )}$ indicates the estimated value. Then, the estimates are updated using the measurements according to
 \begin{align}
     \tilde{\mathbf{z}}_k &= \mathbf{z}_k - H_k \hat{\vx}_{k|k-1} \label{eq:kfu1} \\
     S_k &= H_k P_{k|k-1} H_k^\top + M R_k M^\top \\
@@ -186,7 +186,7 @@ applicable~\cite{li04}. Deterministic sampling methods are special numerical met
     \vx_k &= \vf_d(\vx_{k-1},\vu_k) + L(\vx_{k-1},\vu_k) \vw_k \label{eq:dtsys_x} \\
     \mathbf{z}_k &= \vh(\vx_k,\vu_k) + M(\vx_k,\vu_k) \vv_k, \label{eq:dtsys_z}
 \end{align}
-where $\vf\in\mathcal{R}^n$ and $\vh\in\mathcal{R}^m$ are nonlinear vector functions, $L\in\mathcal{R}^{n\times N_w}$ and $M\in\mathcal{R}^{m\times N_v}$ are nonlinear matrix functions, and the input $\vu$ is assumed to be piecewise constant, meaning $\vu(t)=\vu(t_k)=\vu_k$ for $t_{k-1}<t\le t_k$. An implicit, first-order Taylor-Heun numerical integration method was used to discretize the continuous-time dynamics $\vf$ of the chosen battery model. In particular, an iterated integration
+where $\vf\in\mathbb{R}^n$ and $\vh\in\mathbb{R}^m$ are nonlinear vector functions, $L\in\mathbb{R}^{n\times N_w}$ and $M\in\mathbb{R}^{m\times N_v}$ are nonlinear matrix functions, and the input $\vu$ is assumed to be piecewise constant, meaning $\vu(t)=\vu(t_k)=\vu_k$ for $t_{k-1}<t\le t_k$. An implicit, first-order Taylor-Heun numerical integration method was used to discretize the continuous-time dynamics $\vf$ of the chosen battery model. In particular, an iterated integration
 procedure was used, as was done by S\"arkk\"a~\cite{sarkka12}. For the iterations, a superscript of $(i)$ indicates the $i$th step of a $M$-step iterative integration scheme. Note that $\vx^{(0)}_{k-1}=\vx_{k-1}$ and $\vx^{(M)}_{k-1}=\vx_k$. The specifics of the discretization along with the notation used are discussed in \cref{sec:discret}.
 
 \subsection{Extended Kalman Filter}
@@ -273,11 +273,11 @@ with the Jacobian $H=\partial\vh/\partial\vx$.
 %\end{equation}
 %It can be shown that the expected value of the state is given by
 %\begin{equation}
-%    \vx_{k+1} = \int_{\mathcal{R}^n} \vf_d(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k.
+%    \vx_{k+1} = \int_{\mathbb{R}^n} \vf_d(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k.
 %\end{equation}
 %The propagation of the covariance matrix is given by
 %\begin{align}
-%    P_{k|k} = \begin{multlined}[t] \int_{\mathcal{R}^n} \vf_d(\vx_k) \vf_d^\top(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k + \frac{\delta^3}{3} \big( \mathbb{L}\vf(\vx_k) \big) \big( \mathbb{L}\vf(\vx_k) \big)^\top \\ 
+%    P_{k|k} = \begin{multlined}[t] \int_{\mathbb{R}^n} \vf_d(\vx_k) \vf_d^\top(\vx_k) \mathcal{N}(\vx_k;\hat{\vx}_{k|k},P_{k|k})\,\mathrm{d}\vx_k + \frac{\delta^3}{3} \big( \mathbb{L}\vf(\vx_k) \big) \big( \mathbb{L}\vf(\vx_k) \big)^\top \\ 
 %    + \frac{\delta^2}{2} \left[ \sqrt{Q} \big(\mathbb{L}\vf(\vx_k)\big)^\top + \big(\mathbb{L}\vf(\vx_k)\big)^\top \sqrt{Q} \right] - (\hat{\vx}_{k|k})(\hat{\vx}_{k|k})^\top + \delta Q.
 %    \end{multlined}
 %\end{align}

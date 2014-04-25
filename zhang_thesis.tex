@@ -13,14 +13,20 @@
 % Packages we like to use. %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}
+%\usepackage{fourier}
 %\usepackage{fouriernc}
+%\usepackage{bookman}
+%\usepackage{utopia}
+%\usepackage{mathpazo}
 \usepackage{subfiles} % allows for better include support
 %\usepackage{pslatex}
 %\usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{amsthm}
+%\usepackage{mathdesign}
+\usepackage{charter}
 %\usepackage{exscale}
 %\usepackage[mathscr]{eucal}
 %\usepackage{bm}
@@ -40,7 +46,6 @@
 %\usepackage{rotating}
 %\usepackage{ctable}
 \usepackage[inline]{enumitem}
-%\usepackage{lmodern}
 %\usepackage{textcomp}
 \usepackage{setspace}
 \usepackage{rotating}
@@ -51,6 +56,7 @@
 \usepackage[crop=pdfcrop,process=auto]{pstool}
 
 %\usepackage[final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[final,tracking=true,kerning=true,spacing=true,factor=1100]{microtype}
 %\usepackage[final]{microtype}
 %\microtypecontext{spacing=nonfrench}
 % activate={true,nocompatibility} - activate protrusion and expansion - (not needed; also works for dvi now)
@@ -206,7 +212,8 @@
 % contain every after the word ``requirements'' that appears on
 % the title page. This provides the needed flexibility for
 % all the degree types.
-\honorsdegreeinfo{Masters of Science \\ in \\ Engineering \\ Electrical Engineering}
+%\honorsdegreeinfo{Masters of Science \\ in \\ Engineering \\ Electrical Engineering}
+\honorsdegreeinfo{Masters of Science \\[-0.6ex] in \\[-0.6ex] Engineering \\ Electrical Engineering}
 
 % This is the document type. For example, this could also be:
 %     Comprehensive Document
@@ -324,7 +331,9 @@
 \thesisabstract{SupplementaryMaterial/Abstract}
 
 % Generates the Table of Contents
+\microtypesetup{protrusion=false}
 \thesistableofcontents
+\microtypesetup{protrusion=true}
 
 % Generates the List of Figures
 \thesislistoffigures

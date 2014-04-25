@@ -42,11 +42,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Battery Model}{28}{section..2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Discretization of System Dynamics}{37}{section..2.2}
+\contentsline {section}{\numberline {2.2}Discretization of System Dynamics}{38}{section..2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Simulation Setup}{41}{section..2.3}
+\contentsline {section}{\numberline {2.3}Simulation Setup}{42}{section..2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Filtering Setup}{46}{section..2.4}
+\contentsline {section}{\numberline {2.4}Filtering Setup}{47}{section..2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Filtering Results}{49}{chapter..3}
 \defcounter {refsection}{0}\relax 
@@ -64,6 +64,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Future Work}{64}{section..4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{65}{section*.27}
+\contentsline {chapter}{Bibliography}{66}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Vita}{69}{section*.29}
+\contentsline {chapter}{Vita}{70}{section*.29}

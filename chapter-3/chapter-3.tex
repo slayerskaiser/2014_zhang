@@ -7,24 +7,26 @@
 
 \section{Performance Measures}
 
-This study was concerned with the accuracy and speed of the nonlinear filters for estimation of the SOC. The accuracy of the estimation was measured using the mean RMSE (MRMSE). Recall that the state variable $x_1$ represents the SOC. The other two state variables don't directly represent physical properties of the battery and are less useful in battery management, so they are ignored in determining the RMSE. However, they likely have similar error as the SOC estimates. For the SOC, the RMSE is defined as
+This study was concerned with the accuracy and speed of the nonlinear filters for estimation of the SOC. The accuracy of the estimation was measured using the mean RMSE (MRMSE). Recall that the state variable $x_1$ represents the SOC. The other two state variables don't directly represent physical properties of the battery and are less useful in battery management, so they are ignored in determining the RMSE. However, the filters probably resulted in comparable error in their
+estimates as in the SOC estimates. For the SOC, the RMSE is defined as
 \begin{equation}
     \mathrm{RMSE}(kT_s) = \sqrt{ \frac{1}{N_\text{trials}} \sum_{j=1}^{N_\text{trials}} \Big( \hat{x}_1^{(j)}(kT_s) - x_1^{(j)}(kT_s) \Big)^2 },
 \end{equation}
-where $T_s$ is the sample period, the superscript $(j)$ indicates the $j$th Monte Carlo trial. Note that the squared error was averaged over the Monte Carlo trials. Additionally, recall that $N_\text{trials}=100$ Monte Carlo trials were used in this study. Note that the defined RMSE is a function of discrete time steps. Then, the MRMSE is the mean of the RMSE over time, giving
+where $T_s$ is the sample period, the superscript $(j)$ indicates the $j$th Monte Carlo trial, and the squared error is averaged over the Monte Carlo trials. Additionally, recall that $N_\text{trials}=100$ Monte Carlo trials were used in this study. Note that the defined RMSE is a function of discrete time steps. Then, the MRMSE is the mean of the RMSE over the time steps, giving
 \begin{equation}
     \mathrm{MRMSE} = \frac{1}{N} \sum_{k=1}^N \mathrm{RMSE}(kT_s),
 \end{equation}
-where $N$ is the total number of time instances at which the filtering was performed. Note that the MRMSE is a nonnegative number, and it is desired to be minimal to indicate a more accurate estimate. An additional measure of accuracy was the number of trials in which the filter estimate diverged. A divergence is considered an absolute error in teh estimated SOC greater than $0.1$~V or any failure in the filtering process, such as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition,
-after a numerical failure for a filter in a trial, no attempt was made to keep filtering the system, and the remainder of the SOC values are assumed to be the worst case of zero. The speed was measured using the CPU time, which is the sum of the times used by the filter program on each of the CPU cores. The use of the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data is not counted.
+where $N$ is the total number of time steps at which the filtering was performed. Note that the MRMSE is a nonnegative number, and it is desirable for a filter to produce an estimate with a small MRMSE, indicating a more accurate estimate. An additional measure of accuracy is the number of trials in which the filter estimate diverged. A divergence was considered to be an absolute error in the estimated SOC greater than $0.1~\mathrm{V}$ or any failure in the filtering process, such
+as due to a non-invertible matrix or a non-positive definite covariance matrix. In addition, after a filter failed in a trial, the filtering process was halted for that trial, and the remainder of the SOC values were assumed to be the worst case of zero, i.e.\ a fully discharged battery. Furthermore, the speed of a filter was measured using the CPU time it took to complete the Monte Carlo trials. This time is the sum of the times used by the filter program on each of the CPU cores. The use of
+the CPU time results in less variability between runs compared to the clock time. In addition, the time taken to read and write the data was not counted, since that time should be the same for all the filters and this study was concerned about the computational complexity of the filters.
 
-The remainder of this chapter shows the filtering results for sampling periods of $T_s=30$, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period. For each sampling period, the number of divergences and filtering times are displayed as a function of the number of integration steps. Then, the MRMSE are plotted for those integration steps that have zero divergences. Finally, the RMSE is plotted as a function of time at the least and most number of integration steps that produce zero divergences.
-
-\clearpage
+The remainder of this chapter shows the filtering results for sampling periods $T_s$ of 30, 150, and 300 seconds. Additionally, integration steps of $M=1,2,4,\dots,256$ were used for each sampling period. For each sampling period, the number of divergences and filtering times are displayed as a function of the number of integration steps. Then, the MRMSEs are plotted for those integration steps that have zero divergences. Finally, the RMSEs are plotted as a function of time for the
+least and most numbers of integration steps that produce zero divergences.
 
 \section{Sampling Period of 30 Seconds}
 
-From \cref{tab:div_30}, it can be seen that the filters have no divergences for $M=4,\dots,64$. For small $M$, all filters diverge, as expected. However, the UKF and the CKF3 also diverge for large $M$, which can be explained by numerical problems arising from the large number of integration steps. The times shown in \cref{tab:time_30} show that the EKF is the fastest by far, about three to four times the speed of the next fastest, the SLF. Additionally, the EKF is about five times the speed of the UKF and the CKF3 and more than twelve times the speed of the CKF5. 
+From \cref{tab:div_30}, it can be seen that the filters had no divergences for $M=4,\dots,64$. For small $M$, all filters diverged, as expected. However, the UKF and the CKF3 also diverged for large $M$, which can be explained by numerical problems arising from the large number of integration steps. The times shown in \cref{tab:time_30} show that the EKF was by far the fastest, about three to four times the speed of the next fastest, the SLF. Additionally, the EKF was about five times the
+speed of the UKF and the CKF3 and more than twelve times the speed of the CKF5. The slowness of the CKF5 was a result of using about three times as many cubature points as the CKF3.
 
 \begin{table}[h]
 \centering
@@ -58,7 +60,8 @@ SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 100
 \label{tab:time_30}
 \end{table}
 
-\cref{fig:mrmse_30} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be see that the EKF result shows a decrease over this range as expected. However, the other results have minimum error at $M=16$, with an increase in error for larger $M$. This could be due to numerical errors that also caused divergences for large $M$ in the case of the UKF and the CKF3. The global minimum error is given by both the CKF5 and the SLF at $M=16$.
+\cref{fig:mrmse_30} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be see that the EKF result showed a decrease over this range as expected. However, the other results had minimum error at $M=16$, with an increase in error for larger $M$. This could be due to numerical errors that also caused divergences for large $M$ in the case of the UKF and the CKF3. The global minimum error was produced by both the CKF5 and the SLF at $M=16$.
+Interestingly, the EKF resulted in the largest error for that number of integration steps out of all the filters.
 
 \begin{figure}[ht]
 \centering
@@ -68,7 +71,8 @@ SLF        & 4.521 & 6.52  & 16.35 & 32.11 & 63.43 & 126.7 & 252.1 & 503.5 & 100
 \label{fig:mrmse_30}
 \end{figure}
 
-For comparison purposes, the RMSE at $M=4$ and 64 are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. For $M=4$, the EKF has lower error initially during the high-rate charge and discharge period from about $k=1900$ to 2300, but its error reaches those of the other filter near the end of that period. The other filters have very comparable errors. For $M=64$, the EKF has higher median error, but its lower worst case error results in the slightly lower MRMSE. The other filters are again very close in errors, with the UKF having slighly higher error on average.
+For comparison purposes, the RMSEs at $M=4$ and $64$ are shown in \cref{fig:rmse_30_4,fig:rmse_30_64}. The period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. For $M=4$, the EKF had lower error initially during the high-rate charge and discharge period from about $k=1900$ to $2300$, but its error reached those of the other filters near the end of that period. The other filters had very comparable errors. For $M=64$, the EKF
+had higher median error, but its lower worst case error resulted in the slightly lower MRMSE. The other filters were again very close in error, with the UKF having slightly higher error on average.
 
 \begin{figure}[h]
 \centering
@@ -90,7 +94,7 @@ For comparison purposes, the RMSE at $M=4$ and 64 are shown in \cref{fig:rmse_30
 
 \section{Sampling Period of 150 Seconds}
 
-From \cref{tab:div_150}, it can be seen that the filters have no divergences for $M=16,\dots,256$. For small $M$, all filters diverge, as expected. For large $M$, there are no divergences, unlike with $T_s=30$ seconds. The times shown in \cref{tab:time_150} show that the EKF is again the fastest with a similar ratio between the speeds as with $T_s=30$ seconds. 
+From \cref{tab:div_150}, it can be seen that the filters had no divergences for $M=16,\dots,256$. For small $M$, all filters diverged, as expected. For large $M$, there were no divergences, unlike with $T_s=30$ seconds. The times in \cref{tab:time_150} show that the EKF was again the fastest with a similar ratio between the speeds as with $T_s=30$ seconds. 
 
 \begin{table}[h]
 \centering
@@ -124,7 +128,8 @@ SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 20
 \label{tab:time_150}
 \end{table}
 
-\cref{fig:mrmse_150} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for all five filters. The EKF results in the least error by far, with its MRMSE at $M=16$ approximately equal to the MRMSEs of the other filters at $M=256$. For small $M$, the UKF has the second smallest error with the two CKFs and the SLF having approximately the same error. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF.
+\cref{fig:mrmse_150} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decreased as the number of integration steps increased, and the rate of decrease was roughly the same for all five filters. The EKF resulted in the least error by far, with its MRMSE at $M=16$ approximately equal to the MRMSEs of the other filters at $M=256$. For small $M$, the UKF had the second smallest error, and the two CKFs and the SLF
+approximately tied for the most error. For large $M$, the CKF5 and the SLF had the second smallest error, being trailed by the CKF3 and then the UKF.
 
 \begin{figure}[ht]
 \centering
@@ -134,7 +139,8 @@ SLF        & 0.873  & 1.655 & 3.217 & 6.352 & 12.7  & 25.39 & 50.63 & 101   & 20
 \label{fig:mrmse_150}
 \end{figure}
 
-For comparison purposes, the RMSE at $M=16$ and 256 are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. For both sampling periods shown, the EKF has much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=16$, the UKF has higher error than the CKFs and the SLF until about $k=350$ and then has lower error afterwards. Both CKFs and the SLF have approximately the same error. For $M=256$, the UKF has higher error than the CKFs and the SLF after about $k=380$ and about the same error before. The CKF5 and the SLF are very close in error. The CKF3 is very close in error to them except for a short period from about $k=290$ to 350.
+For comparison purposes, the RMSEs at $M=16$ and $256$ are shown in \cref{fig:rmse_150_16,fig:rmse_150_256}. The period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. For both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=16$, the UKF had higher error than the CKFs and the SLF, which were approximately equal in error, until about $k=350$ and then had lower error for
+larger $k$. For $M=256$, the UKF had higher error than the CKFs and the SLF after about $k=380$ and about the same error before. The CKFs and the SLF were again approximately equal in error, with the CKF3 showing a small deviation from $k=290$ to $350$.
 
 \begin{figure}[h]
 \centering
@@ -156,7 +162,7 @@ For comparison purposes, the RMSE at $M=16$ and 256 are shown in \cref{fig:rmse_
 
 \section{Sampling Period of 300 Seconds}
 
-From \cref{tab:div_300}, it can be seen that the filters have no divergences for $M=64,\dots,256$. It can be seen that the UKF has more numerical problems for small $M$than the CKF3. The CKF5 and SLF are the best in terms of divergences. The times shown in \cref{tab:time_300} show that the EKF is again the fastest with a similar ratio between the speeds as with $T_s=30$ seconds. 
+From \cref{tab:div_300}, it can be seen that the filters had no divergences for $M=64,\dots,256$. This is a smaller divergence-free range than before due to the long sampling period. The CKF5 and the SLF were the best in terms of divergences, followed by the EKF and the CKF3. The UKF had more numerical problems than the other filters, with some divergences still occurring for $M=32$. The times shown in \cref{tab:time_300} show that the EKF is again the fastest with a similar ratio between the speeds as with the other two sampling periods. 
 
 \begin{table}[h]
 \centering
@@ -190,7 +196,8 @@ SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101
 \label{tab:time_300}
 \end{table}
 
-\cref{fig:mrmse_300} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decrease as the number of integration steps increase, and the rate of decrease is roughly the same for four of the filters, while the decrease shown by the EKF is less steep. The EKF results in the least error by far, with its MRMSE lower than those of the other filters for all combinations of $M$ in the divergence-free range. For small $M$, the UKF has the second smallest error, followed by the CKF5 and the SLF, and then the CKF3. For large $M$, the CKF5 and the SLF have the second smallest error, being trailed by the CKF3 and, then the UKF.
+\cref{fig:mrmse_300} shows the MRMSE as a function of the number of integration steps over the divergence-free range. It can be seen that the errors decreased as the number of integration steps increased, and the rate of decrease is roughly the same for four of the filters, while the decrease shown by the EKF is less steep. The EKF resulted in the least error by far, with its MRMSEs lower than those of the other filters for all combinations of $M$ in the divergence-free range. For small
+$M$, the UKF had the second smallest error, followed by the CKF5 and the SLF, and then the CKF3. For large $M$, the CKF5 and the SLF had the second smallest error, trailed by the CKF3 and, then the UKF.
 
 \begin{figure}[ht]
 \centering
@@ -200,7 +207,8 @@ SLF        & 0.498 & 0.958 & 1.564 & 3.114 & 6.309 & 12.71 & 25.3  & 50.47 & 101
 \label{fig:mrmse_300}
 \end{figure}
 
-For comparison purposes, the RMSE at $M=64$ and 256 are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As before, the period of high error corresponds to the high-rate charge and discharge period that results in the strongest nonlinear effect. As before for $T_s=150$ seconds, for both sampling periods shown, the EKF has much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=64$, the UKF approximately the same error as the CKFs and the SLF until about $k=200$ and then has lower error afterwards. Both CKFs and the SLF have approximately the same error. For $M=256$, the UKF has higher error than the CKFs and the SLF after about $k=180$ and about the same error before. The CKF5 and the SLF are very close in error. The CKF3 is roughly equal in error to them with short periods of lower and higher error.
+For comparison purposes, the RMSEs at $M=64$ and $256$ are shown in \cref{fig:rmse_300_64,fig:rmse_300_256}. As before, the period of high error corresponds to the high-rate charge and discharge period that resulted in the strongest nonlinear effect. As with $T_s=150$ seconds, for both sampling periods shown, the EKF had much lower error over the high-rate period and during the idle periods at the end of the simulation. For $M=64$, the UKF had approximately the same error as the CKFs
+and the SLF, which were approximately equal in error, until about $k=200$ and then had lower error afterwards. For $M=256$, the UKF had higher error than the CKFs and the SLF after about $k=180$, with approximately the same error before. Additionally, the CKF5 and the SLF were very close in error. The CKF3 was roughly equal to them in error with short periods of lower and higher error.
 
 \begin{figure}[h]
 \centering
