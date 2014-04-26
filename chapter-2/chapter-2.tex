@@ -283,10 +283,7 @@ battery was discharged and charged at $R_L=20~\Omega$ for 290 and 270 minutes, r
 reduced to $R_L=5~\Omega$ and discharged and charged for 80 minutes and 70 minutes, respectively. Next, the battery was discharged and charged at $R_L=4~\Omega$ for 60 minutes, each. Following were discharge and charge periods at $R_L=2~\Omega$ for 35, 25, 25, 20, 25, 25, 20, and 15 minutes. The high current resulted in very strong rate-capacity effects. Finally, the battery was rested for 70 minutes, discharged at $R_L=2~\Omega$ for 25 minutes, rested for 75 minutes, and charged at
 $R_L=10~\Omega$ for 135 minutes. The two resting periods should show the strongest recovery effect. The total input time was 1635 minutes.
 
-The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input for one Monte Carlo trial are shown in \cref{fig:soc,fig:meas}, respectively. Note that the noisy measurement has a similar form to the SOC, with increases and decreases in the measured $V_\text{cell}$ corresponding to increases and decreases in the SOC,
-respectively. This is explained by recalling that the open-circuit voltage $V_\text{OC}$ is a function of the SOC and that the measurement $V_\text{cell}$ is the sum of $V_\text{OC}$, the nonlinear and transient effects, and measurement noise. The nonlinear and transient effects along with the measurement noise are generally small enough that the variation of $V_\text{OC}$ as a function of the SOC can be seen.
-
-\begin{figure}[htb]
+\begin{figure}[b]
 \centering
 %\input{chapter-2/figures/soc}
 %\psfragfig[width=15cm]{chapter-2/figures/soc}
@@ -303,6 +300,9 @@ respectively. This is explained by recalling that the open-circuit voltage $V_\t
 \caption{Noisy measurement $V_\text{cell}$ for one run.}
 \label{fig:meas}
 \end{figure}
+
+The SOC and the noisy measurement of $V_\text{cell}$ resulting from the given input for one Monte Carlo trial are shown in \cref{fig:soc,fig:meas}, respectively. Note that the noisy measurement has a similar form to the SOC, with increases and decreases in the measured $V_\text{cell}$ corresponding to increases and decreases in the SOC,
+respectively. This is explained by recalling that the open-circuit voltage $V_\text{OC}$ is a function of the SOC and that the measurement $V_\text{cell}$ is the sum of $V_\text{OC}$, the nonlinear and transient effects, and measurement noise. The nonlinear and transient effects along with the measurement noise are generally small enough that the variation of $V_\text{OC}$ as a function of the SOC can be seen.
 
 The Monte Carlo trials used varying sampling periods, calculated as some multiple $K$ of the simulation step size. For example, for a desired sampling period of 300 seconds, the actual sampling period is
 \begin{equation}
